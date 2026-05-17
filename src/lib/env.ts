@@ -1,33 +1,12 @@
 /**
  * SABA 环境配置
- * 支持 Cloudflare Workers 环境变量和本地 .env 开发
+ * Cloudflare Workers：handler 入口调用 bindWorkerEnv(env)
+ * 本地开发：vite / scripts/ensure-env.mjs 预先写入 process.env
  */
-
-import { config as loadDotenvFile } from 'dotenv';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-// 本地开发时读取 .env 文件
-// Cloudflare Workers 使用 wrangler secret put 或直接在 wrangler.toml 绑定
-// 生产环境请通过 Cloudflare Dashboard 设置或 wrangler secret
-
-const PROJECT_ROOT = path.resolve(
-  path.dirname(fileURLToPath(import.meta.url)),
-  '..',
-  '..',
-);
-
-export function bootstrapEnvFiles(): void {
-  loadDotenvFile({ path: path.join(PROJECT_ROOT, '.env'), quiet: true });
-  loadDotenvFile({ path: path.join(PROJECT_ROOT, '.env.local'), override: true, quiet: true });
-}
-
-bootstrapEnvFiles();
 
 export type LLMProvider = 'anthropic' | 'dashscope';
 
 export interface SABA_CONFIG {
-  // LLM 配置
   llm_provider: LLMProvider;
   anthropic_api_key: string;
   anthropic_base_url: string;
@@ -35,50 +14,57 @@ export interface SABA_CONFIG {
   anthropic_max_tokens: number;
   dashscope_api_key: string;
   dashscope_model: string;
-
-  // RAG 配置
   rag_enabled: boolean;
-
-  // 应用配置
   app_env: 'development' | 'production';
   log_level: 'debug' | 'info' | 'warn' | 'error';
 }
 
-// 默认配置（本地开发使用）
 const DEFAULT_CONFIG: SABA_CONFIG = {
   llm_provider: 'dashscope',
-  anthropic_api_key: process.env['ANTHROPIC_API_KEY'] || '',
-  anthropic_base_url: process.env['ANTHROPIC_BASE_URL'] || '',
+  anthropic_api_key: '',
+  anthropic_base_url: '',
   anthropic_model: 'claude-opus-4-7',
   anthropic_max_tokens: 1024,
-  dashscope_api_key: process.env['DASHSCOPE_API_KEY'] || '',
+  dashscope_api_key: '',
   dashscope_model: 'qwen3.6-plus',
   rag_enabled: true,
-  app_env: (process.env['NODE_ENV'] as SABA_CONFIG['app_env']) || 'development',
+  app_env: 'development',
   log_level: 'info',
 };
 
-// 从环境变量加载配置
-export function loadConfig(): SABA_CONFIG {
-  const config: SABA_CONFIG = { ...DEFAULT_CONFIG };
-
-  if (typeof process !== 'undefined' && process.env) {
-    config.llm_provider = (process.env['LLM_PROVIDER'] as LLMProvider) || config.llm_provider;
-    config.anthropic_api_key = process.env['ANTHROPIC_API_KEY'] || config.anthropic_api_key;
-    config.anthropic_base_url = process.env['ANTHROPIC_BASE_URL'] || config.anthropic_base_url;
-    config.anthropic_model = process.env['ANTHROPIC_MODEL'] || config.anthropic_model;
-    config.anthropic_max_tokens = parseInt(process.env['ANTHROPIC_MAX_TOKENS'] || String(config.anthropic_max_tokens));
-    config.dashscope_api_key = process.env['DASHSCOPE_API_KEY'] || config.dashscope_api_key;
-    config.dashscope_model = process.env['DASHSCOPE_MODEL'] || config.dashscope_model;
-    config.rag_enabled = process.env['RAG_ENABLED'] !== 'false';
-    config.app_env = (process.env['APP_ENV'] as SABA_CONFIG['app_env']) || config.app_env;
-    config.log_level = (process.env['LOG_LEVEL'] as SABA_CONFIG['log_level']) || config.log_level;
+function readProcessEnv(): Partial<SABA_CONFIG> {
+  if (typeof process === 'undefined' || !process.env) {
+    return {};
   }
-
-  return config;
+  const e = process.env;
+  return {
+    llm_provider: (e['LLM_PROVIDER'] as LLMProvider) || undefined,
+    anthropic_api_key: e['ANTHROPIC_API_KEY'] || undefined,
+    anthropic_base_url: e['ANTHROPIC_BASE_URL'] || undefined,
+    anthropic_model: e['ANTHROPIC_MODEL'] || undefined,
+    anthropic_max_tokens: e['ANTHROPIC_MAX_TOKENS']
+      ? parseInt(e['ANTHROPIC_MAX_TOKENS'], 10)
+      : undefined,
+    dashscope_api_key: e['DASHSCOPE_API_KEY'] || undefined,
+    dashscope_model: e['DASHSCOPE_MODEL'] || undefined,
+    rag_enabled: e['RAG_ENABLED'] !== undefined ? e['RAG_ENABLED'] !== 'false' : undefined,
+    app_env: (e['APP_ENV'] as SABA_CONFIG['app_env']) || (e['NODE_ENV'] as SABA_CONFIG['app_env']) || undefined,
+    log_level: (e['LOG_LEVEL'] as SABA_CONFIG['log_level']) || undefined,
+  };
 }
 
-// 单例配置实例
+export function loadConfig(): SABA_CONFIG {
+  const fromEnv = readProcessEnv();
+  return {
+    ...DEFAULT_CONFIG,
+    ...fromEnv,
+    llm_provider: fromEnv.llm_provider ?? DEFAULT_CONFIG.llm_provider,
+    rag_enabled: fromEnv.rag_enabled ?? DEFAULT_CONFIG.rag_enabled,
+    app_env: fromEnv.app_env ?? DEFAULT_CONFIG.app_env,
+    log_level: fromEnv.log_level ?? DEFAULT_CONFIG.log_level,
+  };
+}
+
 let _config: SABA_CONFIG | null = null;
 
 export function getConfig(): SABA_CONFIG {
@@ -88,15 +74,19 @@ export function getConfig(): SABA_CONFIG {
   return _config;
 }
 
-/** 重新读取 .env 与 process.env（开发服务热重载后调用） */
+/** Workers 请求入口：从 env binding / secret 加载配置 */
+export function bindWorkerEnv(env: Env): void {
+  _config = loadConfigFromEnv(env);
+}
+
+/** 本地开发热重载后重新读取 process.env（Workers 上勿调用） */
 export function reloadConfig(): SABA_CONFIG {
-  bootstrapEnvFiles();
   _config = loadConfig();
   return _config;
 }
 
-// Cloudflare Workers 环境变量类型声明
 export interface Env {
+  ASSETS: Fetcher;
   ASSESSMENTS_KV: KVNamespace;
   D1_DATABASE: D1Database;
   LLM_PROVIDER?: string;
@@ -110,20 +100,29 @@ export interface Env {
   LOG_LEVEL?: string;
 }
 
-/**
- * 从 Cloudflare Workers Env 获取配置
- */
 export function loadConfigFromEnv(env: Env): SABA_CONFIG {
+  const fromProcess = readProcessEnv();
   return {
-    llm_provider: (env['LLM_PROVIDER'] as LLMProvider) || (process.env['LLM_PROVIDER'] as LLMProvider) || 'dashscope',
-    anthropic_api_key: env['ANTHROPIC_API_KEY'] || process.env['ANTHROPIC_API_KEY'] || '',
-    anthropic_base_url: env['ANTHROPIC_BASE_URL'] || process.env['ANTHROPIC_BASE_URL'] || '',
-    anthropic_model: env['ANTHROPIC_MODEL'] || process.env['ANTHROPIC_MODEL'] || 'claude-sonnet-4-20250514',
-    anthropic_max_tokens: 1024,
-    dashscope_api_key: env['DASHSCOPE_API_KEY'] || process.env['DASHSCOPE_API_KEY'] || '',
-    dashscope_model: env['DASHSCOPE_MODEL'] || process.env['DASHSCOPE_MODEL'] || 'qwen3.6-plus',
-    rag_enabled: env['RAG_ENABLED'] !== 'false' && process.env['RAG_ENABLED'] !== 'false',
-    app_env: (env['APP_ENV'] as SABA_CONFIG['app_env']) || (process.env['APP_ENV'] as SABA_CONFIG['app_env']) || 'production',
-    log_level: (env['LOG_LEVEL'] as SABA_CONFIG['log_level']) || (process.env['LOG_LEVEL'] as SABA_CONFIG['log_level']) || 'info',
+    llm_provider:
+      (env.LLM_PROVIDER as LLMProvider) ||
+      fromProcess.llm_provider ||
+      DEFAULT_CONFIG.llm_provider,
+    anthropic_api_key: env.ANTHROPIC_API_KEY || fromProcess.anthropic_api_key || '',
+    anthropic_base_url: env.ANTHROPIC_BASE_URL || fromProcess.anthropic_base_url || '',
+    anthropic_model: env.ANTHROPIC_MODEL || fromProcess.anthropic_model || 'claude-sonnet-4-20250514',
+    anthropic_max_tokens: fromProcess.anthropic_max_tokens ?? DEFAULT_CONFIG.anthropic_max_tokens,
+    dashscope_api_key: env.DASHSCOPE_API_KEY || fromProcess.dashscope_api_key || '',
+    dashscope_model: env.DASHSCOPE_MODEL || fromProcess.dashscope_model || 'qwen3.6-plus',
+    rag_enabled:
+      env.RAG_ENABLED !== 'false' &&
+      (fromProcess.rag_enabled ?? DEFAULT_CONFIG.rag_enabled),
+    app_env:
+      (env.APP_ENV as SABA_CONFIG['app_env']) ||
+      fromProcess.app_env ||
+      'production',
+    log_level:
+      (env.LOG_LEVEL as SABA_CONFIG['log_level']) ||
+      fromProcess.log_level ||
+      'info',
   };
 }

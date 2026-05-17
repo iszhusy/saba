@@ -53,7 +53,7 @@ function ensureRuntimeReady(): void {
   if (runtimeReady) {
     return;
   }
-  reloadConfig();
+  getConfig();
   defaultExecutive = undefined;
   runtimeReady = true;
 }

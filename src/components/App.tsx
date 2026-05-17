@@ -9,7 +9,7 @@ import { ConversationAssessment } from './chat/ConversationAssessment';
 import { HistoryList } from './history/HistoryList';
 import { ProfilePage } from './profile/ProfilePage';
 import { ReasoningChain } from './assessment/ReasoningChain';
-import { ResultCard } from './assessment/ResultCard';
+import { AuditDisclosure } from './assessment/AuditDisclosure';
 import { ConfirmDialog } from '../web/ConfirmDialog';
 import { FeedbackState } from './ui/FeedbackState';
 import { PageHero } from './ui/PageHero';
@@ -247,7 +247,7 @@ export function App({ onExitHome }: AppProps) {
 
         {/* 三视图均保持挂载；用 saba-view--active 切换，避免 hidden 与 flex 冲突盖住其它 tab */}
         <section
-          className={`saba-view chat-layout ${view === 'chat' ? 'saba-view--active' : ''} ${lastResult ? 'chat-layout--with-audit' : ''}`}
+          className={`saba-view chat-layout ${view === 'chat' ? 'saba-view--active' : ''}`}
           aria-hidden={view !== 'chat'}
         >
           <ConversationAssessment
@@ -263,26 +263,13 @@ export function App({ onExitHome }: AppProps) {
             }}
             onContactTeam={handleContactTeam}
           />
-          {lastResult && (
-            <aside className="saba-audit-panel saba-panel">
-                <h3 className="saba-section-label">审计信息</h3>
-                <ResultCard result={lastResult} onContactTeam={handleContactTeam} />
-                {teamRequestResult && (
-                  <FeedbackState
-                    className="saba-feedback--inline"
-                    variant="success"
-                    title="协同请求已创建"
-                    message={`请求 ${teamRequestResult.notification_id} · 评估 ${teamRequestResult.assessment_id}`}
-                    detail={new Date(teamRequestResult.created_at).toLocaleString('zh-CN', {
-                      month: 'long',
-                      day: 'numeric',
-                      hour: '2-digit',
-                      minute: '2-digit',
-                    })}
-                  />
-                )}
-              </aside>
-            )}
+          {lastResult && !isClarificationResult(lastResult) && (
+            <AuditDisclosure
+              result={lastResult}
+              teamRequestResult={teamRequestResult}
+              onContactTeam={handleContactTeam}
+            />
+          )}
         </section>
 
         <section

@@ -1,5 +1,8 @@
 node_modules
 .wrangler/
+wrangler.toml
+scripts/deploy-cloudflare.mjs
+scripts/push-wrangler-secrets.mjs
 test-results/
 playwright-report/
 blob-report/

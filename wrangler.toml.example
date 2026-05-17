@@ -1,0 +1,23 @@
+name = "saba"
+main = "src/api/handler.ts"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+
+# 生产变量与密钥请用 wrangler secret put / Dashboard，勿提交到 git
+# 复制本文件为 wrangler.toml 后填写 KV / D1 id：
+#   npx wrangler kv namespace create ASSESSMENTS_KV
+#   npx wrangler d1 create saba-db
+
+[[kv_namespaces]]
+binding = "ASSESSMENTS_KV"
+id = "your-kv-namespace-id"
+
+[[d1_databases]]
+binding = "D1_DATABASE"
+database_name = "saba-db"
+database_id = "your-database-id"

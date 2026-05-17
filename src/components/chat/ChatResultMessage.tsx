@@ -79,6 +79,7 @@ export function ChatResultMessage({ result }: ChatResultMessageProps) {
           {result.metadata.model_version ? ` · ${result.metadata.model_version}` : ''}
         </p>
       )}
+      <p className="chat-result__more">完整规则与审计留痕可在对话区下方展开查看。</p>
     </div>
   );
 }

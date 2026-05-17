@@ -12,7 +12,7 @@ import { runAssessPipeline } from '../services/assess-pipeline.js';
 import { LlmNotConfiguredError } from '../lib/llm-config.js';
 import { createAssessStreamSink, encodeSseEvent } from '../lib/assess-stream.js';
 import { createTraceContext, createChildTraceContext } from '../lib/trace.js';
-import { getConfig } from '../lib/env.js';
+import { bindWorkerEnv, getConfig, type Env as WorkerEnv } from '../lib/env.js';
 import {
   AssessRequest,
   FeedbackRequest,
@@ -29,13 +29,11 @@ declare const ENV: {
   D1_DATABASE: D1Database;
 };
 
-export interface Env {
-  ASSESSMENTS_KV: KVNamespace;
-  D1_DATABASE: D1Database;
-}
+export type Env = WorkerEnv;
 
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
+    bindWorkerEnv(env);
     const url = new URL(request.url);
     const path = url.pathname;
     const method = request.method;
@@ -123,6 +121,10 @@ export default {
 
       if (path === '/api/v1/rules/versions' && method === 'GET') {
         return handleRulesVersions();
+      }
+
+      if (env.ASSETS) {
+        return env.ASSETS.fetch(request);
       }
 
       // 404

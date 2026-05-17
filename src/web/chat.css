@@ -2,8 +2,7 @@
 .chat-shell {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 4.5rem);
-  max-height: 720px;
+  height: min(720px, calc(100vh - 7.5rem));
   min-height: 420px;
   border: 1px solid var(--saba-ink, #141210);
   background: var(--saba-white, #fffcf7);
@@ -325,13 +324,26 @@
 .chat-result__action {
   margin: 0;
   font-size: 0.9rem;
-  line-height: 1.5;
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .chat-result__meta {
   margin: 0.75rem 0 0;
   font-size: 0.7rem;
   color: var(--saba-muted, #888);
+}
+
+.chat-result__more {
+  margin: 0.65rem 0 0;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--saba-border, rgba(20, 18, 16, 0.14));
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: var(--saba-muted, rgba(20, 18, 16, 0.5));
 }
 
 .chat-result__warnings {
@@ -374,38 +386,66 @@
   min-height: 2.75rem;
 }
 
-.saba-audit-panel {
-  min-width: 0;
+/* 审计详情：默认折叠，不挤压对话主区域 */
+.saba-audit-disclosure {
+  flex-shrink: 0;
 }
 
-@media (min-width: 1024px) {
-  .saba-view--active.chat-layout--with-audit {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(16rem, 22rem);
-    align-items: start;
-    gap: 1.25rem;
-  }
-
-  .chat-layout--with-audit .chat-shell {
-    height: calc(100vh - 6rem);
-    max-height: 720px;
-    min-height: 420px;
-  }
-
-  .saba-audit-panel {
-    position: sticky;
-    top: 5.5rem;
-    max-height: calc(100vh - 6.5rem);
-    overflow-y: auto;
-  }
+.saba-audit-disclosure__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  margin: 0;
+  padding: 0.65rem 0.85rem;
+  border: 1px dashed var(--saba-border, rgba(20, 18, 16, 0.14));
+  background: rgba(47, 92, 74, 0.04);
+  font-family: var(--saba-font-mono, monospace);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--saba-ink-soft, #3d3834);
+  cursor: pointer;
+  transition:
+    background 0.2s var(--saba-ease-out, ease),
+    border-color 0.2s var(--saba-ease-out, ease);
 }
 
-@media (max-width: 1023px) {
-  .chat-layout--with-audit .chat-shell {
-    height: min(480px, 52vh);
-    max-height: 480px;
-    min-height: 280px;
-  }
+.saba-audit-disclosure__toggle:hover {
+  border-color: var(--saba-clinical-teal, #2f5c5a);
+  background: var(--saba-clinical-teal-soft, rgba(47, 92, 74, 0.1));
+}
+
+.saba-audit-disclosure__toggle-hint {
+  color: var(--saba-clinical-teal, #2f5c5a);
+}
+
+.saba-audit-disclosure__body {
+  margin-top: 0.75rem;
+  max-height: min(42vh, 380px);
+  overflow-y: auto;
+  padding-right: 0.15rem;
+}
+
+.saba-audit-disclosure__intro {
+  margin: 0 0 0.75rem;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--saba-muted, rgba(20, 18, 16, 0.5));
+}
+
+.saba-audit-disclosure__body .saba-result {
+  font-size: 0.92rem;
+}
+
+.saba-audit-disclosure__body .saba-result__score {
+  font-size: 2.25rem;
+}
+
+.saba-audit-disclosure__body .saba-result__action-text {
+  text-transform: none;
+  line-height: 1.55;
 }
 
 /* ───────────────── Patient Baseline Intake Card ───────────────── */
