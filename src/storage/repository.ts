@@ -10,7 +10,11 @@ import {
   FeedbackRequest,
   HistoryQuery,
   HistoryResponse,
+  TraceChainSnapshot,
 } from '../types/index.js';
+import { TeamNotificationRepository } from './conversation-repository.js';
+import { PatientBaselineRepository } from './patient-baseline-repository.js';
+import { buildTraceChainSnapshot } from '../lib/trace-chain.js';
 
 export class AssessmentRepository {
   constructor(private db: D1Database) {}
@@ -25,12 +29,12 @@ export class AssessmentRepository {
           id, user_id, raw_input, structured_input, risk_level, risk_score,
           immediate_action, reasoning, evidence, triggered_rules,
           team_contact_required, follow_up, warning_signs,
-          metadata, created_at
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+          metadata, trace_json, created_at
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
       `)
       .bind(
         assessment.assessment_id,
-        assessment.raw_input?.split('user_id:')[1]?.split(',')[0] || 'unknown',
+        assessment.user_id || 'unknown',
         assessment.raw_input || '',
         JSON.stringify(assessment.structured_input),
         assessment.risk_level,
@@ -43,6 +47,7 @@ export class AssessmentRepository {
         assessment.follow_up || null,
         JSON.stringify(assessment.warning_signs),
         JSON.stringify(assessment.metadata),
+        assessment.trace ? JSON.stringify(assessment.trace) : null,
         assessment.created_at
       )
       .run();
@@ -59,6 +64,19 @@ export class AssessmentRepository {
 
     if (!result) return null;
     return this.mapToAssessment(result);
+  }
+
+  async findByTraceId(traceId: string): Promise<AssessmentDetail[]> {
+    const result = await this.db
+      .prepare(`
+        SELECT * FROM assessments
+        WHERE json_extract(trace_json, '$.trace_id') = ?
+        ORDER BY created_at ASC
+      `)
+      .bind(traceId)
+      .all();
+
+    return result.results.map((row) => this.mapToAssessment(row));
   }
 
   /**
@@ -153,6 +171,7 @@ export class AssessmentRepository {
       warning_signs: JSON.parse(row.warning_signs as string || '[]'),
       metadata: JSON.parse(row.metadata as string || '{}'),
       created_at: row.created_at as string,
+      trace: row.trace_json ? JSON.parse(row.trace_json as string) : undefined,
       raw_input: row.raw_input as string,
       structured_input: row.structured_input ? JSON.parse(row.structured_input as string) : undefined,
       evidence: JSON.parse(row.evidence as string || '[]'),
@@ -195,8 +214,8 @@ export class BehaviorEventRepository {
     await this.db
       .prepare(`
         INSERT INTO assessment_events (
-          id, event_name, user_id, assessment_id, session_id, metadata, created_at
-        ) VALUES (?, ?, ?, ?, ?, ?, ?)
+          id, event_name, user_id, assessment_id, session_id, metadata, trace_json, created_at
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
       `)
       .bind(
         event.event_id,
@@ -205,9 +224,60 @@ export class BehaviorEventRepository {
         event.assessment_id ?? null,
         event.session_id ?? null,
         JSON.stringify(event.metadata ?? {}),
+        event.trace ? JSON.stringify(event.trace) : null,
         new Date().toISOString()
       )
       .run();
+  }
+
+  async findByTraceId(traceId: string): Promise<TraceChainSnapshot['behavior_events']> {
+    const result = await this.db
+      .prepare(`
+        SELECT * FROM assessment_events
+        WHERE json_extract(trace_json, '$.trace_id') = ?
+        ORDER BY created_at ASC
+      `)
+      .bind(traceId)
+      .all();
+
+    return result.results.map((row) => ({
+      event_id: row.id as string,
+      event: row.event_name as BehaviorEventRequest['event'],
+      user_id: row.user_id as string,
+      assessment_id: (row.assessment_id as string) || undefined,
+      session_id: (row.session_id as string) || undefined,
+      metadata: row.metadata ? JSON.parse(row.metadata as string) : undefined,
+      trace: row.trace_json ? JSON.parse(row.trace_json as string) : undefined,
+      created_at: row.created_at as string,
+    }));
+  }
+}
+
+export class TraceRepository {
+  constructor(private db: D1Database) {}
+
+  async getTraceChain(traceId: string): Promise<TraceChainSnapshot> {
+    const assessmentRepo = new AssessmentRepository(this.db);
+    const eventRepo = new BehaviorEventRepository(this.db);
+    const baselineRepo = new PatientBaselineRepository(this.db);
+    const notificationRepo = new TeamNotificationRepository(this.db);
+
+    const [assessments, behaviorEvents, baselines, notifications] = await Promise.all([
+      assessmentRepo.findByTraceId(traceId),
+      eventRepo.findByTraceId(traceId),
+      baselineRepo.findByTraceId(traceId),
+      notificationRepo.findByTraceId(traceId),
+    ]);
+
+    return {
+      ...buildTraceChainSnapshot({
+        traceId,
+        assessments,
+        behavior_events: behaviorEvents,
+      }),
+      baselines,
+      notifications,
+    };
   }
 }
 

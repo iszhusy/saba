@@ -4,12 +4,15 @@
  */
 
 import { Saba } from '../index.js';
-import { AssessmentRepository, BehaviorEventRepository, FeedbackRepository } from '../storage/repository.js';
+import { AssessmentRepository, BehaviorEventRepository, FeedbackRepository, TraceRepository } from '../storage/repository.js';
 import { TeamNotificationRepository } from '../storage/conversation-repository.js';
 import { PatientBaselineRepository } from '../storage/patient-baseline-repository.js';
 import { ConversationStateService } from '../services/conversation-state.js';
 import { runAssessPipeline } from '../services/assess-pipeline.js';
 import { LlmNotConfiguredError } from '../lib/llm-config.js';
+import { createAssessStreamSink, encodeSseEvent } from '../lib/assess-stream.js';
+import { createTraceContext, createChildTraceContext } from '../lib/trace.js';
+import { getConfig } from '../lib/env.js';
 import {
   AssessRequest,
   FeedbackRequest,
@@ -44,13 +47,17 @@ export default {
 
     try {
       // 路由匹配
+      if (path === '/api/v1/assess/stream' && method === 'POST') {
+        return handleAssessStream(request, env);
+      }
+
       if (path === '/api/v1/assess' && method === 'POST') {
         return handleAssess(request, env);
       }
 
       if (path.match(/^\/api\/v1\/assessments\/([^/]+)$/) && method === 'GET') {
         const id = path.match(/^\/api\/v1\/assessments\/([^/]+)$/)?.[1];
-        return handleGetAssessment(id!, env);
+        return handleGetAssessment(id!, env, request);
       }
 
       if (path === '/api/v1/assessments' && method === 'GET') {
@@ -109,6 +116,11 @@ export default {
         return handleHealth();
       }
 
+      if (path.match(/^\/api\/v1\/debug\/trace\/([^/]+)$/) && method === 'GET') {
+        const id = path.match(/^\/api\/v1\/debug\/trace\/([^/]+)$/)?.[1];
+        return handleGetTraceChain(id!, env);
+      }
+
       if (path === '/api/v1/rules/versions' && method === 'GET') {
         return handleRulesVersions();
       }
@@ -126,6 +138,24 @@ export default {
   },
 };
 
+function readTraceHeaders(request: Request, flow: 'assessment' | 'baseline' | 'history' | 'team_notify' | 'behavior_event') {
+  const traceId = request.headers.get('X-Trace-Id');
+  const spanId = request.headers.get('X-Span-Id');
+  const parentSpanId = request.headers.get('X-Parent-Span-Id') ?? undefined;
+
+  if (!traceId || !spanId) {
+    return createTraceContext(flow);
+  }
+
+  return {
+    trace_id: traceId,
+    span_id: spanId,
+    parent_span_id: parentSpanId,
+    flow,
+    started_at: new Date().toISOString(),
+  };
+}
+
 function shouldPersistAssessment(result: Awaited<ReturnType<typeof runAssessPipeline>>): boolean {
   return result.executive_summary?.status !== 'clarification_required';
 }
@@ -136,6 +166,8 @@ function shouldPersistAssessment(result: Awaited<ReturnType<typeof runAssessPipe
 async function handleAssess(request: Request, env: Env): Promise<Response> {
   const repo = new AssessmentRepository(env.D1_DATABASE);
   const stateService = ConversationStateService.createFromDb(env.D1_DATABASE);
+
+  const trace = readTraceHeaders(request, 'assessment');
 
   // 解析请求体
   const body = await request.json() as AssessRequest;
@@ -150,7 +182,7 @@ async function handleAssess(request: Request, env: Env): Promise<Response> {
   let persistedResult: Awaited<ReturnType<typeof runAssessPipeline>>;
   try {
     persistedResult = await runAssessPipeline({
-      request: body,
+      request: { ...body, trace },
       stateService,
     });
   } catch (error) {
@@ -172,6 +204,7 @@ async function handleAssess(request: Request, env: Env): Promise<Response> {
       symptoms: persistedResult.symptoms ?? [],
     },
     evidence: persistedResult.evidence ?? [],
+    trace: persistedResult.trace ?? createChildTraceContext(trace, 'assessment'),
   };
 
   if (shouldPersistAssessment(persistedResult)) {
@@ -187,14 +220,93 @@ async function handleAssess(request: Request, env: Env): Promise<Response> {
 }
 
 /**
+ * 流式评估（SSE）
+ */
+async function handleAssessStream(request: Request, env: Env): Promise<Response> {
+  const stateService = ConversationStateService.createFromDb(env.D1_DATABASE);
+  const repo = new AssessmentRepository(env.D1_DATABASE);
+  const trace = readTraceHeaders(request, 'assessment');
+  const body = await request.json() as AssessRequest;
+
+  if (!body.user_id || !body.input) {
+    return errorResponse('VALIDATION_ERROR', 'Missing required fields', 400, [
+      { field: !body.user_id ? 'user_id' : 'input', message: 'Required field' },
+    ]);
+  }
+
+  const encoder = new TextEncoder();
+  const { readable, writable } = new TransformStream<Uint8Array, Uint8Array>();
+  const writer = writable.getWriter();
+
+  const sink = createAssessStreamSink((event) => {
+    void writer.write(encoder.encode(encodeSseEvent(event)));
+  });
+
+  void (async () => {
+    try {
+      const persistedResult = await runAssessPipeline({
+        request: { ...body, trace },
+        stateService,
+        stream: sink,
+      });
+
+      const created_at = persistedResult.created_at ?? new Date().toISOString();
+      const assessment_id = persistedResult.assessment_id ?? crypto.randomUUID();
+      const detail = {
+        ...persistedResult,
+        assessment_id,
+        user_id: body.user_id,
+        created_at,
+        raw_input: body.input,
+        structured_input: { symptoms: persistedResult.symptoms ?? [] },
+        evidence: persistedResult.evidence ?? [],
+        trace: persistedResult.trace ?? createChildTraceContext(trace, 'assessment'),
+      };
+
+      if (shouldPersistAssessment(persistedResult)) {
+        await env.ASSESSMENTS_KV.put(
+          `assessment:${assessment_id}`,
+          JSON.stringify({ ...detail, assessment_id, created_at }),
+          { expirationTtl: 60 * 60 * 24 * 30 },
+        );
+        await repo.create(detail as Parameters<AssessmentRepository['create']>[0]);
+      }
+    } catch (error) {
+      const message =
+        error instanceof LlmNotConfiguredError
+          ? error.message
+          : error instanceof Error
+            ? error.message
+            : 'Internal server error';
+      await writer.write(
+        encoder.encode(encodeSseEvent({ type: 'error', message })),
+      );
+    } finally {
+      await writer.close();
+    }
+  })();
+
+  return new Response(readable, {
+    headers: {
+      'Content-Type': 'text/event-stream; charset=utf-8',
+      'Cache-Control': 'no-cache, no-transform',
+      Connection: 'keep-alive',
+      'Access-Control-Allow-Origin': '*',
+    },
+  });
+}
+
+/**
  * 获取评估详情
  */
-async function handleGetAssessment(id: string, env: Env): Promise<Response> {
+async function handleGetAssessment(id: string, env: Env, request: Request): Promise<Response> {
+  const trace = readTraceHeaders(request, 'history');
   const repo = new AssessmentRepository(env.D1_DATABASE);
   const kvData = await env.ASSESSMENTS_KV.get(`assessment:${id}`);
 
   if (kvData) {
-    return jsonResponse(JSON.parse(kvData));
+    const detail = JSON.parse(kvData) as Record<string, unknown>;
+    return jsonResponse({ ...detail, trace: detail.trace ?? createChildTraceContext(trace, 'history') });
   }
 
   const assessment = await repo.findById(id);
@@ -202,13 +314,14 @@ async function handleGetAssessment(id: string, env: Env): Promise<Response> {
     return errorResponse('NOT_FOUND', 'Assessment not found', 404);
   }
 
-  return jsonResponse(assessment);
+  return jsonResponse({ ...assessment, trace: assessment.trace ?? createChildTraceContext(trace, 'history') });
 }
 
 /**
  * 获取评估历史列表
  */
 async function handleGetAssessments(request: Request, env: Env): Promise<Response> {
+  const trace = readTraceHeaders(request, 'history');
   const repo = new AssessmentRepository(env.D1_DATABASE);
   const url = new URL(request.url);
   const query: HistoryQuery = {
@@ -225,7 +338,29 @@ async function handleGetAssessments(request: Request, env: Env): Promise<Respons
   }
 
   const history = await repo.findByUserId(query);
-  return jsonResponse(history);
+  return jsonResponse({
+    ...history,
+    assessments: history.assessments.map((assessment) => ({
+      ...assessment,
+      trace: createChildTraceContext(trace, 'history'),
+    })),
+  });
+}
+
+/**
+ * 按 trace_id 聚合评估、行为事件与基线（开发排障）
+ */
+async function handleGetTraceChain(traceId: string, env: Env): Promise<Response> {
+  if (getConfig().app_env !== 'development') {
+    return errorResponse('NOT_FOUND', 'Endpoint not found', 404);
+  }
+
+  const repo = new TraceRepository(env.D1_DATABASE);
+  const chain = await repo.getTraceChain(traceId);
+  if (chain.behavior_events.length === 0 && chain.assessments.length === 0 && chain.baselines.length === 0) {
+    return errorResponse('NOT_FOUND', `No records for trace_id ${traceId}`, 404);
+  }
+  return jsonResponse(chain);
 }
 
 /**
@@ -307,6 +442,7 @@ async function handleResolveEpisode(id: string, request: Request, env: Env): Pro
  * 写入/更新 Patient Baseline
  */
 async function handleUpsertBaseline(request: Request, env: Env): Promise<Response> {
+  const trace = readTraceHeaders(request, 'baseline');
   const body = (await request.json().catch(() => ({}))) as Partial<PatientBaseline> & { user_id?: string };
   if (!body.user_id?.trim()) {
     return errorResponse('VALIDATION_ERROR', 'user_id is required', 400);
@@ -320,13 +456,14 @@ async function handleUpsertBaseline(request: Request, env: Env): Promise<Respons
     updated_at: new Date().toISOString(),
   };
   const saved = await repo.upsert(merged);
-  return jsonResponse(saved);
+  return jsonResponse({ ...saved, trace: createChildTraceContext(trace, 'baseline') });
 }
 
 /**
  * 读取 Patient Baseline
  */
 async function handleGetBaseline(request: Request, env: Env): Promise<Response> {
+  const trace = readTraceHeaders(request, 'baseline');
   const url = new URL(request.url);
   const userId = url.searchParams.get('user_id') || '';
   if (!userId) {
@@ -337,7 +474,7 @@ async function handleGetBaseline(request: Request, env: Env): Promise<Response> 
   if (!baseline) {
     return errorResponse('NOT_FOUND', 'baseline not found', 404);
   }
-  return jsonResponse(baseline);
+  return jsonResponse({ ...baseline, trace: createChildTraceContext(trace, 'baseline') });
 }
 
 /**
@@ -364,6 +501,7 @@ async function handleFeedback(request: Request, env: Env): Promise<Response> {
 }
 
 async function handleBehaviorEvent(request: Request, env: Env): Promise<Response> {
+  const trace = readTraceHeaders(request, 'behavior_event');
   const repo = new BehaviorEventRepository(env.D1_DATABASE);
   const body = await request.json() as BehaviorEventRequest;
 
@@ -372,12 +510,13 @@ async function handleBehaviorEvent(request: Request, env: Env): Promise<Response
   }
 
   const event_id = crypto.randomUUID();
-  await repo.create({ ...body, event_id });
+  await repo.create({ ...body, trace, event_id });
 
   return jsonResponse(
     {
       event_id,
       created_at: new Date().toISOString(),
+      trace: createChildTraceContext(trace, 'behavior_event'),
     },
     201
   );
@@ -387,6 +526,7 @@ async function handleBehaviorEvent(request: Request, env: Env): Promise<Response
  * 处理团队通知
  */
 async function handleTeamNotify(request: Request, env: Env): Promise<Response> {
+  const trace = readTraceHeaders(request, 'team_notify');
   const repo = new TeamNotificationRepository(env.D1_DATABASE);
   const body = await request.json() as TeamNotifyRequest;
 
@@ -398,6 +538,7 @@ async function handleTeamNotify(request: Request, env: Env): Promise<Response> {
   const recipients = ['team_oncall_queue'];
   const queued = await repo.createQueued({
     ...body,
+    trace,
     notification_id,
     recipients,
   });
@@ -410,6 +551,7 @@ async function handleTeamNotify(request: Request, env: Env): Promise<Response> {
       sent_at: queued.sent_at,
       recipients: queued.recipients,
       status: queued.status,
+      trace: createChildTraceContext(trace, 'team_notify'),
     },
     201
   );

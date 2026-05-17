@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import type { AssessResponse } from '../../types/index';
 import { sabaClient } from '../../client';
 import { createBehaviorEventRequest } from '../../lib/assessment-observability';
+import { RISK_HINTS } from '../../lib/risk-display';
 import { RiskBadge } from '../ui/RiskBadge';
 
 interface ChatResultMessageProps {
@@ -12,6 +13,7 @@ const USER_ID = 'user-123';
 
 export function ChatResultMessage({ result }: ChatResultMessageProps) {
   const hasTrackedView = useRef(false);
+  const { risk_level } = result;
 
   useEffect(() => {
     if (hasTrackedView.current || !result.assessment_id) {
@@ -34,11 +36,12 @@ export function ChatResultMessage({ result }: ChatResultMessageProps) {
   }, [result.assessment_id, result.risk_level, result.session_id]);
 
   return (
-    <div className="chat-result">
+    <div className={`chat-result chat-result--${risk_level}`} role="status">
       <div className="chat-result__head">
-        <RiskBadge level={result.risk_level} size="lg" />
+        <RiskBadge level={risk_level} size="lg" />
         <span className="chat-result__score">{result.risk_score}</span>
       </div>
+      <p className="chat-result__hint">{RISK_HINTS[risk_level]}</p>
       <p className="chat-result__label">建议行动</p>
       <p className="chat-result__action">{result.immediate_action}</p>
       {result.triggered_rules.length > 0 && (

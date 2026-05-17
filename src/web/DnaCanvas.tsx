@@ -22,18 +22,17 @@ export function DnaCanvas({
       throw new Error('2D canvas context is unavailable');
     }
     const ctx = rawCtx;
-    if (!ctx) {
-      throw new Error('2D canvas context is unavailable');
-    }
-    if (!ctx) return;
 
     const container = canvas.parentElement;
     if (!container) return;
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     let width = 0;
     let height = 0;
     let t = 0;
     let frameId = 0;
+    let visible = true;
     const bases = ['A', 'T', 'C', 'G'] as const;
 
     class Particle {
@@ -62,8 +61,9 @@ export function DnaCanvas({
       }
 
       draw() {
-        ctx.font = `bold ${this.size}px Helvetica, sans-serif`;
-        ctx.fillStyle = `rgba(0,0,0, ${this.alpha})`;
+        ctx.font = `500 ${this.size}px "IBM Plex Mono", ui-monospace, monospace`;
+        const ink = this.alpha;
+        ctx.fillStyle = `rgba(20, 18, 16, ${ink * 0.85})`;
         ctx.textAlign = 'center';
         ctx.fillText(this.char, this.x, this.screenY);
       }
@@ -83,15 +83,15 @@ export function DnaCanvas({
       height = canvas.height = container.clientHeight;
     };
 
-    const animate = () => {
+    const drawFrame = () => {
       ctx.clearRect(0, 0, width, height);
-      t += 0.008;
-      ctx.strokeStyle = 'rgba(0,0,0,0.15)';
+      const time = reducedMotion ? 0 : t;
+      ctx.strokeStyle = 'rgba(158, 59, 50, 0.12)';
       for (let i = 0; i < particles.length; i += 2) {
         const p1 = particles[i]!;
         const p2 = particles[i + 1]!;
-        p1.update(t);
-        p2.update(t);
+        p1.update(time);
+        p2.update(time);
         ctx.beginPath();
         ctx.moveTo(p1.x, p1.screenY);
         ctx.lineTo(p2.x, p2.screenY);
@@ -99,16 +99,39 @@ export function DnaCanvas({
         p1.draw();
         p2.draw();
       }
+    };
+
+    const animate = () => {
+      if (!visible) return;
+      drawFrame();
+      if (!reducedMotion) {
+        t += 0.008;
+      }
       frameId = requestAnimationFrame(animate);
     };
 
-    const observer = new ResizeObserver(resize);
-    observer.observe(container);
+    const visibilityObserver = new IntersectionObserver(
+      ([entry]) => {
+        visible = entry?.isIntersecting ?? true;
+        if (visible && !frameId) {
+          frameId = requestAnimationFrame(animate);
+        }
+      },
+      { threshold: 0.05 },
+    );
+
+    const resizeObserver = new ResizeObserver(resize);
+    resizeObserver.observe(container);
+    visibilityObserver.observe(container);
     resize();
-    animate();
+    drawFrame();
+    if (!reducedMotion) {
+      frameId = requestAnimationFrame(animate);
+    }
 
     return () => {
-      observer.disconnect();
+      resizeObserver.disconnect();
+      visibilityObserver.disconnect();
       cancelAnimationFrame(frameId);
     };
   }, [densityMultiplier, alignment]);

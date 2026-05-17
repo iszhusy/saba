@@ -4,7 +4,8 @@
   "description": "Side-Effect Assessment for Breast cancer patients with AI-powered feedback",
   "type": "module",
   "scripts": {
-    "dev": "node scripts/ensure-env.mjs && vite",
+    "dev": "node scripts/ensure-env.mjs && node scripts/d1-local-init.mjs && vite",
+    "d1:local:init": "node scripts/d1-local-init.mjs",
     "setup:env": "node scripts/ensure-env.mjs",
     "dev:demo": "tsx watch src/demo.ts",
     "build": "tsc",
@@ -13,6 +14,8 @@
     "preview:demo": "tsx src/demo.ts",
     "test": "vitest run",
     "test:arch": "vitest run src/lib/architecture-invariants.test.ts src/lib/mode-protocol-remnants.test.ts",
+    "test:e2e": "npx playwright test",
+    "test:e2e:update": "npx playwright test --update-snapshots",
     "harness": "tsx run-harness.ts",
     "lint": "eslint src --ext .ts,.tsx"
   },
@@ -26,6 +29,7 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20260515.1",
     "@fission-ai/openspec": "^1.3.1",
+    "@playwright/test": "^1.60.0",
     "@types/node": "^20.0.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
@@ -37,6 +41,7 @@
     "tsx": "^4.0.0",
     "typescript": "^5.0.0",
     "vite": "^5.4.21",
-    "vitest": "^1.0.0"
+    "vitest": "^1.0.0",
+    "wrangler": "^4.92.0"
   }
 }

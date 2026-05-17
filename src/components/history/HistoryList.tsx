@@ -1,5 +1,6 @@
 import type { HistoryResponse, AssessmentSummary } from '../../types/index';
 import { RiskBadge } from '../ui/RiskBadge';
+import { FeedbackState } from '../ui/FeedbackState';
 
 interface HistoryListProps {
   history: HistoryResponse;
@@ -20,17 +21,17 @@ export function HistoryList({ history, onSelect, isLoading }: HistoryListProps) 
 
   if (history.assessments.length === 0) {
     return (
-      <div className="saba-empty">
-        <p>暂无评估记录</p>
-        <p style={{ marginTop: '0.5rem', fontSize: '0.75rem' }}>
-          完成首次评估后将显示于此
-        </p>
-      </div>
+      <FeedbackState
+        variant="empty"
+        title="暂无评估记录"
+        message="完成首次对话评估后，记录将显示在这里。"
+        detail="您可以从「对话」页开始描述当前症状。"
+      />
     );
   }
 
   return (
-    <div className="saba-stack">
+    <div className="saba-stack saba-history-timeline">
       {history.assessments.map(item => (
         <HistoryItem
           key={item.assessment_id}
@@ -58,7 +59,7 @@ function HistoryItem({
       className={`saba-history-item saba-history-item--${item.risk_level}`}
     >
       <div className="saba-history-item__body">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+        <div className="saba-history-item__meta-row">
           <RiskBadge level={item.risk_level} size="sm" />
           <span className="saba-history-item__sub">{timeAgo}</span>
         </div>

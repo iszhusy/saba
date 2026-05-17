@@ -1,18 +1,22 @@
 /**
  * App - SABA 评估主界面（对话式）
  */
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { sabaClient } from '../client';
 import { createBehaviorEventRequest } from '../lib/assessment-observability';
+import { createChildTraceContext, createTraceContext } from '../lib/trace';
 import { ConversationAssessment } from './chat/ConversationAssessment';
 import { HistoryList } from './history/HistoryList';
+import { ProfilePage } from './profile/ProfilePage';
 import { ReasoningChain } from './assessment/ReasoningChain';
 import { ResultCard } from './assessment/ResultCard';
 import { ConfirmDialog } from '../web/ConfirmDialog';
+import { FeedbackState } from './ui/FeedbackState';
+import { PageHero } from './ui/PageHero';
+import { TrustStrip } from './ui/TrustStrip';
 import type { AssessmentDetail, HistoryResponse, TeamNotifyResponse } from '../types/index';
-import type { AssessRequest } from '../types/index';
 
-type View = 'chat' | 'history';
+type View = 'chat' | 'history' | 'profile';
 
 const USER_ID = 'user-123';
 
@@ -35,6 +39,7 @@ function buildAssessmentClosedEvent(lastResult: AssessmentDetail | null) {
       risk_level: lastResult?.risk_level,
       had_assessment_id: lastResult?.assessment_id != null,
     },
+    trace: createChildTraceContext(createTraceContext('behavior_event'), 'behavior_event'),
   });
 }
 
@@ -43,11 +48,22 @@ export function App({ onExitHome }: AppProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [lastResult, setLastResult] = useState<AssessmentDetail | null>(null);
   const [history, setHistory] = useState<HistoryResponse | null>(null);
-  const [activeTab, setActiveTab] = useState<'assess' | 'history'>('assess');
+  const [activeTab, setActiveTab] = useState<'assess' | 'history' | 'profile'>('assess');
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [hasDraft, setHasDraft] = useState(false);
   const [showExitConfirm, setShowExitConfirm] = useState(false);
   const [teamRequestResult, setTeamRequestResult] = useState<TeamNotifyResponse | null>(null);
+  const [hydrateAssessment, setHydrateAssessment] = useState<AssessmentDetail | null>(null);
+  const [fontScale, setFontScale] = useState<'normal' | 'large'>(() => {
+    if (typeof window === 'undefined') return 'normal';
+    return localStorage.getItem('saba-font-scale') === 'large' ? 'large' : 'normal';
+  });
+  const historyTrace = createTraceContext('history');
+
+  useEffect(() => {
+    document.documentElement.dataset.fontScale = fontScale;
+    localStorage.setItem('saba-font-scale', fontScale);
+  }, [fontScale]);
 
   const requestExit = () => {
     if (hasDraft && view === 'chat') {
@@ -59,31 +75,11 @@ export function App({ onExitHome }: AppProps) {
     onExitHome?.();
   };
 
-  const handleTurn = async (request: AssessRequest) => {
-    setIsLoading(true);
-    setErrorMessage(null);
-    try {
-      const result = await sabaClient.assess(request);
-      setTeamRequestResult(null);
-      if (!isClarificationResult(result as AssessmentDetail)) {
-        setLastResult(result as AssessmentDetail);
-      }
-      return result;
-    } catch (error) {
-      const message =
-        error instanceof Error ? error.message : '评估请求失败，请稍后重试';
-      setErrorMessage(message);
-      throw error;
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
   const handleViewHistory = async () => {
     setIsLoading(true);
     setErrorMessage(null);
     try {
-      const historyData = await sabaClient.getHistory({ user_id: 'user-123' });
+      const historyData = await sabaClient.getHistory({ user_id: 'user-123' }, historyTrace);
       setHistory(historyData);
       setView('history');
       setActiveTab('history');
@@ -95,6 +91,7 @@ export function App({ onExitHome }: AppProps) {
             source: 'history',
             history_count: historyData.pagination.total,
           },
+          trace: createChildTraceContext(historyTrace, 'behavior_event'),
         }),
       );
     } catch (error) {
@@ -110,8 +107,10 @@ export function App({ onExitHome }: AppProps) {
     setIsLoading(true);
     setErrorMessage(null);
     try {
-      const detail = await sabaClient.getAssessment(id);
+      const detail = await sabaClient.getAssessment(id, historyTrace);
       setLastResult(detail);
+      setHydrateAssessment(detail);
+      setTeamRequestResult(null);
       setView('chat');
       setActiveTab('assess');
       void sabaClient.trackBehaviorEvent(
@@ -125,6 +124,7 @@ export function App({ onExitHome }: AppProps) {
             risk_level: detail.risk_level,
             selected_assessment_id: detail.assessment_id,
           },
+          trace: createChildTraceContext(historyTrace, 'behavior_event'),
         }),
       );
       void sabaClient.trackBehaviorEvent(
@@ -137,6 +137,7 @@ export function App({ onExitHome }: AppProps) {
             source: 'history',
             risk_level: detail.risk_level,
           },
+          trace: createChildTraceContext(historyTrace, 'behavior_event'),
         }),
       );
     } catch (error) {
@@ -164,14 +165,17 @@ export function App({ onExitHome }: AppProps) {
           risk_level: lastResult.risk_level,
           notification_type: lastResult.risk_level === 'high' ? 'high_risk' : 'team_contact',
         },
+        trace: createChildTraceContext(createTraceContext('behavior_event'), 'behavior_event'),
       }),
     );
 
+    const notifyTrace = createTraceContext('team_notify');
     const notifyResponse = await sabaClient.notifyTeam({
       assessment_id: lastResult.assessment_id,
       patient_id: USER_ID,
       notification_type: lastResult.risk_level === 'high' ? 'high_risk' : 'team_contact',
       message: lastResult.immediate_action,
+      trace: notifyTrace,
     });
     setTeamRequestResult(notifyResponse);
   };
@@ -189,6 +193,7 @@ export function App({ onExitHome }: AppProps) {
               onClick={() => {
                 setActiveTab('assess');
                 setView('chat');
+                setHydrateAssessment(null);
               }}
             >
               对话
@@ -200,61 +205,99 @@ export function App({ onExitHome }: AppProps) {
             >
               历史
             </button>
-          </nav>
-
-          {onExitHome ? (
             <button
               type="button"
-              className="saba-header__exit"
-              onClick={requestExit}
+              className={`saba-header__tab ${activeTab === 'profile' ? 'saba-header__tab--active' : ''}`}
+              onClick={() => {
+                setActiveTab('profile');
+                setView('profile');
+              }}
             >
-              EXIT —
+              档案
             </button>
-          ) : (
-            <span />
-          )}
+          </nav>
+
+          <div className="saba-header__tools">
+            <button
+              type="button"
+              className="saba-header__font-toggle"
+              onClick={() => setFontScale(s => (s === 'large' ? 'normal' : 'large'))}
+              aria-pressed={fontScale === 'large'}
+              aria-label={fontScale === 'large' ? '切换为标准字号' : '切换为大字号'}
+            >
+              {fontScale === 'large' ? 'A−' : 'A+'}
+            </button>
+            {onExitHome ? (
+              <button
+                type="button"
+                className="saba-header__exit"
+                onClick={requestExit}
+              >
+                EXIT —
+              </button>
+            ) : null}
+          </div>
         </div>
       </header>
 
-      <main className={`saba-main ${view === 'chat' ? 'saba-main--chat' : ''}`}>
+      <main className="saba-main">
         {errorMessage && (
-          <div className="saba-alert" role="alert">
-            {errorMessage}
-          </div>
+          <FeedbackState variant="error" message={errorMessage} />
         )}
 
-        {view === 'chat' && (
-          <>
-            <ConversationAssessment
-              onTurn={handleTurn}
-              isLoading={isLoading}
-              onDraftChange={setHasDraft}
-              onComplete={setLastResult}
-              onContactTeam={handleContactTeam}
-            />
-            {lastResult && (
-              <section className="saba-panel" style={{ marginTop: '1.5rem' }}>
+        {/* 三视图均保持挂载；用 saba-view--active 切换，避免 hidden 与 flex 冲突盖住其它 tab */}
+        <section
+          className={`saba-view chat-layout ${view === 'chat' ? 'saba-view--active' : ''} ${lastResult ? 'chat-layout--with-audit' : ''}`}
+          aria-hidden={view !== 'chat'}
+        >
+          <ConversationAssessment
+            hydrateAssessment={hydrateAssessment}
+            onExitHydrate={() => setHydrateAssessment(null)}
+            onDraftChange={setHasDraft}
+            onComplete={(detail) => {
+              setTeamRequestResult(null);
+              setHydrateAssessment(null);
+              if (!isClarificationResult(detail)) {
+                setLastResult(detail);
+              }
+            }}
+            onContactTeam={handleContactTeam}
+          />
+          {lastResult && (
+            <aside className="saba-audit-panel saba-panel">
                 <h3 className="saba-section-label">审计信息</h3>
                 <ResultCard result={lastResult} onContactTeam={handleContactTeam} />
                 {teamRequestResult && (
-                  <div className="saba-alert" role="status" style={{ marginTop: '1rem' }}>
-                    已创建协同请求：{teamRequestResult.notification_id} ·
-                    评估 {teamRequestResult.assessment_id} ·
-                    创建时间 {new Date(teamRequestResult.created_at).toLocaleString('zh-CN', {
+                  <FeedbackState
+                    className="saba-feedback--inline"
+                    variant="success"
+                    title="协同请求已创建"
+                    message={`请求 ${teamRequestResult.notification_id} · 评估 ${teamRequestResult.assessment_id}`}
+                    detail={new Date(teamRequestResult.created_at).toLocaleString('zh-CN', {
                       month: 'long',
                       day: 'numeric',
                       hour: '2-digit',
                       minute: '2-digit',
                     })}
-                  </div>
+                  />
                 )}
-              </section>
+              </aside>
             )}
-          </>
-        )}
+        </section>
 
-        {view === 'history' && history && (
-          <div className="animate-in">
+        <section
+          className={`saba-view saba-page-view ${view === 'history' ? 'saba-view--active' : ''}`}
+          aria-hidden={view !== 'history'}
+        >
+          {history ? (
+          <div className="saba-page-shell animate-in">
+            <PageHero
+              variant="history"
+              protocol="RECORDS · ASSESSMENT HISTORY"
+              title="评估历史"
+              description="回顾历次症状评估与风险结论，点击记录可回到对应对话上下文。"
+            />
+            <TrustStrip />
             <button
               type="button"
               className="saba-back"
@@ -267,7 +310,7 @@ export function App({ onExitHome }: AppProps) {
             </button>
 
             <div className="saba-list-title">
-              <h2>评估历史</h2>
+              <h2>全部记录</h2>
               <span>共 {history.pagination.total} 条</span>
             </div>
 
@@ -278,7 +321,7 @@ export function App({ onExitHome }: AppProps) {
             />
 
             {lastResult && (
-              <section className="saba-panel" style={{ marginTop: '1.5rem' }}>
+              <section className="saba-panel saba-panel--spaced">
                 <h3 className="saba-section-label">最近一次评估推理</h3>
                 {lastResult.evidence && lastResult.evidence.length > 0 && (
                   <ReasoningChain
@@ -289,7 +332,38 @@ export function App({ onExitHome }: AppProps) {
               </section>
             )}
           </div>
-        )}
+          ) : view === 'history' && isLoading ? (
+            <div className="saba-page-shell">
+              <PageHero
+                variant="history"
+                protocol="RECORDS · ASSESSMENT HISTORY"
+                title="评估历史"
+                description="正在加载您的评估记录…"
+              />
+              <div className="saba-stack">
+                <div className="saba-skeleton" />
+                <div className="saba-skeleton" />
+                <div className="saba-skeleton" />
+              </div>
+            </div>
+          ) : null}
+        </section>
+
+        <section
+          className={`saba-view saba-page-view ${view === 'profile' ? 'saba-view--active' : ''}`}
+          aria-hidden={view !== 'profile'}
+        >
+          <div className="saba-page-shell">
+            <PageHero
+              variant="profile"
+              protocol="CHART · PATIENT BASELINE"
+              title="治疗档案"
+              description="完善治疗背景有助于更准确评估副作用风险；信息仅用于本次会话内的推理判断。"
+            />
+            <TrustStrip />
+            <ProfilePage userId={USER_ID} />
+          </div>
+        </section>
       </main>
 
       <footer className="saba-footer">

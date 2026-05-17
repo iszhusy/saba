@@ -29,12 +29,7 @@ export function ReasoningChain({ evidence, reasoningChain }: ReasoningChainProps
               </p>
               <p className="saba-reasoning-step__content">{item.description}</p>
               {item.source && (
-                <p
-                  className="saba-reasoning-step__type"
-                  style={{ marginTop: '0.35rem' }}
-                >
-                  来源: {item.source}
-                </p>
+                <p className="saba-reasoning-step__source">来源: {item.source}</p>
               )}
             </div>
           </article>
@@ -42,21 +37,11 @@ export function ReasoningChain({ evidence, reasoningChain }: ReasoningChainProps
       </div>
 
       {reasoningChain.length > 0 && (
-        <div style={{ marginTop: '2rem' }}>
+        <div className="saba-reasoning__chain">
           <p className="saba-reasoning-step__type">推理链</p>
-          <ul
-            style={{
-              margin: '0.5rem 0 0',
-              paddingLeft: '1.25rem',
-              fontSize: '0.85rem',
-              textTransform: 'uppercase',
-              letterSpacing: '0.04em',
-            }}
-          >
+          <ul className="saba-reasoning__chain-list">
             {reasoningChain.map((step, i) => (
-              <li key={i} style={{ marginBottom: '0.35rem' }}>
-                {step}
-              </li>
+              <li key={i}>{step}</li>
             ))}
           </ul>
         </div>

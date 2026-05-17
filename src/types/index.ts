@@ -39,8 +39,15 @@ export type AssessmentBehaviorEvent =
 
 // ============ 评估模块 ============
 
-export interface TreatmentContext {
-  treatment_phase?: string;
+export interface TraceContext {
+  trace_id: string;
+  span_id: string;
+  parent_span_id?: string;
+  flow: 'assessment' | 'baseline' | 'history' | 'team_notify' | 'behavior_event';
+  started_at: string;
+}
+
+export interface TreatmentContext {  treatment_phase?: string;
   treatment_type?: string;
   treatment_day?: number;
   known_side_effects?: string[];
@@ -64,6 +71,7 @@ export interface PatientBaseline {
   treatment_day?: number;
   known_side_effects?: string[];
   updated_at: string;
+  trace?: TraceContext;
 }
 
 export interface AssessRequest {
@@ -73,6 +81,7 @@ export interface AssessRequest {
   session_id?: string;
   episode_id?: string;
   session_history?: SessionHistory;
+  trace?: TraceContext;
 }
 
 export interface RiskResult {
@@ -245,6 +254,7 @@ export interface AssessResponse {
   reasoning_chain?: string[];
   metadata: AssessmentMetadata;
   created_at?: string;
+  trace?: TraceContext;
 }
 
 export interface AssessmentDetail extends AssessResponse {
@@ -253,6 +263,51 @@ export interface AssessmentDetail extends AssessResponse {
   decision_chain?: Evidence[];
   rag_sources?: string[];
 }
+
+// ============ 流式评估 ============
+
+export type AssessPipelineStepId =
+  | 'intent_framing'
+  | 'clinical_triage'
+  | 'evidence_retrieval'
+  | 'risk_deliberation'
+  | 'safety_check'
+  | 'executive_synthesis';
+
+export interface AssessStreamStepEvent {
+  type: 'step';
+  step: AssessPipelineStepId;
+  status: 'start' | 'done';
+  label: string;
+  detail?: string;
+}
+
+export interface AssessStreamThinkingEvent {
+  type: 'thinking';
+  delta: string;
+}
+
+export interface AssessStreamMessageEvent {
+  type: 'message';
+  delta: string;
+}
+
+export interface AssessStreamDoneEvent {
+  type: 'done';
+  result: AssessResponse;
+}
+
+export interface AssessStreamErrorEvent {
+  type: 'error';
+  message: string;
+}
+
+export type AssessStreamEvent =
+  | AssessStreamStepEvent
+  | AssessStreamThinkingEvent
+  | AssessStreamMessageEvent
+  | AssessStreamDoneEvent
+  | AssessStreamErrorEvent;
 
 // ============ 反馈模块 ============
 
@@ -284,7 +339,7 @@ export interface BehaviorEventMetadata {
   notification_type?: NotificationType;
   clarification_question_count?: number;
   baseline_question_count?: number;
-  treatment_category?: TreatmentCategory;
+  treatment_category?: string;
   history_count?: number;
   selected_assessment_id?: string;
   error_message?: string;
@@ -296,6 +351,7 @@ export interface BehaviorEventRequest {
   assessment_id?: string;
   session_id?: string;
   metadata?: BehaviorEventMetadata;
+  trace?: TraceContext;
 }
 
 export interface BehaviorEventResponse {
@@ -310,6 +366,7 @@ export interface TeamNotifyRequest {
   patient_id: string;
   notification_type: NotificationType;
   message?: string;
+  trace?: TraceContext;
 }
 
 export interface TeamNotifyResponse {
@@ -319,6 +376,7 @@ export interface TeamNotifyResponse {
   recipients: string[];
   status?: 'queued' | 'sent' | 'failed';
   created_at: string;
+  trace?: TraceContext;
 }
 
 export interface SessionHistory {
@@ -463,11 +521,23 @@ export interface AssessmentSummary {
   created_at: string;
   triggered_rules: TriggeredRule[];
   rules_version: string;
+  trace?: TraceContext;
 }
 
 export interface HistoryResponse {
   assessments: AssessmentSummary[];
   pagination: Pagination;
+}
+
+export interface TraceChainSnapshot {
+  trace_id: string;
+  assessments: AssessmentDetail[];
+  behavior_events: Array<BehaviorEventRequest & { event_id: string; created_at: string }>;
+  baselines: PatientBaseline[];
+  notifications: OutboxNotificationRecord[];
+  session_ids: string[];
+  episode_ids: string[];
+  assessment_ids: string[];
 }
 
 // ============ 错误处理 ============

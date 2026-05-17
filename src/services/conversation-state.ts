@@ -17,6 +17,7 @@ import type {
   SessionHistory,
   Symptom,
   ExecutiveResponseMode,
+  TraceContext,
   TreatmentContext,
 } from '../types/index.js';
 import { EpisodeRepository, SessionRepository } from '../storage/conversation-repository.js';
@@ -60,6 +61,7 @@ export interface PreparedConversationState {
   episode: Episode;
   conversation_context: ConversationContext;
   request: AssessRequest;
+  trace: TraceContext | undefined;
 }
 
 const SESSION_TTL_MINUTES = 30;
@@ -117,6 +119,50 @@ function appendUniqueReported(list: string[], message: string): string[] {
   if (!message.trim()) return list;
   if (list[list.length - 1] === message) return list;
   return [...list, message];
+}
+
+/** 每轮 assess 前记录用户输入，并在澄清 awaiting 时收口，避免陈旧 unresolved 卡死后续轮次。 */
+function recordEpisodeUserTurn(episode: Episode, input: string): Episode {
+  const trimmed = input.trim();
+  if (!trimmed) {
+    return episode;
+  }
+
+  const timestamp = nowIso();
+  const reported = appendUniqueReported(episode.symptoms.reported, trimmed);
+  let next: Episode = {
+    ...episode,
+    updated_at: timestamp,
+    symptoms: {
+      ...episode.symptoms,
+      reported,
+    },
+  };
+
+  if (episode.clarification_state?.status !== 'awaiting') {
+    return next;
+  }
+
+  const answer = { question_id: 'free_text_reply', answer: trimmed };
+  next = {
+    ...next,
+    clarification_state: {
+      ...episode.clarification_state,
+      answers: [...episode.clarification_state.answers, answer],
+      status: 'completed',
+    },
+    clarification_history: episode.clarification_history.map((entry) =>
+      entry.status === 'awaiting'
+        ? {
+            ...entry,
+            answers: [...entry.answers, answer],
+            status: 'completed' as const,
+          }
+        : entry,
+    ),
+    unresolved_uncertainties: [],
+  };
+  return next;
 }
 
 function upsertEpisodeSummary(session: Session, episode: Episode): Session['episodes'] {
@@ -328,6 +374,9 @@ export class ConversationStateService {
         status: 'active',
       };
       await this.deps.sessionRepo.save(session);
+    } else {
+      episode = recordEpisodeUserTurn(episode, request.input);
+      await this.deps.episodeRepo.save(episode);
     }
 
     const baseline = this.deps.baselineRepo
@@ -347,6 +396,7 @@ export class ConversationStateService {
       session,
       episode,
       request: mergedRequest,
+      trace: mergedRequest.trace,
       conversation_context: buildConversationContext(session, episode, baseline, mergedContext),
     };
   }

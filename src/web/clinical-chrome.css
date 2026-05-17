@@ -1,0 +1,305 @@
+/* 医疗咨询场景 — 页面装饰与版式（历史 / 档案 / 对话统一居中） */
+
+.saba-main {
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.25rem 1.5rem 4rem;
+}
+
+.saba-page-view {
+  position: relative;
+}
+
+.saba-page-shell {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* —— 页头 Hero —— */
+.saba-page-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 1.35rem 1.25rem 1.15rem;
+  border: 1px solid var(--saba-border-strong);
+  background: linear-gradient(
+    145deg,
+    var(--saba-white) 0%,
+    var(--saba-paper-deep) 55%,
+    rgba(47, 92, 74, 0.06) 100%
+  );
+  box-shadow: 6px 6px 0 rgba(20, 18, 16, 0.05);
+}
+
+.saba-page-hero--history {
+  border-left: 4px solid var(--saba-clinical-teal, #2f5c5a);
+}
+
+.saba-page-hero--profile {
+  border-left: 4px solid var(--saba-accent);
+}
+
+.saba-page-hero__grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+  background-image:
+    linear-gradient(rgba(47, 92, 74, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(47, 92, 74, 0.07) 1px, transparent 1px);
+  background-size: 18px 18px;
+  mask-image: linear-gradient(180deg, #000 0%, transparent 85%);
+  pointer-events: none;
+}
+
+.saba-page-hero__wave {
+  position: absolute;
+  right: -8%;
+  bottom: -20%;
+  width: 55%;
+  height: 70%;
+  opacity: 0.2;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Cpath fill='none' stroke='%232f5c5a' stroke-width='1.2' d='M0 30 Q25 10 50 30 T100 30 T150 30 T200 30'/%3E%3Cpath fill='none' stroke='%239e3b32' stroke-width='0.8' opacity='0.6' d='M0 38 Q30 48 60 38 T120 38 T180 38 T200 38'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+  pointer-events: none;
+}
+
+.saba-page-hero__protocol {
+  position: relative;
+  margin: 0 0 0.5rem;
+  font-family: var(--saba-font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--saba-clinical-teal, #2f5c5a);
+}
+
+.saba-page-hero__title {
+  position: relative;
+  margin: 0 0 0.65rem;
+  font-size: 1.65rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.saba-page-hero__desc {
+  position: relative;
+  margin: 0 0 1rem;
+  max-width: 36ch;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--saba-ink-soft);
+}
+
+.saba-care-path {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.saba-care-path__step {
+  display: flex;
+  align-items: center;
+  font-family: var(--saba-font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--saba-muted);
+}
+
+.saba-care-path__step::after {
+  content: '';
+  width: 1.5rem;
+  height: 1px;
+  margin: 0 0.45rem;
+  background: var(--saba-border);
+}
+
+.saba-care-path__step:last-child::after {
+  display: none;
+}
+
+.saba-care-path__step--done {
+  color: var(--saba-clinical-teal, #2f5c5a);
+}
+
+.saba-care-path__step span::before {
+  content: '○ ';
+  font-size: 0.5rem;
+  vertical-align: middle;
+}
+
+.saba-care-path__step--done span::before {
+  content: '● ';
+}
+
+/* —— 信任条 —— */
+.saba-trust-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.saba-trust-strip__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid var(--saba-border);
+  background: var(--saba-white);
+  font-family: var(--saba-font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--saba-ink-soft);
+}
+
+.saba-trust-strip__icon {
+  color: var(--saba-clinical-teal, #2f5c5a);
+  font-size: 0.55rem;
+}
+
+/* —— 对话区顶栏 —— */
+.chat-shell__clinical-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.55rem 0.85rem;
+  border-bottom: 1px solid var(--saba-border);
+  background: linear-gradient(90deg, rgba(47, 92, 74, 0.06) 0%, transparent 70%);
+  font-family: var(--saba-font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--saba-ink-soft);
+}
+
+.chat-shell__clinical-bar strong {
+  color: var(--saba-clinical-teal, #2f5c5a);
+  font-weight: 500;
+}
+
+.chat-shell__clinical-pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--saba-clinical-teal, #2f5c5a);
+  box-shadow: 0 0 0 0 rgba(47, 92, 74, 0.45);
+  animation: saba-clinical-pulse 2.2s ease-out infinite;
+}
+
+@keyframes saba-clinical-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(47, 92, 74, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(47, 92, 74, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(47, 92, 74, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chat-shell__clinical-pulse {
+    animation: none;
+  }
+}
+
+/* —— 历史时间线 —— */
+.saba-history-timeline {
+  position: relative;
+  padding-left: 0.25rem;
+}
+
+.saba-history-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.65rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    var(--saba-clinical-teal, #2f5c5a) 0%,
+    var(--saba-border) 40%,
+    transparent 100%
+  );
+  opacity: 0.5;
+}
+
+.saba-history-timeline .saba-history-item {
+  position: relative;
+  margin-left: 1.25rem;
+}
+
+.saba-history-timeline .saba-history-item::before {
+  content: '';
+  position: absolute;
+  left: -1.35rem;
+  top: 1.35rem;
+  width: 8px;
+  height: 8px;
+  border: 2px solid var(--saba-white);
+  background: var(--saba-clinical-teal, #2f5c5a);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--saba-clinical-teal, #2f5c5a);
+}
+
+.saba-history-item--high::before {
+  background: var(--saba-risk-high);
+  box-shadow: 0 0 0 1px var(--saba-risk-high);
+}
+
+/* —— 档案临床卡 —— */
+.profile-page__panel--record {
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-page__panel--record::before {
+  content: 'CLINICAL RECORD';
+  position: absolute;
+  top: 0.65rem;
+  right: 0.75rem;
+  font-family: var(--saba-font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  color: var(--saba-muted);
+  opacity: 0.65;
+}
+
+.profile-page__panel--record::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--saba-accent) 0%,
+    var(--saba-clinical-teal, #2f5c5a) 100%
+  );
+}
+
+.profile-page__disclaimer {
+  margin: 0;
+  padding: 0.85rem 1rem;
+  border-left: 3px solid var(--saba-clinical-teal, #2f5c5a);
+  background: rgba(47, 92, 74, 0.06);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--saba-ink-soft);
+}

@@ -30,7 +30,8 @@ export default defineConfig({
   },
   server: {
     port: 5173,
-    open: true,
+    strictPort: true,
+    open: process.env.CI !== 'true' && process.env.PLAYWRIGHT !== '1',
   },
   build: {
     outDir: 'public',

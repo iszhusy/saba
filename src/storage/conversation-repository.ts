@@ -209,8 +209,8 @@ export class TeamNotificationRepository {
       .prepare(`
         INSERT INTO team_notifications (
           id, assessment_id, patient_id, notification_type, message,
-          status, recipients, created_at, sent_at, last_error, attempt_count
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+          status, recipients, trace_json, created_at, sent_at, last_error, attempt_count
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
       `)
       .bind(
         notification.notification_id,
@@ -220,6 +220,7 @@ export class TeamNotificationRepository {
         notification.message || null,
         'queued',
         JSON.stringify(notification.recipients),
+        notification.trace ? JSON.stringify(notification.trace) : null,
         createdAt,
         null,
         null,
@@ -233,6 +234,7 @@ export class TeamNotificationRepository {
       created_at: createdAt,
       recipients: notification.recipients,
       status: 'queued',
+      trace: notification.trace,
     };
   }
 
@@ -245,6 +247,19 @@ export class TeamNotificationRepository {
         LIMIT ?
       `)
       .bind(limit)
+      .all();
+
+    return result.results.map((row) => this.mapNotification(row));
+  }
+
+  async findByTraceId(traceId: string): Promise<OutboxNotificationRecord[]> {
+    const result = await this.db
+      .prepare(`
+        SELECT * FROM team_notifications
+        WHERE json_extract(trace_json, '$.trace_id') = ?
+        ORDER BY created_at ASC
+      `)
+      .bind(traceId)
       .all();
 
     return result.results.map((row) => this.mapNotification(row));
@@ -283,6 +298,7 @@ export class TeamNotificationRepository {
       sent_at: (row.sent_at as string) || undefined,
       recipients: parseJson(row.recipients, []),
       status: row.status as OutboxNotificationRecord['status'],
+      trace: row.trace_json ? parseJson(row.trace_json, undefined) : undefined,
       last_error: (row.last_error as string) || undefined,
       attempt_count: Number(row.attempt_count ?? 0),
     };

@@ -86,4 +86,40 @@ describe('ConversationStateService source-of-truth persistence', () => {
       },
     ]);
   });
+
+  it('records each user turn and clears stale clarification uncertainties before assess', async () => {
+    const sessionRepo = new MemorySessionRepository();
+    const episodeRepo = new MemoryEpisodeRepository();
+    const stateService = new ConversationStateService({ sessionRepo, episodeRepo });
+
+    const first = await stateService.prepareRequest({
+      user_id: 'turn-user',
+      input: '你好',
+    });
+
+    await stateService.markClarificationAwaiting({
+      session: first.session,
+      episode: first.episode,
+      questions: [
+        {
+          question_id: 'intake_overview',
+          text: '请按顺序补充：当前最主要的不适、持续多久、严重程度，以及是否还有其他症状。',
+        },
+      ],
+    });
+
+    const second = await stateService.prepareRequest({
+      user_id: 'turn-user',
+      input: '上周开始感到恶心，吃饭也吃不下，脑袋隐隐做痛',
+      session_id: first.session.session_id,
+      episode_id: first.episode.episode_id,
+    });
+
+    expect(second.episode.symptoms.reported).toEqual([
+      '你好',
+      '上周开始感到恶心，吃饭也吃不下，脑袋隐隐做痛',
+    ]);
+    expect(second.episode.clarification_state?.status).toBe('completed');
+    expect(second.episode.unresolved_uncertainties).toEqual([]);
+  });
 });

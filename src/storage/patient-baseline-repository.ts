@@ -4,7 +4,7 @@
  */
 
 import type { D1Database } from '@cloudflare/workers-types';
-import type { PatientBaseline } from '../types/index.js';
+import type { PatientBaseline, TraceContext } from '../types/index.js';
 
 function parseJson<T>(value: unknown, fallback: T): T {
   if (!value || typeof value !== 'string') return fallback;
@@ -31,16 +31,27 @@ export class PatientBaselineRepository {
     return this.mapRow(row);
   }
 
-  async upsert(baseline: PatientBaseline): Promise<PatientBaseline> {
+  async findByTraceId(traceId: string): Promise<PatientBaseline[]> {
+    const result = await this.db
+      .prepare(`
+        SELECT * FROM patient_baselines
+        WHERE json_extract(trace_json, '$.trace_id') = ?
+      `)
+      .bind(traceId)
+      .all();
+    return result.results.map((row) => this.mapRow(row));
+  }
+
+  async upsert(baseline: PatientBaseline & { trace?: TraceContext }): Promise<PatientBaseline & { trace?: TraceContext }> {
     const updatedAt = baseline.updated_at || nowIso();
-    const next: PatientBaseline = { ...baseline, updated_at: updatedAt };
+    const next: PatientBaseline & { trace?: TraceContext } = { ...baseline, updated_at: updatedAt };
     await this.db
       .prepare(`
         INSERT OR REPLACE INTO patient_baselines (
           user_id, treatment_category, treatment_anchor, primary_regimen,
           treatment_type, treatment_phase, treatment_day,
-          known_side_effects_json, updated_at
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+          known_side_effects_json, trace_json, updated_at
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
       `)
       .bind(
         next.user_id,
@@ -51,13 +62,14 @@ export class PatientBaselineRepository {
         next.treatment_phase ?? null,
         next.treatment_day ?? null,
         JSON.stringify(next.known_side_effects ?? []),
+        next.trace ? JSON.stringify(next.trace) : null,
         next.updated_at,
       )
       .run();
     return next;
   }
 
-  private mapRow(row: Record<string, unknown>): PatientBaseline {
+  private mapRow(row: Record<string, unknown>): PatientBaseline & { trace?: TraceContext } {
     return {
       user_id: row.user_id as string,
       treatment_category: (row.treatment_category as string) || undefined,
@@ -67,6 +79,7 @@ export class PatientBaselineRepository {
       treatment_phase: (row.treatment_phase as string) || undefined,
       treatment_day: typeof row.treatment_day === 'number' ? row.treatment_day : undefined,
       known_side_effects: parseJson<string[]>(row.known_side_effects_json, []),
+      trace: row.trace_json ? parseJson<TraceContext | undefined>(row.trace_json, undefined) : undefined,
       updated_at: row.updated_at as string,
     };
   }

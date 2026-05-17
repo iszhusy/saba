@@ -16,12 +16,6 @@ export function ResultCard({ result, onContactTeam }: ResultCardProps) {
   if (!rulesVersion) {
     throw new Error('Assessment result is missing metadata.rules_version');
   }
-  const statusHint =
-    risk_level === 'high'
-      ? '需要立即关注'
-      : risk_level === 'medium'
-        ? '建议尽快联系'
-        : '可继续观察';
 
   return (
     <article className={`saba-result saba-result--${risk_level}`}>
@@ -31,10 +25,7 @@ export function ResultCard({ result, onContactTeam }: ResultCardProps) {
           <p className="saba-result__score">{risk_score}</p>
         </div>
         <div>
-          <RiskBadge level={risk_level} size="lg" />
-          <p className="saba-result__meta" style={{ marginTop: '0.5rem' }}>
-            {statusHint}
-          </p>
+          <RiskBadge level={risk_level} size="lg" showHint />
         </div>
       </header>
 
@@ -45,16 +36,7 @@ export function ResultCard({ result, onContactTeam }: ResultCardProps) {
         </div>
 
         {result.reasoning && (
-          <p
-            style={{
-              fontSize: '0.85rem',
-              lineHeight: 1.5,
-              textTransform: 'uppercase',
-              letterSpacing: '0.04em',
-            }}
-          >
-            {result.reasoning}
-          </p>
+          <p className="saba-result__reasoning">{result.reasoning}</p>
         )}
 
         {result.triggered_rules.length > 0 && (
@@ -73,15 +55,7 @@ export function ResultCard({ result, onContactTeam }: ResultCardProps) {
         {result.warning_signs && result.warning_signs.length > 0 && (
           <div>
             <p className="saba-result__action-label">请注意</p>
-            <ul
-              style={{
-                margin: 0,
-                paddingLeft: '1.25rem',
-                fontSize: '0.85rem',
-                textTransform: 'uppercase',
-                letterSpacing: '0.04em',
-              }}
-            >
+            <ul className="saba-result__warnings">
               {result.warning_signs.map((signal, i) => (
                 <li key={i}>{signal}</li>
               ))}
@@ -91,7 +65,11 @@ export function ResultCard({ result, onContactTeam }: ResultCardProps) {
 
         {result.team_contact_required && onContactTeam && (
           <div className="saba-btn-row">
-            <button type="button" className="saba-btn" onClick={onContactTeam}>
+            <button
+              type="button"
+              className={`saba-btn ${risk_level === 'high' ? 'saba-btn--urgent' : ''}`}
+              onClick={onContactTeam}
+            >
               {risk_level === 'high' ? '立即联系团队' : '联系医疗团队'}
             </button>
           </div>

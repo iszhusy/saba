@@ -5,22 +5,28 @@ import type { IncomingMessage, ServerResponse } from 'node:http';
 import type { Connect } from 'vite';
 import { Saba } from '../index.js';
 import { runAssessPipeline } from '../services/assess-pipeline.js';
+import { createAssessStreamSink, encodeSseEvent } from '../lib/assess-stream.js';
 import { LlmNotConfiguredError } from '../lib/llm-config.js';
 import { hasLlmApiKey } from '../lib/llm-config.js';
 import { getConfig } from '../lib/env.js';
 import type {
   AssessRequest,
+  AssessStreamEvent,
   AssessmentDetail,
-  AssessmentSummary,
   BehaviorEventRequest,
   HistoryQuery,
   PatientBaseline,
 } from '../types/index.js';
-import { createMemoryConversationBundle } from './memory-conversation-store.js';
+import { resolveDevStorage, type DevStorage } from './dev-storage.js';
 
-const assessments = new Map<string, AssessmentDetail>();
-const behaviorEvents = new Map<string, BehaviorEventRequest & { event_id: string; created_at: string }>();
-const { service: stateService, baselineRepo } = createMemoryConversationBundle();
+let devStorage: DevStorage | null = null;
+
+async function storage(): Promise<DevStorage> {
+  if (!devStorage) {
+    devStorage = await resolveDevStorage();
+  }
+  return devStorage;
+}
 
 function json(res: ServerResponse, status: number, body: unknown): void {
   res.statusCode = status;
@@ -68,40 +74,67 @@ function toDetail(
   };
 }
 
-function toSummary(detail: AssessmentDetail): AssessmentSummary {
-  const label =
-    detail.result?.label ??
-    (detail.risk_level === 'high'
-      ? '高风险'
-      : detail.risk_level === 'medium'
-        ? '中风险'
-        : '低风险');
-  const color =
-    detail.result?.color ??
-    (detail.risk_level === 'high'
-      ? '#EF4444'
-      : detail.risk_level === 'medium'
-        ? '#F59E0B'
-        : '#22C55E');
-
-  return {
-    assessment_id: detail.assessment_id!,
-    risk_level: detail.risk_level,
-    result_label: label,
-    result_color: color,
-    symptom_summary:
-      detail.symptoms?.map(s => s.standard_term ?? s.name).join('、') ||
-      detail.raw_input?.slice(0, 40) ||
-      '—',
-    immediate_action: detail.immediate_action,
-    created_at: detail.created_at!,
-    triggered_rules: detail.triggered_rules,
-    rules_version: detail.metadata.rules_version,
-  };
-}
-
 function shouldPersistAssessment(result: Awaited<ReturnType<typeof runAssessPipeline>>): boolean {
   return result.executive_summary?.status !== 'clarification_required';
+}
+
+async function collectDevTraceChain(traceId: string): Promise<import('../types/index.js').TraceChainSnapshot> {
+  return (await storage()).getTraceChain(traceId);
+}
+
+function writeSse(res: ServerResponse, event: AssessStreamEvent): void {
+  res.write(encodeSseEvent(event));
+}
+
+async function handleAssessStream(
+  req: IncomingMessage,
+  res: ServerResponse,
+): Promise<void> {
+  const body = JSON.parse(await readBody(req)) as AssessRequest;
+  if (!body.user_id || !body.input?.trim()) {
+    error(res, 400, 'VALIDATION_ERROR', 'Missing required fields');
+    return;
+  }
+
+  res.writeHead(200, {
+    'Content-Type': 'text/event-stream; charset=utf-8',
+    'Cache-Control': 'no-cache, no-transform',
+    Connection: 'keep-alive',
+    'Access-Control-Allow-Origin': '*',
+  });
+
+  const sink = createAssessStreamSink((event) => writeSse(res, event));
+
+  try {
+    const store = await storage();
+    const result = await runAssessPipeline({
+      request: body,
+      stateService: store.stateService,
+      stream: sink,
+    });
+
+    if (shouldPersistAssessment(result)) {
+      const assessmentId = result.assessment_id ?? crypto.randomUUID();
+      const createdAt = result.created_at ?? new Date().toISOString();
+      const detail = toDetail(
+        { ...result, assessment_id: assessmentId, created_at: createdAt },
+        body,
+        assessmentId,
+        createdAt,
+      );
+      await store.saveAssessment(detail);
+    }
+  } catch (err) {
+    if (err instanceof LlmNotConfiguredError) {
+      writeSse(res, { type: 'error', message: err.message });
+    } else {
+      const message = err instanceof Error ? err.message : 'Assessment failed';
+      console.error('[dev-api] assess stream failed:', err);
+      writeSse(res, { type: 'error', message });
+    }
+  }
+
+  res.end();
 }
 
 async function handleAssess(
@@ -115,9 +148,10 @@ async function handleAssess(
   }
 
   try {
+    const store = await storage();
     const result = await runAssessPipeline({
       request: body,
-      stateService,
+      stateService: store.stateService,
     });
 
     const assessmentId = result.assessment_id ?? crypto.randomUUID();
@@ -130,7 +164,7 @@ async function handleAssess(
     );
 
     if (shouldPersistAssessment(result)) {
-      assessments.set(assessmentId, detail);
+      await store.saveAssessment(detail);
     }
 
     json(res, 200, detail);
@@ -154,14 +188,15 @@ async function handleUpsertBaseline(
     error(res, 400, 'VALIDATION_ERROR', 'user_id is required');
     return;
   }
-  const existing = await baselineRepo.findByUserId(body.user_id);
+  const store = await storage();
+  const existing = await store.baselineRepo.findByUserId(body.user_id);
   const merged: PatientBaseline = {
     ...(existing ?? { user_id: body.user_id, updated_at: new Date().toISOString() }),
     ...body,
     user_id: body.user_id,
     updated_at: new Date().toISOString(),
   };
-  const saved = await baselineRepo.upsert(merged);
+  const saved = await store.baselineRepo.upsert(merged);
   json(res, 200, saved);
 }
 
@@ -174,7 +209,7 @@ async function handleGetBaseline(
     error(res, 400, 'VALIDATION_ERROR', 'user_id is required');
     return;
   }
-  const baseline = await baselineRepo.findByUserId(userId);
+  const baseline = await (await storage()).baselineRepo.findByUserId(userId);
   if (!baseline) {
     error(res, 404, 'NOT_FOUND', 'baseline not found');
     return;
@@ -192,17 +227,15 @@ async function handleBehaviorEvent(
     return;
   }
 
-  const event_id = crypto.randomUUID();
-  const created_at = new Date().toISOString();
-  behaviorEvents.set(event_id, { ...body, event_id, created_at });
-  json(res, 201, { event_id, created_at });
+  const saved = await (await storage()).saveBehaviorEvent(body);
+  json(res, 201, saved);
 }
 
-function handleGetAssessment(
+async function handleGetAssessment(
   id: string,
   res: ServerResponse,
-): void {
-  const detail = assessments.get(id);
+): Promise<void> {
+  const detail = await (await storage()).getAssessment(id);
   if (!detail) {
     error(res, 404, 'NOT_FOUND', 'Assessment not found');
     return;
@@ -210,10 +243,10 @@ function handleGetAssessment(
   json(res, 200, detail);
 }
 
-function handleGetAssessments(
+async function handleGetAssessments(
   url: URL,
   res: ServerResponse,
-): void {
+): Promise<void> {
   const query: HistoryQuery = {
     user_id: url.searchParams.get('user_id') || '',
     page: parseInt(url.searchParams.get('page') || '1', 10),
@@ -226,32 +259,15 @@ function handleGetAssessments(
     return;
   }
 
-  const all = [...assessments.values()]
-    .filter(a => a.user_id === query.user_id)
-    .sort(
-      (a, b) =>
-        new Date(b.created_at!).getTime() - new Date(a.created_at!).getTime(),
-    );
-
-  const page = query.page ?? 1;
-  const limit = query.limit ?? 20;
-  const start = (page - 1) * limit;
-  const slice = all.slice(start, start + limit);
-  const total = all.length;
-
-  json(res, 200, {
-    assessments: slice.map(toSummary),
-    pagination: {
-      page,
-      limit,
-      total,
-      total_pages: Math.max(1, Math.ceil(total / limit)),
-    },
-  });
+  const history = await (await storage()).listAssessments(query);
+  json(res, 200, history);
 }
 
 export function createSabaDevApiMiddleware(): Connect.NextHandleFunction {
   const config = getConfig();
+  void resolveDevStorage().then((store) => {
+    console.info(`[dev-api] 存储后端: ${store.mode}`);
+  });
   if (!hasLlmApiKey(config)) {
     console.warn(
       '[dev-api] 未检测到 LLM API Key（DASHSCOPE_API_KEY / ANTHROPIC_API_KEY）。评估接口将返回 503，请在 .env 中配置后重启。',
@@ -280,13 +296,35 @@ export function createSabaDevApiMiddleware(): Connect.NextHandleFunction {
 
     try {
       if (url.pathname === '/api/v1/health' && req.method === 'GET') {
+        const store = await storage();
         json(res, 200, {
           status: 'ok',
           version: 'dev',
           timestamp: new Date().toISOString(),
           llm_configured: hasLlmApiKey(getConfig()),
           llm_provider: config.llm_provider,
+          storage: store.mode,
         });
+        return;
+      }
+
+      const traceMatch = url.pathname.match(/^\/api\/v1\/debug\/trace\/([^/]+)$/);
+      if (traceMatch && req.method === 'GET') {
+        const chain = await collectDevTraceChain(traceMatch[1]!);
+        if (
+          chain.behavior_events.length === 0 &&
+          chain.assessments.length === 0 &&
+          chain.baselines.length === 0
+        ) {
+          error(res, 404, 'NOT_FOUND', `No records for trace_id ${traceMatch[1]}`);
+          return;
+        }
+        json(res, 200, chain);
+        return;
+      }
+
+      if (url.pathname === '/api/v1/assess/stream' && req.method === 'POST') {
+        await handleAssessStream(req, res);
         return;
       }
 
@@ -312,12 +350,12 @@ export function createSabaDevApiMiddleware(): Connect.NextHandleFunction {
 
       const detailMatch = url.pathname.match(/^\/api\/v1\/assessments\/([^/]+)$/);
       if (detailMatch && req.method === 'GET') {
-        handleGetAssessment(detailMatch[1]!, res);
+        await handleGetAssessment(detailMatch[1]!, res);
         return;
       }
 
       if (url.pathname === '/api/v1/assessments' && req.method === 'GET') {
-        handleGetAssessments(url, res);
+        await handleGetAssessments(url, res);
         return;
       }
 

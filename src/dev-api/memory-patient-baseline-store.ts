@@ -17,6 +17,16 @@ export class MemoryPatientBaselineRepository {
     return structuredClone(stored);
   }
 
+  findByTraceId(traceId: string): PatientBaseline[] {
+    return [...this.baselines.values()]
+      .filter((baseline) => baseline.trace?.trace_id === traceId)
+      .map((baseline) => structuredClone(baseline));
+  }
+
+  listAll(): PatientBaseline[] {
+    return [...this.baselines.values()].map((baseline) => structuredClone(baseline));
+  }
+
   /** 测试夹具：直接注入基线，不更新 updated_at 处理。 */
   seed(baseline: PatientBaseline): void {
     this.baselines.set(baseline.user_id, structuredClone(baseline));

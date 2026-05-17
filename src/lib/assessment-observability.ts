@@ -2,6 +2,7 @@ import type {
   AssessmentBehaviorEvent,
   BehaviorEventMetadata,
   BehaviorEventRequest,
+  TraceContext,
 } from '../types/index.js';
 
 export interface CreateBehaviorEventInput {
@@ -10,6 +11,7 @@ export interface CreateBehaviorEventInput {
   assessmentId?: string;
   sessionId?: string;
   metadata?: BehaviorEventMetadata;
+  trace?: TraceContext;
 }
 
 export function createBehaviorEventRequest(
@@ -21,5 +23,6 @@ export function createBehaviorEventRequest(
     assessment_id: input.assessmentId,
     session_id: input.sessionId,
     metadata: input.metadata,
+    trace: input.trace,
   };
 }

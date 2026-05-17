@@ -524,7 +524,7 @@ export class IntentFramer {
     const medicationBoundary = isMedicationBoundary(input, legacy.intent);
     const conversationGoal = resolveConversationGoal(input, legacy.intent, medicationBoundary, followUp);
     const baselineComplete = isBaselineComplete(input.context);
-    const interactionMode = deriveInteractionMode({
+    let interactionMode = deriveInteractionMode({
       input,
       disposition: legacy.disposition,
       missingFields: sufficiency.missing_fields,
@@ -533,6 +533,19 @@ export class IntentFramer {
       medicationBoundary,
       baselineComplete,
     });
+
+    // 用户已补充足够临床信息时，不以 LLM disposition 继续卡在 structured_intake/clarify。
+    if (
+      baselineComplete &&
+      sufficiency.missing_fields.length === 0 &&
+      !medicationBoundary &&
+      legacy.disposition !== 'emergency_escalation' &&
+      legacy.disposition !== 'non_medical_redirect' &&
+      (interactionMode === 'structured_intake' || interactionMode === 'clarify')
+    ) {
+      interactionMode = 'provisional_assessment';
+    }
+
     const answerability = deriveAnswerability(interactionMode, medicationBoundary);
     const clarificationQuestions = deriveClarificationQuestions({
       input,

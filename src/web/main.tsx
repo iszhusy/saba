@@ -2,10 +2,11 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { AppRoutes } from './routes';
-import './index.css';
 import './saba-theme.css';
+import './index.css';
 import './landing.css';
 import './chat.css';
+import './clinical-chrome.css';
 
 const rootEl = document.getElementById('root');
 if (!rootEl) {

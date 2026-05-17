@@ -12,4 +12,5 @@ id = "your-kv-namespace-id"
 [[d1_databases]]
 binding = "D1_DATABASE"
 database_name = "saba-db"
+# 本地 dev 可用占位 id；部署前请 wrangler d1 create 并替换为真实 database_id
 database_id = "your-database-id"

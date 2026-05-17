@@ -1,36 +1,94 @@
-/* SABA 全局视觉 — 对齐落地页 design.html */
+/* SABA — Clinical Manuscript：暖纸、墨线、赤陶点缀 */
 :root {
-  --saba-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --saba-black: #000;
-  --saba-white: #fff;
-  --saba-muted: rgba(0, 0, 0, 0.45);
-  --saba-border: rgba(0, 0, 0, 0.15);
-  --saba-border-strong: #000;
+  --saba-font-serif: 'Noto Serif SC', 'Songti SC', serif;
+  --saba-font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --saba-font: var(--saba-font-serif);
+
+  --saba-paper: #f4efe6;
+  --saba-paper-deep: #ebe4d8;
+  --saba-ink: #141210;
+  --saba-ink-soft: #3d3834;
+  --saba-white: #fffcf7;
+  --saba-accent: #9e3b32;
+  --saba-accent-soft: rgba(158, 59, 50, 0.12);
+  --saba-clinical-teal: #2f5c5a;
+  --saba-clinical-teal-soft: rgba(47, 92, 74, 0.1);
+
+  --saba-black: var(--saba-ink);
+  --saba-muted: rgba(20, 18, 16, 0.5);
+  --saba-border: rgba(20, 18, 16, 0.14);
+  --saba-border-strong: var(--saba-ink);
+
+  --saba-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --saba-duration: 0.35s;
+
+  --saba-risk-high: #9e3b32;
+  --saba-risk-high-bg: #f5e8e6;
+  --saba-risk-high-border: #9e3b32;
+
+  --saba-risk-medium: #8a5a14;
+  --saba-risk-medium-bg: #f7f0e4;
+  --saba-risk-medium-border: #8a5a14;
+
+  --saba-risk-low: #2f5c4a;
+  --saba-risk-low-bg: #ecf3ef;
+  --saba-risk-low-border: #2f5c4a;
+}
+
+html[data-font-scale='large'] {
+  font-size: 112.5%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .saba-app__canvas,
+  .landing-canvas-layer {
+    opacity: 0.06;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 .saba-app {
   position: relative;
   min-height: 100%;
-  background: var(--saba-white);
-  color: var(--saba-black);
+  background: var(--saba-paper);
+  color: var(--saba-ink);
   font-family: var(--saba-font);
   overflow-x: hidden;
+}
+
+.saba-app::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.45;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
 }
 
 .saba-app__canvas {
   position: fixed;
   top: 0;
   right: 0;
-  width: min(38vw, 420px);
+  width: min(42vw, 480px);
   height: 100vh;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.14;
+  opacity: 0.11;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 35%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 35%);
 }
 
 .saba-app__inner {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .saba-header {
@@ -38,8 +96,8 @@
   top: 0;
   z-index: 40;
   border-bottom: 1px solid var(--saba-border);
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(8px);
+  background: color-mix(in srgb, var(--saba-paper) 88%, transparent);
+  backdrop-filter: blur(12px);
 }
 
 .saba-header__bar {
@@ -49,14 +107,25 @@
   gap: 1rem;
   max-width: 56rem;
   margin: 0 auto;
-  padding: 1.25rem 1.5rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
+  padding: 1.1rem 1.5rem;
+  font-family: var(--saba-font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
 .saba-header__brand {
   font-weight: 500;
+}
+
+.saba-header__brand::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-left: 0.5rem;
+  background: var(--saba-accent);
+  vertical-align: middle;
 }
 
 .saba-header__nav {
@@ -70,12 +139,14 @@
   border: none;
   background: transparent;
   padding: 0.55rem 1.25rem;
-  font: inherit;
-  font-size: 0.875rem;
+  font-family: var(--saba-font-mono);
+  font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background var(--saba-duration) var(--saba-ease-out),
+    color var(--saba-duration) var(--saba-ease-out);
 }
 
 .saba-header__tab:hover {
@@ -83,15 +154,41 @@
 }
 
 .saba-header__tab--active {
-  background: var(--saba-black);
-  color: var(--saba-white);
+  background: var(--saba-ink);
+  color: var(--saba-paper);
+}
+
+.saba-header__tools {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.saba-header__font-toggle {
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  border: 1px solid var(--saba-border-strong);
+  background: var(--saba-white);
+  font-family: var(--saba-font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition:
+    background var(--saba-duration) var(--saba-ease-out),
+    color var(--saba-duration) var(--saba-ease-out);
+}
+
+.saba-header__font-toggle[aria-pressed='true'] {
+  background: var(--saba-ink);
+  color: var(--saba-paper);
 }
 
 .saba-header__exit {
-  justify-self: end;
   border: none;
   background: none;
   font: inherit;
+  font-family: var(--saba-font-mono);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   cursor: pointer;
@@ -102,19 +199,7 @@
   opacity: 0.45;
 }
 
-.saba-main {
-  max-width: 42rem;
-  margin: 0 auto;
-  padding: 2rem 1.5rem 4rem;
-}
-
-@media (min-width: 900px) {
-  .saba-main {
-    margin-left: max(1.5rem, calc((100% - 42rem - min(40vw, 480px)) / 2));
-    margin-right: min(40vw, 480px);
-    max-width: 42rem;
-  }
-}
+/* 主栏居中见 clinical-chrome.css */
 
 .saba-hero {
   margin-bottom: 3rem;
@@ -153,6 +238,7 @@
   border: 1px solid var(--saba-border-strong);
   padding: 2rem 1.5rem;
   background: var(--saba-white);
+  box-shadow: 6px 6px 0 rgba(20, 18, 16, 0.06);
 }
 
 .saba-section-label {
@@ -165,7 +251,8 @@
 }
 
 .saba-section-label::before {
-  content: '+ ';
+  content: '— ';
+  color: var(--saba-accent);
 }
 
 .saba-section-hint {
@@ -183,6 +270,88 @@
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+}
+
+/* —— 统一反馈 / 空态 —— */
+.saba-feedback {
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--saba-border-strong);
+  background: var(--saba-white);
+}
+
+.saba-feedback__title {
+  margin: 0 0 0.35rem;
+  font-family: var(--saba-font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.saba-feedback__message {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--saba-ink);
+}
+
+.saba-feedback__detail {
+  margin: 0.5rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--saba-muted);
+}
+
+.saba-feedback__action {
+  margin-top: 0.85rem;
+}
+
+.saba-feedback--error {
+  border-left: 4px solid var(--saba-risk-high);
+  background: var(--saba-risk-high-bg);
+}
+
+.saba-feedback--error .saba-feedback__title {
+  color: var(--saba-risk-high);
+}
+
+.saba-feedback--success {
+  border-left: 4px solid var(--saba-risk-low);
+  background: var(--saba-risk-low-bg);
+}
+
+.saba-feedback--success .saba-feedback__title {
+  color: var(--saba-risk-low);
+}
+
+.saba-feedback--info {
+  border-left: 4px solid var(--saba-accent);
+  background: var(--saba-accent-soft);
+}
+
+.saba-feedback--info .saba-feedback__title {
+  color: var(--saba-accent);
+}
+
+.saba-feedback--empty {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  border-style: dashed;
+  background: transparent;
+}
+
+.saba-feedback--empty .saba-feedback__title {
+  color: var(--saba-muted);
+}
+
+.saba-feedback--empty .saba-feedback__message {
+  color: var(--saba-ink-soft);
+}
+
+.saba-feedback--inline {
+  margin-top: 1rem;
+  margin-bottom: 0;
 }
 
 .saba-back {
@@ -439,11 +608,50 @@
 
 /* —— 结果卡 —— */
 .saba-result {
-  border: 2px solid var(--saba-black);
+  border: 1px solid var(--saba-border-strong);
+  border-left-width: 4px;
 }
 
 .saba-result--high {
-  border-width: 3px;
+  border-left-color: var(--saba-risk-high);
+  background: linear-gradient(135deg, var(--saba-risk-high-bg) 0%, var(--saba-white) 42%);
+}
+
+.saba-result--medium {
+  border-left-color: var(--saba-risk-medium);
+  background: linear-gradient(135deg, var(--saba-risk-medium-bg) 0%, var(--saba-white) 42%);
+}
+
+.saba-result--low {
+  border-left-color: var(--saba-risk-low);
+  background: linear-gradient(135deg, var(--saba-risk-low-bg) 0%, var(--saba-white) 42%);
+}
+
+.saba-result__reasoning {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--saba-ink-soft);
+}
+
+.saba-result__warnings {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--saba-ink-soft);
+}
+
+.saba-result--high .saba-result__action {
+  border-left-color: var(--saba-risk-high);
+}
+
+.saba-result--medium .saba-result__action {
+  border-left-color: var(--saba-risk-medium);
+}
+
+.saba-result--low .saba-result__action {
+  border-left-color: var(--saba-risk-low);
 }
 
 .saba-result__head {
@@ -539,6 +747,25 @@
   color: var(--saba-black);
 }
 
+.saba-btn--urgent {
+  background: var(--saba-risk-high);
+  border-color: var(--saba-risk-high);
+  color: var(--saba-white);
+}
+
+.saba-btn--urgent:hover {
+  background: var(--saba-white);
+  color: var(--saba-risk-high);
+}
+
+.saba-alert--spaced {
+  margin-top: 1rem;
+}
+
+.saba-panel--spaced {
+  margin-top: 1.5rem;
+}
+
 .saba-result__foot {
   display: flex;
   justify-content: space-between;
@@ -551,33 +778,58 @@
 }
 
 /* —— 风险徽章 —— */
+.saba-badge-wrap {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+
 .saba-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  border: 1px solid var(--saba-black);
+  gap: 0.4rem;
+  border: 1px solid var(--saba-ink);
   padding: 0.35rem 0.75rem;
-  font-size: 0.75rem;
+  font-family: var(--saba-font-mono);
+  font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
+.saba-badge__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+.saba-badge__hint {
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: var(--saba-ink-soft);
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
 .saba-badge--high {
-  background: var(--saba-black);
-  color: var(--saba-white);
+  background: var(--saba-risk-high-bg);
+  color: var(--saba-risk-high);
+  border-color: var(--saba-risk-high-border);
 }
 
 .saba-badge--medium {
-  background: var(--saba-white);
-  color: var(--saba-black);
-  border-width: 2px;
+  background: var(--saba-risk-medium-bg);
+  color: var(--saba-risk-medium);
+  border-color: var(--saba-risk-medium-border);
 }
 
 .saba-badge--low {
-  background: var(--saba-white);
-  color: var(--saba-muted);
-  border-color: var(--saba-border);
+  background: var(--saba-risk-low-bg);
+  color: var(--saba-risk-low);
+  border-color: var(--saba-risk-low-border);
 }
 
 .saba-badge--lg {
@@ -594,9 +846,10 @@
 .saba-history-item {
   display: block;
   width: 100%;
+  min-height: 44px;
   text-align: left;
   border: 1px solid var(--saba-border-strong);
-  border-left-width: 3px;
+  border-left-width: 4px;
   background: var(--saba-white);
   padding: 0;
   font: inherit;
@@ -605,11 +858,26 @@
 }
 
 .saba-history-item:hover {
-  background: rgba(0, 0, 0, 0.03);
+  background: var(--saba-paper-deep);
 }
 
 .saba-history-item--high {
-  border-left-width: 4px;
+  border-left-color: var(--saba-risk-high);
+}
+
+.saba-history-item--medium {
+  border-left-color: var(--saba-risk-medium);
+}
+
+.saba-history-item--low {
+  border-left-color: var(--saba-risk-low);
+}
+
+.saba-history-item__meta-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 .saba-history-item__body {
@@ -649,6 +917,13 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--saba-muted);
+}
+
+.saba-empty__sub {
+  margin: 0.5rem 0 0;
+  font-size: 0.75rem;
+  text-transform: none;
+  letter-spacing: 0.02em;
 }
 
 .saba-skeleton {
@@ -716,7 +991,26 @@
 .saba-reasoning-step__content {
   font-size: 0.9rem;
   line-height: 1.5;
+}
+
+.saba-reasoning-step__source {
+  margin: 0.35rem 0 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  color: var(--saba-muted);
+}
+
+.saba-reasoning__chain {
+  margin-top: 2rem;
+}
+
+.saba-reasoning__chain-list {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--saba-ink-soft);
 }
 
 .saba-list-title {

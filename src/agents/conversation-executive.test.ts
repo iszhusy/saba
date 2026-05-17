@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { createConversationExecutive } from '../agents/conversation-executive.js';
+import { LlmNotConfiguredError } from '../lib/llm-config.js';
 import type { TreatmentContext } from '../types/index.js';
 
 const executive = createConversationExecutive({
@@ -85,5 +86,66 @@ describe('ConversationExecutive AI-native modes', () => {
 
     expect(response.executive_summary?.status).toBe('escalated');
     expect(response.risk_level).toBe('high');
+  });
+
+  it('澄清后补充足够症状信息时不应再卡在重复澄清', async () => {
+    const staleEpisode = {
+      episode_id: 'ep-loop-1',
+      session_id: 'sess-loop-1',
+      user_id: 'clarify-loop-user',
+      started_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+      status: 'active' as const,
+      symptoms: {
+        reported: ['你好'],
+        extracted: [],
+      },
+      assessments: [],
+      clarification_state: {
+        round: 1,
+        questions: [
+          {
+            question_id: 'intake_overview',
+            text: '请按顺序补充：当前最主要的不适、持续多久、严重程度，以及是否还有其他症状。',
+          },
+        ],
+        answers: [],
+        status: 'awaiting' as const,
+      },
+      clarification_history: [],
+      working_hypotheses: { alternatives: [] },
+      unresolved_uncertainties: [
+        {
+          item: '请按顺序补充：当前最主要的不适、持续多久、严重程度，以及是否还有其他症状。',
+          impact: '需要继续澄清后才能稳定进入下一步判断',
+          status: 'open' as const,
+        },
+      ],
+      context_summary: '你好',
+    };
+
+    try {
+      const response = await executive.execute(
+        {
+          user_id: 'clarify-loop-user',
+          input: '上周开始感到恶心，吃饭也吃不下，脑袋隐隐做痛',
+          context: COMPLETE_BASELINE,
+        },
+        {
+          conversation_context: {
+            episode: staleEpisode,
+            baseline_complete: true,
+          },
+        },
+      );
+
+      expect(response.executive_summary?.status).not.toBe('clarification_required');
+      expect(response.immediate_action).not.toContain(
+        '在继续给出判断前，还需要先补全上一轮尚未解决的关键信息',
+      );
+    } catch (error) {
+      // 无 API Key 时会进入 risk_deliberation 才抛错，说明已越过重复澄清短路
+      expect(error).toBeInstanceOf(LlmNotConfiguredError);
+    }
   });
 });

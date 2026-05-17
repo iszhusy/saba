@@ -55,6 +55,29 @@ describe('IntentFramer', () => {
     expect(result.clinical_input).toBe('我不舒服');
   });
 
+  it('treats detailed symptom narrative as ready for assessment when baseline is complete', async () => {
+    const result = await framer.frame({
+      user_input: '上周开始感到恶心，吃饭也吃不下，脑袋隐隐做痛',
+      context: COMPLETE_BASELINE,
+      clarification_state: {
+        round: 1,
+        questions: [
+          {
+            question_id: 'intake_overview',
+            text: '请按顺序补充：当前最主要的不适、持续多久、严重程度，以及是否还有其他症状。',
+          },
+        ],
+        answers: [],
+        status: 'awaiting',
+      },
+      reported_messages: ['你好'],
+    });
+
+    expect(result.interaction_mode).toBe('provisional_assessment');
+    expect(result.answerability).toBe('ready');
+    expect(result.clinical_input).toContain('恶心');
+  });
+
   it('marks worsening symptom updates as follow-up framing (with baseline)', async () => {
     const result = await framer.frame({
       user_input: '现在更严重了，还有点发热',

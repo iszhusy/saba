@@ -13,8 +13,14 @@ import { createRiskDeliberation, type RiskDeliberationResult } from '../modules/
 import { validateSafety } from '../tools/safety-validator.js';
 import { getConfig, type SABA_CONFIG } from '../lib/env.js';
 import { resolveDeliberationRuntime } from '../lib/llm-config.js';
+import type { AssessStreamSink } from '../lib/assess-stream.js';
+import { emitPipelineStep } from '../lib/assess-stream.js';
 import { synthesizeExecutiveResponse } from '../lib/executive-synthesis.js';
 import { isBaselineComplete } from '../lib/patient-baseline.js';
+
+export interface ConversationExecutiveExecuteOptions {
+  stream?: AssessStreamSink;
+}
 
 type ConversationExecutiveConfig = Partial<SABA_CONFIG> & {
   deliberation_runtime?: 'structured' | 'tool_native';
@@ -54,11 +60,10 @@ export class ConversationExecutive {
       episode_id?: string;
       conversation_context?: AssessResponse['conversation_context'];
     },
+    options?: ConversationExecutiveExecuteOptions,
   ): Promise<AssessResponse> {
+    const stream = options?.stream;
     const episode = state?.conversation_context?.episode;
-    const clarificationState = episode?.clarification_state;
-    const unresolvedUncertainties = episode?.unresolved_uncertainties ?? [];
-    const clarificationHistory = episode?.clarification_history ?? [];
     const framingInput: IntentFramingInput = {
       user_input: request.input,
       context: request.context,
@@ -66,7 +71,14 @@ export class ConversationExecutive {
       clarification_state: episode?.clarification_state,
       reported_messages: episode?.symptoms.reported,
     };
+    emitPipelineStep(stream, 'intent_framing', 'start');
     const framingResult = await createIntentFramer(this.config).frame(framingInput);
+    emitPipelineStep(
+      stream,
+      'intent_framing',
+      'done',
+      `${framingResult.conversation_goal} · ${framingResult.interaction_mode} — ${framingResult.rationale}`,
+    );
 
     const enrichedRequest: AssessRequest = {
       ...request,
@@ -152,34 +164,6 @@ export class ConversationExecutive {
     }
 
     if (
-      clarificationState?.status === 'awaiting' &&
-      clarificationHistory.length > 0 &&
-      unresolvedUncertainties.length > 0 &&
-      framingResult.interaction_mode === 'provisional_assessment'
-    ) {
-      return this.buildShortCircuitResponse({
-        request: enrichedRequest,
-        framing: framingResult,
-        conversationContext: state?.conversation_context,
-        status: 'clarification_required',
-        responseMode: 'clarify',
-        decisionMode: 'insufficient',
-        immediateAction: '在继续给出判断前，还需要先补全上一轮尚未解决的关键信息。',
-        followUp: '请优先回答仍未解决的不确定项。',
-        warningSigns: [],
-        teamContactRequired: false,
-        clarificationQuestions: unresolvedUncertainties.map((item, index) => ({
-          question_id: `uncertainty-${index + 1}`,
-          text: item.item,
-        })),
-        visibleUncertainty: unresolvedUncertainties.map((item) => item.item),
-        nextStep: '请先补充仍未解决的高影响信息。',
-        riskLevel: 'low',
-        riskScore: 0,
-      });
-    }
-
-    if (
       framingResult.interaction_mode === 'structured_intake' ||
       framingResult.interaction_mode === 'clarify'
     ) {
@@ -205,11 +189,19 @@ export class ConversationExecutive {
       });
     }
 
+    emitPipelineStep(stream, 'clinical_triage', 'start');
     const triageResult = await createClinicalTriage().assess({
       user_input: enrichedRequest.input,
       context: enrichedRequest.context,
     });
+    emitPipelineStep(
+      stream,
+      'clinical_triage',
+      'done',
+      `规则倾向 ${triageResult.assessment.current_risk_tendency}；已知：${triageResult.assessment.basis.known_facts.join('、') || '—'}；未知：${triageResult.assessment.critical_unknowns.join('、') || '无'}`,
+    );
 
+    emitPipelineStep(stream, 'evidence_retrieval', 'start');
     const evidenceRetriever = createEvidenceRetrievalTool();
     const evidenceResult = evidenceRetriever.retrieve({
       parsed_symptoms: triageResult.findings.map((finding) => ({
@@ -220,6 +212,14 @@ export class ConversationExecutive {
       critical_unknowns: triageResult.assessment.critical_unknowns,
       should_retrieve: triageResult.retrieval_strategy.should_retrieve,
     });
+    emitPipelineStep(
+      stream,
+      'evidence_retrieval',
+      'done',
+      evidenceResult.knowledge_snippets.length > 0
+        ? `引用 ${evidenceResult.knowledge_snippets.length} 条知识片段`
+        : '未检索到额外知识片段',
+    );
 
     const deliberation = createRiskDeliberation({
       llm_provider:
@@ -234,12 +234,22 @@ export class ConversationExecutive {
       dashscope_model: this.config.dashscope_model,
       deliberation_runtime: resolveDeliberationRuntime(this.config),
     });
-    const deliberationResult = await deliberation.deliberate({
-      request: enrichedRequest,
-      framing: framingResult,
-      triage: triageResult,
-      evidence: evidenceResult,
-    });
+    emitPipelineStep(stream, 'risk_deliberation', 'start');
+    const deliberationResult = await deliberation.deliberate(
+      {
+        request: enrichedRequest,
+        framing: framingResult,
+        triage: triageResult,
+        evidence: evidenceResult,
+      },
+      stream,
+    );
+    emitPipelineStep(
+      stream,
+      'risk_deliberation',
+      'done',
+      `${deliberationResult.risk_level}（${deliberationResult.risk_score}）· ${deliberationResult.decision_mode}`,
+    );
 
     if (deliberationResult.decision_mode === 'insufficient') {
       return this.buildShortCircuitResponse({
@@ -264,7 +274,8 @@ export class ConversationExecutive {
       });
     }
 
-    return this.synthesizeAssessmentResponse({
+    emitPipelineStep(stream, 'safety_check', 'start');
+    const synthesized = this.synthesizeAssessmentResponse({
       request: enrichedRequest,
       framing: framingResult,
       triage: triageResult,
@@ -272,6 +283,8 @@ export class ConversationExecutive {
       deliberation: deliberationResult,
       conversationContext: state?.conversation_context,
     });
+    emitPipelineStep(stream, 'safety_check', 'done', '已通过安全约束校验');
+    return synthesized;
   }
 
   private buildShortCircuitResponse(params: {

@@ -17,6 +17,7 @@ CREATE TABLE IF NOT EXISTS assessments (
   follow_up TEXT,
   warning_signs TEXT,
   metadata TEXT,
+  trace_json TEXT,
   created_at TEXT DEFAULT (datetime('now'))
 );
 
@@ -51,6 +52,7 @@ CREATE TABLE IF NOT EXISTS assessment_events (
   assessment_id TEXT,
   session_id TEXT,
   metadata TEXT,
+  trace_json TEXT,
   created_at TEXT DEFAULT (datetime('now')),
   FOREIGN KEY (assessment_id) REFERENCES assessments(id)
 );
@@ -58,6 +60,7 @@ CREATE TABLE IF NOT EXISTS assessment_events (
 CREATE INDEX IF NOT EXISTS idx_assessment_events_user_id ON assessment_events(user_id);
 CREATE INDEX IF NOT EXISTS idx_assessment_events_assessment_id ON assessment_events(assessment_id);
 CREATE INDEX IF NOT EXISTS idx_assessment_events_event_name ON assessment_events(event_name);
+CREATE INDEX IF NOT EXISTS idx_assessment_events_trace_json ON assessment_events(trace_json);
 
 -- 通知出站表（Outbox）
 CREATE TABLE IF NOT EXISTS team_notifications (
@@ -68,6 +71,7 @@ CREATE TABLE IF NOT EXISTS team_notifications (
   message TEXT,
   status TEXT NOT NULL DEFAULT 'queued',
   recipients TEXT,
+  trace_json TEXT,
   created_at TEXT DEFAULT (datetime('now')),
   sent_at TEXT,
   last_error TEXT,
@@ -124,6 +128,7 @@ CREATE TABLE IF NOT EXISTS patient_baselines (
   treatment_phase TEXT,
   treatment_day INTEGER,
   known_side_effects_json TEXT NOT NULL DEFAULT '[]',
+  trace_json TEXT,
   updated_at TEXT NOT NULL
 );
 
