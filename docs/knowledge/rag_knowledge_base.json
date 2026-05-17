@@ -1,0 +1,3687 @@
+{
+  "metadata": {
+    "name": "SABA RAG Knowledge Base",
+    "version": "1.0",
+    "created": "2026-05-15",
+    "source": "NCI Guidelines + ClinicalTrials.gov",
+    "description": "乳腺癌治疗副作用管理知识库 - 支持症状解析和风险评估",
+    "ctcae_terms_count": 194
+  },
+  "symptom_categories": [
+    {
+      "id": "gastrointestinal",
+      "name": "胃肠道反应",
+      "symptoms": [
+        "恶心呕吐",
+        "腹泻",
+        "便秘",
+        "口腔溃疡",
+        "食欲下降"
+      ],
+      "common_treatments": [
+        "chemotherapy"
+      ]
+    },
+    {
+      "id": "hematologic",
+      "name": "血液系统",
+      "symptoms": [
+        "发热性中性粒细胞减少",
+        "贫血",
+        "血小板减少",
+        "出血",
+        "感染"
+      ],
+      "common_treatments": [
+        "chemotherapy"
+      ]
+    },
+    {
+      "id": "neurologic",
+      "name": "神经系统",
+      "symptoms": [
+        "周围神经病变",
+        "头痛",
+        "认知障碍",
+        "疲劳"
+      ],
+      "common_treatments": [
+        "chemotherapy",
+        "targeted"
+      ]
+    },
+    {
+      "id": "cardiovascular",
+      "name": "心血管系统",
+      "symptoms": [
+        "心脏毒性",
+        "心律失常",
+        "心衰",
+        "血压异常"
+      ],
+      "common_treatments": [
+        "chemotherapy",
+        "targeted"
+      ]
+    },
+    {
+      "id": "dermatologic",
+      "name": "皮肤",
+      "symptoms": [
+        "皮疹",
+        "瘙痒",
+        "皮肤红斑",
+        "脱发",
+        "手足综合征"
+      ],
+      "common_treatments": [
+        "targeted",
+        "chemotherapy",
+        "radiation"
+      ]
+    },
+    {
+      "id": "endocrine",
+      "name": "内分泌",
+      "symptoms": [
+        "潮热",
+        "骨质疏松",
+        "关节痛",
+        "子宫内膜异常",
+        "性功能障碍"
+      ],
+      "common_treatments": [
+        "endocrine"
+      ]
+    },
+    {
+      "id": "general",
+      "name": "全身症状",
+      "symptoms": [
+        "疲劳",
+        "疼痛",
+        "发热",
+        "体重变化",
+        "睡眠障碍"
+      ],
+      "common_treatments": [
+        "chemotherapy",
+        "radiation",
+        "targeted",
+        "endocrine"
+      ]
+    }
+  ],
+  "side_effect_entries": [
+    {
+      "category": "chemotherapy",
+      "symptom": "恶心呕吐",
+      "standard_term": "Nausea and Vomiting",
+      "keywords": [
+        "恶心",
+        "想吐",
+        "呕吐",
+        "反胃",
+        "vomiting",
+        "nausea"
+      ],
+      "severity_levels": {
+        "mild": "轻微恶心，食欲下降",
+        "moderate": "持续恶心，影响进食",
+        "severe": "剧烈呕吐，无法进食"
+      },
+      "risk_criteria": {
+        "high": "无法进水 > 12小时",
+        "medium": "持续 > 2天 或 影响进食",
+        "low": "轻微，可自行缓解"
+      },
+      "management": {
+        "immediate": "止吐药调整",
+        "follow_up": "联系团队评估",
+        "warning_signs": [
+          "呕血",
+          "脱水体征",
+          "高烧"
+        ]
+      },
+      "source": "NCI Chemotherapy Side Effects Guide"
+    },
+    {
+      "category": "chemotherapy",
+      "symptom": "骨髓抑制",
+      "standard_term": "Myelosuppression",
+      "keywords": [
+        "发烧",
+        "感染",
+        "虚弱",
+        "瘀青",
+        "出血",
+        "neutropenia",
+        "fever",
+        "fatigue"
+      ],
+      "severity_levels": {
+        "mild": "疲劳，轻微贫血",
+        "moderate": "需要升白针，中性粒细胞减少",
+        "severe": "发热性中性粒细胞减少，需要住院"
+      },
+      "risk_criteria": {
+        "high": "发烧 > 38.3°C 合并中性粒细胞减少",
+        "medium": "严重疲劳或感染迹象",
+        "low": "实验室检查异常但无症状"
+      },
+      "management": {
+        "immediate": "监测体温，联系团队",
+        "follow_up": "血液检查，调整剂量",
+        "warning_signs": [
+          "高烧",
+          "感染",
+          "出血"
+        ]
+      },
+      "source": "NCI Side Effects Management"
+    },
+    {
+      "category": "chemotherapy",
+      "symptom": "周围神经病变",
+      "standard_term": "Peripheral Neuropathy",
+      "keywords": [
+        "手脚麻",
+        "刺痛",
+        "麻木",
+        "感觉异常",
+        "neuropathy",
+        "numbness",
+        "tingling"
+      ],
+      "severity_levels": {
+        "mild": "轻微刺痛，对日常活动无影响",
+        "moderate": "明显麻木，影响精细动作",
+        "severe": "严重功能障碍，需要治疗调整"
+      },
+      "risk_criteria": {
+        "high": "严重疼痛或功能障碍",
+        "medium": "持续症状，影响日常生活",
+        "low": "轻度症状，可耐受"
+      },
+      "management": {
+        "immediate": "症状评估，考虑减量",
+        "follow_up": "神经科会诊，疼痛管理",
+        "warning_signs": [
+          "持续麻木",
+          "肌肉无力",
+          "跌倒"
+        ]
+      },
+      "source": "NCI Chemotherapy Side Effects Guide"
+    },
+    {
+      "category": "chemotherapy",
+      "symptom": "心脏毒性",
+      "standard_term": "Cardiotoxicity",
+      "keywords": [
+        "心脏",
+        "心悸",
+        "胸闷",
+        "呼吸困难",
+        "水肿",
+        "cardiac",
+        "heart",
+        "shortness of breath"
+      ],
+      "severity_levels": {
+        "mild": "心电图改变，无症状",
+        "moderate": "心功能下降，左室射血分数(LVEF)降低",
+        "severe": "心衰症状，需要停药"
+      },
+      "risk_criteria": {
+        "high": "LVEF下降 > 10% 或 < 50%",
+        "medium": "心脏症状，心功能轻度下降",
+        "low": "无症状，心功能正常"
+      },
+      "management": {
+        "immediate": "心脏评估，停止蒽环类药物",
+        "follow_up": "心脏超声监测，心脏科会诊",
+        "warning_signs": [
+          "胸痛",
+          "呼吸困难",
+          "水肿",
+          "心悸"
+        ]
+      },
+      "source": "NCI Cardiotoxicity Management"
+    },
+    {
+      "category": "endocrine",
+      "symptom": "子宫内膜异常",
+      "standard_term": "Endometrial Changes",
+      "keywords": [
+        "阴道出血",
+        "月经异常",
+        "子宫内膜",
+        "异常出血",
+        "bleeding"
+      ],
+      "severity_levels": {
+        "mild": "轻微不规则出血",
+        "moderate": "异常子宫出血，需要评估",
+        "severe": "疑似子宫内膜癌"
+      },
+      "risk_criteria": {
+        "high": "异常出血伴有贫血或疑似肿瘤",
+        "medium": "持续异常出血",
+        "low": "轻微不规则，可观察"
+      },
+      "management": {
+        "immediate": "妇科评估",
+        "follow_up": "子宫内膜活检，影像学检查",
+        "warning_signs": [
+          "异常出血",
+          "盆腔疼痛"
+        ]
+      },
+      "source": "NCI Endocrine Therapy Side Effects"
+    },
+    {
+      "category": "endocrine",
+      "symptom": "骨质疏松",
+      "standard_term": "Osteoporosis",
+      "keywords": [
+        "骨痛",
+        "骨折",
+        "骨密度",
+        "骨骼",
+        "bone",
+        "fracture",
+        "osteoporosis"
+      ],
+      "severity_levels": {
+        "mild": "骨密度降低，无症状",
+        "moderate": "骨质减少，需要干预",
+        "severe": "骨质疏松性骨折"
+      },
+      "risk_criteria": {
+        "high": "骨折或严重骨痛",
+        "medium": "骨密度显著降低",
+        "low": "轻度骨质减少"
+      },
+      "management": {
+        "immediate": "骨密度评估",
+        "follow_up": "钙剂、维生素D、双膦酸盐",
+        "warning_signs": [
+          "骨痛",
+          "骨折"
+        ]
+      },
+      "source": "NCI Bone Health in Cancer"
+    },
+    {
+      "category": "targeted",
+      "symptom": "输液反应",
+      "standard_term": "Infusion Reaction",
+      "keywords": [
+        "过敏",
+        "发热",
+        "寒战",
+        "皮疹",
+        "呼吸困难",
+        "allergic",
+        "fever",
+        "rash"
+      ],
+      "severity_levels": {
+        "mild": "轻微皮疹或发热",
+        "moderate": "明显反应，需要处理",
+        "severe": "过敏性休克，需要紧急处理"
+      },
+      "risk_criteria": {
+        "high": "呼吸困难、血压下降、意识改变",
+        "medium": "明显过敏反应",
+        "low": "轻度皮疹或发热"
+      },
+      "management": {
+        "immediate": "停止输液，抗过敏处理",
+        "follow_up": "再次用药前预防性用药",
+        "warning_signs": [
+          "呼吸困难",
+          "皮疹扩散",
+          "低血压"
+        ]
+      },
+      "source": "NCI Targeted Therapy Side Effects"
+    },
+    {
+      "category": "radiation",
+      "symptom": "皮肤反应",
+      "standard_term": "Radiation Dermatitis",
+      "keywords": [
+        "皮肤红",
+        "脱皮",
+        "瘙痒",
+        "皮肤反应",
+        "skin",
+        "redness",
+        "peeling"
+      ],
+      "severity_levels": {
+        "mild": "轻微红斑，干燥",
+        "moderate": "明显红斑，脱屑，肿胀",
+        "severe": "湿性脱皮，溃疡"
+      },
+      "risk_criteria": {
+        "high": "皮肤溃疡或坏死",
+        "medium": "湿性脱皮",
+        "low": "轻度红斑"
+      },
+      "management": {
+        "immediate": "局部护理，避免刺激",
+        "follow_up": "皮肤科会诊，湿润疗法",
+        "warning_signs": [
+          "皮肤破溃",
+          "感染迹象"
+        ]
+      },
+      "source": "NCI Radiation Therapy Side Effects"
+    },
+    {
+      "category": "chemotherapy",
+      "symptom": "口腔黏膜炎",
+      "standard_term": "Mucositis",
+      "keywords": [
+        "口腔",
+        "嘴疼",
+        "嘴烂",
+        "吞咽痛",
+        "oral",
+        "mouth sore",
+        "mucositis"
+      ],
+      "severity_levels": {
+        "mild": "轻微口腔不适",
+        "moderate": "口腔溃疡，影响进食",
+        "severe": "严重溃疡，无法进食，需要肠内/肠外营养"
+      },
+      "risk_criteria": {
+        "high": "无法进食或进水",
+        "medium": "影响营养摄入",
+        "low": "轻微不适，可自愈"
+      },
+      "management": {
+        "immediate": "口腔护理，避免刺激性食物",
+        "follow_up": "口腔科会诊，局部用药",
+        "warning_signs": [
+          "口腔出血",
+          "感染迹象"
+        ]
+      },
+      "source": "NCI Chemotherapy Side Effects Guide"
+    },
+    {
+      "category": "chemotherapy",
+      "symptom": "脱发",
+      "standard_term": "Alopecia",
+      "keywords": [
+        "掉头发",
+        "脱发",
+        "头发",
+        "alopecia",
+        "hair loss"
+      ],
+      "severity_levels": {
+        "mild": "轻微脱发",
+        "moderate": "明显脱发",
+        "severe": "全秃"
+      },
+      "risk_criteria": {
+        "high": "N/A（通常不危及生命）",
+        "medium": "严重心理影响",
+        "low": "轻度可接受"
+      },
+      "management": {
+        "immediate": "心理支持",
+        "follow_up": "假发，准备脱发期",
+        "warning_signs": []
+      },
+      "source": "NCI Coping with Cancer"
+    },
+    {
+      "category": "targeted",
+      "symptom": "手足综合征",
+      "standard_term": "Hand-Foot Syndrome",
+      "keywords": [
+        "手脚红",
+        "手足",
+        "脱皮",
+        "疼",
+        "hand foot",
+        "palmar plantar"
+      ],
+      "severity_levels": {
+        "mild": "轻微红斑，不影响日常",
+        "moderate": "红斑、脱皮、疼痛，影响日常",
+        "severe": "溃疡、水疱、严重疼痛"
+      },
+      "risk_criteria": {
+        "high": "严重疼痛或溃疡",
+        "medium": "影响日常活动",
+        "low": "轻度红斑"
+      },
+      "management": {
+        "immediate": "避免热和摩擦",
+        "follow_up": "尿素霜，剂量调整",
+        "warning_signs": [
+          "皮肤破溃",
+          "感染"
+        ]
+      },
+      "source": "NCI Targeted Therapy Side Effects"
+    },
+    {
+      "category": "targeted",
+      "symptom": "腹泻",
+      "standard_term": "Diarrhea",
+      "keywords": [
+        "腹泻",
+        "拉肚子",
+        "大便稀",
+        "diarrhea"
+      ],
+      "severity_levels": {
+        "mild": "每天增加2-3次排便",
+        "moderate": "每天增加4-6次排便",
+        "severe": "每天增加≥7次排便，或失禁"
+      },
+      "risk_criteria": {
+        "high": "严重腹泻伴脱水",
+        "medium": "中度腹泻影响生活",
+        "low": "轻度腹泻"
+      },
+      "management": {
+        "immediate": "补液，止泻药",
+        "follow_up": "调整靶向药剂量",
+        "warning_signs": [
+          "脱水",
+          "血便"
+        ]
+      },
+      "source": "NCI Targeted Therapy Side Effects"
+    },
+    {
+      "category": "immunotherapy",
+      "symptom": "免疫相关不良反应",
+      "standard_term": "Immune-Related Adverse Events (irAE)",
+      "keywords": [
+        "免疫",
+        "皮疹",
+        "发烧",
+        "关节痛",
+        "肝炎",
+        "肺炎",
+        "immune",
+        "irAE"
+      ],
+      "severity_levels": {
+        "mild": "1级 irAE",
+        "moderate": "2级 irAE",
+        "severe": "3-4级 irAE"
+      },
+      "risk_criteria": {
+        "high": "3-4级irAE（需住院）",
+        "medium": "2级irAE需激素治疗",
+        "low": "1级irAE可观察"
+      },
+      "management": {
+        "immediate": "暂停免疫治疗，评估器官功能",
+        "follow_up": "激素治疗，专科会诊",
+        "warning_signs": [
+          "肝功能异常",
+          "呼吸困难",
+          "皮疹扩散"
+        ]
+      },
+      "source": "NCI Immunotherapy Side Effects"
+    },
+    {
+      "category": "endocrine",
+      "symptom": "关节痛",
+      "standard_term": "Arthralgia",
+      "keywords": [
+        "关节痛",
+        "肌肉痛",
+        "关节僵硬",
+        "arthralgia",
+        "joint pain"
+      ],
+      "severity_levels": {
+        "mild": "轻微疼痛，不影响日常",
+        "moderate": "明显疼痛，影响日常",
+        "severe": "严重疼痛，功能受限"
+      },
+      "risk_criteria": {
+        "high": "N/A（通常不危及生命）",
+        "medium": "严重影响生活质量",
+        "low": "轻度可接受"
+      },
+      "management": {
+        "immediate": "止痛药对症",
+        "follow_up": "关节炎专科评估",
+        "warning_signs": [
+          "关节肿胀",
+          "红热"
+        ]
+      },
+      "source": "NCI Endocrine Therapy Side Effects"
+    },
+    {
+      "category": "radiation",
+      "symptom": "放射性食管炎",
+      "standard_term": "Radiation Esophagitis",
+      "keywords": [
+        "吞咽痛",
+        "食管",
+        "胸痛",
+        "吞咽困难",
+        "esophagitis"
+      ],
+      "severity_levels": {
+        "mild": "轻微吞咽不适",
+        "moderate": "吞咽疼痛，需要软食",
+        "severe": "无法吞咽，需要管饲"
+      },
+      "risk_criteria": {
+        "high": "无法进食",
+        "medium": "严重吞咽痛",
+        "low": "轻微不适"
+      },
+      "management": {
+        "immediate": "避免刺激性食物",
+        "follow_up": "吞咽评估，营养支持",
+        "warning_signs": [
+          "体重下降",
+          "脱水"
+        ]
+      },
+      "source": "NCI Radiation Therapy Side Effects"
+    },
+    {
+      "category": "general",
+      "symptom": "疲劳",
+      "standard_term": "Cancer-Related Fatigue",
+      "keywords": [
+        "疲劳",
+        "累",
+        "没力气",
+        "乏力",
+        "fatigue",
+        "tired"
+      ],
+      "severity_levels": {
+        "mild": "休息后恢复",
+        "moderate": "休息后不完全恢复",
+        "severe": "无法进行日常活动"
+      },
+      "risk_criteria": {
+        "high": "严重疲劳影响生活",
+        "medium": "中度疲劳",
+        "low": "轻度疲劳"
+      },
+      "management": {
+        "immediate": "评估原因（贫血、甲状腺等）",
+        "follow_up": "运动治疗，心理支持",
+        "warning_signs": [
+          "呼吸困难",
+          "严重贫血"
+        ]
+      },
+      "source": "NCI Cancer Fatigue"
+    },
+    {
+      "category": "general",
+      "symptom": "疼痛",
+      "standard_term": "Cancer Pain",
+      "keywords": [
+        "疼痛",
+        "疼",
+        "痛",
+        "pain",
+        "ache"
+      ],
+      "severity_levels": {
+        "mild": "1-3分（0-10分制）",
+        "moderate": "4-6分",
+        "severe": "7-10分"
+      },
+      "risk_criteria": {
+        "high": "严重疼痛（7-10分）",
+        "medium": "中度疼痛（4-6分）",
+        "low": "轻度疼痛（1-3分）"
+      },
+      "management": {
+        "immediate": "疼痛评估，止痛药",
+        "follow_up": "疼痛专科，神经病理性疼痛管理",
+        "warning_signs": [
+          "突发剧痛",
+          "神经症状"
+        ]
+      },
+      "source": "NCI Cancer Pain Management"
+    }
+  ],
+  "high_risk_rules": [
+    {
+      "id": "HR-001",
+      "name": "呼吸困难/胸痛",
+      "trigger_keywords": [
+        "呼吸困难",
+        "胸闷",
+        "胸痛",
+        "呼吸急促"
+      ],
+      "risk_level": "high",
+      "immediate_action": "立即拨打120或前往急诊",
+      "reasoning": "可能提示肺栓塞、心脏事件等危及生命的情况"
+    },
+    {
+      "id": "HR-002",
+      "name": "发热性中性粒细胞减少",
+      "trigger_keywords": [
+        "发烧",
+        "发热",
+        "38",
+        "neutropenia"
+      ],
+      "risk_level": "high",
+      "immediate_action": "立即就医，急诊或肿瘤科",
+      "reasoning": "化疗后发热可能是威胁生命的感染信号"
+    },
+    {
+      "id": "HR-003",
+      "name": "严重过敏反应",
+      "trigger_keywords": [
+        "过敏",
+        "呼吸困难",
+        "皮疹",
+        "面部肿胀"
+      ],
+      "risk_level": "high",
+      "immediate_action": "立即停药，寻求急救",
+      "reasoning": "可能发展为过敏性休克"
+    },
+    {
+      "id": "HR-004",
+      "name": "消化道出血",
+      "trigger_keywords": [
+        "呕血",
+        "黑便",
+        "血便",
+        "吐血"
+      ],
+      "risk_level": "high",
+      "immediate_action": "立即就医，可能需要输血",
+      "reasoning": "严重出血可能危及生命"
+    },
+    {
+      "id": "HR-005",
+      "name": "心脏症状",
+      "trigger_keywords": [
+        "心悸",
+        "胸痛",
+        "呼吸困难",
+        "水肿",
+        "心律"
+      ],
+      "risk_level": "high",
+      "immediate_action": "心脏评估，可能需要停药",
+      "reasoning": "蒽环类药物心脏毒性可能致命"
+    },
+    {
+      "id": "HR-006",
+      "name": "脑病症状",
+      "trigger_keywords": [
+        "意识",
+        "混乱",
+        "癫痫",
+        "癫痫发作",
+        "神志不清"
+      ],
+      "risk_level": "high",
+      "immediate_action": "立即就医，神经科评估",
+      "reasoning": "可能提示代谢性脑病或转移"
+    },
+    {
+      "id": "HR-007",
+      "name": "深静脉血栓",
+      "trigger_keywords": [
+        "腿肿",
+        "腿疼",
+        "小腿红肿",
+        "肿胀"
+      ],
+      "risk_level": "high",
+      "immediate_action": "超声检查，抗凝治疗",
+      "reasoning": "可能发展为肺栓塞"
+    }
+  ],
+  "medium_risk_rules": [
+    {
+      "id": "MR-001",
+      "name": "持续恶心呕吐",
+      "trigger_keywords": [
+        "恶心",
+        "呕吐",
+        "吃不下"
+      ],
+      "duration_threshold": "2天",
+      "risk_level": "medium",
+      "immediate_action": "联系团队，止吐方案调整",
+      "reasoning": "可能需要补液和营养支持"
+    },
+    {
+      "id": "MR-002",
+      "name": "中度周围神经病变",
+      "trigger_keywords": [
+        "麻木",
+        "刺痛",
+        "手脚麻"
+      ],
+      "risk_level": "medium",
+      "immediate_action": "联系团队，评估是否需要减量",
+      "reasoning": "持续可能发展为不可逆损伤"
+    },
+    {
+      "id": "MR-003",
+      "name": "严重疲劳",
+      "trigger_keywords": [
+        "疲劳",
+        "没力气",
+        "累"
+      ],
+      "risk_level": "medium",
+      "immediate_action": "联系团队，排除其他原因",
+      "reasoning": "严重疲劳影响生活质量，需评估"
+    },
+    {
+      "id": "MR-004",
+      "name": "中度皮肤反应",
+      "trigger_keywords": [
+        "皮疹",
+        "红",
+        "脱皮"
+      ],
+      "risk_level": "medium",
+      "immediate_action": "皮肤科会诊，局部护理",
+      "reasoning": "可能影响治疗进行"
+    },
+    {
+      "id": "MR-005",
+      "name": "血小板减少出血",
+      "trigger_keywords": [
+        "瘀青",
+        "出血",
+        "牙龈出血",
+        "鼻出血",
+        "blood"
+      ],
+      "risk_level": "medium",
+      "immediate_action": "联系团队，血小板检查",
+      "reasoning": "严重出血风险"
+    },
+    {
+      "id": "MR-006",
+      "name": "严重贫血",
+      "trigger_keywords": [
+        "头晕",
+        "心悸",
+        "气短",
+        "苍白",
+        "fatigue"
+      ],
+      "risk_level": "medium",
+      "immediate_action": "血红蛋白检查，输血评估",
+      "reasoning": "需要输血支持"
+    },
+    {
+      "id": "MR-007",
+      "name": "肝功能异常",
+      "trigger_keywords": [
+        "黄疸",
+        "皮肤发黄",
+        "尿黄",
+        "恶心厌食"
+      ],
+      "risk_level": "medium",
+      "immediate_action": "肝功能检查，专科评估",
+      "reasoning": "药物性肝损伤可能"
+    },
+    {
+      "id": "MR-008",
+      "name": "肾功能异常",
+      "trigger_keywords": [
+        "尿少",
+        "浮肿",
+        "腰痛",
+        "泡沫尿"
+      ],
+      "risk_level": "medium",
+      "immediate_action": "肾功能检查，泌尿科评估",
+      "reasoning": "需要评估肾损伤原因"
+    }
+  ],
+  "low_risk_rules": [
+    {
+      "id": "LR-001",
+      "name": "轻度脱发",
+      "trigger_keywords": [
+        "掉头发",
+        "脱发"
+      ],
+      "risk_level": "low",
+      "immediate_action": "心理支持，对症处理",
+      "reasoning": "通常是可逆的，暂时性"
+    },
+    {
+      "id": "LR-002",
+      "name": "轻度潮热",
+      "trigger_keywords": [
+        "潮热",
+        "出汗",
+        "脸红"
+      ],
+      "risk_level": "low",
+      "immediate_action": "生活方式调整",
+      "reasoning": "生活质量影响，对症处理即可"
+    }
+  ],
+  "ctcae_entries": [
+    {
+      "ctcae_code": "10002272",
+      "symptom": "Anemia",
+      "soc_category": "Blood and lymphatic system disorders",
+      "category": "hematologic",
+      "grades": {
+        "grade1": "Hemoglobin (Hgb) <LLN - 10.0 g/dL; <LLN - 6.2 mmol/L; <LLN - 100 g/L",
+        "grade2": "Hgb <10.0 - 8.0 g/dL; <6.2 - 4.9 mmol/L; <100 - 80g/L",
+        "grade3": "Hgb <8.0 g/dL; <4.9 mmol/L; <80 g/L; transfusion indicated",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10016288",
+      "symptom": "Febrile neutropenia",
+      "soc_category": "Blood and lymphatic system disorders",
+      "category": "hematologic",
+      "grades": {
+        "grade1": "-",
+        "grade2": "-",
+        "grade3": "ANC <1000/mm3 with a single temperature of >38.3 degrees C (101 degrees F) or a sustained temperature of >=38 degrees C (100.4 degrees F) for more than one hour",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10025182",
+      "symptom": "Lymph node pain",
+      "soc_category": "Blood and lymphatic system disorders",
+      "category": "hematologic",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10000081",
+      "symptom": "Abdominal pain",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10055226",
+      "symptom": "Anal hemorrhage",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10002167",
+      "symptom": "Anal pain",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10065747",
+      "symptom": "Cecal hemorrhage",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10009998",
+      "symptom": "Colonic hemorrhage",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10010774",
+      "symptom": "Constipation",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Occasional or intermittent symptoms; occasional use of stool softeners, laxatives, dietary modification, or enema",
+        "grade2": "Persistent symptoms with regular use of laxatives or enemas; limiting instrumental ADL",
+        "grade3": "Obstipation with manual evacuation indicated; limiting self care ADL",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10012727",
+      "symptom": "Diarrhea",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Increase of <4 stools per day over baseline; mild increase in ostomy output compared to baseline",
+        "grade2": "Increase of 4 - 6 stools per day over baseline; moderate increase in ostomy output compared to baseline; limiting instrumental ADL",
+        "grade3": "Increase of >=7 stools per day over baseline; hospitalization indicated; severe increase in ostomy output compared to baseline; limiting self care ADL",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10055242",
+      "symptom": "Duodenal hemorrhage",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10015384",
+      "symptom": "Esophageal hemorrhage",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10015388",
+      "symptom": "Esophageal pain",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10015453",
+      "symptom": "Esophageal varices hemorrhage",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "-",
+        "grade2": "Self-limited; intervention not indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10017789",
+      "symptom": "Gastric hemorrhage",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10017999",
+      "symptom": "Gastrointestinal pain",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10018286",
+      "symptom": "Gingival pain",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain interfering with oral intake",
+        "grade3": "Severe pain; inability to aliment orally",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10060640",
+      "symptom": "Hemorrhoidal hemorrhage",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10055287",
+      "symptom": "Ileal hemorrhage",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10055291",
+      "symptom": "Intra-abdominal hemorrhage",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "-",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10055300",
+      "symptom": "Jejunal hemorrhage",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10024561",
+      "symptom": "Lip pain",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10051746",
+      "symptom": "Lower gastrointestinal hemorrhage",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10028813",
+      "symptom": "Nausea",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Loss of appetite without alteration in eating habits",
+        "grade2": "Oral intake decreased without significant weight loss, dehydration or malnutrition",
+        "grade3": "Inadequate oral caloric or fluid intake; tube feeding, TPN, or hospitalization indicated",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10054520",
+      "symptom": "Oral dysesthesia",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Mild discomfort; not interfering with oral intake",
+        "grade2": "Moderate pain; interfering with oral intake",
+        "grade3": "Disabling pain; tube feeding or TPN indicated",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10030980",
+      "symptom": "Oral hemorrhage",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10031009",
+      "symptom": "Oral pain",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10033626",
+      "symptom": "Pancreatic hemorrhage",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10038064",
+      "symptom": "Rectal hemorrhage",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10038072",
+      "symptom": "Rectal pain",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10038981",
+      "symptom": "Retroperitoneal hemorrhage",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "-",
+        "grade2": "Self-limited; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10042112",
+      "symptom": "Stomach pain",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10055356",
+      "symptom": "Upper gastrointestinal hemorrhage",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10047700",
+      "symptom": "Vomiting",
+      "soc_category": "Gastrointestinal disorders",
+      "category": "gastrointestinal",
+      "grades": {
+        "grade1": "Intervention not indicated",
+        "grade2": "Outpatient IV hydration; medical intervention indicated",
+        "grade3": "Tube feeding, TPN, or hospitalization indicated",
+        "grade4": "Life-threatening consequences",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10053662",
+      "symptom": "Abducens nerve disorder",
+      "soc_category": "Nervous system disorders",
+      "category": "neurologic",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10060929",
+      "symptom": "Accessory nerve disorder",
+      "soc_category": "Nervous system disorders",
+      "category": "neurologic",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10000521",
+      "symptom": "Acoustic nerve disorder NOS",
+      "soc_category": "Nervous system disorders",
+      "category": "neurologic",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10013573",
+      "symptom": "Dizziness",
+      "soc_category": "Nervous system disorders",
+      "category": "neurologic",
+      "grades": {
+        "grade1": "Mild unsteadiness or sensation of movement",
+        "grade2": "Moderate unsteadiness or sensation of movement; limiting instrumental ADL",
+        "grade3": "Severe unsteadiness or sensation of movement; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10062872",
+      "symptom": "Dysesthesia",
+      "soc_category": "Nervous system disorders",
+      "category": "neurologic",
+      "grades": {
+        "grade1": "Mild sensory alteration",
+        "grade2": "Moderate sensory alteration; limiting instrumental ADL",
+        "grade3": "Severe sensory alteration; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10014217",
+      "symptom": "Edema cerebral",
+      "soc_category": "Nervous system disorders",
+      "category": "neurologic",
+      "grades": {
+        "grade1": "-",
+        "grade2": "-",
+        "grade3": "New onset; worsening from baseline",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10051272",
+      "symptom": "Facial muscle weakness",
+      "soc_category": "Nervous system disorders",
+      "category": "neurologic",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10061457",
+      "symptom": "Facial nerve disorder",
+      "soc_category": "Nervous system disorders",
+      "category": "neurologic",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10061185",
+      "symptom": "Glossopharyngeal nerve disorder",
+      "soc_category": "Nervous system disorders",
+      "category": "neurologic",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10019211",
+      "symptom": "Headache",
+      "soc_category": "Nervous system disorders",
+      "category": "neurologic",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10061212",
+      "symptom": "Hypoglossal nerve disorder",
+      "soc_category": "Nervous system disorders",
+      "category": "neurologic",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10022763",
+      "symptom": "Intracranial hemorrhage",
+      "soc_category": "Nervous system disorders",
+      "category": "neurologic",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Ventriculostomy, ICP monitoring, intraventricular thrombolysis, or invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10065780",
+      "symptom": "Muscle weakness left-sided",
+      "soc_category": "Nervous system disorders",
+      "category": "neurologic",
+      "grades": {
+        "grade1": "Symptomatic; perceived by patient but not evident on physical exam",
+        "grade2": "Symptomatic; evident on physical exam; limiting instrumental ADL",
+        "grade3": "Limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10065794",
+      "symptom": "Muscle weakness right-sided",
+      "soc_category": "Nervous system disorders",
+      "category": "neurologic",
+      "grades": {
+        "grade1": "Symptomatic; perceived by patient but not evident on physical exam",
+        "grade2": "Symptomatic; evident on physical exam; limiting instrumental ADL",
+        "grade3": "Limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10028417",
+      "symptom": "Myasthenia gravis",
+      "soc_category": "Nervous system disorders",
+      "category": "neurologic",
+      "grades": {
+        "grade1": "Asymptomatic or mild symptoms; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate; minimal, local or noninvasive intervention indicated; limiting age-appropriate instrumental ADL",
+        "grade3": "Severe or medically significant but not immediately life-threatening; hospitalization or prolongation of existing hospitalization indicated; limiting self care ADL",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10029223",
+      "symptom": "Neuralgia",
+      "soc_category": "Nervous system disorders",
+      "category": "neurologic",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10053661",
+      "symptom": "Oculomotor nerve disorder",
+      "soc_category": "Nervous system disorders",
+      "category": "neurologic",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10056388",
+      "symptom": "Olfactory nerve disorder",
+      "soc_category": "Nervous system disorders",
+      "category": "neurologic",
+      "grades": {
+        "grade1": "-",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10033987",
+      "symptom": "Paresthesia",
+      "soc_category": "Nervous system disorders",
+      "category": "neurologic",
+      "grades": {
+        "grade1": "Mild symptoms",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10034580",
+      "symptom": "Peripheral motor neuropathy",
+      "soc_category": "Nervous system disorders",
+      "category": "neurologic",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10034620",
+      "symptom": "Peripheral sensory neuropathy",
+      "soc_category": "Nervous system disorders",
+      "category": "neurologic",
+      "grades": {
+        "grade1": "Asymptomatic",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10056238",
+      "symptom": "Phantom pain",
+      "soc_category": "Nervous system disorders",
+      "category": "neurologic",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10038130",
+      "symptom": "Recurrent laryngeal nerve palsy",
+      "soc_category": "Nervous system disorders",
+      "category": "neurologic",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms",
+        "grade3": "Severe symptoms; medical intervention indicated (e.g., thyroplasty, vocal cord injection)",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10060890",
+      "symptom": "Trigeminal nerve disorder",
+      "soc_category": "Nervous system disorders",
+      "category": "neurologic",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10074765",
+      "symptom": "Trochlear nerve disorder",
+      "soc_category": "Nervous system disorders",
+      "category": "neurologic",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10061403",
+      "symptom": "Vagus nerve disorder",
+      "soc_category": "Nervous system disorders",
+      "category": "neurologic",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10065836",
+      "symptom": "IVth nerve disorder",
+      "soc_category": "Nervous system disorders",
+      "category": "neurologic",
+      "grades": {
+        "grade1": "[Term deleted. Map to Trochlear nerve disorder, Grade 1.] Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "[Term deleted. Map to Trochlear nerve disorder, Grade 2.] Moderate symptoms; limiting instrumental ADL",
+        "grade3": "[Term deleted. Map to Trochlear nerve disorder, Grade 3.] Severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10061589",
+      "symptom": "Aortic valve disease",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "Asymptomatic valvular thickening with or without mild valvular regurgitation or stenosis by imaging",
+        "grade2": "Asymptomatic; moderate regurgitation or stenosis by imaging",
+        "grade3": "Symptomatic; severe regurgitation or stenosis by imaging; symptoms controlled with medical intervention",
+        "grade4": "Life-threatening consequences; urgent intervention indicated (e.g., valve replacement, valvuloplasty)",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10003586",
+      "symptom": "Asystole",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "Periods of asystole; non-urgent medical management indicated",
+        "grade2": "-",
+        "grade3": "-",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10003658",
+      "symptom": "Atrial fibrillation",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "Asymptomatic, intervention not indicated",
+        "grade2": "Non-urgent medical intervention indicated",
+        "grade3": "Symptomatic, urgent intervention indicated; device (e.g., pacemaker); ablation; new onset",
+        "grade4": "Life-threatening consequences; embolus requiring urgent intervention",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10003662",
+      "symptom": "Atrial flutter",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "Asymptomatic, intervention not indicated",
+        "grade2": "Non-urgent medical intervention indicated",
+        "grade3": "Symptomatic, urgent intervention indicated; device (e.g., pacemaker); ablation",
+        "grade4": "Life-threatening consequences; embolus requiring urgent intervention",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10003673",
+      "symptom": "Atrioventricular block complete",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "-",
+        "grade2": "Non-urgent intervention indicated",
+        "grade3": "Symptomatic and incompletely controlled medically, or controlled with device (e.g., pacemaker); new onset",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10003674",
+      "symptom": "Atrioventricular block first degree",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "Asymptomatic, intervention not indicated",
+        "grade2": "Non-urgent intervention indicated",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10007515",
+      "symptom": "Cardiac arrest",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "-",
+        "grade2": "-",
+        "grade3": "-",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10007541",
+      "symptom": "Cardiac disorders - Other, specify",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "Asymptomatic or mild symptoms; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate; minimal, local or noninvasive intervention indicated; limiting age-appropriate instrumental ADL",
+        "grade3": "Severe or medically significant but not immediately life-threatening; hospitalization or prolongation of existing hospitalization indicated; limiting self care ADL",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10008481",
+      "symptom": "Chest pain - cardiac",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; pain on exertion; limiting instrumental ADL; hemodynamically stable",
+        "grade3": "Pain at rest; limiting self care ADL; cardiac catheterization; new onset cardiac chest pain; unstable angina",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10010276",
+      "symptom": "Conduction disorder",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Non-urgent medical intervention indicated",
+        "grade3": "Symptomatic, urgent intervention indicated",
+        "grade4": "Life-threatening consequences",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10011703",
+      "symptom": "Cyanosis",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "-",
+        "grade2": "Present",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10019279",
+      "symptom": "Heart failure",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "Asymptomatic with laboratory (e.g., BNP [B-Natriuretic Peptide ]) or cardiac imaging abnormalities",
+        "grade2": "Symptoms with moderate activity or exertion",
+        "grade3": "Symptoms at rest or with minimal activity or exertion; hospitalization; new onset of symptoms",
+        "grade4": "Life-threatening consequences; urgent intervention indicated (e.g., continuous IV therapy or mechanical hemodynamic support)",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10069501",
+      "symptom": "Left ventricular systolic dysfunction",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "-",
+        "grade2": "-",
+        "grade3": "Symptomatic due to drop in ejection fraction responsive to intervention",
+        "grade4": "Refractory or poorly controlled heart failure due to drop in ejection fraction; intervention such as ventricular assist device, intravenous vasopressor support, or heart transplant indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10061532",
+      "symptom": "Mitral valve disease",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "Asymptomatic valvular thickening with or without mild valvular regurgitation or stenosis by imaging",
+        "grade2": "Asymptomatic; moderate regurgitation or stenosis by imaging",
+        "grade3": "Symptomatic; severe regurgitation or stenosis by imaging; symptoms controlled with medical intervention",
+        "grade4": "Life-threatening consequences; urgent intervention indicated (e.g., valve replacement, valvuloplasty)",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10027786",
+      "symptom": "Mobitz (type) II atrioventricular block",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "Asymptomatic, intervention not indicated",
+        "grade2": "Symptomatic; medical intervention indicated",
+        "grade3": "Symptomatic and incompletely controlled medically, or controlled with device (e.g., pacemaker); new onset",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10027787",
+      "symptom": "Mobitz type I",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "Asymptomatic, intervention not indicated",
+        "grade2": "Symptomatic; medical intervention indicated",
+        "grade3": "Symptomatic and incompletely controlled medically, or controlled with device (e.g., pacemaker)",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10028596",
+      "symptom": "Myocardial infarction",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "-",
+        "grade2": "Asymptomatic and cardiac enzymes minimally abnormal and no evidence of ischemic ECG changes",
+        "grade3": "Severe symptoms; cardiac enzymes abnormal; hemodynamically stable; ECG changes consistent with infarction",
+        "grade4": "Life-threatening consequences; hemodynamically unstable",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10028606",
+      "symptom": "Myocarditis",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "-",
+        "grade2": "Symptoms with moderate activity or exertion",
+        "grade3": "Severe with symptoms at rest or with minimal activity or exertion; intervention indicated; new onset of symptoms",
+        "grade4": "Life-threatening consequences; urgent intervention indicated (e.g., continuous IV therapy or mechanical hemodynamic support)",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10033557",
+      "symptom": "Palpitations",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Intervention indicated",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10034040",
+      "symptom": "Paroxysmal atrial tachycardia",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "Asymptomatic, intervention not indicated",
+        "grade2": "Non-urgent medical intervention indicated",
+        "grade3": "Symptomatic, urgent intervention indicated; ablation",
+        "grade4": "Life-threatening consequences; incompletely controlled medically; cardioversion indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10034474",
+      "symptom": "Pericardial effusion",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "-",
+        "grade2": "Asymptomatic effusion size small to moderate",
+        "grade3": "Effusion with physiologic consequences",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10053565",
+      "symptom": "Pericardial tamponade",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "-",
+        "grade2": "-",
+        "grade3": "-",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10034484",
+      "symptom": "Pericarditis",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "Asymptomatic, ECG or physical findings (e.g., rub) consistent with pericarditis",
+        "grade2": "Symptomatic pericarditis (e.g., chest pain)",
+        "grade3": "Pericarditis with physiologic consequences (e.g., pericardial constriction)",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10061541",
+      "symptom": "Pulmonary valve disease",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "Asymptomatic valvular thickening with or without mild valvular regurgitation or stenosis by imaging",
+        "grade2": "Asymptomatic; moderate regurgitation or stenosis by imaging",
+        "grade3": "Symptomatic; severe regurgitation or stenosis by imaging; symptoms controlled with medical intervention",
+        "grade4": "Life-threatening consequences; urgent intervention indicated (e.g., valve replacement, valvuloplasty)",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10038748",
+      "symptom": "Restrictive cardiomyopathy",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "Imaging findings only",
+        "grade2": "Symptomatic without signs of heart failure",
+        "grade3": "Symptomatic heart failure or other cardiac symptoms, responsive to intervention; new onset of symptoms",
+        "grade4": "Refractory heart failure or other poorly controlled cardiac symptoms",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10058597",
+      "symptom": "Right ventricular dysfunction",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "Asymptomatic with laboratory (e.g., BNP [B-Natriuretic Peptide ]) or cardiac imaging abnormalities",
+        "grade2": "Symptoms with moderate activity or exertion",
+        "grade3": "Severe symptoms, associated with hypoxia, right heart failure; oxygen indicated",
+        "grade4": "Life-threatening consequences; urgent intervention indicated (e.g., ventricular assist device); heart transplant indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10040639",
+      "symptom": "Sick sinus syndrome",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "Asymptomatic, intervention not indicated",
+        "grade2": "Symptomatic, intervention not indicated; change in medication initiated",
+        "grade3": "Symptomatic, intervention indicated",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10040741",
+      "symptom": "Sinus bradycardia",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "Asymptomatic, intervention not indicated",
+        "grade2": "Symptomatic, intervention not indicated; change in medication initiated",
+        "grade3": "Symptomatic, intervention indicated",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10040752",
+      "symptom": "Sinus tachycardia",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "Asymptomatic, intervention not indicated",
+        "grade2": "Symptomatic; non-urgent medical intervention indicated",
+        "grade3": "Urgent medical intervention indicated",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10042604",
+      "symptom": "Supraventricular tachycardia",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "Asymptomatic, intervention not indicated",
+        "grade2": "Non-urgent medical intervention indicated",
+        "grade3": "Symptomatic, urgent intervention indicated",
+        "grade4": "Life-threatening consequences",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10061389",
+      "symptom": "Tricuspid valve disease",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "Asymptomatic valvular thickening with or without mild valvular regurgitation or stenosis",
+        "grade2": "Asymptomatic; moderate regurgitation or stenosis by imaging",
+        "grade3": "Symptomatic; severe regurgitation or stenosis; symptoms controlled with medical intervention",
+        "grade4": "Life-threatening consequences; urgent intervention indicated (e.g., valve replacement, valvuloplasty)",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10047281",
+      "symptom": "Ventricular arrhythmia",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "Asymptomatic, intervention not indicated",
+        "grade2": "Non-urgent medical intervention indicated",
+        "grade3": "Urgent intervention indicated",
+        "grade4": "Life-threatening consequences; hemodynamic compromise",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10047290",
+      "symptom": "Ventricular fibrillation",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "-",
+        "grade2": "-",
+        "grade3": "-",
+        "grade4": "Life-threatening consequences; hemodynamic compromise",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10047302",
+      "symptom": "Ventricular tachycardia",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "-",
+        "grade2": "Non-urgent medical intervention indicated",
+        "grade3": "Symptomatic, urgent intervention indicated",
+        "grade4": "Life-threatening consequences; hemodynamic compromise",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10051592",
+      "symptom": "Acute coronary syndrome",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "-",
+        "grade2": "[Term deleted. Map to Chest pain-cardiac, Grade 2.] Symptomatic, progressive angina; cardiac enzymes normal; hemodynamically stable",
+        "grade3": "[Term deleted. Map to Chest pain-cardiac, Grade 3.] Symptomatic, unstable angina and/or acute myocardial infarction, cardiac enzymes abnormal, hemodynamically stable",
+        "grade4": "[Term deleted. Map to Myocardial infarction, Grade 4.] Symptomatic, unstable angina and/or acute myocardial infarction, cardiac enzymes abnormal, hemodynamically unstable",
+        "grade5": "[Term deleted. Map to Myocardial infarction, Grade 5.] Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10010783",
+      "symptom": "Constrictive pericarditis",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "-",
+        "grade2": "-",
+        "grade3": "[Term deleted. Map to Pericarditis, Grade 3.] Symptomatic heart failure or other cardiac symptoms, responsive to intervention",
+        "grade4": "[Term deleted. Map to Pericarditis, Grade 4.] Refractory heart failure or other poorly controlled cardiac symptoms",
+        "grade5": "[Term deleted. Map to Pericarditis, Grade 5.] Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10048015",
+      "symptom": "Wolff-Parkinson-White syndrome",
+      "soc_category": "Cardiac disorders",
+      "category": "cardiovascular",
+      "grades": {
+        "grade1": "[Term deleted. Map to Cardiac disorders - Other, specify (Wolff-Parkinson-White syndrome), Grade 1.] Asymptomatic, intervention not indicated",
+        "grade2": "[Term deleted. Map to Cardiac disorders - Other, specify (Wolff-Parkinson-White syndrome), Grade 2.] Non-urgent medical intervention indicated",
+        "grade3": "[Term deleted. Map to Cardiac disorders - Other, specify (Wolff-Parkinson-White syndrome), Grade 3.] Symptomatic and incompletely controlled medically or controlled with procedure",
+        "grade4": "[Term deleted. Map to Cardiac disorders - Other, specify (Wolff-Parkinson-White syndrome), Grade 4.] Life-threatening consequences; urgent intervention indicated",
+        "grade5": "[Term deleted. Map to Cardiac disorders - Other, specify (Wolff-Parkinson-White syndrome), Grade 5.] Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10001760",
+      "symptom": "Alopecia",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Hair loss of <50% of normal for that individual that is not obvious from a distance but only on close inspection; a different hair style may be required to cover the hair loss but it does not require a wig or hair piece to camouflage",
+        "grade2": "Hair loss of >=50% normal for that individual that is readily apparent to others; a wig or hair piece is necessary if the patient desires to completely camouflage the hair loss; associated with psychosocial impact",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10005901",
+      "symptom": "Body odor",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Mild odor; physician intervention not indicated; self care interventions",
+        "grade2": "Pronounced odor; psychosocial impact; patient seeks medical intervention",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10006556",
+      "symptom": "Bullous dermatitis",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Asymptomatic; blisters covering <10% BSA",
+        "grade2": "Blisters covering 10 - 30% BSA; painful blisters; limiting instrumental ADL",
+        "grade3": "Blisters covering >30% BSA; limiting self care ADL",
+        "grade4": "Blisters covering >30% BSA; associated with fluid or electrolyte abnormalities; ICU care or burn unit indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10013786",
+      "symptom": "Dry skin",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Covering <10% BSA and no associated erythema or pruritus",
+        "grade2": "Covering 10 - 30% BSA and associated with erythema or pruritus; limiting instrumental ADL",
+        "grade3": "Covering >30% BSA and associated with pruritus; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10014184",
+      "symptom": "Eczema",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Asymptomatic or mild symptoms; additional medical intervention over baseline not indicated",
+        "grade2": "Moderate; topical or oral intervention indicated; additional medical intervention over baseline indicated",
+        "grade3": "Severe or medically significant but not immediately life-threatening; IV intervention indicated",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10015218",
+      "symptom": "Erythema multiforme",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Target lesions covering <10% BSA and not associated with skin tenderness",
+        "grade2": "Target lesions covering 10 - 30% BSA and associated with skin tenderness",
+        "grade3": "Target lesions covering >30% BSA and associated with oral or genital erosions",
+        "grade4": "Target lesions covering >30% BSA; associated with fluid or electrolyte abnormalities; ICU care or burn unit indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10015277",
+      "symptom": "Erythroderma",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "-",
+        "grade2": "Erythema covering >90% BSA without associated symptoms; limiting instrumental ADL",
+        "grade3": "Erythema covering >90% BSA with associated symptoms (e.g., pruritus or tenderness); limiting self care ADL",
+        "grade4": "Erythema covering >90% BSA with associated fluid or electrolyte abnormalities; ICU care or burn unit indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10016241",
+      "symptom": "Fat atrophy",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Covering <10% BSA and asymptomatic",
+        "grade2": "Covering 10 - 30% BSA and associated with erythema or tenderness; limiting instrumental ADL",
+        "grade3": "Covering >30% BSA; associated with erythema or tenderness; limiting self-care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10055525",
+      "symptom": "Hair color changes",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Present",
+        "grade2": "-",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10019049",
+      "symptom": "Hair texture abnormal",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Present",
+        "grade2": "-",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10020112",
+      "symptom": "Hirsutism",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "In women, increase in length, thickness or density of hair in a male distribution that the patient is able to camouflage by periodic shaving, bleaching, or removal of hair",
+        "grade2": "In women, increase in length, thickness or density of hair in a male distribution that requires daily shaving or consistent destructive means of hair removal to camouflage; associated with psychosocial impact",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10020642",
+      "symptom": "Hyperhidrosis",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Limited to one site (palms, soles, or axillae); self care interventions",
+        "grade2": "Involving >1 site; patient seeks medical intervention; associated with psychosocial impact",
+        "grade3": "Associated with electrolyte/hemodynamic imbalance",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10020649",
+      "symptom": "Hyperkeratosis",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Present",
+        "grade2": "-",
+        "grade3": "Limiting self-care ADLs",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10020864",
+      "symptom": "Hypertrichosis",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Increase in length, thickness or density of hair that the patient is either able to camouflage by periodic shaving or removal of hairs or is not concerned enough about the overgrowth to use any form of hair removal",
+        "grade2": "Increase in length, thickness or density of hair at least on the usual exposed areas of the body [face (not limited to beard/moustache area) plus/minus arms] that requires frequent shaving or use of destructive means of hair removal to camouflage; associated with psychosocial impact",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10021013",
+      "symptom": "Hypohidrosis",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "-",
+        "grade2": "Symptomatic; limiting instrumental ADL",
+        "grade3": "Increase in body temperature; limiting self care ADL",
+        "grade4": "Heat stroke",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10062315",
+      "symptom": "Lipohypertrophy",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Asymptomatic and covering <10% BSA",
+        "grade2": "Covering 10 - 30% BSA and associated tenderness; limiting instrumental ADL",
+        "grade3": "Covering >30% BSA and associated tenderness and narcotics or NSAIDs indicated; lipohypertrophy; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10028689",
+      "symptom": "Nail changes",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Present",
+        "grade2": "-",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10028691",
+      "symptom": "Nail discoloration",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only",
+        "grade2": "-",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10049281",
+      "symptom": "Nail loss",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Asymptomatic separation of the nail bed from the nail plate or nail loss",
+        "grade2": "Symptomatic separation of the nail bed from the nail plate or nail loss; limiting instrumental ADL",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10062283",
+      "symptom": "Nail ridging",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "-",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10033474",
+      "symptom": "Pain of skin",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10054524",
+      "symptom": "Palmar-plantar erythrodysesthesia syndrome",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Minimal skin changes or dermatitis (e.g., erythema, edema, or hyperkeratosis) without pain",
+        "grade2": "Skin changes (e.g., peeling, blisters, bleeding, fissures, edema, or hyperkeratosis) with pain; limiting instrumental ADL",
+        "grade3": "Severe skin changes (e.g., peeling, blisters, bleeding, fissures, edema, or hyperkeratosis) with pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10034966",
+      "symptom": "Photosensitivity",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Painless erythema and erythema covering <10% BSA",
+        "grade2": "Tender erythema covering 10 - 30% BSA",
+        "grade3": "Erythema covering >30% BSA and erythema with blistering; photosensitivity; oral corticosteroid therapy indicated; pain control indicated (e.g., narcotics or NSAIDs)",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10037087",
+      "symptom": "Pruritus",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Mild or localized; topical intervention indicated",
+        "grade2": "Widespread and intermittent; skin changes from scratching (e.g., edema, papulation, excoriations, lichenification, oozing/crusts); oral intervention indicated; limiting instrumental ADL",
+        "grade3": "Widespread and constant; limiting self care ADL or sleep; systemic corticosteroid or immunosuppressive therapy indicated",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10037549",
+      "symptom": "Purpura",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Combined area of lesions covering <10% BSA",
+        "grade2": "Combined area of lesions covering 10 - 30% BSA; bleeding with trauma",
+        "grade3": "Combined area of lesions covering >30% BSA; spontaneous bleeding",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10037847",
+      "symptom": "Rash acneiform",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Papules and/or pustules covering <10% BSA, which may or may not be associated with symptoms of pruritus or tenderness",
+        "grade2": "Papules and/or pustules covering 10 - 30% BSA, which may or may not be associated with symptoms of pruritus or tenderness; associated with psychosocial impact; limiting instrumental ADL; papules and/or pustules covering > 30% BSA with or without mild symptoms",
+        "grade3": "Papules and/or pustules covering >30% BSA with moderate or severe symptoms; limiting self-care ADL; associated with local superinfection with oral antibiotics indicated",
+        "grade4": "Life-threatening consequences; papules and/or pustules covering any % BSA, which may or may not be associated with symptoms of pruritus or tenderness and are associated with extensive superinfection with IV antibiotics indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10037868",
+      "symptom": "Rash maculo-papular",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Macules/papules covering <10% BSA with or without symptoms (e.g., pruritus, burning, tightness)",
+        "grade2": "Macules/papules covering 10 - 30% BSA with or without symptoms (e.g., pruritus, burning, tightness); limiting instrumental ADL; rash covering > 30% BSA with or without mild symptoms",
+        "grade3": "Macules/papules covering >30% BSA with moderate or severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10049120",
+      "symptom": "Scalp pain",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10040785",
+      "symptom": "Skin and subcutaneous tissue disorders - Other, specify",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Asymptomatic or mild symptoms; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate; minimal, local or noninvasive intervention indicated; limiting age-appropriate instrumental ADL",
+        "grade3": "Severe or medically significant but not immediately life-threatening; hospitalization or prolongation of existing hospitalization indicated; limiting self care ADL",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10040799",
+      "symptom": "Skin atrophy",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Covering <10% BSA; associated with telangiectasias or changes in skin color",
+        "grade2": "Covering 10 - 30% BSA; associated with striae or adnexal structure loss",
+        "grade3": "Covering >30% BSA; associated with ulceration",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10040865",
+      "symptom": "Skin hyperpigmentation",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Hyperpigmentation covering <10% BSA; no psychosocial impact",
+        "grade2": "Hyperpigmentation covering >10% BSA; associated psychosocial impact",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10040868",
+      "symptom": "Skin hypopigmentation",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Hypopigmentation or depigmentation covering <10% BSA; no psychosocial impact",
+        "grade2": "Hypopigmentation or depigmentation covering >10% BSA; associated psychosocial impact",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10051837",
+      "symptom": "Skin induration",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Mild induration, able to move skin parallel to plane (sliding) and perpendicular to skin (pinching up)",
+        "grade2": "Moderate induration, able to slide skin, unable to pinch skin; limiting instrumental ADL",
+        "grade3": "Severe induration; unable to slide or pinch skin; limiting joint or orifice movement (e.g., mouth, anus); limiting self care ADL",
+        "grade4": "Generalized; associated with signs or symptoms of impaired breathing or feeding",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10040947",
+      "symptom": "Skin ulceration",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Combined area of ulcers <1 cm; nonblanchable erythema of intact skin with associated warmth or edema",
+        "grade2": "Combined area of ulcers 1 - 2 cm; partial thickness skin loss involving skin or subcutaneous fat",
+        "grade3": "Combined area of ulcers >2 cm; full-thickness skin loss involving damage to or necrosis of subcutaneous tissue that may extend down to fascia",
+        "grade4": "Any size ulcer with extensive destruction, tissue necrosis, or damage to muscle, bone, or supporting structures with or without full thickness skin loss",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10042033",
+      "symptom": "Stevens-Johnson syndrome",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "-",
+        "grade2": "-",
+        "grade3": "Skin sloughing covering <10% BSA with associated signs (e.g., erythema, purpura, epidermal detachment, and mucous membrane detachment)",
+        "grade4": "Skin sloughing covering 10 - 30% BSA with associated signs (e.g., erythema, purpura, epidermal detachment and mucous membrane detachment)",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10042344",
+      "symptom": "Subcutaneous emphysema",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Asymptomatic or mild symptoms; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate; minimal, local or noninvasive intervention indicated",
+        "grade3": "Severe or medically significant but not immediately life-threatening; hospitalization or prolongation of existing hospitalization indicated; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10043189",
+      "symptom": "Telangiectasia",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Telangiectasias covering <10% BSA",
+        "grade2": "Telangiectasias covering >=10% BSA; associated with psychosocial impact",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10044223",
+      "symptom": "Toxic epidermal necrolysis",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "-",
+        "grade2": "-",
+        "grade3": "-",
+        "grade4": "Skin sloughing covering >=30% BSA with associated symptoms (e.g., erythema, purpura, or epidermal detachment)",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10046735",
+      "symptom": "Urticaria",
+      "soc_category": "Skin and subcutaneous tissue disorders",
+      "category": "dermatologic",
+      "grades": {
+        "grade1": "Urticarial lesions covering <10% BSA; topical intervention indicated",
+        "grade2": "Urticarial lesions covering 10 - 30% BSA; oral intervention indicated",
+        "grade3": "Urticarial lesions covering >30% BSA; IV intervention indicated",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10014222",
+      "symptom": "Edema face",
+      "soc_category": "General disorders and administration site conditions",
+      "category": "general",
+      "grades": {
+        "grade1": "Localized facial edema",
+        "grade2": "Moderate localized facial edema; limiting instrumental ADL",
+        "grade3": "Severe swelling; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10050068",
+      "symptom": "Edema limbs",
+      "soc_category": "General disorders and administration site conditions",
+      "category": "general",
+      "grades": {
+        "grade1": "5 - 10% inter-limb discrepancy in volume or circumference at point of greatest visible difference; swelling or obscuration of anatomic architecture on close inspection",
+        "grade2": ">10 - 30% inter-limb discrepancy in volume or circumference at point of greatest visible difference; readily apparent obscuration of anatomic architecture; obliteration of skin folds; readily apparent deviation from normal anatomic contour; limiting instrumental ADL",
+        "grade3": ">30% inter-limb discrepancy in volume; gross deviation from normal anatomic contour; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10058720",
+      "symptom": "Edema trunk",
+      "soc_category": "General disorders and administration site conditions",
+      "category": "general",
+      "grades": {
+        "grade1": "Swelling or obscuration of anatomic architecture on close inspection",
+        "grade2": "Readily apparent obscuration of anatomic architecture; obliteration of skin folds; readily apparent deviation from normal anatomic contour; limiting instrumental ADL",
+        "grade3": "Gross deviation from normal anatomic contour; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10016059",
+      "symptom": "Facial pain",
+      "soc_category": "General disorders and administration site conditions",
+      "category": "general",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10016256",
+      "symptom": "Fatigue",
+      "soc_category": "General disorders and administration site conditions",
+      "category": "general",
+      "grades": {
+        "grade1": "Fatigue relieved by rest",
+        "grade2": "Fatigue not relieved by rest; limiting instrumental ADL",
+        "grade3": "Fatigue not relieved by rest, limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10018112",
+      "symptom": "Generalized edema",
+      "soc_category": "General disorders and administration site conditions",
+      "category": "general",
+      "grades": {
+        "grade1": "Noted on exam; 1+ pitting edema",
+        "grade2": "Interfering with instrumental ADLs; oral therapy initiated",
+        "grade3": "Interferes with self care ADL; intravenous therapy indicated; skin breakdown",
+        "grade4": "Life-threatening consequences",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10062466",
+      "symptom": "Localized edema",
+      "soc_category": "General disorders and administration site conditions",
+      "category": "general",
+      "grades": {
+        "grade1": "Localized to dependent areas, no disability or functional impairment",
+        "grade2": "Moderate localized edema and intervention indicated; limiting instrumental ADL",
+        "grade3": "Severe localized edema and intervention indicated; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10054482",
+      "symptom": "Neck edema",
+      "soc_category": "General disorders and administration site conditions",
+      "category": "general",
+      "grades": {
+        "grade1": "Asymptomatic localized neck edema",
+        "grade2": "Moderate neck edema; slight obliteration of anatomic landmarks; limiting instrumental ADL",
+        "grade3": "Generalized neck edema (e.g., difficulty in turning neck); limiting self care ADL",
+        "grade4": "Vascular or respiratory impairment requiring urgent intervention",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10062501",
+      "symptom": "Non-cardiac chest pain",
+      "soc_category": "General disorders and administration site conditions",
+      "category": "general",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10033371",
+      "symptom": "Pain",
+      "soc_category": "General disorders and administration site conditions",
+      "category": "general",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10003239",
+      "symptom": "Arthralgia",
+      "soc_category": "Musculoskeletal and connective tissue disorders",
+      "category": "musculoskeletal",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10003988",
+      "symptom": "Back pain",
+      "soc_category": "Musculoskeletal and connective tissue disorders",
+      "category": "musculoskeletal",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10006002",
+      "symptom": "Bone pain",
+      "soc_category": "Musculoskeletal and connective tissue disorders",
+      "category": "musculoskeletal",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10048677",
+      "symptom": "Buttock pain",
+      "soc_category": "Musculoskeletal and connective tissue disorders",
+      "category": "musculoskeletal",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10008496",
+      "symptom": "Chest wall pain",
+      "soc_category": "Musculoskeletal and connective tissue disorders",
+      "category": "musculoskeletal",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10016750",
+      "symptom": "Flank pain",
+      "soc_category": "Musculoskeletal and connective tissue disorders",
+      "category": "musculoskeletal",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10062572",
+      "symptom": "Generalized muscle weakness",
+      "soc_category": "Musculoskeletal and connective tissue disorders",
+      "category": "musculoskeletal",
+      "grades": {
+        "grade1": "Symptomatic; perceived by patient but not evident on physical exam",
+        "grade2": "Symptomatic; evident on physical exam; limiting instrumental ADL",
+        "grade3": "Limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10023215",
+      "symptom": "Joint effusion",
+      "soc_category": "Musculoskeletal and connective tissue disorders",
+      "category": "musculoskeletal",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Symptomatic; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL; invasive intervention indicated",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10048706",
+      "symptom": "Joint range of motion decreased",
+      "soc_category": "Musculoskeletal and connective tissue disorders",
+      "category": "musculoskeletal",
+      "grades": {
+        "grade1": "<=25% loss of ROM (range of motion); decreased ROM limiting athletic activity",
+        "grade2": ">25 - 50% decrease in ROM; limiting instrumental ADL",
+        "grade3": ">50% decrease in ROM; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10065796",
+      "symptom": "Joint range of motion decreased cervical spine",
+      "soc_category": "Musculoskeletal and connective tissue disorders",
+      "category": "musculoskeletal",
+      "grades": {
+        "grade1": "Mild restriction of rotation or flexion between 60 - 70 degrees",
+        "grade2": "Rotation <60 degrees to right or left; <60 degrees of flexion",
+        "grade3": "Ankylosed/fused over multiple segments with no C-spine rotation",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10065800",
+      "symptom": "Joint range of motion decreased lumbar spine",
+      "soc_category": "Musculoskeletal and connective tissue disorders",
+      "category": "musculoskeletal",
+      "grades": {
+        "grade1": "Stiffness; difficulty bending to the floor to pick up a very light object but able to do athletic activity",
+        "grade2": "Pain with range of motion (ROM) in lumbar spine; requires a reaching aid to pick up a very light object from the floor",
+        "grade3": "<50% lumbar spine flexion; associated with symptoms of ankylosis or fused over multiple segments with no L-spine flexion (e.g., unable to reach to floor to pick up a very light object)",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10028294",
+      "symptom": "Muscle cramp",
+      "soc_category": "Musculoskeletal and connective tissue disorders",
+      "category": "musculoskeletal",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10065776",
+      "symptom": "Muscle weakness lower limb",
+      "soc_category": "Musculoskeletal and connective tissue disorders",
+      "category": "musculoskeletal",
+      "grades": {
+        "grade1": "Symptomatic; perceived by patient but not evident on physical exam",
+        "grade2": "Symptomatic; evident on physical exam; limiting instrumental ADL",
+        "grade3": "Limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10065795",
+      "symptom": "Muscle weakness trunk",
+      "soc_category": "Musculoskeletal and connective tissue disorders",
+      "category": "musculoskeletal",
+      "grades": {
+        "grade1": "Symptomatic; perceived by patient but not evident on physical exam",
+        "grade2": "Symptomatic; evident on physical exam; limiting instrumental ADL",
+        "grade3": "Limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10065895",
+      "symptom": "Muscle weakness upper limb",
+      "soc_category": "Musculoskeletal and connective tissue disorders",
+      "category": "musculoskeletal",
+      "grades": {
+        "grade1": "Symptomatic; perceived by patient but not evident on physical exam",
+        "grade2": "Symptomatic; evident on physical exam; limiting instrumental ADL",
+        "grade3": "Limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10028411",
+      "symptom": "Myalgia",
+      "soc_category": "Musculoskeletal and connective tissue disorders",
+      "category": "musculoskeletal",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10028836",
+      "symptom": "Neck pain",
+      "soc_category": "Musculoskeletal and connective tissue disorders",
+      "category": "musculoskeletal",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10033425",
+      "symptom": "Pain in extremity",
+      "soc_category": "Musculoskeletal and connective tissue disorders",
+      "category": "musculoskeletal",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10001367",
+      "symptom": "Adrenal insufficiency",
+      "soc_category": "Endocrine disorders",
+      "category": "endocrine",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms; medical intervention indicated",
+        "grade3": "Severe symptoms; hospitalization indicated",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10065746",
+      "symptom": "Bronchopulmonary hemorrhage",
+      "soc_category": "Respiratory, thoracic and mediastinal disorders",
+      "category": "respiratory",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; invasive intervention not indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; intubation or urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10011224",
+      "symptom": "Cough",
+      "soc_category": "Respiratory, thoracic and mediastinal disorders",
+      "category": "respiratory",
+      "grades": {
+        "grade1": "Mild symptoms; nonprescription intervention indicated",
+        "grade2": "Moderate symptoms, medical intervention indicated; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10013963",
+      "symptom": "Dyspnea",
+      "soc_category": "Respiratory, thoracic and mediastinal disorders",
+      "category": "respiratory",
+      "grades": {
+        "grade1": "Shortness of breath with moderate exertion",
+        "grade2": "Shortness of breath with minimal exertion; limiting instrumental ADL",
+        "grade3": "Shortness of breath at rest; limiting self care ADL",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10023838",
+      "symptom": "Laryngeal edema",
+      "soc_category": "Respiratory, thoracic and mediastinal disorders",
+      "category": "respiratory",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Symptomatic; medical intervention indicated (e.g., dexamethasone, epinephrine, antihistamines)",
+        "grade3": "Stridor; respiratory distress; hospitalization indicated",
+        "grade4": "Life-threatening airway compromise; urgent intervention indicated (e.g., tracheotomy or intubation)",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10065759",
+      "symptom": "Laryngeal hemorrhage",
+      "soc_category": "Respiratory, thoracic and mediastinal disorders",
+      "category": "respiratory",
+      "grades": {
+        "grade1": "Mild cough or trace hemoptysis; laryngoscopic findings",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated (e.g., tracheotomy or intubation)",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10062667",
+      "symptom": "Laryngopharyngeal dysesthesia",
+      "soc_category": "Respiratory, thoracic and mediastinal disorders",
+      "category": "respiratory",
+      "grades": {
+        "grade1": "Mild symptoms; no anxiety; intervention not indicated",
+        "grade2": "Moderate symptoms; mild anxiety, but no dyspnea; short duration of observation and/or anxiolytic indicated; limiting instrumental ADL",
+        "grade3": "Severe symptoms; dyspnea and swallowing difficulty; limiting self care ADL",
+        "grade4": "Life-threatening consequences",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10056356",
+      "symptom": "Mediastinal hemorrhage",
+      "soc_category": "Respiratory, thoracic and mediastinal disorders",
+      "category": "respiratory",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated; radiologic evidence only",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10068319",
+      "symptom": "Oropharyngeal pain",
+      "soc_category": "Respiratory, thoracic and mediastinal disorders",
+      "category": "respiratory",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; altered oral intake; non-narcotics initiated; topical analgesics initiated",
+        "grade3": "Severe pain; severely altered eating/swallowing; narcotics initiated; requires parenteral nutrition",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10055315",
+      "symptom": "Pharyngeal hemorrhage",
+      "soc_category": "Respiratory, thoracic and mediastinal disorders",
+      "category": "respiratory",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; intubation or urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10034844",
+      "symptom": "Pharyngolaryngeal pain",
+      "soc_category": "Respiratory, thoracic and mediastinal disorders",
+      "category": "respiratory",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10055319",
+      "symptom": "Pleural hemorrhage",
+      "soc_category": "Respiratory, thoracic and mediastinal disorders",
+      "category": "respiratory",
+      "grades": {
+        "grade1": "Asymptomatic; mild hemorrhage confirmed by thoracentesis",
+        "grade2": "Symptomatic or associated with pneumothorax; chest tube drainage indicated",
+        "grade3": ">1000 ml of blood evacuated; persistent bleeding (150-200 ml/hr for 2 - 4 hr); persistent transfusion indicated; elective operative intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; intubation or urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10035623",
+      "symptom": "Pleuritic pain",
+      "soc_category": "Respiratory, thoracic and mediastinal disorders",
+      "category": "respiratory",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10035742",
+      "symptom": "Pneumonitis",
+      "soc_category": "Respiratory, thoracic and mediastinal disorders",
+      "category": "respiratory",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Symptomatic; medical intervention indicated; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL; oxygen indicated",
+        "grade4": "Life-threatening respiratory compromise; urgent intervention indicated (e.g., tracheotomy or intubation)",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10036790",
+      "symptom": "Productive cough",
+      "soc_category": "Respiratory, thoracic and mediastinal disorders",
+      "category": "respiratory",
+      "grades": {
+        "grade1": "Occasional/minimal production of sputum with cough",
+        "grade2": "Moderate sputum production; limiting instrumental ADL",
+        "grade3": "Persistent or copious production of sputum; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10037375",
+      "symptom": "Pulmonary edema",
+      "soc_category": "Respiratory, thoracic and mediastinal disorders",
+      "category": "respiratory",
+      "grades": {
+        "grade1": "Radiologic findings only; minimal dyspnea on exertion",
+        "grade2": "Moderate dyspnea on exertion; medical intervention indicated; limiting instrumental ADL",
+        "grade3": "Severe dyspnea or dyspnea at rest; oxygen indicated; limiting self care ADL",
+        "grade4": "Life-threatening respiratory compromise; urgent intervention or intubation with ventilatory support indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10037383",
+      "symptom": "Pulmonary fibrosis",
+      "soc_category": "Respiratory, thoracic and mediastinal disorders",
+      "category": "respiratory",
+      "grades": {
+        "grade1": "Radiologic pulmonary fibrosis <25% of lung volume associated with hypoxia",
+        "grade2": "Evidence of pulmonary hypertension; radiographic pulmonary fibrosis 25 - 50% associated with hypoxia",
+        "grade3": "Severe hypoxia; evidence of right-sided heart failure; radiographic pulmonary fibrosis >50 - 75%",
+        "grade4": "Life-threatening consequences (e.g., hemodynamic/pulmonary complications); intubation with ventilatory support indicated; radiographic pulmonary fibrosis >75% with severe honeycombing",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10065873",
+      "symptom": "Pulmonary fistula",
+      "soc_category": "Respiratory, thoracic and mediastinal disorders",
+      "category": "respiratory",
+      "grades": {
+        "grade1": "Asymptomatic",
+        "grade2": "Symptomatic, invasive intervention not indicated",
+        "grade3": "Invasive intervention indicated",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10037400",
+      "symptom": "Pulmonary hypertension",
+      "soc_category": "Respiratory, thoracic and mediastinal disorders",
+      "category": "respiratory",
+      "grades": {
+        "grade1": "Minimal dyspnea; findings on physical exam or other evaluation",
+        "grade2": "Moderate dyspnea, cough; requiring evaluation by cardiac catheterization and medical intervention",
+        "grade3": "Severe symptoms, associated with hypoxia, right heart failure; oxygen indicated",
+        "grade4": "Life-threatening airway consequences; urgent intervention indicated (e.g., tracheotomy or intubation)",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10040747",
+      "symptom": "Sinus pain",
+      "soc_category": "Respiratory, thoracic and mediastinal disorders",
+      "category": "respiratory",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10040975",
+      "symptom": "Sleep apnea",
+      "soc_category": "Respiratory, thoracic and mediastinal disorders",
+      "category": "respiratory",
+      "grades": {
+        "grade1": "Snoring and nocturnal sleep arousal without apneic periods",
+        "grade2": "Moderate apnea and oxygen desaturation; excessive daytime sleepiness; medical evaluation indicated; limiting instrumental ADL",
+        "grade3": "Oxygen desaturation; associated with pulmonary hypertension; medical intervention indicated; limiting self care ADL",
+        "grade4": "Cardiovascular or neuropsychiatric symptoms; urgent operative intervention indicated",
+        "grade5": "Death"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10005364",
+      "symptom": "Blood bilirubin increased",
+      "soc_category": "Investigations",
+      "category": "general",
+      "grades": {
+        "grade1": ">ULN - 1.5 x ULN if baseline was normal; > 1.0 - 1.5 x baseline if baseline was abnormal",
+        "grade2": ">1.5 - 3.0 x ULN if baseline was normal; >1.5 - 3.0 x baseline if baseline was abnormal",
+        "grade3": ">3.0 - 10.0 x ULN if baseline was normal; >3.0 - 10.0 x baseline if baseline was abnormal",
+        "grade4": ">10.0 x ULN if baseline was normal; >10.0 x baseline if baseline was abnormal",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10007612",
+      "symptom": "Cardiac troponin I increased",
+      "soc_category": "Investigations",
+      "category": "general",
+      "grades": {
+        "grade1": "Levels above the upper limit of normal and below the level of myocardial infarction as defined by the manufacturer",
+        "grade2": "-",
+        "grade3": "Levels consistent with myocardial infarction as defined by the manufacturer",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10007613",
+      "symptom": "Cardiac troponin T increased",
+      "soc_category": "Investigations",
+      "category": "general",
+      "grades": {
+        "grade1": "Levels above the upper limit of normal and below the level of myocardial infarction as defined by the manufacturer",
+        "grade2": "-",
+        "grade3": "Levels consistent with myocardial infarction as defined by the manufacturer",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10011368",
+      "symptom": "Creatinine increased",
+      "soc_category": "Investigations",
+      "category": "general",
+      "grades": {
+        "grade1": ">ULN - 1.5 x ULN",
+        "grade2": ">1.5 - 3.0 x baseline; >1.5 - 3.0 x ULN",
+        "grade3": ">3.0 x baseline; >3.0 - 6.0 x ULN",
+        "grade4": ">6.0 x ULN",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10014383",
+      "symptom": "Electrocardiogram QT corrected interval prolonged",
+      "soc_category": "Investigations",
+      "category": "general",
+      "grades": {
+        "grade1": "Average QTc 450 - 480 ms",
+        "grade2": "Average QTc 481 - 500 ms",
+        "grade3": "Average QTc >= 501 ms; >60 ms change from baseline",
+        "grade4": "Torsade de pointes; polymorphic ventricular tachycardia; signs/symptoms of serious arrhythmia",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10050380",
+      "symptom": "Electrocardiogram T wave abnormal",
+      "soc_category": "Investigations",
+      "category": "general",
+      "grades": {
+        "grade1": "T wave flattening",
+        "grade2": "Nonspecific ST segment change",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10047896",
+      "symptom": "Weight gain",
+      "soc_category": "Investigations",
+      "category": "general",
+      "grades": {
+        "grade1": "5 - <10% from baseline",
+        "grade2": "10 - <20% from baseline",
+        "grade3": ">=20% from baseline",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    },
+    {
+      "ctcae_code": "10047900",
+      "symptom": "Weight loss",
+      "soc_category": "Investigations",
+      "category": "general",
+      "grades": {
+        "grade1": "5 to <10% from baseline; intervention not indicated",
+        "grade2": "10 - <20% from baseline; nutritional support indicated",
+        "grade3": ">=20% from baseline; tube feeding or TPN indicated",
+        "grade4": "-",
+        "grade5": "-"
+      },
+      "source": "CTCAE v5.0"
+    }
+  ],
+  "epidemiology": {
+    "source": "SEER + GLOBOCAN 2022",
+    "incidence_per_100K": 132.5,
+    "mortality_per_100K": 18.9,
+    "local_stage_percentage": 64.0,
+    "five_year_survival": {
+      "overall": 90.8,
+      "localized": 99.3,
+      "regional": 86.3,
+      "distant": 31.0
+    }
+  },
+  "treatment_categories": {
+    "chemotherapy": {
+      "common_drugs": [
+        "paclitaxel",
+        "docetaxel",
+        "cyclophosphamide",
+        "doxorubicin",
+        "epirubicin"
+      ],
+      "side_effect_focus": [
+        "骨髓抑制",
+        "恶心呕吐",
+        "神经病变",
+        "心脏毒性"
+      ]
+    },
+    "endocrine": {
+      "common_drugs": [
+        "tamoxifen",
+        "aromatase inhibitors",
+        "fulvestrant"
+      ],
+      "side_effect_focus": [
+        "骨质疏松",
+        "潮热",
+        "子宫内膜异常",
+        "关节痛"
+      ]
+    },
+    "targeted": {
+      "common_drugs": [
+        "trastuzumab",
+        "pertuzumab",
+        "CDK4/6 inhibitors"
+      ],
+      "side_effect_focus": [
+        "心脏毒性",
+        "腹泻",
+        "手足综合征"
+      ]
+    },
+    "immunotherapy": {
+      "common_drugs": [
+        "pembrolizumab",
+        "atezolizumab"
+      ],
+      "side_effect_focus": [
+        "免疫相关不良反应",
+        "皮疹",
+        "肝炎",
+        "肺炎"
+      ]
+    },
+    "radiation": {
+      "common_drugs": [],
+      "side_effect_focus": [
+        "皮肤反应",
+        "放射性食管炎",
+        "疲劳"
+      ]
+    }
+  }
+}

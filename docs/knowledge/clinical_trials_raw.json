@@ -1,0 +1,4538 @@
+{
+  "metadata": {
+    "source": "ClinicalTrials.gov + NCI Guidelines",
+    "version": "1.0",
+    "created": "2026-05-15"
+  },
+  "knowledge_entries": [
+    {
+      "id": "adverse_events_NCT01301040",
+      "category": "adverse_events",
+      "nct_id": "NCT01301040",
+      "title": "Early Cardiac Toxicity of Adjuvant CT in Elderly BC.",
+      "interventions": [
+        {
+          "name": "epirubicin, cyclophosphamide, docetaxel",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT05146843",
+      "category": "adverse_events",
+      "nct_id": "NCT05146843",
+      "title": "The Impact of Chronic Mitochondrial Antioxidant Supplementation on CardiovascularToxicity in Breast Cancer Patients",
+      "interventions": [
+        {
+          "name": "Mitoquinone",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Placebo",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Neoplasms"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT05874297",
+      "category": "adverse_events",
+      "nct_id": "NCT05874297",
+      "title": "Online Nutrition Education to Decrease the Side Effects of Chemotherapy in Patients With Breast Cancer",
+      "interventions": [
+        {
+          "name": "Best Practice",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Internet-Based Intervention",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Questionnaire Administration",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Anatomic Stage I Breast Cancer AJCC v8",
+        "Anatomic Stage II Breast Cancer AJCC v8",
+        "Anatomic Stage III Breast Cancer AJCC v8"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT06776458",
+      "category": "adverse_events",
+      "nct_id": "NCT06776458",
+      "title": "Chronic Impacts of Endocrine Therapy on Cardiovascular and Brain Health Outcomes in Breast Cancer",
+      "interventions": [
+        {
+          "name": "N/A - Usual Care",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer Females"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT06595147",
+      "category": "adverse_events",
+      "nct_id": "NCT06595147",
+      "title": "Breast cancEr, FITness and ExeRcise for Heart Health: The BE-FITTER Study",
+      "interventions": [
+        {
+          "name": "Structured Exercise Training",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Group-based Yoga and Stretching",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Disability Physical",
+        "Heart Failure",
+        "Cardiotoxicity"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT04434404",
+      "category": "adverse_events",
+      "nct_id": "NCT04434404",
+      "title": "Evaluation of the Cardioprotective Effect of L-carnitine and Silymarin in Patients Receiving Anthracycline Chemotherapy",
+      "interventions": [
+        {
+          "name": "L-Carnitine 500Mg Oral Tablet",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE4"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT00016276",
+      "category": "adverse_events",
+      "nct_id": "NCT00016276",
+      "title": "Combination Chemotherapy, Surgery, and Radiation Therapy With or Without Dexrazoxane and Trastuzumab in Treating Women With Stage III or Stage IV Breast Cancer",
+      "interventions": [
+        {
+          "name": "dexrazoxane hydrochloride",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "doxorubicin hydrochloride",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "cyclophosphamide",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "paclitaxel",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "trastuzumab",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "therapeutic conventional surgery",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "radiation therapy",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "tamoxifen citrate",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "laboratory biomarker analysis",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Cardiac Toxicity",
+        "Inflammatory Breast Cancer",
+        "Stage IIIA Breast Cancer",
+        "Stage IIIB Breast Cancer",
+        "Stage IV Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE3"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT05755646",
+      "category": "adverse_events",
+      "nct_id": "NCT05755646",
+      "title": "Ice Plant Intensive Cream for the Prevention of Hand-Foot Syndrome in Breast Cancer: Pilot Randomized Controlled Trial",
+      "interventions": [
+        {
+          "name": "Ice Plant Intensive Cream plus Standard Care",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Standard Care",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Hand-Foot Syndrome",
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT03252717",
+      "category": "adverse_events",
+      "nct_id": "NCT03252717",
+      "title": "Predictive Role of New Biomarkers for Hypersensitive Patients to Radiation in Breast Cancer (BIORISE)",
+      "interventions": [
+        {
+          "name": "Blood sample",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT01153282",
+      "category": "adverse_events",
+      "nct_id": "NCT01153282",
+      "title": "Physical Functional Side Effects of Taxane Chemotherapy for Breast Cancer",
+      "interventions": [],
+      "conditions": [
+        "Breast Cancer"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT05467111",
+      "category": "adverse_events",
+      "nct_id": "NCT05467111",
+      "title": "Cardioprotective Effect of Acute Exercise in Breast Cancer Patients",
+      "interventions": [
+        {
+          "name": "Acute Exercise",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Early-stage Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT03253159",
+      "category": "adverse_events",
+      "nct_id": "NCT03253159",
+      "title": "Added Conversational Hypnosis Reduced General Anesthesia Side Effects for Day Case Breast Surgery",
+      "interventions": [
+        {
+          "name": "Hypnosis",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT06781762",
+      "category": "adverse_events",
+      "nct_id": "NCT06781762",
+      "title": "Short-term Impacts of Endocrine Therapy on Cardiovascular and Brain Health Outcomes in Breast Cancer",
+      "interventions": [
+        {
+          "name": "N/A (Usual Care)",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer Females"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT06310330",
+      "category": "adverse_events",
+      "nct_id": "NCT06310330",
+      "title": "TRUST-ACE - Anticancer-treatment Cardiotoxicity Identification by Echocardiography",
+      "interventions": [
+        {
+          "name": "Comprehensive echocardiographic follow-up",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Simplified echocardiographic follow-up",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Neoplasm Malignant Primary"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT00748267",
+      "category": "adverse_events",
+      "nct_id": "NCT00748267",
+      "title": "Hypnosis in Reducing Pain and Other Side Effects in Women Undergoing Surgery for Breast Cancer",
+      "interventions": [
+        {
+          "name": "questionnaire administration",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "hypnotherapy",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "therapeutic conventional surgery",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Anxiety Disorder",
+        "Breast Cancer",
+        "Nausea and Vomiting",
+        "Pain"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT06930521",
+      "category": "adverse_events",
+      "nct_id": "NCT06930521",
+      "title": "JUdicious Surveillance for Trastuzumab Induced Cardiotoxicity in the First Year",
+      "interventions": [
+        {
+          "name": "Intervention - Low Risk Group OR Intermediate Risk Group",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Cardiovascular Health",
+        "Breast Cancer",
+        "Breast Cancer Early Stage Breast Cancer (Stage 1-3)",
+        "Cardio-oncology",
+        "Circulatory and Respiratory Health",
+        "Clinical and Translational Cardiovascular Sciences",
+        "Health Services and Systems - Healthcare Effectiveness &Amp; Outcomes"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT04429633",
+      "category": "adverse_events",
+      "nct_id": "NCT04429633",
+      "title": "Strain vs. Left Ventricular Ejection Fraction-based Cardiotoxicity Prevention in Breast Cancer",
+      "interventions": [
+        {
+          "name": "Candesartan",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Cardiotoxicity",
+        "Breast Cancer",
+        "Prevention",
+        "Adjuvant",
+        "Trastuzumab"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT05084625",
+      "category": "adverse_events",
+      "nct_id": "NCT05084625",
+      "title": "PACED-digitized Support During Adjuvant Endocrine Therapy",
+      "interventions": [
+        {
+          "name": "Digitized support",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Treatment Adherence",
+        "Quality of Life",
+        "Treatment Side Effects"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT06023576",
+      "category": "adverse_events",
+      "nct_id": "NCT06023576",
+      "title": "A Study of Blood Pressure Control During Cancer Treatment",
+      "interventions": [
+        {
+          "name": "antihypertensive medications",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Blood pressure measurement",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Echocardiogram",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Symptom-limited cardiopulmonary exercise test",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Quality of Life Measures",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Biomarkers",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Cardiotoxicity"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT02388230",
+      "category": "adverse_events",
+      "nct_id": "NCT02388230",
+      "title": "Quantification of Breast RadioTherapy Associated Late Toxicity Using Novel UltraSound Techniques",
+      "interventions": [
+        {
+          "name": "Ultrasound imaging",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Radiotherapy Toxicity"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT00245050",
+      "category": "adverse_events",
+      "nct_id": "NCT00245050",
+      "title": "Pyridoxine in Preventing Hand-Foot Syndrome in Patients Who Are Receiving Liposomal Doxorubicin for Cancer",
+      "interventions": [
+        {
+          "name": "pyridoxine hydrochloride",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Placebo",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "doxorubicin HCL liposome",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Drug/Agent Toxicity by Tissue/Organ",
+        "Endometrial Cancer",
+        "Fallopian Tube Cancer",
+        "Ovarian Cancer",
+        "Peritoneal Cavity Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE3"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT02415387",
+      "category": "adverse_events",
+      "nct_id": "NCT02415387",
+      "title": "Typhoid Vaccine in Testing Response to Immune Stress in Patients With Stage I-IIIA Breast Cancer",
+      "interventions": [
+        {
+          "name": "typhoid vaccine",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Placebo",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Cognitive Side Effects of Cancer Therapy",
+        "Depression",
+        "Recurrent Breast Carcinoma",
+        "Stage IA Breast Cancer",
+        "Stage IB Breast Cancer",
+        "Stage IIA Breast Cancer",
+        "Stage IIB Breast Cancer",
+        "Stage IIIA Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "EARLY_PHASE1"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT04790266",
+      "category": "adverse_events",
+      "nct_id": "NCT04790266",
+      "title": "Early Detection of Cardiotoxicity From Systemic and Radiation Therapy in Breast Cancer Patients",
+      "interventions": [
+        {
+          "name": "Cardiac MRI",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Cardiotoxicity"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT07253987",
+      "category": "adverse_events",
+      "nct_id": "NCT07253987",
+      "title": "Cancer Survivors Program",
+      "interventions": [
+        {
+          "name": "active screening of adverse effects of anticancer therapy based on specific questionnaire + quality of life screening",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Prostate Cancer Patients",
+        "Breast Cancer Patients"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT02300675",
+      "category": "adverse_events",
+      "nct_id": "NCT02300675",
+      "title": "Therapeutic Education Intervention in Breast Cancer: PEPs Hormonotherapy",
+      "interventions": [
+        {
+          "name": "therapeutic education program",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT06332131",
+      "category": "adverse_events",
+      "nct_id": "NCT06332131",
+      "title": "Effects of Immune Checkpoint Inhibitors on Coronary Microvasculature",
+      "interventions": [],
+      "conditions": [
+        "Coronary Microvascular Dysfunction",
+        "Cardiotoxicity",
+        "Breast Cancer",
+        "Lung Cancer (NSCLC)"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT04789187",
+      "category": "adverse_events",
+      "nct_id": "NCT04789187",
+      "title": "Exercise, Cancer and Cognition: The ECCO-Study",
+      "interventions": [
+        {
+          "name": "High-Intensity-Interval-Training",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "General Physical Activity Recommendations",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT07254221",
+      "category": "adverse_events",
+      "nct_id": "NCT07254221",
+      "title": "Rosuvastatin for Prevention of Anthracycline-induced Cardiac Dysfunction in Breast Cancer Patients",
+      "interventions": [
+        {
+          "name": "Rosuvastatin 20 mg/day",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Placebo tablets similar to rosuvastatin 20mg tablets",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Anthracycline-induced Cardiac Toxicity",
+        "Breast Cancer",
+        "Anthracycline Related Cardiotoxicity in Breast Cancer",
+        "Anthracycline-induced Cardiotoxicity"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE4"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT05406635",
+      "category": "adverse_events",
+      "nct_id": "NCT05406635",
+      "title": "Imaging Versus Cardiac Biomarker Monitored HER2 Directed Therapy in Patients With Breast Cancer",
+      "interventions": [
+        {
+          "name": "Biomarkers: Troponins and natriuretic peptides",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Cardiotoxicity",
+        "HER2-positive Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT04962425",
+      "category": "adverse_events",
+      "nct_id": "NCT04962425",
+      "title": "Risk Assessment Model of Trastuzumab-related Cardiotoxicity in Breast Cancer Patients",
+      "interventions": [
+        {
+          "name": "Trastuzumab",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Cardiac Toxicity",
+        "Antitumor Drugs",
+        "Breast Cancer"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT06415162",
+      "category": "adverse_events",
+      "nct_id": "NCT06415162",
+      "title": "Evaluation of the Effects of Using Cooling Pillowcases, on the Symptoms of Hot Flushes, Sleep and Life Quality",
+      "interventions": [
+        {
+          "name": "Cooling Pillowcases",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT07264985",
+      "category": "adverse_events",
+      "nct_id": "NCT07264985",
+      "title": "Gut Microbiota and Diarrhea in Breast Cancer Patients Receiving Pyrotinib",
+      "interventions": [],
+      "conditions": [
+        "Breast Cancer",
+        "Drug-Related Side Effects",
+        "Diarrhea"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT02024568",
+      "category": "adverse_events",
+      "nct_id": "NCT02024568",
+      "title": "Exploratory Study on the Use of Pregabalin for the Treatment of Taxol Related Arthralgia-Myalgia",
+      "interventions": [
+        {
+          "name": "Pregabalin",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Placebo",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Taxane",
+        "Drug-related Side Effects and Adverse Reactions",
+        "Pain",
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT07148505",
+      "category": "adverse_events",
+      "nct_id": "NCT07148505",
+      "title": "A Study of Real-world Outcomes Among Patients Treated With Ribociclib",
+      "interventions": [],
+      "conditions": [
+        "Metastatic Breast Cancer"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT05019365",
+      "category": "adverse_events",
+      "nct_id": "NCT05019365",
+      "title": "Investigating the Long-term Cardiac Sequelae of Trastuzumab Therapy",
+      "interventions": [],
+      "conditions": [
+        "Breast Cancer",
+        "HER2-positive Breast Cancer",
+        "Cardiotoxicity"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT05622058",
+      "category": "adverse_events",
+      "nct_id": "NCT05622058",
+      "title": "A Study of ALRN-6924 for Protection of Chemotherapy-Induced Side Effects in Patients With TP53-Mutant Breast Cancer",
+      "interventions": [
+        {
+          "name": "ALRN-6924",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "TAC (doxorubicin 50 mg/m2; cyclophosphamide 500 mg/m2; docetaxel 75 mg/m2)",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Prevention of Chemotherapy-induced Myelosuppression"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE1"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT00287482",
+      "category": "adverse_events",
+      "nct_id": "NCT00287482",
+      "title": "Essiac (ESIAK) Versus Placebo to Improve Quality of Life in Transition in Women With Breast or Ovarian Cancer.",
+      "interventions": [
+        {
+          "name": "Essiac",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Ovarian Cancer",
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT00497458",
+      "category": "adverse_events",
+      "nct_id": "NCT00497458",
+      "title": "Androgen Therapy for Breast Cancer Patients With Aromatase Inhibitor Induced Side-Effects",
+      "interventions": [
+        {
+          "name": "Testosterone",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Arthralgia",
+        "Osteoporosis"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT05036252",
+      "category": "adverse_events",
+      "nct_id": "NCT05036252",
+      "title": "Study of Cardiopulmonary Exercise Testing in Women Who Have HER2-Positive Breast Cancer With Mild Cardiotoxicity",
+      "interventions": [
+        {
+          "name": "Cardiopulmonary Exercise Test",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Echocardiogram",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Echocardiography",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "HER2-positive Breast Cancer",
+        "HER2-positive Metastatic Breast Cancer",
+        "Breast Cancer Stage I",
+        "Breast Cancer Stage II",
+        "Breast Cancer Stage III",
+        "Breast Cancer Stage IV",
+        "Cardiotoxicity"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT00559858",
+      "category": "adverse_events",
+      "nct_id": "NCT00559858",
+      "title": "Pyridoxine in Preventing Hand-Foot Syndrome in Patients Who Are Receiving Capecitabine for Advanced Colorectal Cancer or Breast Cancer",
+      "interventions": [
+        {
+          "name": "pyridoxine hydrochloride",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "placebo",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "quality-of-life assessment",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Colorectal Cancer",
+        "Palmar-plantar Erythrodysesthesia"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE3"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT04044872",
+      "category": "adverse_events",
+      "nct_id": "NCT04044872",
+      "title": "Hyperpolarized Carbon 13-Based Metabolic Imaging to Detect Radiation-Induced Cardiotoxicity",
+      "interventions": [
+        {
+          "name": "[1-13C]pyruvate along with MRI imaging",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Thoracic Cancer",
+        "Left Sided Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "EARLY_PHASE1"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT05595109",
+      "category": "adverse_events",
+      "nct_id": "NCT05595109",
+      "title": "Role of Silymarin in Chemotherapy Toxicity and Cognition Improvement in Breast Cancer Patients",
+      "interventions": [
+        {
+          "name": "Silymarin",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Placebo",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Peripheral Neuropathy",
+        "Cardiac Toxicities",
+        "Hepatic Toxicity",
+        "Cognitive Impairment"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2",
+        "PHASE3"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT00296036",
+      "category": "adverse_events",
+      "nct_id": "NCT00296036",
+      "title": "Pyridoxine and Topical Urea/Lactic Acid-Based Cream in Preventing Hand-Foot Syndrome in Patients Receiving Capecitabine for Breast Cancer or Other Cancer",
+      "interventions": [
+        {
+          "name": "pyridoxine hydrochloride",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "urea/lactic acid-based topical cream",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "placebo",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Drug/Agent Toxicity by Tissue/Organ",
+        "Unspecified Adult Solid Tumor, Protocol Specific"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE3"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT06152471",
+      "category": "adverse_events",
+      "nct_id": "NCT06152471",
+      "title": "Effect of Salovum™ and SPC-Flakes™ on Abemaciclib-induced Gastrointestinal Toxicity in Early Breast Cancer",
+      "interventions": [
+        {
+          "name": "SPC-flakes",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Salovum",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Placebo",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Early-stage Breast Cancer",
+        "Diarrhea",
+        "Adverse Drug Event"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE3"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT02942615",
+      "category": "adverse_events",
+      "nct_id": "NCT02942615",
+      "title": "The Safety Management of Cardiac Toxicity in Breast Cancer Patients Under Multidiscipline Therapy.",
+      "interventions": [
+        {
+          "name": "limit heart dose",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Neoplasms",
+        "Cardiotoxicity"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT02753036",
+      "category": "adverse_events",
+      "nct_id": "NCT02753036",
+      "title": "Chemotherapy-induced Cognitive Alterations in Recruits With Ovarian and Breast Cancer",
+      "interventions": [
+        {
+          "name": "Chemotherapy",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Cognition Disorders",
+        "Polyneuropathies"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT01954706",
+      "category": "adverse_events",
+      "nct_id": "NCT01954706",
+      "title": "Exercise to Prevent Aromatase Inhibitor Side Effects in Breast Cancer Patients",
+      "interventions": [
+        {
+          "name": "Structured Exercise",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Usual Care",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Sarcopenia"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT01665300",
+      "category": "adverse_events",
+      "nct_id": "NCT01665300",
+      "title": "Usefulness of Myocardial Deformation Imaging for Trastuzumab-induced Cardiotoxicity",
+      "interventions": [],
+      "conditions": [
+        "Left Ventricular Function Systolic Dysfunction",
+        "Cardiotoxicity"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT04270123",
+      "category": "adverse_events",
+      "nct_id": "NCT04270123",
+      "title": "An EORTC Study Updating the QLQ-BR23 to BR45",
+      "interventions": [
+        {
+          "name": "EORTC QLQ-BR45 questionnaire",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Cancer",
+        "Breast Cancer"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT06673329",
+      "category": "adverse_events",
+      "nct_id": "NCT06673329",
+      "title": "Brodalumab in the Treatment of Immune-Related Adverse Events",
+      "interventions": [
+        {
+          "name": "Brodalumab",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "CT scan",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Esophageal Cancer",
+        "Kidney Cancer",
+        "Lung Cancer",
+        "Thyroid Cancer",
+        "Gynecologic Cancer",
+        "Pancreatic Cancer",
+        "Stomach Cancer",
+        "Brain Tumor",
+        "Colon Cancer",
+        "Rectal Cancer",
+        "Head and Neck Cancer",
+        "Oral Cancer",
+        "Liver Cancer",
+        "Skin Cancer",
+        "Prostate Cancer",
+        "Testicular Cancer",
+        "Solid Tumor"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE1"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT06435559",
+      "category": "adverse_events",
+      "nct_id": "NCT06435559",
+      "title": "CHEmotherapy and Cognitive Deterioration in Patients With Operable Breast Cancer: Impact of Cognitive Rehabilitation (CHEMOFOG)",
+      "interventions": [
+        {
+          "name": "Neurotablet® and Neuropsychological evaluations",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Neuropsychological evaluations",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT04839588",
+      "category": "adverse_events",
+      "nct_id": "NCT04839588",
+      "title": "Telerehabilitation Cognitive Impairments Following Chemotherapy Usability Study",
+      "interventions": [
+        {
+          "name": "Usability study",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Chemotherapy-Related Cognitive Impairment",
+        "Healthy"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT03740984",
+      "category": "adverse_events",
+      "nct_id": "NCT03740984",
+      "title": "Effects of Music or Hypnotherapy on Cancer Patients During Chemotherapy",
+      "interventions": [
+        {
+          "name": "Interventions are self controlled by the patient via a mp3 player and noise reduction headphones.",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Neoplasm",
+        "Ovary Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT07465497",
+      "category": "adverse_events",
+      "nct_id": "NCT07465497",
+      "title": "Impact of Supplementation With Synbiotics and Prebiotics on Cognitive Decline Associated With Neoadjuvant Chemotherapy in First-line Patients With Breast Cancer",
+      "interventions": [
+        {
+          "name": "Synbiotics Blend",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Synbiotics + Vitamin D",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Prebiotic",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Chemobrain",
+        "Breast Cancer",
+        "Inflammatory Disease"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT05063643",
+      "category": "adverse_events",
+      "nct_id": "NCT05063643",
+      "title": "Cardiotoxicity of Targeted Therapy for HER-2 Positive Breast Cancer Patients at High Altitude",
+      "interventions": [
+        {
+          "name": "High altitude",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "HER2-positive Breast Cancer",
+        "Targeted Therapy",
+        "Cardiac Toxicity",
+        "High Altitude"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT01110291",
+      "category": "adverse_events",
+      "nct_id": "NCT01110291",
+      "title": "Study of Usefulness of Genotyping to Predict Docetaxel Exposure and Adverse Events",
+      "interventions": [
+        {
+          "name": "docetaxel + CEF",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "CYP3A Phenotyping",
+        "CYP3A5 and MDR1 Genotyping",
+        "Docetaxel Toxicity",
+        "Associations Between Genetic Data and Docetaxel Toxicity"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT00260975",
+      "category": "adverse_events",
+      "nct_id": "NCT00260975",
+      "title": "Study of the Effects of Chemotherapy on Memory and Other Mental Functions in Women With Breast Cancer",
+      "interventions": [],
+      "conditions": [
+        "Breast Cancer"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT03711110",
+      "category": "adverse_events",
+      "nct_id": "NCT03711110",
+      "title": "Cardiovascular Prevention Strategies in Elderly Patients With Cancer (CARTIER Clinical Trial)",
+      "interventions": [
+        {
+          "name": "Intensive cardiovascular monitoring",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "No intervention",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Cancer (Colon Cancer, Breast Cancer, Lymphoma, Chronic Lymphoma Leukemia, Multiple Myeloma)",
+        "Elderly",
+        "Antineoplastic Agents",
+        "Cardiotoxicity"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT04928261",
+      "category": "adverse_events",
+      "nct_id": "NCT04928261",
+      "title": "Evaluating 6-months of HER2-targeted Therapy in Patients With HER2 Positive Early-stage Breast Cancer That Achieve a Pathological Complete Response to Neoadjuvant Systemic Therapy",
+      "interventions": [
+        {
+          "name": "Trastuzumab",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE4"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT02781155",
+      "category": "adverse_events",
+      "nct_id": "NCT02781155",
+      "title": "Limiting Chemotherapy Side Effects by Using Moxa",
+      "interventions": [
+        {
+          "name": "Moxibustion",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Neoplasms",
+        "Colorectal Neoplasms",
+        "Genital Neoplasms, Female",
+        "Toxicity Due to Chemotherapy"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE1",
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT01473680",
+      "category": "adverse_events",
+      "nct_id": "NCT01473680",
+      "title": "Neuropsychologic and Electrophysiological Features of Cancer-Related Cognitive Side Effects in Racial and Ethnic Minority Breast Cancer Patients",
+      "interventions": [
+        {
+          "name": "EEG, Neuropsychological Evaluation, Psychological Questionnaires, Medical Questionnaire",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "EEG, Neuropsychological Evaluation, Psychological Questionnaires, Medical Questionnaire",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "EEG, Neuropsychological Evaluation, Psychological Questionnaires, Medical Questionnaire",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT04568161",
+      "category": "adverse_events",
+      "nct_id": "NCT04568161",
+      "title": "Effect of Anthracyclines and Cyclophosphamide on Cardiovascular Responses",
+      "interventions": [
+        {
+          "name": "Physical Characteristics",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Muscular Sympathetic Nervous Activity",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Cardiac Function",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Heart rate",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Blood pressure",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Blood Assessments",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Muscle blood flow",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Endothelium-dependent vascular function",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Vascular intima-media thickness",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Physical Capacity",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Anthracycline & Cyclophosphamide treatment scheme",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Cardiotoxicity",
+        "Cardiovascular Disease",
+        "Neurovascular Disorder",
+        "Endothelial Disfunction",
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT04632407",
+      "category": "adverse_events",
+      "nct_id": "NCT04632407",
+      "title": "Can Flaxseed Prevent Broken Hearts in Women With Breast Cancer Study?",
+      "interventions": [
+        {
+          "name": "Flax \"milk\"",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Oat fibre \"milk\"",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Cardiotoxicity"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT03862131",
+      "category": "adverse_events",
+      "nct_id": "NCT03862131",
+      "title": "PROactive Evaluation of Function to Avoid CardioToxicity",
+      "interventions": [
+        {
+          "name": "MyoStrain®",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Cardiotoxicity",
+        "Breast Cancer",
+        "Lymphoma",
+        "Sarcoma",
+        "Leukemia",
+        "Myeloma",
+        "Lung Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT05728632",
+      "category": "adverse_events",
+      "nct_id": "NCT05728632",
+      "title": "Cardioprotective Effects of Nebivolol Versus Placebo in Patients Undergoing Chemotherapy With Anthracyclines",
+      "interventions": [
+        {
+          "name": "Nebivolol",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Placebo",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Lymphoma, Large B-Cell, Diffuse",
+        "Cardiotoxicity",
+        "Left Ventricular Dysfunction",
+        "Chemotherapy Effect"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE3"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT04361240",
+      "category": "adverse_events",
+      "nct_id": "NCT04361240",
+      "title": "Cardiotoxicity in Breast Cancer Patients Treated With Proton or Photon Radiotherapy: A RadComp Companion Study",
+      "interventions": [
+        {
+          "name": "Proton vs Photon Radiation",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Cardiotoxicity"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT06505018",
+      "category": "adverse_events",
+      "nct_id": "NCT06505018",
+      "title": "Telemonitoring Platform \"CUREETY TECHCARE\" vs Standard of Care for mTBNC Patients Initiating a First-line Treatment",
+      "interventions": [
+        {
+          "name": "Cureety techcare",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Metastatic Triple-Negative Breast Carcinoma"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT05927246",
+      "category": "adverse_events",
+      "nct_id": "NCT05927246",
+      "title": "Radiotherapy-Associated Atrial Fibrillation",
+      "interventions": [
+        {
+          "name": "ECG",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Atrial Fibrillation New Onset"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT03235427",
+      "category": "adverse_events",
+      "nct_id": "NCT03235427",
+      "title": "The CAROLE (CArdiac Related Oncologic Late Effects) Study",
+      "interventions": [],
+      "conditions": [
+        "Coronary Artery Disease",
+        "Cardiac Disease",
+        "Cardiac Toxicity",
+        "Radiation",
+        "Radiation Therapy",
+        "Atherosclerotic Heart Disease",
+        "Cardiotoxicity",
+        "Breast Cancer",
+        "Lung Cancer",
+        "Lymphoma",
+        "Cancer",
+        "Carcinoma, Intraductal, Noninfiltrating"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT02195960",
+      "category": "adverse_events",
+      "nct_id": "NCT02195960",
+      "title": "Supplementation With Dietary Anthocyanins and Side Effects of Radiotherapy for Breast Cancer",
+      "interventions": [
+        {
+          "name": "Placebo",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "intake anthocyanin-rich corn extract",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Toxicity Due to Radiotherapy"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT02457039",
+      "category": "adverse_events",
+      "nct_id": "NCT02457039",
+      "title": "Acupuncture Prevents Chemobrain in Breast Cancer Patients",
+      "interventions": [
+        {
+          "name": "Dense cranial electroacupuncture stimulation",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Body acupuncture",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Least acupuncture stimulation",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Cytoxan-containing chemotherapy regimens",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Chemo-brain",
+        "Drug-Related Side Effects and Adverse Reactions",
+        "Mild Cognitive Impairment",
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT00160901",
+      "category": "adverse_events",
+      "nct_id": "NCT00160901",
+      "title": "Complementary Therapies for the Reduction of Side Effects During Chemotherapy for Breast Cancer",
+      "interventions": [
+        {
+          "name": "two complex naturopathic add-on therapies, leaflet 5-a-day",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE4"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT00875238",
+      "category": "adverse_events",
+      "nct_id": "NCT00875238",
+      "title": "Side Effects Involving the Heart in Women With Breast Cancer Receiving Doxorubicin and Trastuzumab",
+      "interventions": [
+        {
+          "name": "trastuzumab",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "doxorubicin hydrochloride",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "polymorphism analysis",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "laboratory biomarker analysis",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "questionnaire administration",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "assessment of therapy complications",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "magnetic resonance imaging",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Cardiac Toxicity",
+        "Cardiovascular Complications"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT06103318",
+      "category": "adverse_events",
+      "nct_id": "NCT06103318",
+      "title": "eHealth Interventions for Breast Cancer Cognitive Impairment",
+      "interventions": [
+        {
+          "name": "ICOgnition",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Cognitive Dysfunction"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT05142475",
+      "category": "adverse_events",
+      "nct_id": "NCT05142475",
+      "title": "A Study of GC101 TIL in Advanced Breast Cancer (10hospital)",
+      "interventions": [
+        {
+          "name": "Tumor Infiltrating Lymphocytes (TIL)",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Treatment Side Effects",
+        "Advanced Breast Cancer",
+        "Effects of Immunotherapy"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "EARLY_PHASE1"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT05743686",
+      "category": "adverse_events",
+      "nct_id": "NCT05743686",
+      "title": "App for Adverse Events to Oral Chemotherapy - Pilot Study",
+      "interventions": [
+        {
+          "name": "Application",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Neoplasms",
+        "Chemotherapeutic Toxicity"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT00179348",
+      "category": "adverse_events",
+      "nct_id": "NCT00179348",
+      "title": "Yoga-Based Rehabilitation Program in Reducing Physical and Emotional Side Effects in Patients With Cancer",
+      "interventions": [
+        {
+          "name": "Quality-of-Life Assessment",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Yoga",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Alopecia",
+        "Anxiety",
+        "Breast Carcinoma",
+        "Cognitive Side Effects of Cancer Therapy",
+        "Colorectal Carcinoma",
+        "Depression",
+        "Fatigue",
+        "Lung Carcinoma",
+        "Nausea and Vomiting",
+        "Pain",
+        "Psychological Impact of Cancer",
+        "Sleep Disorder",
+        "Weight Change"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT04641247",
+      "category": "adverse_events",
+      "nct_id": "NCT04641247",
+      "title": "A Long-term Treatment Extension Study of Niraparib in Participants Who Completed a Prior GlaxoSmithKline/TESARO-sponsored Niraparib Study",
+      "interventions": [
+        {
+          "name": "Niraparib",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Ovarian Neoplasms",
+        "Breast Neoplasms"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT06595316",
+      "category": "adverse_events",
+      "nct_id": "NCT06595316",
+      "title": "Exercise for Ameliorating Chemotherapy Cardiotoxicity",
+      "interventions": [
+        {
+          "name": "Exercise intervention group",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Cardiotoxicity"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT06164119",
+      "category": "adverse_events",
+      "nct_id": "NCT06164119",
+      "title": "Effects of Diet and Osteopathy on Quality of Life and Inflammation in Breast Cancer Patients Under Hormonal Therapy",
+      "interventions": [
+        {
+          "name": "manual treatment with osteopathic techniques and nutritional treatment",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "manual treatment with osteopathic techniques",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "nutritional treatment",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT00436566",
+      "category": "adverse_events",
+      "nct_id": "NCT00436566",
+      "title": "Doxorubicin and Cyclophosphamide Followed By Trastuzumab, Paclitaxel, and Lapatinib in Treating Patients With Early-Stage HER2-Positive Breast Cancer That Has Been Removed By Surgery",
+      "interventions": [
+        {
+          "name": "trastuzumab",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "cyclophosphamide",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "doxorubicin hydrochloride",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "lapatinib ditosylate",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "paclitaxel",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "gene expression analysis",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "reverse transcriptase-polymerase chain reaction",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "fluorophotometry",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "laboratory biomarker analysis",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "mass spectrometry",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "adjuvant therapy",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "quality-of-life assessment",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Cardiac Toxicity"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT05465031",
+      "category": "adverse_events",
+      "nct_id": "NCT05465031",
+      "title": "Sacubitril/Valsartan in PriMAry preventIoN of the Cardiotoxicity of Systematic breaST canceR trEAtMent (MAINSTREAM)",
+      "interventions": [
+        {
+          "name": "Sacubitril-valsartan",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Placebo",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Neoplasm, Breast",
+        "Breast Diseases",
+        "Antihypertensive Agents",
+        "Sacubitril/Valsartan",
+        "Angiotensin II Type 1 Receptor Blockers",
+        "Angiotensin Receptor Antagonists",
+        "Molecular Mechanisms of Pharmacological Action",
+        "Heart Failure",
+        "Cardiac Toxicity",
+        "Cancer, Therapy-Related",
+        "Cancer Therapy-Related Cardiac Dysfunction",
+        "Cardiotoxicity"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE4"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT06407401",
+      "category": "adverse_events",
+      "nct_id": "NCT06407401",
+      "title": "Improvement of Quality of Life Through Supportive Treatments for Hormone Therapy - Related Symptoms in Patients With Early Breast Cancer",
+      "interventions": [
+        {
+          "name": "Duloxetine 60 MG",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Furosemide 40 mg",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Booklet for healthy behaviors",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "ER+ Breast Cancer",
+        "HER2-negative Breast Cancer",
+        "Breast Cancer Stage I",
+        "Breast Cancer Stage II",
+        "Breast Cancer Stage III",
+        "Drug-Related Side Effects and Adverse Reactions",
+        "Musculoskeletal Pain"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE3"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT07198958",
+      "category": "adverse_events",
+      "nct_id": "NCT07198958",
+      "title": "Immune Adverse Events Registry in Onco-Hematologic Patients Treated With Immunotherapy",
+      "interventions": [],
+      "conditions": [
+        "Cancer",
+        "Cancer (Colon Cancer, Breast Cancer, Lymphoma, Chronic Lymphoma Leukemia, Multiple Myeloma)",
+        "Cancer (Solid Tumors)",
+        "Cancer (With or Without Metastasis)"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT05409248",
+      "category": "adverse_events",
+      "nct_id": "NCT05409248",
+      "title": "Cognitive Stimulation and Chemobrain. An Innovative Intervention for Cancer Survivors",
+      "interventions": [
+        {
+          "name": "Personalized cognitive stimulation",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Sham cognitive stimulation",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Cognitive Decline"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT04896242",
+      "category": "adverse_events",
+      "nct_id": "NCT04896242",
+      "title": "Multimodal Assesment of Acute Cardiac Toxicity Induced by Thoracic Radiotherapy in Cancer Patients",
+      "interventions": [],
+      "conditions": [
+        "Radiotherapy; Complications",
+        "Cardiotoxicity",
+        "Cancer",
+        "Lung Cancer",
+        "Breast Cancer",
+        "Esophageal Cancer"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT06684054",
+      "category": "adverse_events",
+      "nct_id": "NCT06684054",
+      "title": "Studying the Senescent T Cell Features and Its Relationship with the Chemotherapy Efficacy in Young TNBC",
+      "interventions": [
+        {
+          "name": "docetaxel, anthracycline, cyclophosphamide",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "T-Cell Dysfunction",
+        "Chemotherapy Effect",
+        "Adverse Events"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT04046315",
+      "category": "adverse_events",
+      "nct_id": "NCT04046315",
+      "title": "Early Detection of Cardiac Damage With CMR in Women With Breast Cancer",
+      "interventions": [
+        {
+          "name": "CMR",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Cardiotoxicity",
+        "Breast Cancer",
+        "Chemotherapy Induced Systolic Dysfunction"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT06662474",
+      "category": "adverse_events",
+      "nct_id": "NCT06662474",
+      "title": "Cognitive Impairment in Treated Breast Cancer Survivors: Possible Approaches",
+      "interventions": [
+        {
+          "name": "1. cognitive stimulation",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "2. psychoeducation and cognitive stimulation",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "3. no intervention",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Cognitive Impairment",
+        "Chemobrain"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT02605512",
+      "category": "adverse_events",
+      "nct_id": "NCT02605512",
+      "title": "BreAst Cancer and Cardiotoxicity Induced by RAdioTherapy: the BACCARAT Study",
+      "interventions": [
+        {
+          "name": "Subclinical cardiac lesions and biomarkers",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Cardiac Toxicity"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT05960214",
+      "category": "adverse_events",
+      "nct_id": "NCT05960214",
+      "title": "Cardiac Management of Patients With Thalassemia Minor and Breast Cancer",
+      "interventions": [],
+      "conditions": [
+        "Breast Cancer",
+        "Thalassemia Minor",
+        "Heart Diseases"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT07021911",
+      "category": "adverse_events",
+      "nct_id": "NCT07021911",
+      "title": "Concomitant Radiotherapy and New Drugs in Metastatic Breast Cancer",
+      "interventions": [
+        {
+          "name": "Radiotherapy",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Radiotherapy; Complications"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT06602167",
+      "category": "adverse_events",
+      "nct_id": "NCT06602167",
+      "title": "Electroacupuncture Combined With Self-administered Acupressure for the Prevention of Capecitabine-Associated Hand-Foot Syndrome",
+      "interventions": [
+        {
+          "name": "True electroacupuncture + True self-administered acupressure",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Doctor-prescribed treatment",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Sham electroacupuncture + Sham self-administered acupressure",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Capecitabine",
+        "Hand-foot Syndrome",
+        "Electroacupuncture",
+        "Self-administered Acupressure",
+        "Breast Cancer",
+        "Gastrointestinal Cancers"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT02052102",
+      "category": "adverse_events",
+      "nct_id": "NCT02052102",
+      "title": "Study to See Whether Breath-Hold Techniques During RT Are Effective in Helping to Improve Sparing of the Heart",
+      "interventions": [
+        {
+          "name": "Radiation therapy",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Adverse Effect of Radiation Therapy"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT01741883",
+      "category": "adverse_events",
+      "nct_id": "NCT01741883",
+      "title": "Side Effect Prevention Training (SEPT) for Nocebo Effects in Breast Cancer Patients",
+      "interventions": [
+        {
+          "name": "Side effect prevention training (SEPT)",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Attention Control group (ACG)",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Female Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT01557478",
+      "category": "adverse_events",
+      "nct_id": "NCT01557478",
+      "title": "Melatonin as Adjuvant Therapy in Breast Cancer Patients",
+      "interventions": [
+        {
+          "name": "Melatonin",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "match placebo",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Stage II and III Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2",
+        "PHASE3"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT01904331",
+      "category": "adverse_events",
+      "nct_id": "NCT01904331",
+      "title": "Breast Cancer Long-term Outcome of Cardiac Dysfunction",
+      "interventions": [],
+      "conditions": [
+        "Breast Neoplasms"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "adverse_events_NCT06986291",
+      "category": "adverse_events",
+      "nct_id": "NCT06986291",
+      "title": "Radiation-induced Toxicity of the Heart",
+      "interventions": [
+        {
+          "name": "Imaging and biomarkers",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Non-small Cell Lung Cancer",
+        "Esophageal Cancer",
+        "Breast Cancer Female"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT03964142",
+      "category": "adverse_events",
+      "nct_id": "NCT03964142",
+      "title": "Exercise-based Cardiac Rehabilitation for the Prevention of Breast Cancer Chemotherapy-induced Cardiotoxicity",
+      "interventions": [
+        {
+          "name": "Cardiac rehabilitation",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Cardiotoxicity",
+        "Cardiac Rehabilitation"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "adverse_events_NCT00968682",
+      "category": "adverse_events",
+      "nct_id": "NCT00968682",
+      "title": "CADY Study ICORG 08-01",
+      "interventions": [
+        {
+          "name": "trastuzumab",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "laboratory biomarker analysis",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "assessment of therapy complications",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Cardiac Toxicity"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "chemo_toxicity_NCT01301040",
+      "category": "chemo_toxicity",
+      "nct_id": "NCT01301040",
+      "title": "Early Cardiac Toxicity of Adjuvant CT in Elderly BC.",
+      "interventions": [
+        {
+          "name": "epirubicin, cyclophosphamide, docetaxel",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "chemo_toxicity_NCT00016276",
+      "category": "chemo_toxicity",
+      "nct_id": "NCT00016276",
+      "title": "Combination Chemotherapy, Surgery, and Radiation Therapy With or Without Dexrazoxane and Trastuzumab in Treating Women With Stage III or Stage IV Breast Cancer",
+      "interventions": [
+        {
+          "name": "dexrazoxane hydrochloride",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "doxorubicin hydrochloride",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "cyclophosphamide",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "paclitaxel",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "trastuzumab",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "therapeutic conventional surgery",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "radiation therapy",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "tamoxifen citrate",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "laboratory biomarker analysis",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Cardiac Toxicity",
+        "Inflammatory Breast Cancer",
+        "Stage IIIA Breast Cancer",
+        "Stage IIIB Breast Cancer",
+        "Stage IV Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE3"
+      ]
+    },
+    {
+      "id": "chemo_toxicity_NCT01735175",
+      "category": "chemo_toxicity",
+      "nct_id": "NCT01735175",
+      "title": "Phase III Study Comparing the Efficacy and Safety of LA-EP2006 and Neulasta®",
+      "interventions": [
+        {
+          "name": "LA-EP2006",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Neulasta®",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Neutropenic Complications",
+        "Breast Neoplasms",
+        "Chemotherapy-induced Neutropenia",
+        "Chemotherapeutic Toxicity"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE3"
+      ]
+    },
+    {
+      "id": "chemo_toxicity_NCT02583204",
+      "category": "chemo_toxicity",
+      "nct_id": "NCT02583204",
+      "title": "Taxane Chemotherapy and Nail Toxicity in Women With Breast Cancer; Stage Two: Evaluation of Interventions",
+      "interventions": [
+        {
+          "name": "Onicolife nail drops",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Nail polish",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Nail Toxicity"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "chemo_toxicity_NCT00772824",
+      "category": "chemo_toxicity",
+      "nct_id": "NCT00772824",
+      "title": "Study of the Effect of Glutamine Supplementation on Chemotherapy Induced Toxicities in Breast Cancer Patients",
+      "interventions": [
+        {
+          "name": "Glutamine",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "IV Glutamine",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE4"
+      ]
+    },
+    {
+      "id": "chemo_toxicity_NCT01262469",
+      "category": "chemo_toxicity",
+      "nct_id": "NCT01262469",
+      "title": "Evaluating Lapatinib + Capecitabine in Patients Aged 70 and Over With HER2 Metastatic Breast Cancer.",
+      "interventions": [
+        {
+          "name": "lapatinib + capecitabine",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Metastatic Breast Cancer",
+        "70 Years Old Patients and Over",
+        "After One Line of Chemotherapy With Trastuzumab"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "chemo_toxicity_NCT07273357",
+      "category": "chemo_toxicity",
+      "nct_id": "NCT07273357",
+      "title": "Aspects of Adjuvant CDK4/6 Inhibitors in Older Breast Cancer Patients - Focusing on Geriatric Screening",
+      "interventions": [],
+      "conditions": [
+        "Geriatric Assessment",
+        "Adjuvant Drug Therapy",
+        "Breast Cancer Early Stage Breast Cancer (Stage 1-3)"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "chemo_toxicity_NCT00436566",
+      "category": "chemo_toxicity",
+      "nct_id": "NCT00436566",
+      "title": "Doxorubicin and Cyclophosphamide Followed By Trastuzumab, Paclitaxel, and Lapatinib in Treating Patients With Early-Stage HER2-Positive Breast Cancer That Has Been Removed By Surgery",
+      "interventions": [
+        {
+          "name": "trastuzumab",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "cyclophosphamide",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "doxorubicin hydrochloride",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "lapatinib ditosylate",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "paclitaxel",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "gene expression analysis",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "reverse transcriptase-polymerase chain reaction",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "fluorophotometry",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "laboratory biomarker analysis",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "mass spectrometry",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "adjuvant therapy",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "quality-of-life assessment",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Cardiac Toxicity"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "chemo_toxicity_NCT01719562",
+      "category": "chemo_toxicity",
+      "nct_id": "NCT01719562",
+      "title": "MRI in Detecting Heart Damage in Patients With Cancer Receiving Chemotherapy With Exercise Capacity Addendum",
+      "interventions": [
+        {
+          "name": "Magnetic resonance imaging",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Physical Activity",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Healthy Living",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Cardiopulmonary Exercise Testing (CPET)",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Questionnaire Administration",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Cardiac Toxicity",
+        "Malignant Neoplasm",
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "chemo_toxicity_NCT05968677",
+      "category": "chemo_toxicity",
+      "nct_id": "NCT05968677",
+      "title": "Effect of an Amino Acids and Flavonoids Containing FSMP on Chemotherapy Toxicity, Nutritional Status and Quality of Life in Breast Cancer Patients",
+      "interventions": [
+        {
+          "name": "FSMP",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Nutritional counseling",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "chemo_toxicity_NCT01802346",
+      "category": "chemo_toxicity",
+      "nct_id": "NCT01802346",
+      "title": "Controlled Low Calorie Diet in Reducing Side Effects and Increasing Response to Chemotherapy in Patients With Breast or Prostate Cancer",
+      "interventions": [
+        {
+          "name": "dietary intervention",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "nutritional support",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "laboratory biomarker analysis",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Hormone-resistant Prostate Cancer",
+        "Recurrent Prostate Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "chemo_toxicity_NCT03131024",
+      "category": "chemo_toxicity",
+      "nct_id": "NCT03131024",
+      "title": "Caloric Restriction and Exercise for Protection From Anthracycline Toxic Effects",
+      "interventions": [
+        {
+          "name": "50% caloric restriction",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Aerobic exercise",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer Female"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "chemo_toxicity_NCT03576521",
+      "category": "chemo_toxicity",
+      "nct_id": "NCT03576521",
+      "title": "Evaluation of Ocoxin®-Viusid® in Breast Cancer",
+      "interventions": [
+        {
+          "name": "CT + Ocoxin-Viusid",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "CT + Placebo",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Breast Carcinoma",
+        "Adriamycin Toxicity",
+        "Cyclosporine Toxicity"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "chemo_toxicity_NCT01009918",
+      "category": "chemo_toxicity",
+      "nct_id": "NCT01009918",
+      "title": "Lisinopril or Coreg CR® in Reducing Side Effects in Women With Breast Cancer Receiving Trastuzumab",
+      "interventions": [
+        {
+          "name": "Coreg CR®",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "lisinopril",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "placebo",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Cardiac Toxicity"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "chemo_toxicity_NCT06621459",
+      "category": "chemo_toxicity",
+      "nct_id": "NCT06621459",
+      "title": "Retrospective Observational Study of the Safety and Toxicity Management of Abemaciclib in Combination with Adjuvant Hormone Therapy in Patients with RH+ ,HER2-nonoveramplified Breast Cancer, Real-life Data (MONARCHE29)",
+      "interventions": [],
+      "conditions": [
+        "Brest Cancer",
+        "Abemaciclib",
+        "Adjuvant Therapy",
+        "Antineoplastic Combined Chemotherapy Protocols",
+        "Breast Neoplasms"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "chemo_toxicity_NCT00681993",
+      "category": "chemo_toxicity",
+      "nct_id": "NCT00681993",
+      "title": "Trial of Partial Breast Irradiation With Various Concurrent Chemotherapy Regimens",
+      "interventions": [
+        {
+          "name": "Standard Dose Dense Doxorubucin and Cyclophosphamide",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Standard Doxorubucin and Cyclophosphamide",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Standard Docetaxel, Carboplatin, and Herceptin",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Standard Docetaxel, Doxorubucin and Cyclophosphamide",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Standard Docetaxel and Cyclophosphamide",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "chemo_toxicity_NCT03858712",
+      "category": "chemo_toxicity",
+      "nct_id": "NCT03858712",
+      "title": "EHR-embedded OCDT in Breast or GI Cancer",
+      "interventions": [
+        {
+          "name": "Active Care Team Alert",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Passive Care Team Alert",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Oral Cancer Directed Therapy",
+        "Breast Cancer",
+        "Gastrointestinal Cancer",
+        "Oral Chemotherapy"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "chemo_toxicity_NCT00771433",
+      "category": "chemo_toxicity",
+      "nct_id": "NCT00771433",
+      "title": "G-CSF in Preventing Neutropenia in Women Receiving Chemotherapy for Breast Cancer",
+      "interventions": [
+        {
+          "name": "filgrastim",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Chemotherapeutic Agent Toxicity",
+        "Neutropenia"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "chemo_toxicity_NCT00090844",
+      "category": "chemo_toxicity",
+      "nct_id": "NCT00090844",
+      "title": "Triptorelin for Preserving Ovarian Function in Premenopausal Women Receiving Chemotherapy for Early-Stage Breast Cancer",
+      "interventions": [
+        {
+          "name": "triptorelin",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Hormone Changes",
+        "Drug Toxicity"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "chemo_toxicity_NCT06424054",
+      "category": "chemo_toxicity",
+      "nct_id": "NCT06424054",
+      "title": "Mitigating Toxicity by Electronic Health Portal-mediated Interactive Monitoring of Patient-reported Side Effects",
+      "interventions": [
+        {
+          "name": "eChemoCoach",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "eHealth",
+        "Symptom Monitoring",
+        "Self Management"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "chemo_toxicity_NCT05302336",
+      "category": "chemo_toxicity",
+      "nct_id": "NCT05302336",
+      "title": "AC vs TC in Patients With HR-positive, HER2-negative Early Breast Cancer",
+      "interventions": [
+        {
+          "name": "Liposomal doxorubicin + Cyclophosphamide vs Docetaxel + Cyclophosphamide",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Chemotherapeutic Toxicity"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE4"
+      ]
+    },
+    {
+      "id": "chemo_toxicity_NCT06214195",
+      "category": "chemo_toxicity",
+      "nct_id": "NCT06214195",
+      "title": "The Use of Shengmai San to Prevent Anthracycline Sequential Trastuzumab Therapy Related Cardiac Toxicity",
+      "interventions": [
+        {
+          "name": "Shengmai San (ingredients include ginseng, Ophiopogon japonicus, and Schisandra chinensis)",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Cardiotoxicity Induced by Drug Therapy for Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE3"
+      ]
+    },
+    {
+      "id": "chemo_toxicity_NCT00003269",
+      "category": "chemo_toxicity",
+      "nct_id": "NCT00003269",
+      "title": "Amifostine Followed by High Dose Chemotherapy in Treating Patients With Hematologic Cancer or Solid Tumors",
+      "interventions": [
+        {
+          "name": "sargramostim",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "amifostine trihydrate",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "cisplatin",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "cyclophosphamide",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "etoposide",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Drug/Agent Toxicity by Tissue/Organ",
+        "Lung Cancer",
+        "Lymphoma",
+        "Ovarian Cancer",
+        "Unspecified Adult Solid Tumor, Protocol Specific"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "endocrine_side_NCT06776458",
+      "category": "endocrine_side",
+      "nct_id": "NCT06776458",
+      "title": "Chronic Impacts of Endocrine Therapy on Cardiovascular and Brain Health Outcomes in Breast Cancer",
+      "interventions": [
+        {
+          "name": "N/A - Usual Care",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer Females"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "endocrine_side_NCT06781762",
+      "category": "endocrine_side",
+      "nct_id": "NCT06781762",
+      "title": "Short-term Impacts of Endocrine Therapy on Cardiovascular and Brain Health Outcomes in Breast Cancer",
+      "interventions": [
+        {
+          "name": "N/A (Usual Care)",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer Females"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "endocrine_side_NCT05084625",
+      "category": "endocrine_side",
+      "nct_id": "NCT05084625",
+      "title": "PACED-digitized Support During Adjuvant Endocrine Therapy",
+      "interventions": [
+        {
+          "name": "Digitized support",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Treatment Adherence",
+        "Quality of Life",
+        "Treatment Side Effects"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "endocrine_side_NCT02300675",
+      "category": "endocrine_side",
+      "nct_id": "NCT02300675",
+      "title": "Therapeutic Education Intervention in Breast Cancer: PEPs Hormonotherapy",
+      "interventions": [
+        {
+          "name": "therapeutic education program",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "endocrine_side_NCT06415162",
+      "category": "endocrine_side",
+      "nct_id": "NCT06415162",
+      "title": "Evaluation of the Effects of Using Cooling Pillowcases, on the Symptoms of Hot Flushes, Sleep and Life Quality",
+      "interventions": [
+        {
+          "name": "Cooling Pillowcases",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "endocrine_side_NCT00287482",
+      "category": "endocrine_side",
+      "nct_id": "NCT00287482",
+      "title": "Essiac (ESIAK) Versus Placebo to Improve Quality of Life in Transition in Women With Breast or Ovarian Cancer.",
+      "interventions": [
+        {
+          "name": "Essiac",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Ovarian Cancer",
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "endocrine_side_NCT06673329",
+      "category": "endocrine_side",
+      "nct_id": "NCT06673329",
+      "title": "Brodalumab in the Treatment of Immune-Related Adverse Events",
+      "interventions": [
+        {
+          "name": "Brodalumab",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "CT scan",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Esophageal Cancer",
+        "Kidney Cancer",
+        "Lung Cancer",
+        "Thyroid Cancer",
+        "Gynecologic Cancer",
+        "Pancreatic Cancer",
+        "Stomach Cancer",
+        "Brain Tumor",
+        "Colon Cancer",
+        "Rectal Cancer",
+        "Head and Neck Cancer",
+        "Oral Cancer",
+        "Liver Cancer",
+        "Skin Cancer",
+        "Prostate Cancer",
+        "Testicular Cancer",
+        "Solid Tumor"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE1"
+      ]
+    },
+    {
+      "id": "endocrine_side_NCT00260975",
+      "category": "endocrine_side",
+      "nct_id": "NCT00260975",
+      "title": "Study of the Effects of Chemotherapy on Memory and Other Mental Functions in Women With Breast Cancer",
+      "interventions": [],
+      "conditions": [
+        "Breast Cancer"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "endocrine_side_NCT04641247",
+      "category": "endocrine_side",
+      "nct_id": "NCT04641247",
+      "title": "A Long-term Treatment Extension Study of Niraparib in Participants Who Completed a Prior GlaxoSmithKline/TESARO-sponsored Niraparib Study",
+      "interventions": [
+        {
+          "name": "Niraparib",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Ovarian Neoplasms",
+        "Breast Neoplasms"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "endocrine_side_NCT06164119",
+      "category": "endocrine_side",
+      "nct_id": "NCT06164119",
+      "title": "Effects of Diet and Osteopathy on Quality of Life and Inflammation in Breast Cancer Patients Under Hormonal Therapy",
+      "interventions": [
+        {
+          "name": "manual treatment with osteopathic techniques and nutritional treatment",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "manual treatment with osteopathic techniques",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "nutritional treatment",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "endocrine_side_NCT06407401",
+      "category": "endocrine_side",
+      "nct_id": "NCT06407401",
+      "title": "Improvement of Quality of Life Through Supportive Treatments for Hormone Therapy - Related Symptoms in Patients With Early Breast Cancer",
+      "interventions": [
+        {
+          "name": "Duloxetine 60 MG",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Furosemide 40 mg",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Booklet for healthy behaviors",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "ER+ Breast Cancer",
+        "HER2-negative Breast Cancer",
+        "Breast Cancer Stage I",
+        "Breast Cancer Stage II",
+        "Breast Cancer Stage III",
+        "Drug-Related Side Effects and Adverse Reactions",
+        "Musculoskeletal Pain"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE3"
+      ]
+    },
+    {
+      "id": "endocrine_side_NCT01741883",
+      "category": "endocrine_side",
+      "nct_id": "NCT01741883",
+      "title": "Side Effect Prevention Training (SEPT) for Nocebo Effects in Breast Cancer Patients",
+      "interventions": [
+        {
+          "name": "Side effect prevention training (SEPT)",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Attention Control group (ACG)",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Female Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "endocrine_side_NCT03345485",
+      "category": "endocrine_side",
+      "nct_id": "NCT03345485",
+      "title": "Study of the Safety, Pharmacokinetics and Efficacy of Tinostamustine in Patients With Advanced Solid Tumors.",
+      "interventions": [
+        {
+          "name": "Tinostamustine 60mg/m2 over 30min",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Tinostamustine 80mg/m2 over 30min",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Tinostamustine 100mg/m2 over 30min",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Tinostamustine 60mg/m2 over 60min",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Tinostamustine 80mg/m2 over 60min",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Tinostamustine 100mg/m2 over 60min",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Tinostamustine 80mg/m2 over 80min",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Small Cell Lung Cancer",
+        "Soft Tissue Sarcoma",
+        "Triple-negative Breast Cancer",
+        "Ovarian Cancer",
+        "Endometrial Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE1",
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "endocrine_side_NCT03407768",
+      "category": "endocrine_side",
+      "nct_id": "NCT03407768",
+      "title": "Role of Individualized Intervention(s) in Hormone-Receptor Positive Early-stage Breast Cancer",
+      "interventions": [
+        {
+          "name": "Individualized interventions",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Premenopausal Breast Cancer",
+        "Hormone Receptor Positive Tumor"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "endocrine_side_NCT02088710",
+      "category": "endocrine_side",
+      "nct_id": "NCT02088710",
+      "title": "Expectations and Side Effects of Endocrine Therapy in Women With Breast Cancer",
+      "interventions": [
+        {
+          "name": "Enhanced information about endocrine therapy",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Female Breast Cancer"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "endocrine_side_NCT06781996",
+      "category": "endocrine_side",
+      "nct_id": "NCT06781996",
+      "title": "A Study to Determine the Efficacy of a Digital Self-management Support Tool to Improve the Quality of Life During Adjuvant HOrmonal Therapy for Patients With Early Breast Cancer",
+      "interventions": [
+        {
+          "name": "multimodal Resilience© digital companion",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Standard supportive care",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Breast Cancer Early Stage Breast Cancer (Stage 1-3)"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE3"
+      ]
+    },
+    {
+      "id": "endocrine_side_NCT06606535",
+      "category": "endocrine_side",
+      "nct_id": "NCT06606535",
+      "title": "ENDO-BRAIN: Effects of Endocrine Adjuvant Therapy with Aromatase Inhibitors on the Cognitive Function of Breast Cancer Patients",
+      "interventions": [
+        {
+          "name": "validated questionnaires",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "functional MRI",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Optical Coherent Tomography Angiography",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Cognitive Side Effects of Cancer Therapy",
+        "Hypoestrogenism"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "endocrine_side_NCT07071038",
+      "category": "endocrine_side",
+      "nct_id": "NCT07071038",
+      "title": "Evaluating the Use of a Medication 'Switch' vs Guideline-directed Interventions for Relieving Side Effects of Aromatase Inhibitors Among Breast Cancer Patients",
+      "interventions": [
+        {
+          "name": "Switch",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Guideline Directed Intervention (GDI)",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Adjuvant Treatment",
+        "Early Stage Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "endocrine_side_NCT01563211",
+      "category": "endocrine_side",
+      "nct_id": "NCT01563211",
+      "title": "Predictive Model of Therapy Outcomes in Breast Cancer Patients",
+      "interventions": [],
+      "conditions": [
+        "Toxicity From Medication (Endocrine Treatment and Chemotherapy) Given for Breast Cancer Treatment."
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "endocrine_side_NCT06690489",
+      "category": "endocrine_side",
+      "nct_id": "NCT06690489",
+      "title": "An Observational Real-world Study to Evaluate the Impact of Dermatological Toxicities on the Quality of Life in Patients With Early Breast Cancer Treated With Adjuvant Endocrine Therapy - BCARE (Breast Cancer Adjuvant Real-world Evaluation of Dermatological Adverse Events)",
+      "interventions": [],
+      "conditions": [
+        "Early Breast Cancer",
+        "Skin Condition",
+        "Quality of Life"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "endocrine_side_NCT03033186",
+      "category": "endocrine_side",
+      "nct_id": "NCT03033186",
+      "title": "Everolimus TDM to Predict Long Term Toxicity",
+      "interventions": [],
+      "conditions": [
+        "Breast Cancer",
+        "Renal Cell Carcinoma",
+        "Pancreatic Neuroendocrine Tumour",
+        "Gastrointestinal Neuroendocrine Tumour",
+        "Neuroendocrine Neoplasm of Lung"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "endocrine_side_NCT05362760",
+      "category": "endocrine_side",
+      "nct_id": "NCT05362760",
+      "title": "Combination of Abemaciclib and Endocrine Therapy in Hormone Receptor Positive HER2 Negative Locally Advanced or Metastatic Breast Cancer With Focus on Digital Side Effect Management",
+      "interventions": [
+        {
+          "name": "Abemaciclib + Aromatase Inhibitor",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Abemaciclib + Fulvestrant",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Hormone Receptor-positive Metastatic Breast Cancer",
+        "HER2-negative Metastatic Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE4"
+      ]
+    },
+    {
+      "id": "endocrine_side_NCT06558084",
+      "category": "endocrine_side",
+      "nct_id": "NCT06558084",
+      "title": "Real-World Clinical Outcomes and Toxicity in Metastatic Breast Cancer Patients Treated With First or Second Line CDK 4/6 Inhibitors and Endocrine Therapy",
+      "interventions": [
+        {
+          "name": "CDK4/6 Inhibitor",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Toxicity, Drug",
+        "Progression, Disease"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "endocrine_side_NCT02896504",
+      "category": "endocrine_side",
+      "nct_id": "NCT02896504",
+      "title": "Chemotherapy Effect on Brain Structure, Neurophysiology and Psychomotor Behavior in Breast Cancer Patients",
+      "interventions": [
+        {
+          "name": "Exposure: Adjuvant chemotherapy treatment",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Exposure: Adjuvant hormonal therapy treatment",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "endocrine_side_NCT04824339",
+      "category": "endocrine_side",
+      "nct_id": "NCT04824339",
+      "title": "Breast Cancer Endocrine Therapy FITness (BE-FIT) Trial.",
+      "interventions": [
+        {
+          "name": "Immediate Intervention Group",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Delayed Intervention Group",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Neoplasms"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "endocrine_side_NCT03949270",
+      "category": "endocrine_side",
+      "nct_id": "NCT03949270",
+      "title": "Text Messaging in Patients on Adjuvant Endocrine Therapy for Breast Cancer",
+      "interventions": [
+        {
+          "name": "BETA-Text text messaging intervention",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Adherence, Medication",
+        "Side Effect"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "immunotherapy_ae_NCT07527819",
+      "category": "immunotherapy_ae",
+      "nct_id": "NCT07527819",
+      "title": "Evaluating Ovarian Toxicity Outcomes Following Immunotherapy in Patients With Triple-Negative Breast Cancer (TNBC)",
+      "interventions": [],
+      "conditions": [
+        "Triple Negative Breast Cancer (TNBC)"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "immunotherapy_ae_NCT01368107",
+      "category": "immunotherapy_ae",
+      "nct_id": "NCT01368107",
+      "title": "Study Evaluating Impact of IL-7 on CD4 Lymphopenia, Risks of Severe Haematological Toxicity and Tumor Progression in Metastatic Breast Cancer Patients",
+      "interventions": [
+        {
+          "name": "placebo",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "interleukin 7",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "interleukin 7",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "interleukin 7",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Metastatic Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "immunotherapy_ae_NCT00001832",
+      "category": "immunotherapy_ae",
+      "nct_id": "NCT00001832",
+      "title": "Lymphocyte Re-infusion During Immune Suppression to Treat Metastatic Melanoma",
+      "interventions": [
+        {
+          "name": "gp100:209-217 (210M)",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Montanide ISA-51",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "IL-2",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "MART-1:26-35(27L)",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Abl cells",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Fludarabine",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Cyclophosphamide",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "GCSF (Growth colony stimulating factor)",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Apheresis",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Melanoma",
+        "Neoplasm Metastasis"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "immunotherapy_ae_NCT05878964",
+      "category": "immunotherapy_ae",
+      "nct_id": "NCT05878964",
+      "title": "Evaluation of Skin Health and QoL in Pts Receiving Anti-PD1/PDL1/CTLA4 or CDK Inhibitors.",
+      "interventions": [
+        {
+          "name": "EQ-5D-5L questionnaire",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "FACT-G (Functional Assessment of Cancer Therapy - General)",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "FACT-EGFRI-18 (Functional Assessment of Cancer Therapy - Epidermal Growth Factor Inhibitors 18 Item)",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Lung Cancer",
+        "Breast Cancer",
+        "Kidney Cancer",
+        "Bladder Cancer",
+        "Gastric Cancer",
+        "Skin Cancer",
+        "Melanoma",
+        "Head Neck Cancer"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "radiation_sides_NCT01301040",
+      "category": "radiation_sides",
+      "nct_id": "NCT01301040",
+      "title": "Early Cardiac Toxicity of Adjuvant CT in Elderly BC.",
+      "interventions": [
+        {
+          "name": "epirubicin, cyclophosphamide, docetaxel",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "radiation_sides_NCT00016276",
+      "category": "radiation_sides",
+      "nct_id": "NCT00016276",
+      "title": "Combination Chemotherapy, Surgery, and Radiation Therapy With or Without Dexrazoxane and Trastuzumab in Treating Women With Stage III or Stage IV Breast Cancer",
+      "interventions": [
+        {
+          "name": "dexrazoxane hydrochloride",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "doxorubicin hydrochloride",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "cyclophosphamide",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "paclitaxel",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "trastuzumab",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "therapeutic conventional surgery",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "radiation therapy",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "tamoxifen citrate",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "laboratory biomarker analysis",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Cardiac Toxicity",
+        "Inflammatory Breast Cancer",
+        "Stage IIIA Breast Cancer",
+        "Stage IIIB Breast Cancer",
+        "Stage IV Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE3"
+      ]
+    },
+    {
+      "id": "radiation_sides_NCT06930521",
+      "category": "radiation_sides",
+      "nct_id": "NCT06930521",
+      "title": "JUdicious Surveillance for Trastuzumab Induced Cardiotoxicity in the First Year",
+      "interventions": [
+        {
+          "name": "Intervention - Low Risk Group OR Intermediate Risk Group",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Cardiovascular Health",
+        "Breast Cancer",
+        "Breast Cancer Early Stage Breast Cancer (Stage 1-3)",
+        "Cardio-oncology",
+        "Circulatory and Respiratory Health",
+        "Clinical and Translational Cardiovascular Sciences",
+        "Health Services and Systems - Healthcare Effectiveness &Amp; Outcomes"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "radiation_sides_NCT05036252",
+      "category": "radiation_sides",
+      "nct_id": "NCT05036252",
+      "title": "Study of Cardiopulmonary Exercise Testing in Women Who Have HER2-Positive Breast Cancer With Mild Cardiotoxicity",
+      "interventions": [
+        {
+          "name": "Cardiopulmonary Exercise Test",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Echocardiogram",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Echocardiography",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "HER2-positive Breast Cancer",
+        "HER2-positive Metastatic Breast Cancer",
+        "Breast Cancer Stage I",
+        "Breast Cancer Stage II",
+        "Breast Cancer Stage III",
+        "Breast Cancer Stage IV",
+        "Cardiotoxicity"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "radiation_sides_NCT00436566",
+      "category": "radiation_sides",
+      "nct_id": "NCT00436566",
+      "title": "Doxorubicin and Cyclophosphamide Followed By Trastuzumab, Paclitaxel, and Lapatinib in Treating Patients With Early-Stage HER2-Positive Breast Cancer That Has Been Removed By Surgery",
+      "interventions": [
+        {
+          "name": "trastuzumab",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "cyclophosphamide",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "doxorubicin hydrochloride",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "lapatinib ditosylate",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "paclitaxel",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "gene expression analysis",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "reverse transcriptase-polymerase chain reaction",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "fluorophotometry",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "laboratory biomarker analysis",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "mass spectrometry",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "adjuvant therapy",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "quality-of-life assessment",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Cardiac Toxicity"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "radiation_sides_NCT03964142",
+      "category": "radiation_sides",
+      "nct_id": "NCT03964142",
+      "title": "Exercise-based Cardiac Rehabilitation for the Prevention of Breast Cancer Chemotherapy-induced Cardiotoxicity",
+      "interventions": [
+        {
+          "name": "Cardiac rehabilitation",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Cardiotoxicity",
+        "Cardiac Rehabilitation"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "radiation_sides_NCT04580784",
+      "category": "radiation_sides",
+      "nct_id": "NCT04580784",
+      "title": "Weekly Single Fraction Hypofractionated Adjuvant Radiotherapy for Early Stage Breast Cancer",
+      "interventions": [
+        {
+          "name": "Weekly hypofractionation for early breast cancer",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Radiotherapy Side Effect"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "radiation_sides_NCT01719562",
+      "category": "radiation_sides",
+      "nct_id": "NCT01719562",
+      "title": "MRI in Detecting Heart Damage in Patients With Cancer Receiving Chemotherapy With Exercise Capacity Addendum",
+      "interventions": [
+        {
+          "name": "Magnetic resonance imaging",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Physical Activity",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Healthy Living",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Cardiopulmonary Exercise Testing (CPET)",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Questionnaire Administration",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Cardiac Toxicity",
+        "Malignant Neoplasm",
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "radiation_sides_NCT04472845",
+      "category": "radiation_sides",
+      "nct_id": "NCT04472845",
+      "title": "HYPofractionated Adjuvant RadioTherapy in 1 Versus 2 Weeks in High-risk Patients With Breast Cancer (HYPART).",
+      "interventions": [
+        {
+          "name": "1 week RT",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "2 week RT",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Hypofractionation",
+        "Radiotherapy Side Effect"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "radiation_sides_NCT07588425",
+      "category": "radiation_sides",
+      "nct_id": "NCT07588425",
+      "title": "Cardiac Side Effects of Systemic Therapy in Early-Stage Breast Cancer",
+      "interventions": [],
+      "conditions": [
+        "Breast Cancer (Early Breast Cancer)",
+        "Cardiotoxicity",
+        "Cancer Therapy-Related Cardiac Dysfunction"
+      ],
+      "study_type": "OBSERVATIONAL",
+      "phases": []
+    },
+    {
+      "id": "radiation_sides_NCT06902311",
+      "category": "radiation_sides",
+      "nct_id": "NCT06902311",
+      "title": "Ultra Hypo-fractionated Adjuvant Whole Breast Radiation Therapy With Simultaneous Integrated Boost for Early-Stage Breast Cancer (H-ASSIST)",
+      "interventions": [
+        {
+          "name": "Breast Radiotherapy",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Early-stage Breast Cancer",
+        "Ductal Carcinoma in Situ",
+        "DCIS"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "radiation_sides_NCT02696707",
+      "category": "radiation_sides",
+      "nct_id": "NCT02696707",
+      "title": "An Integrated Consent Model Study to Compare Two Standard of Care Schedules for Monitoring Cardiac Function in Patients Receiving Trastuzumab for Early Stage Breast Cancer",
+      "interventions": [
+        {
+          "name": "LVEF 3 month",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "LVEF 4 month",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE4"
+      ]
+    },
+    {
+      "id": "radiation_sides_NCT04550910",
+      "category": "radiation_sides",
+      "nct_id": "NCT04550910",
+      "title": "RCT Comparing 2 Radiotherapy HypoFractionation Schedules In Breast Cancer Patients",
+      "interventions": [
+        {
+          "name": "Hypofractionation Schedules for Breast Cancer patients after mastecomy",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Radiotherapy Side Effect",
+        "Locoregional Recurrence"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "radiation_sides_NCT06155331",
+      "category": "radiation_sides",
+      "nct_id": "NCT06155331",
+      "title": "Evaluation of Possible Safety and Efficacy of Fenofibrate in the Prophylaxis of Doxorubicin Induced Cardiotoxicity in Breast Cancer Patients",
+      "interventions": [
+        {
+          "name": "Fenofibrate",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Placebo",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Doxorubicin",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Cyclophosphamide",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer Stage 2 and 3"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "radiation_sides_NCT05880160",
+      "category": "radiation_sides",
+      "nct_id": "NCT05880160",
+      "title": "Safety of Withdrawal of Pharmacological Treatment for Recovered HER2 Targeted Therapy Related Cardiac Dysfunction",
+      "interventions": [
+        {
+          "name": "Phased withdrawal of heart failure medications",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Cardiotoxicity",
+        "HER2-positive Breast Cancer",
+        "Heart Failure",
+        "Cancer, Therapy-Related"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    },
+    {
+      "id": "radiation_sides_NCT04149522",
+      "category": "radiation_sides",
+      "nct_id": "NCT04149522",
+      "title": "Evaluation of Mepitel Film® in Preventing Epidermitis in Patients Receiving Radiation Therapy for Breast Cancer",
+      "interventions": [
+        {
+          "name": "Mepitel Film®",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Breast Cancer",
+        "Radiotherapy; Adverse Effect, Dermatitis or Eczema",
+        "Radiotherapy Side Effect",
+        "Radiation Burn",
+        "Radiation Dermatitis",
+        "Radiotherapy; Complications"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "PHASE2"
+      ]
+    },
+    {
+      "id": "radiation_sides_NCT07405385",
+      "category": "radiation_sides",
+      "nct_id": "NCT07405385",
+      "title": "Cardiotoxicity Assessment and Reduction Through Exercise in BREAST Cancer",
+      "interventions": [
+        {
+          "name": "Control",
+          "type": "",
+          "description": ""
+        },
+        {
+          "name": "Exercise",
+          "type": "",
+          "description": ""
+        }
+      ],
+      "conditions": [
+        "Cancer",
+        "Breast Cancer",
+        "Neoplasm",
+        "Cardiotoxicity"
+      ],
+      "study_type": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ]
+    }
+  ]
+}

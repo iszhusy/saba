@@ -1,0 +1,827 @@
+{
+  "metadata": {
+    "name": "SABA RAG Index",
+    "version": "1.0",
+    "description": "快速检索索引，支持症状关键词匹配"
+  },
+  "symptom_to_entry": {
+    "恶心呕吐": {
+      "category": "chemotherapy",
+      "standard_term": "Nausea and Vomiting",
+      "risk_levels": {
+        "high": "无法进水 > 12小时",
+        "medium": "持续 > 2天 或 影响进食",
+        "low": "轻微，可自行缓解"
+      },
+      "management": {
+        "immediate": "止吐药调整",
+        "follow_up": "联系团队评估",
+        "warning_signs": [
+          "呕血",
+          "脱水体征",
+          "高烧"
+        ]
+      },
+      "source": "NCI Chemotherapy Side Effects Guide"
+    },
+    "骨髓抑制": {
+      "category": "chemotherapy",
+      "standard_term": "Myelosuppression",
+      "risk_levels": {
+        "high": "发烧 > 38.3°C 合并中性粒细胞减少",
+        "medium": "严重疲劳或感染迹象",
+        "low": "实验室检查异常但无症状"
+      },
+      "management": {
+        "immediate": "监测体温，联系团队",
+        "follow_up": "血液检查，调整剂量",
+        "warning_signs": [
+          "高烧",
+          "感染",
+          "出血"
+        ]
+      },
+      "source": "NCI Side Effects Management"
+    },
+    "周围神经病变": {
+      "category": "chemotherapy",
+      "standard_term": "Peripheral Neuropathy",
+      "risk_levels": {
+        "high": "严重疼痛或功能障碍",
+        "medium": "持续症状，影响日常生活",
+        "low": "轻度症状，可耐受"
+      },
+      "management": {
+        "immediate": "症状评估，考虑减量",
+        "follow_up": "神经科会诊，疼痛管理",
+        "warning_signs": [
+          "持续麻木",
+          "肌肉无力",
+          "跌倒"
+        ]
+      },
+      "source": "NCI Chemotherapy Side Effects Guide"
+    },
+    "心脏毒性": {
+      "category": "chemotherapy",
+      "standard_term": "Cardiotoxicity",
+      "risk_levels": {
+        "high": "LVEF下降 > 10% 或 < 50%",
+        "medium": "心脏症状，心功能轻度下降",
+        "low": "无症状，心功能正常"
+      },
+      "management": {
+        "immediate": "心脏评估，停止蒽环类药物",
+        "follow_up": "心脏超声监测，心脏科会诊",
+        "warning_signs": [
+          "胸痛",
+          "呼吸困难",
+          "水肿",
+          "心悸"
+        ]
+      },
+      "source": "NCI Cardiotoxicity Management"
+    },
+    "子宫内膜异常": {
+      "category": "endocrine",
+      "standard_term": "Endometrial Changes",
+      "risk_levels": {
+        "high": "异常出血伴有贫血或疑似肿瘤",
+        "medium": "持续异常出血",
+        "low": "轻微不规则，可观察"
+      },
+      "management": {
+        "immediate": "妇科评估",
+        "follow_up": "子宫内膜活检，影像学检查",
+        "warning_signs": [
+          "异常出血",
+          "盆腔疼痛"
+        ]
+      },
+      "source": "NCI Endocrine Therapy Side Effects"
+    },
+    "骨质疏松": {
+      "category": "endocrine",
+      "standard_term": "Osteoporosis",
+      "risk_levels": {
+        "high": "骨折或严重骨痛",
+        "medium": "骨密度显著降低",
+        "low": "轻度骨质减少"
+      },
+      "management": {
+        "immediate": "骨密度评估",
+        "follow_up": "钙剂、维生素D、双膦酸盐",
+        "warning_signs": [
+          "骨痛",
+          "骨折"
+        ]
+      },
+      "source": "NCI Bone Health in Cancer"
+    },
+    "输液反应": {
+      "category": "targeted",
+      "standard_term": "Infusion Reaction",
+      "risk_levels": {
+        "high": "呼吸困难、血压下降、意识改变",
+        "medium": "明显过敏反应",
+        "low": "轻度皮疹或发热"
+      },
+      "management": {
+        "immediate": "停止输液，抗过敏处理",
+        "follow_up": "再次用药前预防性用药",
+        "warning_signs": [
+          "呼吸困难",
+          "皮疹扩散",
+          "低血压"
+        ]
+      },
+      "source": "NCI Targeted Therapy Side Effects"
+    },
+    "皮肤反应": {
+      "category": "radiation",
+      "standard_term": "Radiation Dermatitis",
+      "risk_levels": {
+        "high": "皮肤溃疡或坏死",
+        "medium": "湿性脱皮",
+        "low": "轻度红斑"
+      },
+      "management": {
+        "immediate": "局部护理，避免刺激",
+        "follow_up": "皮肤科会诊，湿润疗法",
+        "warning_signs": [
+          "皮肤破溃",
+          "感染迹象"
+        ]
+      },
+      "source": "NCI Radiation Therapy Side Effects"
+    },
+    "口腔黏膜炎": {
+      "category": "chemotherapy",
+      "standard_term": "Mucositis",
+      "risk_levels": {
+        "high": "无法进食或进水",
+        "medium": "影响营养摄入",
+        "low": "轻微不适，可自愈"
+      },
+      "management": {
+        "immediate": "口腔护理，避免刺激性食物",
+        "follow_up": "口腔科会诊，局部用药",
+        "warning_signs": [
+          "口腔出血",
+          "感染迹象"
+        ]
+      },
+      "source": "NCI Chemotherapy Side Effects Guide"
+    },
+    "脱发": {
+      "category": "chemotherapy",
+      "standard_term": "Alopecia",
+      "risk_levels": {
+        "high": "N/A（通常不危及生命）",
+        "medium": "严重心理影响",
+        "low": "轻度可接受"
+      },
+      "management": {
+        "immediate": "心理支持",
+        "follow_up": "假发，准备脱发期",
+        "warning_signs": []
+      },
+      "source": "NCI Coping with Cancer"
+    },
+    "手足综合征": {
+      "category": "targeted",
+      "standard_term": "Hand-Foot Syndrome",
+      "risk_levels": {
+        "high": "严重疼痛或溃疡",
+        "medium": "影响日常活动",
+        "low": "轻度红斑"
+      },
+      "management": {
+        "immediate": "避免热和摩擦",
+        "follow_up": "尿素霜，剂量调整",
+        "warning_signs": [
+          "皮肤破溃",
+          "感染"
+        ]
+      },
+      "source": "NCI Targeted Therapy Side Effects"
+    },
+    "腹泻": {
+      "category": "targeted",
+      "standard_term": "Diarrhea",
+      "risk_levels": {
+        "high": "严重腹泻伴脱水",
+        "medium": "中度腹泻影响生活",
+        "low": "轻度腹泻"
+      },
+      "management": {
+        "immediate": "补液，止泻药",
+        "follow_up": "调整靶向药剂量",
+        "warning_signs": [
+          "脱水",
+          "血便"
+        ]
+      },
+      "source": "NCI Targeted Therapy Side Effects"
+    },
+    "免疫相关不良反应": {
+      "category": "immunotherapy",
+      "standard_term": "Immune-Related Adverse Events (irAE)",
+      "risk_levels": {
+        "high": "3-4级irAE（需住院）",
+        "medium": "2级irAE需激素治疗",
+        "low": "1级irAE可观察"
+      },
+      "management": {
+        "immediate": "暂停免疫治疗，评估器官功能",
+        "follow_up": "激素治疗，专科会诊",
+        "warning_signs": [
+          "肝功能异常",
+          "呼吸困难",
+          "皮疹扩散"
+        ]
+      },
+      "source": "NCI Immunotherapy Side Effects"
+    },
+    "关节痛": {
+      "category": "endocrine",
+      "standard_term": "Arthralgia",
+      "risk_levels": {
+        "high": "N/A（通常不危及生命）",
+        "medium": "严重影响生活质量",
+        "low": "轻度可接受"
+      },
+      "management": {
+        "immediate": "止痛药对症",
+        "follow_up": "关节炎专科评估",
+        "warning_signs": [
+          "关节肿胀",
+          "红热"
+        ]
+      },
+      "source": "NCI Endocrine Therapy Side Effects"
+    },
+    "放射性食管炎": {
+      "category": "radiation",
+      "standard_term": "Radiation Esophagitis",
+      "risk_levels": {
+        "high": "无法进食",
+        "medium": "严重吞咽痛",
+        "low": "轻微不适"
+      },
+      "management": {
+        "immediate": "避免刺激性食物",
+        "follow_up": "吞咽评估，营养支持",
+        "warning_signs": [
+          "体重下降",
+          "脱水"
+        ]
+      },
+      "source": "NCI Radiation Therapy Side Effects"
+    },
+    "疲劳": {
+      "category": "general",
+      "standard_term": "Cancer-Related Fatigue",
+      "risk_levels": {
+        "high": "严重疲劳影响生活",
+        "medium": "中度疲劳",
+        "low": "轻度疲劳"
+      },
+      "management": {
+        "immediate": "评估原因（贫血、甲状腺等）",
+        "follow_up": "运动治疗，心理支持",
+        "warning_signs": [
+          "呼吸困难",
+          "严重贫血"
+        ]
+      },
+      "source": "NCI Cancer Fatigue"
+    },
+    "疼痛": {
+      "category": "general",
+      "standard_term": "Cancer Pain",
+      "risk_levels": {
+        "high": "严重疼痛（7-10分）",
+        "medium": "中度疼痛（4-6分）",
+        "low": "轻度疼痛（1-3分）"
+      },
+      "management": {
+        "immediate": "疼痛评估，止痛药",
+        "follow_up": "疼痛专科，神经病理性疼痛管理",
+        "warning_signs": [
+          "突发剧痛",
+          "神经症状"
+        ]
+      },
+      "source": "NCI Cancer Pain Management"
+    }
+  },
+  "keyword_to_symptoms": {
+    "恶心": [
+      "恶心呕吐"
+    ],
+    "想吐": [
+      "恶心呕吐"
+    ],
+    "呕吐": [
+      "恶心呕吐"
+    ],
+    "反胃": [
+      "恶心呕吐"
+    ],
+    "vomiting": [
+      "恶心呕吐"
+    ],
+    "nausea": [
+      "恶心呕吐"
+    ],
+    "发烧": [
+      "骨髓抑制",
+      "免疫相关不良反应"
+    ],
+    "感染": [
+      "骨髓抑制"
+    ],
+    "虚弱": [
+      "骨髓抑制"
+    ],
+    "瘀青": [
+      "骨髓抑制"
+    ],
+    "出血": [
+      "骨髓抑制"
+    ],
+    "neutropenia": [
+      "骨髓抑制"
+    ],
+    "fever": [
+      "骨髓抑制",
+      "输液反应"
+    ],
+    "fatigue": [
+      "骨髓抑制",
+      "疲劳"
+    ],
+    "手脚麻": [
+      "周围神经病变"
+    ],
+    "刺痛": [
+      "周围神经病变"
+    ],
+    "麻木": [
+      "周围神经病变"
+    ],
+    "感觉异常": [
+      "周围神经病变"
+    ],
+    "neuropathy": [
+      "周围神经病变"
+    ],
+    "numbness": [
+      "周围神经病变"
+    ],
+    "tingling": [
+      "周围神经病变"
+    ],
+    "心脏": [
+      "心脏毒性"
+    ],
+    "心悸": [
+      "心脏毒性"
+    ],
+    "胸闷": [
+      "心脏毒性"
+    ],
+    "呼吸困难": [
+      "心脏毒性",
+      "输液反应"
+    ],
+    "水肿": [
+      "心脏毒性"
+    ],
+    "cardiac": [
+      "心脏毒性"
+    ],
+    "heart": [
+      "心脏毒性"
+    ],
+    "shortness of breath": [
+      "心脏毒性"
+    ],
+    "阴道出血": [
+      "子宫内膜异常"
+    ],
+    "月经异常": [
+      "子宫内膜异常"
+    ],
+    "子宫内膜": [
+      "子宫内膜异常"
+    ],
+    "异常出血": [
+      "子宫内膜异常"
+    ],
+    "bleeding": [
+      "子宫内膜异常"
+    ],
+    "骨痛": [
+      "骨质疏松"
+    ],
+    "骨折": [
+      "骨质疏松"
+    ],
+    "骨密度": [
+      "骨质疏松"
+    ],
+    "骨骼": [
+      "骨质疏松"
+    ],
+    "bone": [
+      "骨质疏松"
+    ],
+    "fracture": [
+      "骨质疏松"
+    ],
+    "osteoporosis": [
+      "骨质疏松"
+    ],
+    "过敏": [
+      "输液反应"
+    ],
+    "发热": [
+      "输液反应"
+    ],
+    "寒战": [
+      "输液反应"
+    ],
+    "皮疹": [
+      "输液反应",
+      "免疫相关不良反应"
+    ],
+    "allergic": [
+      "输液反应"
+    ],
+    "rash": [
+      "输液反应"
+    ],
+    "皮肤红": [
+      "皮肤反应"
+    ],
+    "脱皮": [
+      "皮肤反应",
+      "手足综合征"
+    ],
+    "瘙痒": [
+      "皮肤反应"
+    ],
+    "皮肤反应": [
+      "皮肤反应"
+    ],
+    "skin": [
+      "皮肤反应"
+    ],
+    "redness": [
+      "皮肤反应"
+    ],
+    "peeling": [
+      "皮肤反应"
+    ],
+    "口腔": [
+      "口腔黏膜炎"
+    ],
+    "嘴疼": [
+      "口腔黏膜炎"
+    ],
+    "嘴烂": [
+      "口腔黏膜炎"
+    ],
+    "吞咽痛": [
+      "口腔黏膜炎",
+      "放射性食管炎"
+    ],
+    "oral": [
+      "口腔黏膜炎"
+    ],
+    "mouth sore": [
+      "口腔黏膜炎"
+    ],
+    "mucositis": [
+      "口腔黏膜炎"
+    ],
+    "掉头发": [
+      "脱发"
+    ],
+    "脱发": [
+      "脱发"
+    ],
+    "头发": [
+      "脱发"
+    ],
+    "alopecia": [
+      "脱发"
+    ],
+    "hair loss": [
+      "脱发"
+    ],
+    "手脚红": [
+      "手足综合征"
+    ],
+    "手足": [
+      "手足综合征"
+    ],
+    "疼": [
+      "手足综合征",
+      "疼痛"
+    ],
+    "hand foot": [
+      "手足综合征"
+    ],
+    "palmar plantar": [
+      "手足综合征"
+    ],
+    "腹泻": [
+      "腹泻"
+    ],
+    "拉肚子": [
+      "腹泻"
+    ],
+    "大便稀": [
+      "腹泻"
+    ],
+    "diarrhea": [
+      "腹泻"
+    ],
+    "免疫": [
+      "免疫相关不良反应"
+    ],
+    "关节痛": [
+      "免疫相关不良反应",
+      "关节痛"
+    ],
+    "肝炎": [
+      "免疫相关不良反应"
+    ],
+    "肺炎": [
+      "免疫相关不良反应"
+    ],
+    "immune": [
+      "免疫相关不良反应"
+    ],
+    "irAE": [
+      "免疫相关不良反应"
+    ],
+    "肌肉痛": [
+      "关节痛"
+    ],
+    "关节僵硬": [
+      "关节痛"
+    ],
+    "arthralgia": [
+      "关节痛"
+    ],
+    "joint pain": [
+      "关节痛"
+    ],
+    "食管": [
+      "放射性食管炎"
+    ],
+    "胸痛": [
+      "放射性食管炎"
+    ],
+    "吞咽困难": [
+      "放射性食管炎"
+    ],
+    "esophagitis": [
+      "放射性食管炎"
+    ],
+    "疲劳": [
+      "疲劳"
+    ],
+    "累": [
+      "疲劳"
+    ],
+    "没力气": [
+      "疲劳"
+    ],
+    "乏力": [
+      "疲劳"
+    ],
+    "tired": [
+      "疲劳"
+    ],
+    "疼痛": [
+      "疼痛"
+    ],
+    "痛": [
+      "疼痛"
+    ],
+    "pain": [
+      "疼痛"
+    ],
+    "ache": [
+      "疼痛"
+    ]
+  },
+  "rule_index": {
+    "HR-001": {
+      "name": "呼吸困难/胸痛",
+      "risk_level": "high",
+      "keywords": [
+        "呼吸困难",
+        "胸闷",
+        "胸痛",
+        "呼吸急促"
+      ],
+      "action": "立即拨打120或前往急诊",
+      "reasoning": "可能提示肺栓塞、心脏事件等危及生命的情况"
+    },
+    "HR-002": {
+      "name": "发热性中性粒细胞减少",
+      "risk_level": "high",
+      "keywords": [
+        "发烧",
+        "发热",
+        "38",
+        "neutropenia"
+      ],
+      "action": "立即就医，急诊或肿瘤科",
+      "reasoning": "化疗后发热可能是威胁生命的感染信号"
+    },
+    "HR-003": {
+      "name": "严重过敏反应",
+      "risk_level": "high",
+      "keywords": [
+        "过敏",
+        "呼吸困难",
+        "皮疹",
+        "面部肿胀"
+      ],
+      "action": "立即停药，寻求急救",
+      "reasoning": "可能发展为过敏性休克"
+    },
+    "HR-004": {
+      "name": "消化道出血",
+      "risk_level": "high",
+      "keywords": [
+        "呕血",
+        "黑便",
+        "血便",
+        "吐血"
+      ],
+      "action": "立即就医，可能需要输血",
+      "reasoning": "严重出血可能危及生命"
+    },
+    "HR-005": {
+      "name": "心脏症状",
+      "risk_level": "high",
+      "keywords": [
+        "心悸",
+        "胸痛",
+        "呼吸困难",
+        "水肿",
+        "心律"
+      ],
+      "action": "心脏评估，可能需要停药",
+      "reasoning": "蒽环类药物心脏毒性可能致命"
+    },
+    "HR-006": {
+      "name": "脑病症状",
+      "risk_level": "high",
+      "keywords": [
+        "意识",
+        "混乱",
+        "癫痫",
+        "癫痫发作",
+        "神志不清"
+      ],
+      "action": "立即就医，神经科评估",
+      "reasoning": "可能提示代谢性脑病或转移"
+    },
+    "HR-007": {
+      "name": "深静脉血栓",
+      "risk_level": "high",
+      "keywords": [
+        "腿肿",
+        "腿疼",
+        "小腿红肿",
+        "肿胀"
+      ],
+      "action": "超声检查，抗凝治疗",
+      "reasoning": "可能发展为肺栓塞"
+    },
+    "MR-001": {
+      "name": "持续恶心呕吐",
+      "risk_level": "medium",
+      "keywords": [
+        "恶心",
+        "呕吐",
+        "吃不下"
+      ],
+      "action": "联系团队，止吐方案调整",
+      "reasoning": "可能需要补液和营养支持"
+    },
+    "MR-002": {
+      "name": "中度周围神经病变",
+      "risk_level": "medium",
+      "keywords": [
+        "麻木",
+        "刺痛",
+        "手脚麻"
+      ],
+      "action": "联系团队，评估是否需要减量",
+      "reasoning": "持续可能发展为不可逆损伤"
+    },
+    "MR-003": {
+      "name": "严重疲劳",
+      "risk_level": "medium",
+      "keywords": [
+        "疲劳",
+        "没力气",
+        "累"
+      ],
+      "action": "联系团队，排除其他原因",
+      "reasoning": "严重疲劳影响生活质量，需评估"
+    },
+    "MR-004": {
+      "name": "中度皮肤反应",
+      "risk_level": "medium",
+      "keywords": [
+        "皮疹",
+        "红",
+        "脱皮"
+      ],
+      "action": "皮肤科会诊，局部护理",
+      "reasoning": "可能影响治疗进行"
+    },
+    "MR-005": {
+      "name": "血小板减少出血",
+      "risk_level": "medium",
+      "keywords": [
+        "瘀青",
+        "出血",
+        "牙龈出血",
+        "鼻出血",
+        "blood"
+      ],
+      "action": "联系团队，血小板检查",
+      "reasoning": "严重出血风险"
+    },
+    "MR-006": {
+      "name": "严重贫血",
+      "risk_level": "medium",
+      "keywords": [
+        "头晕",
+        "心悸",
+        "气短",
+        "苍白",
+        "fatigue"
+      ],
+      "action": "血红蛋白检查，输血评估",
+      "reasoning": "需要输血支持"
+    },
+    "MR-007": {
+      "name": "肝功能异常",
+      "risk_level": "medium",
+      "keywords": [
+        "黄疸",
+        "皮肤发黄",
+        "尿黄",
+        "恶心厌食"
+      ],
+      "action": "肝功能检查，专科评估",
+      "reasoning": "药物性肝损伤可能"
+    },
+    "MR-008": {
+      "name": "肾功能异常",
+      "risk_level": "medium",
+      "keywords": [
+        "尿少",
+        "浮肿",
+        "腰痛",
+        "泡沫尿"
+      ],
+      "action": "肾功能检查，泌尿科评估",
+      "reasoning": "需要评估肾损伤原因"
+    },
+    "LR-001": {
+      "name": "轻度脱发",
+      "risk_level": "low",
+      "keywords": [
+        "掉头发",
+        "脱发"
+      ],
+      "action": "心理支持，对症处理",
+      "reasoning": "通常是可逆的，暂时性"
+    },
+    "LR-002": {
+      "name": "轻度潮热",
+      "risk_level": "low",
+      "keywords": [
+        "潮热",
+        "出汗",
+        "脸红"
+      ],
+      "action": "生活方式调整",
+      "reasoning": "生活质量影响，对症处理即可"
+    }
+  }
+}

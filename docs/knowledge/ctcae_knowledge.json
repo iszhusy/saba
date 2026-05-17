@@ -1,0 +1,4300 @@
+{
+  "metadata": {
+    "source": "CTCAE v5.0 (NCI Common Terminology Criteria for Adverse Events v5.0)",
+    "parsed_date": "2026-05-15",
+    "total_terms": 850,
+    "breast_cancer_relevant": 369
+  },
+  "soc_categories": {
+    "Blood and lymphatic system disorders": [
+      {
+        "code": "10002272",
+        "term": "Anemia",
+        "grades": {
+          "grade1": "Hemoglobin (Hgb) <LLN - 10.0 g/dL; <LLN - 6.2 mmol/L; <LLN - 100 g/L",
+          "grade2": "Hgb <10.0 - 8.0 g/dL; <6.2 - 4.9 mmol/L; <100 - 80g/L",
+          "grade3": "Hgb <8.0 g/dL; <4.9 mmol/L; <80 g/L; transfusion indicated",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10016288",
+        "term": "Febrile neutropenia",
+        "grades": {
+          "grade1": "-",
+          "grade2": "-",
+          "grade3": "ANC <1000/mm3 with a single temperature of >38.3 degrees C (101 degrees F) or a sustained temperature of >=38 degrees C (100.4 degrees F) for more than one hour",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10025182",
+        "term": "Lymph node pain",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      }
+    ],
+    "Gastrointestinal disorders": [
+      {
+        "code": "10000081",
+        "term": "Abdominal pain",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10055226",
+        "term": "Anal hemorrhage",
+        "grades": {
+          "grade1": "Mild symptoms; intervention not indicated",
+          "grade2": "Moderate symptoms; intervention indicated",
+          "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10002167",
+        "term": "Anal pain",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10065747",
+        "term": "Cecal hemorrhage",
+        "grades": {
+          "grade1": "Mild symptoms; intervention not indicated",
+          "grade2": "Moderate symptoms; intervention indicated",
+          "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10009998",
+        "term": "Colonic hemorrhage",
+        "grades": {
+          "grade1": "Mild symptoms; intervention not indicated",
+          "grade2": "Moderate symptoms; intervention indicated",
+          "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10010774",
+        "term": "Constipation",
+        "grades": {
+          "grade1": "Occasional or intermittent symptoms; occasional use of stool softeners, laxatives, dietary modification, or enema",
+          "grade2": "Persistent symptoms with regular use of laxatives or enemas; limiting instrumental ADL",
+          "grade3": "Obstipation with manual evacuation indicated; limiting self care ADL",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10012727",
+        "term": "Diarrhea",
+        "grades": {
+          "grade1": "Increase of <4 stools per day over baseline; mild increase in ostomy output compared to baseline",
+          "grade2": "Increase of 4 - 6 stools per day over baseline; moderate increase in ostomy output compared to baseline; limiting instrumental ADL",
+          "grade3": "Increase of >=7 stools per day over baseline; hospitalization indicated; severe increase in ostomy output compared to baseline; limiting self care ADL",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10055242",
+        "term": "Duodenal hemorrhage",
+        "grades": {
+          "grade1": "Mild symptoms; intervention not indicated",
+          "grade2": "Moderate symptoms; intervention indicated",
+          "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10015384",
+        "term": "Esophageal hemorrhage",
+        "grades": {
+          "grade1": "Mild symptoms; intervention not indicated",
+          "grade2": "Moderate symptoms; intervention indicated",
+          "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10015388",
+        "term": "Esophageal pain",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10015453",
+        "term": "Esophageal varices hemorrhage",
+        "grades": {
+          "grade1": "-",
+          "grade2": "Self-limited; intervention not indicated",
+          "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10017789",
+        "term": "Gastric hemorrhage",
+        "grades": {
+          "grade1": "Mild symptoms; intervention not indicated",
+          "grade2": "Moderate symptoms; intervention indicated",
+          "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10017999",
+        "term": "Gastrointestinal pain",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10018286",
+        "term": "Gingival pain",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain interfering with oral intake",
+          "grade3": "Severe pain; inability to aliment orally",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10060640",
+        "term": "Hemorrhoidal hemorrhage",
+        "grades": {
+          "grade1": "Mild symptoms; intervention not indicated",
+          "grade2": "Moderate symptoms; intervention indicated",
+          "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10055287",
+        "term": "Ileal hemorrhage",
+        "grades": {
+          "grade1": "Mild symptoms; intervention not indicated",
+          "grade2": "Moderate symptoms; intervention indicated",
+          "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10055291",
+        "term": "Intra-abdominal hemorrhage",
+        "grades": {
+          "grade1": "-",
+          "grade2": "Moderate symptoms; intervention indicated",
+          "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10055300",
+        "term": "Jejunal hemorrhage",
+        "grades": {
+          "grade1": "Mild symptoms; intervention not indicated",
+          "grade2": "Moderate symptoms; intervention indicated",
+          "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10024561",
+        "term": "Lip pain",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10051746",
+        "term": "Lower gastrointestinal hemorrhage",
+        "grades": {
+          "grade1": "Mild symptoms; intervention not indicated",
+          "grade2": "Moderate symptoms; intervention indicated",
+          "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10028813",
+        "term": "Nausea",
+        "grades": {
+          "grade1": "Loss of appetite without alteration in eating habits",
+          "grade2": "Oral intake decreased without significant weight loss, dehydration or malnutrition",
+          "grade3": "Inadequate oral caloric or fluid intake; tube feeding, TPN, or hospitalization indicated",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10054520",
+        "term": "Oral dysesthesia",
+        "grades": {
+          "grade1": "Mild discomfort; not interfering with oral intake",
+          "grade2": "Moderate pain; interfering with oral intake",
+          "grade3": "Disabling pain; tube feeding or TPN indicated",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10030980",
+        "term": "Oral hemorrhage",
+        "grades": {
+          "grade1": "Mild symptoms; intervention not indicated",
+          "grade2": "Moderate symptoms; intervention indicated",
+          "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10031009",
+        "term": "Oral pain",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10033626",
+        "term": "Pancreatic hemorrhage",
+        "grades": {
+          "grade1": "Mild symptoms; intervention not indicated",
+          "grade2": "Moderate symptoms; intervention indicated",
+          "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10038064",
+        "term": "Rectal hemorrhage",
+        "grades": {
+          "grade1": "Mild symptoms; intervention not indicated",
+          "grade2": "Moderate symptoms; intervention indicated",
+          "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10038072",
+        "term": "Rectal pain",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10038981",
+        "term": "Retroperitoneal hemorrhage",
+        "grades": {
+          "grade1": "-",
+          "grade2": "Self-limited; intervention indicated",
+          "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10042112",
+        "term": "Stomach pain",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10055356",
+        "term": "Upper gastrointestinal hemorrhage",
+        "grades": {
+          "grade1": "Mild symptoms; intervention not indicated",
+          "grade2": "Moderate symptoms; intervention indicated",
+          "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10047700",
+        "term": "Vomiting",
+        "grades": {
+          "grade1": "Intervention not indicated",
+          "grade2": "Outpatient IV hydration; medical intervention indicated",
+          "grade3": "Tube feeding, TPN, or hospitalization indicated",
+          "grade4": "Life-threatening consequences",
+          "grade5": "Death"
+        }
+      }
+    ],
+    "Nervous system disorders": [
+      {
+        "code": "10053662",
+        "term": "Abducens nerve disorder",
+        "grades": {
+          "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+          "grade2": "Moderate symptoms; limiting instrumental ADL",
+          "grade3": "Severe symptoms; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10060929",
+        "term": "Accessory nerve disorder",
+        "grades": {
+          "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+          "grade2": "Moderate symptoms; limiting instrumental ADL",
+          "grade3": "Severe symptoms; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10000521",
+        "term": "Acoustic nerve disorder NOS",
+        "grades": {
+          "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+          "grade2": "Moderate symptoms; limiting instrumental ADL",
+          "grade3": "Severe symptoms; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10013573",
+        "term": "Dizziness",
+        "grades": {
+          "grade1": "Mild unsteadiness or sensation of movement",
+          "grade2": "Moderate unsteadiness or sensation of movement; limiting instrumental ADL",
+          "grade3": "Severe unsteadiness or sensation of movement; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10062872",
+        "term": "Dysesthesia",
+        "grades": {
+          "grade1": "Mild sensory alteration",
+          "grade2": "Moderate sensory alteration; limiting instrumental ADL",
+          "grade3": "Severe sensory alteration; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10014217",
+        "term": "Edema cerebral",
+        "grades": {
+          "grade1": "-",
+          "grade2": "-",
+          "grade3": "New onset; worsening from baseline",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10051272",
+        "term": "Facial muscle weakness",
+        "grades": {
+          "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+          "grade2": "Moderate symptoms; limiting instrumental ADL",
+          "grade3": "Severe symptoms; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10061457",
+        "term": "Facial nerve disorder",
+        "grades": {
+          "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+          "grade2": "Moderate symptoms; limiting instrumental ADL",
+          "grade3": "Severe symptoms; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10061185",
+        "term": "Glossopharyngeal nerve disorder",
+        "grades": {
+          "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+          "grade2": "Moderate symptoms; limiting instrumental ADL",
+          "grade3": "Severe symptoms; limiting self care ADL",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10019211",
+        "term": "Headache",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10061212",
+        "term": "Hypoglossal nerve disorder",
+        "grades": {
+          "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+          "grade2": "Moderate symptoms; limiting instrumental ADL",
+          "grade3": "Severe symptoms; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10022763",
+        "term": "Intracranial hemorrhage",
+        "grades": {
+          "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+          "grade2": "Moderate symptoms; intervention indicated",
+          "grade3": "Ventriculostomy, ICP monitoring, intraventricular thrombolysis, or invasive intervention indicated; hospitalization",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10065780",
+        "term": "Muscle weakness left-sided",
+        "grades": {
+          "grade1": "Symptomatic; perceived by patient but not evident on physical exam",
+          "grade2": "Symptomatic; evident on physical exam; limiting instrumental ADL",
+          "grade3": "Limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10065794",
+        "term": "Muscle weakness right-sided",
+        "grades": {
+          "grade1": "Symptomatic; perceived by patient but not evident on physical exam",
+          "grade2": "Symptomatic; evident on physical exam; limiting instrumental ADL",
+          "grade3": "Limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10028417",
+        "term": "Myasthenia gravis",
+        "grades": {
+          "grade1": "Asymptomatic or mild symptoms; clinical or diagnostic observations only; intervention not indicated",
+          "grade2": "Moderate; minimal, local or noninvasive intervention indicated; limiting age-appropriate instrumental ADL",
+          "grade3": "Severe or medically significant but not immediately life-threatening; hospitalization or prolongation of existing hospitalization indicated; limiting self care ADL",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10029223",
+        "term": "Neuralgia",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10053661",
+        "term": "Oculomotor nerve disorder",
+        "grades": {
+          "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+          "grade2": "Moderate symptoms; limiting instrumental ADL",
+          "grade3": "Severe symptoms; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10056388",
+        "term": "Olfactory nerve disorder",
+        "grades": {
+          "grade1": "-",
+          "grade2": "Moderate symptoms; limiting instrumental ADL",
+          "grade3": "Severe symptoms; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10033987",
+        "term": "Paresthesia",
+        "grades": {
+          "grade1": "Mild symptoms",
+          "grade2": "Moderate symptoms; limiting instrumental ADL",
+          "grade3": "Severe symptoms; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10034580",
+        "term": "Peripheral motor neuropathy",
+        "grades": {
+          "grade1": "Asymptomatic; clinical or diagnostic observations only",
+          "grade2": "Moderate symptoms; limiting instrumental ADL",
+          "grade3": "Severe symptoms; limiting self care ADL",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10034620",
+        "term": "Peripheral sensory neuropathy",
+        "grades": {
+          "grade1": "Asymptomatic",
+          "grade2": "Moderate symptoms; limiting instrumental ADL",
+          "grade3": "Severe symptoms; limiting self care ADL",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10056238",
+        "term": "Phantom pain",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10038130",
+        "term": "Recurrent laryngeal nerve palsy",
+        "grades": {
+          "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+          "grade2": "Moderate symptoms",
+          "grade3": "Severe symptoms; medical intervention indicated (e.g., thyroplasty, vocal cord injection)",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10060890",
+        "term": "Trigeminal nerve disorder",
+        "grades": {
+          "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+          "grade2": "Moderate symptoms; limiting instrumental ADL",
+          "grade3": "Severe symptoms; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10074765",
+        "term": "Trochlear nerve disorder",
+        "grades": {
+          "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+          "grade2": "Moderate symptoms; limiting instrumental ADL",
+          "grade3": "Severe symptoms; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10061403",
+        "term": "Vagus nerve disorder",
+        "grades": {
+          "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+          "grade2": "Moderate symptoms; limiting instrumental ADL",
+          "grade3": "Severe symptoms; limiting self care ADL",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10065836",
+        "term": "IVth nerve disorder",
+        "grades": {
+          "grade1": "[Term deleted. Map to Trochlear nerve disorder, Grade 1.] Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+          "grade2": "[Term deleted. Map to Trochlear nerve disorder, Grade 2.] Moderate symptoms; limiting instrumental ADL",
+          "grade3": "[Term deleted. Map to Trochlear nerve disorder, Grade 3.] Severe symptoms; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      }
+    ],
+    "Cardiac disorders": [
+      {
+        "code": "10061589",
+        "term": "Aortic valve disease",
+        "grades": {
+          "grade1": "Asymptomatic valvular thickening with or without mild valvular regurgitation or stenosis by imaging",
+          "grade2": "Asymptomatic; moderate regurgitation or stenosis by imaging",
+          "grade3": "Symptomatic; severe regurgitation or stenosis by imaging; symptoms controlled with medical intervention",
+          "grade4": "Life-threatening consequences; urgent intervention indicated (e.g., valve replacement, valvuloplasty)",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10003586",
+        "term": "Asystole",
+        "grades": {
+          "grade1": "Periods of asystole; non-urgent medical management indicated",
+          "grade2": "-",
+          "grade3": "-",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10003658",
+        "term": "Atrial fibrillation",
+        "grades": {
+          "grade1": "Asymptomatic, intervention not indicated",
+          "grade2": "Non-urgent medical intervention indicated",
+          "grade3": "Symptomatic, urgent intervention indicated; device (e.g., pacemaker); ablation; new onset",
+          "grade4": "Life-threatening consequences; embolus requiring urgent intervention",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10003662",
+        "term": "Atrial flutter",
+        "grades": {
+          "grade1": "Asymptomatic, intervention not indicated",
+          "grade2": "Non-urgent medical intervention indicated",
+          "grade3": "Symptomatic, urgent intervention indicated; device (e.g., pacemaker); ablation",
+          "grade4": "Life-threatening consequences; embolus requiring urgent intervention",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10003673",
+        "term": "Atrioventricular block complete",
+        "grades": {
+          "grade1": "-",
+          "grade2": "Non-urgent intervention indicated",
+          "grade3": "Symptomatic and incompletely controlled medically, or controlled with device (e.g., pacemaker); new onset",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10003674",
+        "term": "Atrioventricular block first degree",
+        "grades": {
+          "grade1": "Asymptomatic, intervention not indicated",
+          "grade2": "Non-urgent intervention indicated",
+          "grade3": "-",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10007515",
+        "term": "Cardiac arrest",
+        "grades": {
+          "grade1": "-",
+          "grade2": "-",
+          "grade3": "-",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10007541",
+        "term": "Cardiac disorders - Other, specify",
+        "grades": {
+          "grade1": "Asymptomatic or mild symptoms; clinical or diagnostic observations only; intervention not indicated",
+          "grade2": "Moderate; minimal, local or noninvasive intervention indicated; limiting age-appropriate instrumental ADL",
+          "grade3": "Severe or medically significant but not immediately life-threatening; hospitalization or prolongation of existing hospitalization indicated; limiting self care ADL",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10008481",
+        "term": "Chest pain - cardiac",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; pain on exertion; limiting instrumental ADL; hemodynamically stable",
+          "grade3": "Pain at rest; limiting self care ADL; cardiac catheterization; new onset cardiac chest pain; unstable angina",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10010276",
+        "term": "Conduction disorder",
+        "grades": {
+          "grade1": "Mild symptoms; intervention not indicated",
+          "grade2": "Non-urgent medical intervention indicated",
+          "grade3": "Symptomatic, urgent intervention indicated",
+          "grade4": "Life-threatening consequences",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10011703",
+        "term": "Cyanosis",
+        "grades": {
+          "grade1": "-",
+          "grade2": "Present",
+          "grade3": "-",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10019279",
+        "term": "Heart failure",
+        "grades": {
+          "grade1": "Asymptomatic with laboratory (e.g., BNP [B-Natriuretic Peptide ]) or cardiac imaging abnormalities",
+          "grade2": "Symptoms with moderate activity or exertion",
+          "grade3": "Symptoms at rest or with minimal activity or exertion; hospitalization; new onset of symptoms",
+          "grade4": "Life-threatening consequences; urgent intervention indicated (e.g., continuous IV therapy or mechanical hemodynamic support)",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10069501",
+        "term": "Left ventricular systolic dysfunction",
+        "grades": {
+          "grade1": "-",
+          "grade2": "-",
+          "grade3": "Symptomatic due to drop in ejection fraction responsive to intervention",
+          "grade4": "Refractory or poorly controlled heart failure due to drop in ejection fraction; intervention such as ventricular assist device, intravenous vasopressor support, or heart transplant indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10061532",
+        "term": "Mitral valve disease",
+        "grades": {
+          "grade1": "Asymptomatic valvular thickening with or without mild valvular regurgitation or stenosis by imaging",
+          "grade2": "Asymptomatic; moderate regurgitation or stenosis by imaging",
+          "grade3": "Symptomatic; severe regurgitation or stenosis by imaging; symptoms controlled with medical intervention",
+          "grade4": "Life-threatening consequences; urgent intervention indicated (e.g., valve replacement, valvuloplasty)",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10027786",
+        "term": "Mobitz (type) II atrioventricular block",
+        "grades": {
+          "grade1": "Asymptomatic, intervention not indicated",
+          "grade2": "Symptomatic; medical intervention indicated",
+          "grade3": "Symptomatic and incompletely controlled medically, or controlled with device (e.g., pacemaker); new onset",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10027787",
+        "term": "Mobitz type I",
+        "grades": {
+          "grade1": "Asymptomatic, intervention not indicated",
+          "grade2": "Symptomatic; medical intervention indicated",
+          "grade3": "Symptomatic and incompletely controlled medically, or controlled with device (e.g., pacemaker)",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10028596",
+        "term": "Myocardial infarction",
+        "grades": {
+          "grade1": "-",
+          "grade2": "Asymptomatic and cardiac enzymes minimally abnormal and no evidence of ischemic ECG changes",
+          "grade3": "Severe symptoms; cardiac enzymes abnormal; hemodynamically stable; ECG changes consistent with infarction",
+          "grade4": "Life-threatening consequences; hemodynamically unstable",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10028606",
+        "term": "Myocarditis",
+        "grades": {
+          "grade1": "-",
+          "grade2": "Symptoms with moderate activity or exertion",
+          "grade3": "Severe with symptoms at rest or with minimal activity or exertion; intervention indicated; new onset of symptoms",
+          "grade4": "Life-threatening consequences; urgent intervention indicated (e.g., continuous IV therapy or mechanical hemodynamic support)",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10033557",
+        "term": "Palpitations",
+        "grades": {
+          "grade1": "Mild symptoms; intervention not indicated",
+          "grade2": "Intervention indicated",
+          "grade3": "-",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10034040",
+        "term": "Paroxysmal atrial tachycardia",
+        "grades": {
+          "grade1": "Asymptomatic, intervention not indicated",
+          "grade2": "Non-urgent medical intervention indicated",
+          "grade3": "Symptomatic, urgent intervention indicated; ablation",
+          "grade4": "Life-threatening consequences; incompletely controlled medically; cardioversion indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10034474",
+        "term": "Pericardial effusion",
+        "grades": {
+          "grade1": "-",
+          "grade2": "Asymptomatic effusion size small to moderate",
+          "grade3": "Effusion with physiologic consequences",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10053565",
+        "term": "Pericardial tamponade",
+        "grades": {
+          "grade1": "-",
+          "grade2": "-",
+          "grade3": "-",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10034484",
+        "term": "Pericarditis",
+        "grades": {
+          "grade1": "Asymptomatic, ECG or physical findings (e.g., rub) consistent with pericarditis",
+          "grade2": "Symptomatic pericarditis (e.g., chest pain)",
+          "grade3": "Pericarditis with physiologic consequences (e.g., pericardial constriction)",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10061541",
+        "term": "Pulmonary valve disease",
+        "grades": {
+          "grade1": "Asymptomatic valvular thickening with or without mild valvular regurgitation or stenosis by imaging",
+          "grade2": "Asymptomatic; moderate regurgitation or stenosis by imaging",
+          "grade3": "Symptomatic; severe regurgitation or stenosis by imaging; symptoms controlled with medical intervention",
+          "grade4": "Life-threatening consequences; urgent intervention indicated (e.g., valve replacement, valvuloplasty)",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10038748",
+        "term": "Restrictive cardiomyopathy",
+        "grades": {
+          "grade1": "Imaging findings only",
+          "grade2": "Symptomatic without signs of heart failure",
+          "grade3": "Symptomatic heart failure or other cardiac symptoms, responsive to intervention; new onset of symptoms",
+          "grade4": "Refractory heart failure or other poorly controlled cardiac symptoms",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10058597",
+        "term": "Right ventricular dysfunction",
+        "grades": {
+          "grade1": "Asymptomatic with laboratory (e.g., BNP [B-Natriuretic Peptide ]) or cardiac imaging abnormalities",
+          "grade2": "Symptoms with moderate activity or exertion",
+          "grade3": "Severe symptoms, associated with hypoxia, right heart failure; oxygen indicated",
+          "grade4": "Life-threatening consequences; urgent intervention indicated (e.g., ventricular assist device); heart transplant indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10040639",
+        "term": "Sick sinus syndrome",
+        "grades": {
+          "grade1": "Asymptomatic, intervention not indicated",
+          "grade2": "Symptomatic, intervention not indicated; change in medication initiated",
+          "grade3": "Symptomatic, intervention indicated",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10040741",
+        "term": "Sinus bradycardia",
+        "grades": {
+          "grade1": "Asymptomatic, intervention not indicated",
+          "grade2": "Symptomatic, intervention not indicated; change in medication initiated",
+          "grade3": "Symptomatic, intervention indicated",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10040752",
+        "term": "Sinus tachycardia",
+        "grades": {
+          "grade1": "Asymptomatic, intervention not indicated",
+          "grade2": "Symptomatic; non-urgent medical intervention indicated",
+          "grade3": "Urgent medical intervention indicated",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10042604",
+        "term": "Supraventricular tachycardia",
+        "grades": {
+          "grade1": "Asymptomatic, intervention not indicated",
+          "grade2": "Non-urgent medical intervention indicated",
+          "grade3": "Symptomatic, urgent intervention indicated",
+          "grade4": "Life-threatening consequences",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10061389",
+        "term": "Tricuspid valve disease",
+        "grades": {
+          "grade1": "Asymptomatic valvular thickening with or without mild valvular regurgitation or stenosis",
+          "grade2": "Asymptomatic; moderate regurgitation or stenosis by imaging",
+          "grade3": "Symptomatic; severe regurgitation or stenosis; symptoms controlled with medical intervention",
+          "grade4": "Life-threatening consequences; urgent intervention indicated (e.g., valve replacement, valvuloplasty)",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10047281",
+        "term": "Ventricular arrhythmia",
+        "grades": {
+          "grade1": "Asymptomatic, intervention not indicated",
+          "grade2": "Non-urgent medical intervention indicated",
+          "grade3": "Urgent intervention indicated",
+          "grade4": "Life-threatening consequences; hemodynamic compromise",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10047290",
+        "term": "Ventricular fibrillation",
+        "grades": {
+          "grade1": "-",
+          "grade2": "-",
+          "grade3": "-",
+          "grade4": "Life-threatening consequences; hemodynamic compromise",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10047302",
+        "term": "Ventricular tachycardia",
+        "grades": {
+          "grade1": "-",
+          "grade2": "Non-urgent medical intervention indicated",
+          "grade3": "Symptomatic, urgent intervention indicated",
+          "grade4": "Life-threatening consequences; hemodynamic compromise",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10051592",
+        "term": "Acute coronary syndrome",
+        "grades": {
+          "grade1": "-",
+          "grade2": "[Term deleted. Map to Chest pain-cardiac, Grade 2.] Symptomatic, progressive angina; cardiac enzymes normal; hemodynamically stable",
+          "grade3": "[Term deleted. Map to Chest pain-cardiac, Grade 3.] Symptomatic, unstable angina and/or acute myocardial infarction, cardiac enzymes abnormal, hemodynamically stable",
+          "grade4": "[Term deleted. Map to Myocardial infarction, Grade 4.] Symptomatic, unstable angina and/or acute myocardial infarction, cardiac enzymes abnormal, hemodynamically unstable",
+          "grade5": "[Term deleted. Map to Myocardial infarction, Grade 5.] Death"
+        }
+      },
+      {
+        "code": "10010783",
+        "term": "Constrictive pericarditis",
+        "grades": {
+          "grade1": "-",
+          "grade2": "-",
+          "grade3": "[Term deleted. Map to Pericarditis, Grade 3.] Symptomatic heart failure or other cardiac symptoms, responsive to intervention",
+          "grade4": "[Term deleted. Map to Pericarditis, Grade 4.] Refractory heart failure or other poorly controlled cardiac symptoms",
+          "grade5": "[Term deleted. Map to Pericarditis, Grade 5.] Death"
+        }
+      },
+      {
+        "code": "10048015",
+        "term": "Wolff-Parkinson-White syndrome",
+        "grades": {
+          "grade1": "[Term deleted. Map to Cardiac disorders - Other, specify (Wolff-Parkinson-White syndrome), Grade 1.] Asymptomatic, intervention not indicated",
+          "grade2": "[Term deleted. Map to Cardiac disorders - Other, specify (Wolff-Parkinson-White syndrome), Grade 2.] Non-urgent medical intervention indicated",
+          "grade3": "[Term deleted. Map to Cardiac disorders - Other, specify (Wolff-Parkinson-White syndrome), Grade 3.] Symptomatic and incompletely controlled medically or controlled with procedure",
+          "grade4": "[Term deleted. Map to Cardiac disorders - Other, specify (Wolff-Parkinson-White syndrome), Grade 4.] Life-threatening consequences; urgent intervention indicated",
+          "grade5": "[Term deleted. Map to Cardiac disorders - Other, specify (Wolff-Parkinson-White syndrome), Grade 5.] Death"
+        }
+      }
+    ],
+    "Skin and subcutaneous tissue disorders": [
+      {
+        "code": "10001760",
+        "term": "Alopecia",
+        "grades": {
+          "grade1": "Hair loss of <50% of normal for that individual that is not obvious from a distance but only on close inspection; a different hair style may be required to cover the hair loss but it does not require a wig or hair piece to camouflage",
+          "grade2": "Hair loss of >=50% normal for that individual that is readily apparent to others; a wig or hair piece is necessary if the patient desires to completely camouflage the hair loss; associated with psychosocial impact",
+          "grade3": "-",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10005901",
+        "term": "Body odor",
+        "grades": {
+          "grade1": "Mild odor; physician intervention not indicated; self care interventions",
+          "grade2": "Pronounced odor; psychosocial impact; patient seeks medical intervention",
+          "grade3": "-",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10006556",
+        "term": "Bullous dermatitis",
+        "grades": {
+          "grade1": "Asymptomatic; blisters covering <10% BSA",
+          "grade2": "Blisters covering 10 - 30% BSA; painful blisters; limiting instrumental ADL",
+          "grade3": "Blisters covering >30% BSA; limiting self care ADL",
+          "grade4": "Blisters covering >30% BSA; associated with fluid or electrolyte abnormalities; ICU care or burn unit indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10013786",
+        "term": "Dry skin",
+        "grades": {
+          "grade1": "Covering <10% BSA and no associated erythema or pruritus",
+          "grade2": "Covering 10 - 30% BSA and associated with erythema or pruritus; limiting instrumental ADL",
+          "grade3": "Covering >30% BSA and associated with pruritus; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10014184",
+        "term": "Eczema",
+        "grades": {
+          "grade1": "Asymptomatic or mild symptoms; additional medical intervention over baseline not indicated",
+          "grade2": "Moderate; topical or oral intervention indicated; additional medical intervention over baseline indicated",
+          "grade3": "Severe or medically significant but not immediately life-threatening; IV intervention indicated",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10015218",
+        "term": "Erythema multiforme",
+        "grades": {
+          "grade1": "Target lesions covering <10% BSA and not associated with skin tenderness",
+          "grade2": "Target lesions covering 10 - 30% BSA and associated with skin tenderness",
+          "grade3": "Target lesions covering >30% BSA and associated with oral or genital erosions",
+          "grade4": "Target lesions covering >30% BSA; associated with fluid or electrolyte abnormalities; ICU care or burn unit indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10015277",
+        "term": "Erythroderma",
+        "grades": {
+          "grade1": "-",
+          "grade2": "Erythema covering >90% BSA without associated symptoms; limiting instrumental ADL",
+          "grade3": "Erythema covering >90% BSA with associated symptoms (e.g., pruritus or tenderness); limiting self care ADL",
+          "grade4": "Erythema covering >90% BSA with associated fluid or electrolyte abnormalities; ICU care or burn unit indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10016241",
+        "term": "Fat atrophy",
+        "grades": {
+          "grade1": "Covering <10% BSA and asymptomatic",
+          "grade2": "Covering 10 - 30% BSA and associated with erythema or tenderness; limiting instrumental ADL",
+          "grade3": "Covering >30% BSA; associated with erythema or tenderness; limiting self-care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10055525",
+        "term": "Hair color changes",
+        "grades": {
+          "grade1": "Present",
+          "grade2": "-",
+          "grade3": "-",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10019049",
+        "term": "Hair texture abnormal",
+        "grades": {
+          "grade1": "Present",
+          "grade2": "-",
+          "grade3": "-",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10020112",
+        "term": "Hirsutism",
+        "grades": {
+          "grade1": "In women, increase in length, thickness or density of hair in a male distribution that the patient is able to camouflage by periodic shaving, bleaching, or removal of hair",
+          "grade2": "In women, increase in length, thickness or density of hair in a male distribution that requires daily shaving or consistent destructive means of hair removal to camouflage; associated with psychosocial impact",
+          "grade3": "-",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10020642",
+        "term": "Hyperhidrosis",
+        "grades": {
+          "grade1": "Limited to one site (palms, soles, or axillae); self care interventions",
+          "grade2": "Involving >1 site; patient seeks medical intervention; associated with psychosocial impact",
+          "grade3": "Associated with electrolyte/hemodynamic imbalance",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10020649",
+        "term": "Hyperkeratosis",
+        "grades": {
+          "grade1": "Present",
+          "grade2": "-",
+          "grade3": "Limiting self-care ADLs",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10020864",
+        "term": "Hypertrichosis",
+        "grades": {
+          "grade1": "Increase in length, thickness or density of hair that the patient is either able to camouflage by periodic shaving or removal of hairs or is not concerned enough about the overgrowth to use any form of hair removal",
+          "grade2": "Increase in length, thickness or density of hair at least on the usual exposed areas of the body [face (not limited to beard/moustache area) plus/minus arms] that requires frequent shaving or use of destructive means of hair removal to camouflage; associated with psychosocial impact",
+          "grade3": "-",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10021013",
+        "term": "Hypohidrosis",
+        "grades": {
+          "grade1": "-",
+          "grade2": "Symptomatic; limiting instrumental ADL",
+          "grade3": "Increase in body temperature; limiting self care ADL",
+          "grade4": "Heat stroke",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10062315",
+        "term": "Lipohypertrophy",
+        "grades": {
+          "grade1": "Asymptomatic and covering <10% BSA",
+          "grade2": "Covering 10 - 30% BSA and associated tenderness; limiting instrumental ADL",
+          "grade3": "Covering >30% BSA and associated tenderness and narcotics or NSAIDs indicated; lipohypertrophy; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10028689",
+        "term": "Nail changes",
+        "grades": {
+          "grade1": "Present",
+          "grade2": "-",
+          "grade3": "-",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10028691",
+        "term": "Nail discoloration",
+        "grades": {
+          "grade1": "Asymptomatic; clinical or diagnostic observations only",
+          "grade2": "-",
+          "grade3": "-",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10049281",
+        "term": "Nail loss",
+        "grades": {
+          "grade1": "Asymptomatic separation of the nail bed from the nail plate or nail loss",
+          "grade2": "Symptomatic separation of the nail bed from the nail plate or nail loss; limiting instrumental ADL",
+          "grade3": "-",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10062283",
+        "term": "Nail ridging",
+        "grades": {
+          "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+          "grade2": "-",
+          "grade3": "-",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10033474",
+        "term": "Pain of skin",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10054524",
+        "term": "Palmar-plantar erythrodysesthesia syndrome",
+        "grades": {
+          "grade1": "Minimal skin changes or dermatitis (e.g., erythema, edema, or hyperkeratosis) without pain",
+          "grade2": "Skin changes (e.g., peeling, blisters, bleeding, fissures, edema, or hyperkeratosis) with pain; limiting instrumental ADL",
+          "grade3": "Severe skin changes (e.g., peeling, blisters, bleeding, fissures, edema, or hyperkeratosis) with pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10034966",
+        "term": "Photosensitivity",
+        "grades": {
+          "grade1": "Painless erythema and erythema covering <10% BSA",
+          "grade2": "Tender erythema covering 10 - 30% BSA",
+          "grade3": "Erythema covering >30% BSA and erythema with blistering; photosensitivity; oral corticosteroid therapy indicated; pain control indicated (e.g., narcotics or NSAIDs)",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10037087",
+        "term": "Pruritus",
+        "grades": {
+          "grade1": "Mild or localized; topical intervention indicated",
+          "grade2": "Widespread and intermittent; skin changes from scratching (e.g., edema, papulation, excoriations, lichenification, oozing/crusts); oral intervention indicated; limiting instrumental ADL",
+          "grade3": "Widespread and constant; limiting self care ADL or sleep; systemic corticosteroid or immunosuppressive therapy indicated",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10037549",
+        "term": "Purpura",
+        "grades": {
+          "grade1": "Combined area of lesions covering <10% BSA",
+          "grade2": "Combined area of lesions covering 10 - 30% BSA; bleeding with trauma",
+          "grade3": "Combined area of lesions covering >30% BSA; spontaneous bleeding",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10037847",
+        "term": "Rash acneiform",
+        "grades": {
+          "grade1": "Papules and/or pustules covering <10% BSA, which may or may not be associated with symptoms of pruritus or tenderness",
+          "grade2": "Papules and/or pustules covering 10 - 30% BSA, which may or may not be associated with symptoms of pruritus or tenderness; associated with psychosocial impact; limiting instrumental ADL; papules and/or pustules covering > 30% BSA with or without mild symptoms",
+          "grade3": "Papules and/or pustules covering >30% BSA with moderate or severe symptoms; limiting self-care ADL; associated with local superinfection with oral antibiotics indicated",
+          "grade4": "Life-threatening consequences; papules and/or pustules covering any % BSA, which may or may not be associated with symptoms of pruritus or tenderness and are associated with extensive superinfection with IV antibiotics indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10037868",
+        "term": "Rash maculo-papular",
+        "grades": {
+          "grade1": "Macules/papules covering <10% BSA with or without symptoms (e.g., pruritus, burning, tightness)",
+          "grade2": "Macules/papules covering 10 - 30% BSA with or without symptoms (e.g., pruritus, burning, tightness); limiting instrumental ADL; rash covering > 30% BSA with or without mild symptoms",
+          "grade3": "Macules/papules covering >30% BSA with moderate or severe symptoms; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10049120",
+        "term": "Scalp pain",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10040785",
+        "term": "Skin and subcutaneous tissue disorders - Other, specify",
+        "grades": {
+          "grade1": "Asymptomatic or mild symptoms; clinical or diagnostic observations only; intervention not indicated",
+          "grade2": "Moderate; minimal, local or noninvasive intervention indicated; limiting age-appropriate instrumental ADL",
+          "grade3": "Severe or medically significant but not immediately life-threatening; hospitalization or prolongation of existing hospitalization indicated; limiting self care ADL",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10040799",
+        "term": "Skin atrophy",
+        "grades": {
+          "grade1": "Covering <10% BSA; associated with telangiectasias or changes in skin color",
+          "grade2": "Covering 10 - 30% BSA; associated with striae or adnexal structure loss",
+          "grade3": "Covering >30% BSA; associated with ulceration",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10040865",
+        "term": "Skin hyperpigmentation",
+        "grades": {
+          "grade1": "Hyperpigmentation covering <10% BSA; no psychosocial impact",
+          "grade2": "Hyperpigmentation covering >10% BSA; associated psychosocial impact",
+          "grade3": "-",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10040868",
+        "term": "Skin hypopigmentation",
+        "grades": {
+          "grade1": "Hypopigmentation or depigmentation covering <10% BSA; no psychosocial impact",
+          "grade2": "Hypopigmentation or depigmentation covering >10% BSA; associated psychosocial impact",
+          "grade3": "-",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10051837",
+        "term": "Skin induration",
+        "grades": {
+          "grade1": "Mild induration, able to move skin parallel to plane (sliding) and perpendicular to skin (pinching up)",
+          "grade2": "Moderate induration, able to slide skin, unable to pinch skin; limiting instrumental ADL",
+          "grade3": "Severe induration; unable to slide or pinch skin; limiting joint or orifice movement (e.g., mouth, anus); limiting self care ADL",
+          "grade4": "Generalized; associated with signs or symptoms of impaired breathing or feeding",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10040947",
+        "term": "Skin ulceration",
+        "grades": {
+          "grade1": "Combined area of ulcers <1 cm; nonblanchable erythema of intact skin with associated warmth or edema",
+          "grade2": "Combined area of ulcers 1 - 2 cm; partial thickness skin loss involving skin or subcutaneous fat",
+          "grade3": "Combined area of ulcers >2 cm; full-thickness skin loss involving damage to or necrosis of subcutaneous tissue that may extend down to fascia",
+          "grade4": "Any size ulcer with extensive destruction, tissue necrosis, or damage to muscle, bone, or supporting structures with or without full thickness skin loss",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10042033",
+        "term": "Stevens-Johnson syndrome",
+        "grades": {
+          "grade1": "-",
+          "grade2": "-",
+          "grade3": "Skin sloughing covering <10% BSA with associated signs (e.g., erythema, purpura, epidermal detachment, and mucous membrane detachment)",
+          "grade4": "Skin sloughing covering 10 - 30% BSA with associated signs (e.g., erythema, purpura, epidermal detachment and mucous membrane detachment)",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10042344",
+        "term": "Subcutaneous emphysema",
+        "grades": {
+          "grade1": "Asymptomatic or mild symptoms; clinical or diagnostic observations only; intervention not indicated",
+          "grade2": "Moderate; minimal, local or noninvasive intervention indicated",
+          "grade3": "Severe or medically significant but not immediately life-threatening; hospitalization or prolongation of existing hospitalization indicated; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10043189",
+        "term": "Telangiectasia",
+        "grades": {
+          "grade1": "Telangiectasias covering <10% BSA",
+          "grade2": "Telangiectasias covering >=10% BSA; associated with psychosocial impact",
+          "grade3": "-",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10044223",
+        "term": "Toxic epidermal necrolysis",
+        "grades": {
+          "grade1": "-",
+          "grade2": "-",
+          "grade3": "-",
+          "grade4": "Skin sloughing covering >=30% BSA with associated symptoms (e.g., erythema, purpura, or epidermal detachment)",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10046735",
+        "term": "Urticaria",
+        "grades": {
+          "grade1": "Urticarial lesions covering <10% BSA; topical intervention indicated",
+          "grade2": "Urticarial lesions covering 10 - 30% BSA; oral intervention indicated",
+          "grade3": "Urticarial lesions covering >30% BSA; IV intervention indicated",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      }
+    ],
+    "General disorders and administration site conditions": [
+      {
+        "code": "10014222",
+        "term": "Edema face",
+        "grades": {
+          "grade1": "Localized facial edema",
+          "grade2": "Moderate localized facial edema; limiting instrumental ADL",
+          "grade3": "Severe swelling; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10050068",
+        "term": "Edema limbs",
+        "grades": {
+          "grade1": "5 - 10% inter-limb discrepancy in volume or circumference at point of greatest visible difference; swelling or obscuration of anatomic architecture on close inspection",
+          "grade2": ">10 - 30% inter-limb discrepancy in volume or circumference at point of greatest visible difference; readily apparent obscuration of anatomic architecture; obliteration of skin folds; readily apparent deviation from normal anatomic contour; limiting instrumental ADL",
+          "grade3": ">30% inter-limb discrepancy in volume; gross deviation from normal anatomic contour; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10058720",
+        "term": "Edema trunk",
+        "grades": {
+          "grade1": "Swelling or obscuration of anatomic architecture on close inspection",
+          "grade2": "Readily apparent obscuration of anatomic architecture; obliteration of skin folds; readily apparent deviation from normal anatomic contour; limiting instrumental ADL",
+          "grade3": "Gross deviation from normal anatomic contour; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10016059",
+        "term": "Facial pain",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10016256",
+        "term": "Fatigue",
+        "grades": {
+          "grade1": "Fatigue relieved by rest",
+          "grade2": "Fatigue not relieved by rest; limiting instrumental ADL",
+          "grade3": "Fatigue not relieved by rest, limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10018112",
+        "term": "Generalized edema",
+        "grades": {
+          "grade1": "Noted on exam; 1+ pitting edema",
+          "grade2": "Interfering with instrumental ADLs; oral therapy initiated",
+          "grade3": "Interferes with self care ADL; intravenous therapy indicated; skin breakdown",
+          "grade4": "Life-threatening consequences",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10062466",
+        "term": "Localized edema",
+        "grades": {
+          "grade1": "Localized to dependent areas, no disability or functional impairment",
+          "grade2": "Moderate localized edema and intervention indicated; limiting instrumental ADL",
+          "grade3": "Severe localized edema and intervention indicated; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10054482",
+        "term": "Neck edema",
+        "grades": {
+          "grade1": "Asymptomatic localized neck edema",
+          "grade2": "Moderate neck edema; slight obliteration of anatomic landmarks; limiting instrumental ADL",
+          "grade3": "Generalized neck edema (e.g., difficulty in turning neck); limiting self care ADL",
+          "grade4": "Vascular or respiratory impairment requiring urgent intervention",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10062501",
+        "term": "Non-cardiac chest pain",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10033371",
+        "term": "Pain",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      }
+    ],
+    "Musculoskeletal and connective tissue disorders": [
+      {
+        "code": "10003239",
+        "term": "Arthralgia",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10003988",
+        "term": "Back pain",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10006002",
+        "term": "Bone pain",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10048677",
+        "term": "Buttock pain",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10008496",
+        "term": "Chest wall pain",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10016750",
+        "term": "Flank pain",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10062572",
+        "term": "Generalized muscle weakness",
+        "grades": {
+          "grade1": "Symptomatic; perceived by patient but not evident on physical exam",
+          "grade2": "Symptomatic; evident on physical exam; limiting instrumental ADL",
+          "grade3": "Limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10023215",
+        "term": "Joint effusion",
+        "grades": {
+          "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+          "grade2": "Symptomatic; limiting instrumental ADL",
+          "grade3": "Severe symptoms; limiting self care ADL; invasive intervention indicated",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10048706",
+        "term": "Joint range of motion decreased",
+        "grades": {
+          "grade1": "<=25% loss of ROM (range of motion); decreased ROM limiting athletic activity",
+          "grade2": ">25 - 50% decrease in ROM; limiting instrumental ADL",
+          "grade3": ">50% decrease in ROM; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10065796",
+        "term": "Joint range of motion decreased cervical spine",
+        "grades": {
+          "grade1": "Mild restriction of rotation or flexion between 60 - 70 degrees",
+          "grade2": "Rotation <60 degrees to right or left; <60 degrees of flexion",
+          "grade3": "Ankylosed/fused over multiple segments with no C-spine rotation",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10065800",
+        "term": "Joint range of motion decreased lumbar spine",
+        "grades": {
+          "grade1": "Stiffness; difficulty bending to the floor to pick up a very light object but able to do athletic activity",
+          "grade2": "Pain with range of motion (ROM) in lumbar spine; requires a reaching aid to pick up a very light object from the floor",
+          "grade3": "<50% lumbar spine flexion; associated with symptoms of ankylosis or fused over multiple segments with no L-spine flexion (e.g., unable to reach to floor to pick up a very light object)",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10028294",
+        "term": "Muscle cramp",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10065776",
+        "term": "Muscle weakness lower limb",
+        "grades": {
+          "grade1": "Symptomatic; perceived by patient but not evident on physical exam",
+          "grade2": "Symptomatic; evident on physical exam; limiting instrumental ADL",
+          "grade3": "Limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10065795",
+        "term": "Muscle weakness trunk",
+        "grades": {
+          "grade1": "Symptomatic; perceived by patient but not evident on physical exam",
+          "grade2": "Symptomatic; evident on physical exam; limiting instrumental ADL",
+          "grade3": "Limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10065895",
+        "term": "Muscle weakness upper limb",
+        "grades": {
+          "grade1": "Symptomatic; perceived by patient but not evident on physical exam",
+          "grade2": "Symptomatic; evident on physical exam; limiting instrumental ADL",
+          "grade3": "Limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10028411",
+        "term": "Myalgia",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10028836",
+        "term": "Neck pain",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10033425",
+        "term": "Pain in extremity",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      }
+    ],
+    "Endocrine disorders": [
+      {
+        "code": "10001367",
+        "term": "Adrenal insufficiency",
+        "grades": {
+          "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+          "grade2": "Moderate symptoms; medical intervention indicated",
+          "grade3": "Severe symptoms; hospitalization indicated",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      }
+    ],
+    "Respiratory, thoracic and mediastinal disorders": [
+      {
+        "code": "10065746",
+        "term": "Bronchopulmonary hemorrhage",
+        "grades": {
+          "grade1": "Mild symptoms; intervention not indicated",
+          "grade2": "Moderate symptoms; invasive intervention not indicated",
+          "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+          "grade4": "Life-threatening consequences; intubation or urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10011224",
+        "term": "Cough",
+        "grades": {
+          "grade1": "Mild symptoms; nonprescription intervention indicated",
+          "grade2": "Moderate symptoms, medical intervention indicated; limiting instrumental ADL",
+          "grade3": "Severe symptoms; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10013963",
+        "term": "Dyspnea",
+        "grades": {
+          "grade1": "Shortness of breath with moderate exertion",
+          "grade2": "Shortness of breath with minimal exertion; limiting instrumental ADL",
+          "grade3": "Shortness of breath at rest; limiting self care ADL",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10023838",
+        "term": "Laryngeal edema",
+        "grades": {
+          "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+          "grade2": "Symptomatic; medical intervention indicated (e.g., dexamethasone, epinephrine, antihistamines)",
+          "grade3": "Stridor; respiratory distress; hospitalization indicated",
+          "grade4": "Life-threatening airway compromise; urgent intervention indicated (e.g., tracheotomy or intubation)",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10065759",
+        "term": "Laryngeal hemorrhage",
+        "grades": {
+          "grade1": "Mild cough or trace hemoptysis; laryngoscopic findings",
+          "grade2": "Moderate symptoms; intervention indicated",
+          "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+          "grade4": "Life-threatening consequences; urgent intervention indicated (e.g., tracheotomy or intubation)",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10062667",
+        "term": "Laryngopharyngeal dysesthesia",
+        "grades": {
+          "grade1": "Mild symptoms; no anxiety; intervention not indicated",
+          "grade2": "Moderate symptoms; mild anxiety, but no dyspnea; short duration of observation and/or anxiolytic indicated; limiting instrumental ADL",
+          "grade3": "Severe symptoms; dyspnea and swallowing difficulty; limiting self care ADL",
+          "grade4": "Life-threatening consequences",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10056356",
+        "term": "Mediastinal hemorrhage",
+        "grades": {
+          "grade1": "Mild symptoms; intervention not indicated; radiologic evidence only",
+          "grade2": "Moderate symptoms; intervention indicated",
+          "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10068319",
+        "term": "Oropharyngeal pain",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; altered oral intake; non-narcotics initiated; topical analgesics initiated",
+          "grade3": "Severe pain; severely altered eating/swallowing; narcotics initiated; requires parenteral nutrition",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10055315",
+        "term": "Pharyngeal hemorrhage",
+        "grades": {
+          "grade1": "Mild symptoms; intervention not indicated",
+          "grade2": "Moderate symptoms; intervention indicated",
+          "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+          "grade4": "Life-threatening consequences; intubation or urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10034844",
+        "term": "Pharyngolaryngeal pain",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10055319",
+        "term": "Pleural hemorrhage",
+        "grades": {
+          "grade1": "Asymptomatic; mild hemorrhage confirmed by thoracentesis",
+          "grade2": "Symptomatic or associated with pneumothorax; chest tube drainage indicated",
+          "grade3": ">1000 ml of blood evacuated; persistent bleeding (150-200 ml/hr for 2 - 4 hr); persistent transfusion indicated; elective operative intervention indicated; hospitalization",
+          "grade4": "Life-threatening consequences; intubation or urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10035623",
+        "term": "Pleuritic pain",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10035742",
+        "term": "Pneumonitis",
+        "grades": {
+          "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+          "grade2": "Symptomatic; medical intervention indicated; limiting instrumental ADL",
+          "grade3": "Severe symptoms; limiting self care ADL; oxygen indicated",
+          "grade4": "Life-threatening respiratory compromise; urgent intervention indicated (e.g., tracheotomy or intubation)",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10036790",
+        "term": "Productive cough",
+        "grades": {
+          "grade1": "Occasional/minimal production of sputum with cough",
+          "grade2": "Moderate sputum production; limiting instrumental ADL",
+          "grade3": "Persistent or copious production of sputum; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10037375",
+        "term": "Pulmonary edema",
+        "grades": {
+          "grade1": "Radiologic findings only; minimal dyspnea on exertion",
+          "grade2": "Moderate dyspnea on exertion; medical intervention indicated; limiting instrumental ADL",
+          "grade3": "Severe dyspnea or dyspnea at rest; oxygen indicated; limiting self care ADL",
+          "grade4": "Life-threatening respiratory compromise; urgent intervention or intubation with ventilatory support indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10037383",
+        "term": "Pulmonary fibrosis",
+        "grades": {
+          "grade1": "Radiologic pulmonary fibrosis <25% of lung volume associated with hypoxia",
+          "grade2": "Evidence of pulmonary hypertension; radiographic pulmonary fibrosis 25 - 50% associated with hypoxia",
+          "grade3": "Severe hypoxia; evidence of right-sided heart failure; radiographic pulmonary fibrosis >50 - 75%",
+          "grade4": "Life-threatening consequences (e.g., hemodynamic/pulmonary complications); intubation with ventilatory support indicated; radiographic pulmonary fibrosis >75% with severe honeycombing",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10065873",
+        "term": "Pulmonary fistula",
+        "grades": {
+          "grade1": "Asymptomatic",
+          "grade2": "Symptomatic, invasive intervention not indicated",
+          "grade3": "Invasive intervention indicated",
+          "grade4": "Life-threatening consequences; urgent intervention indicated",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10037400",
+        "term": "Pulmonary hypertension",
+        "grades": {
+          "grade1": "Minimal dyspnea; findings on physical exam or other evaluation",
+          "grade2": "Moderate dyspnea, cough; requiring evaluation by cardiac catheterization and medical intervention",
+          "grade3": "Severe symptoms, associated with hypoxia, right heart failure; oxygen indicated",
+          "grade4": "Life-threatening airway consequences; urgent intervention indicated (e.g., tracheotomy or intubation)",
+          "grade5": "Death"
+        }
+      },
+      {
+        "code": "10040747",
+        "term": "Sinus pain",
+        "grades": {
+          "grade1": "Mild pain",
+          "grade2": "Moderate pain; limiting instrumental ADL",
+          "grade3": "Severe pain; limiting self care ADL",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10040975",
+        "term": "Sleep apnea",
+        "grades": {
+          "grade1": "Snoring and nocturnal sleep arousal without apneic periods",
+          "grade2": "Moderate apnea and oxygen desaturation; excessive daytime sleepiness; medical evaluation indicated; limiting instrumental ADL",
+          "grade3": "Oxygen desaturation; associated with pulmonary hypertension; medical intervention indicated; limiting self care ADL",
+          "grade4": "Cardiovascular or neuropsychiatric symptoms; urgent operative intervention indicated",
+          "grade5": "Death"
+        }
+      }
+    ],
+    "Investigations": [
+      {
+        "code": "10005364",
+        "term": "Blood bilirubin increased",
+        "grades": {
+          "grade1": ">ULN - 1.5 x ULN if baseline was normal; > 1.0 - 1.5 x baseline if baseline was abnormal",
+          "grade2": ">1.5 - 3.0 x ULN if baseline was normal; >1.5 - 3.0 x baseline if baseline was abnormal",
+          "grade3": ">3.0 - 10.0 x ULN if baseline was normal; >3.0 - 10.0 x baseline if baseline was abnormal",
+          "grade4": ">10.0 x ULN if baseline was normal; >10.0 x baseline if baseline was abnormal",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10007612",
+        "term": "Cardiac troponin I increased",
+        "grades": {
+          "grade1": "Levels above the upper limit of normal and below the level of myocardial infarction as defined by the manufacturer",
+          "grade2": "-",
+          "grade3": "Levels consistent with myocardial infarction as defined by the manufacturer",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10007613",
+        "term": "Cardiac troponin T increased",
+        "grades": {
+          "grade1": "Levels above the upper limit of normal and below the level of myocardial infarction as defined by the manufacturer",
+          "grade2": "-",
+          "grade3": "Levels consistent with myocardial infarction as defined by the manufacturer",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10011368",
+        "term": "Creatinine increased",
+        "grades": {
+          "grade1": ">ULN - 1.5 x ULN",
+          "grade2": ">1.5 - 3.0 x baseline; >1.5 - 3.0 x ULN",
+          "grade3": ">3.0 x baseline; >3.0 - 6.0 x ULN",
+          "grade4": ">6.0 x ULN",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10014383",
+        "term": "Electrocardiogram QT corrected interval prolonged",
+        "grades": {
+          "grade1": "Average QTc 450 - 480 ms",
+          "grade2": "Average QTc 481 - 500 ms",
+          "grade3": "Average QTc >= 501 ms; >60 ms change from baseline",
+          "grade4": "Torsade de pointes; polymorphic ventricular tachycardia; signs/symptoms of serious arrhythmia",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10050380",
+        "term": "Electrocardiogram T wave abnormal",
+        "grades": {
+          "grade1": "T wave flattening",
+          "grade2": "Nonspecific ST segment change",
+          "grade3": "-",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10047896",
+        "term": "Weight gain",
+        "grades": {
+          "grade1": "5 - <10% from baseline",
+          "grade2": "10 - <20% from baseline",
+          "grade3": ">=20% from baseline",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      },
+      {
+        "code": "10047900",
+        "term": "Weight loss",
+        "grades": {
+          "grade1": "5 to <10% from baseline; intervention not indicated",
+          "grade2": "10 - <20% from baseline; nutritional support indicated",
+          "grade3": ">=20% from baseline; tube feeding or TPN indicated",
+          "grade4": "-",
+          "grade5": "-"
+        }
+      }
+    ]
+  },
+  "full_ctcae_mapping": [
+    {
+      "code": "10002272",
+      "term": "Anemia",
+      "grades": {
+        "grade1": "Hemoglobin (Hgb) <LLN - 10.0 g/dL; <LLN - 6.2 mmol/L; <LLN - 100 g/L",
+        "grade2": "Hgb <10.0 - 8.0 g/dL; <6.2 - 4.9 mmol/L; <100 - 80g/L",
+        "grade3": "Hgb <8.0 g/dL; <4.9 mmol/L; <80 g/L; transfusion indicated",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10016288",
+      "term": "Febrile neutropenia",
+      "grades": {
+        "grade1": "-",
+        "grade2": "-",
+        "grade3": "ANC <1000/mm3 with a single temperature of >38.3 degrees C (101 degrees F) or a sustained temperature of >=38 degrees C (100.4 degrees F) for more than one hour",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10025182",
+      "term": "Lymph node pain",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10000081",
+      "term": "Abdominal pain",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10055226",
+      "term": "Anal hemorrhage",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10002167",
+      "term": "Anal pain",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10065747",
+      "term": "Cecal hemorrhage",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10009998",
+      "term": "Colonic hemorrhage",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10010774",
+      "term": "Constipation",
+      "grades": {
+        "grade1": "Occasional or intermittent symptoms; occasional use of stool softeners, laxatives, dietary modification, or enema",
+        "grade2": "Persistent symptoms with regular use of laxatives or enemas; limiting instrumental ADL",
+        "grade3": "Obstipation with manual evacuation indicated; limiting self care ADL",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10012727",
+      "term": "Diarrhea",
+      "grades": {
+        "grade1": "Increase of <4 stools per day over baseline; mild increase in ostomy output compared to baseline",
+        "grade2": "Increase of 4 - 6 stools per day over baseline; moderate increase in ostomy output compared to baseline; limiting instrumental ADL",
+        "grade3": "Increase of >=7 stools per day over baseline; hospitalization indicated; severe increase in ostomy output compared to baseline; limiting self care ADL",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10055242",
+      "term": "Duodenal hemorrhage",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10015384",
+      "term": "Esophageal hemorrhage",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10015388",
+      "term": "Esophageal pain",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10015453",
+      "term": "Esophageal varices hemorrhage",
+      "grades": {
+        "grade1": "-",
+        "grade2": "Self-limited; intervention not indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10017789",
+      "term": "Gastric hemorrhage",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10017999",
+      "term": "Gastrointestinal pain",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10018286",
+      "term": "Gingival pain",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain interfering with oral intake",
+        "grade3": "Severe pain; inability to aliment orally",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10060640",
+      "term": "Hemorrhoidal hemorrhage",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10055287",
+      "term": "Ileal hemorrhage",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10055291",
+      "term": "Intra-abdominal hemorrhage",
+      "grades": {
+        "grade1": "-",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10055300",
+      "term": "Jejunal hemorrhage",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10024561",
+      "term": "Lip pain",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10051746",
+      "term": "Lower gastrointestinal hemorrhage",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10028813",
+      "term": "Nausea",
+      "grades": {
+        "grade1": "Loss of appetite without alteration in eating habits",
+        "grade2": "Oral intake decreased without significant weight loss, dehydration or malnutrition",
+        "grade3": "Inadequate oral caloric or fluid intake; tube feeding, TPN, or hospitalization indicated",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10054520",
+      "term": "Oral dysesthesia",
+      "grades": {
+        "grade1": "Mild discomfort; not interfering with oral intake",
+        "grade2": "Moderate pain; interfering with oral intake",
+        "grade3": "Disabling pain; tube feeding or TPN indicated",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10030980",
+      "term": "Oral hemorrhage",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10031009",
+      "term": "Oral pain",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10033626",
+      "term": "Pancreatic hemorrhage",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10038064",
+      "term": "Rectal hemorrhage",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10038072",
+      "term": "Rectal pain",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10038981",
+      "term": "Retroperitoneal hemorrhage",
+      "grades": {
+        "grade1": "-",
+        "grade2": "Self-limited; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10042112",
+      "term": "Stomach pain",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10055356",
+      "term": "Upper gastrointestinal hemorrhage",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10047700",
+      "term": "Vomiting",
+      "grades": {
+        "grade1": "Intervention not indicated",
+        "grade2": "Outpatient IV hydration; medical intervention indicated",
+        "grade3": "Tube feeding, TPN, or hospitalization indicated",
+        "grade4": "Life-threatening consequences",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10053662",
+      "term": "Abducens nerve disorder",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10060929",
+      "term": "Accessory nerve disorder",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10000521",
+      "term": "Acoustic nerve disorder NOS",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10013573",
+      "term": "Dizziness",
+      "grades": {
+        "grade1": "Mild unsteadiness or sensation of movement",
+        "grade2": "Moderate unsteadiness or sensation of movement; limiting instrumental ADL",
+        "grade3": "Severe unsteadiness or sensation of movement; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10062872",
+      "term": "Dysesthesia",
+      "grades": {
+        "grade1": "Mild sensory alteration",
+        "grade2": "Moderate sensory alteration; limiting instrumental ADL",
+        "grade3": "Severe sensory alteration; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10014217",
+      "term": "Edema cerebral",
+      "grades": {
+        "grade1": "-",
+        "grade2": "-",
+        "grade3": "New onset; worsening from baseline",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10051272",
+      "term": "Facial muscle weakness",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10061457",
+      "term": "Facial nerve disorder",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10061185",
+      "term": "Glossopharyngeal nerve disorder",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10019211",
+      "term": "Headache",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10061212",
+      "term": "Hypoglossal nerve disorder",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10022763",
+      "term": "Intracranial hemorrhage",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Ventriculostomy, ICP monitoring, intraventricular thrombolysis, or invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10065780",
+      "term": "Muscle weakness left-sided",
+      "grades": {
+        "grade1": "Symptomatic; perceived by patient but not evident on physical exam",
+        "grade2": "Symptomatic; evident on physical exam; limiting instrumental ADL",
+        "grade3": "Limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10065794",
+      "term": "Muscle weakness right-sided",
+      "grades": {
+        "grade1": "Symptomatic; perceived by patient but not evident on physical exam",
+        "grade2": "Symptomatic; evident on physical exam; limiting instrumental ADL",
+        "grade3": "Limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10028417",
+      "term": "Myasthenia gravis",
+      "grades": {
+        "grade1": "Asymptomatic or mild symptoms; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate; minimal, local or noninvasive intervention indicated; limiting age-appropriate instrumental ADL",
+        "grade3": "Severe or medically significant but not immediately life-threatening; hospitalization or prolongation of existing hospitalization indicated; limiting self care ADL",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10029223",
+      "term": "Neuralgia",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10053661",
+      "term": "Oculomotor nerve disorder",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10056388",
+      "term": "Olfactory nerve disorder",
+      "grades": {
+        "grade1": "-",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10033987",
+      "term": "Paresthesia",
+      "grades": {
+        "grade1": "Mild symptoms",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10034580",
+      "term": "Peripheral motor neuropathy",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10034620",
+      "term": "Peripheral sensory neuropathy",
+      "grades": {
+        "grade1": "Asymptomatic",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10056238",
+      "term": "Phantom pain",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10038130",
+      "term": "Recurrent laryngeal nerve palsy",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms",
+        "grade3": "Severe symptoms; medical intervention indicated (e.g., thyroplasty, vocal cord injection)",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10060890",
+      "term": "Trigeminal nerve disorder",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10074765",
+      "term": "Trochlear nerve disorder",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10061403",
+      "term": "Vagus nerve disorder",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10065836",
+      "term": "IVth nerve disorder",
+      "grades": {
+        "grade1": "[Term deleted. Map to Trochlear nerve disorder, Grade 1.] Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "[Term deleted. Map to Trochlear nerve disorder, Grade 2.] Moderate symptoms; limiting instrumental ADL",
+        "grade3": "[Term deleted. Map to Trochlear nerve disorder, Grade 3.] Severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10061589",
+      "term": "Aortic valve disease",
+      "grades": {
+        "grade1": "Asymptomatic valvular thickening with or without mild valvular regurgitation or stenosis by imaging",
+        "grade2": "Asymptomatic; moderate regurgitation or stenosis by imaging",
+        "grade3": "Symptomatic; severe regurgitation or stenosis by imaging; symptoms controlled with medical intervention",
+        "grade4": "Life-threatening consequences; urgent intervention indicated (e.g., valve replacement, valvuloplasty)",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10003586",
+      "term": "Asystole",
+      "grades": {
+        "grade1": "Periods of asystole; non-urgent medical management indicated",
+        "grade2": "-",
+        "grade3": "-",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10003658",
+      "term": "Atrial fibrillation",
+      "grades": {
+        "grade1": "Asymptomatic, intervention not indicated",
+        "grade2": "Non-urgent medical intervention indicated",
+        "grade3": "Symptomatic, urgent intervention indicated; device (e.g., pacemaker); ablation; new onset",
+        "grade4": "Life-threatening consequences; embolus requiring urgent intervention",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10003662",
+      "term": "Atrial flutter",
+      "grades": {
+        "grade1": "Asymptomatic, intervention not indicated",
+        "grade2": "Non-urgent medical intervention indicated",
+        "grade3": "Symptomatic, urgent intervention indicated; device (e.g., pacemaker); ablation",
+        "grade4": "Life-threatening consequences; embolus requiring urgent intervention",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10003673",
+      "term": "Atrioventricular block complete",
+      "grades": {
+        "grade1": "-",
+        "grade2": "Non-urgent intervention indicated",
+        "grade3": "Symptomatic and incompletely controlled medically, or controlled with device (e.g., pacemaker); new onset",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10003674",
+      "term": "Atrioventricular block first degree",
+      "grades": {
+        "grade1": "Asymptomatic, intervention not indicated",
+        "grade2": "Non-urgent intervention indicated",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10007515",
+      "term": "Cardiac arrest",
+      "grades": {
+        "grade1": "-",
+        "grade2": "-",
+        "grade3": "-",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10007541",
+      "term": "Cardiac disorders - Other, specify",
+      "grades": {
+        "grade1": "Asymptomatic or mild symptoms; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate; minimal, local or noninvasive intervention indicated; limiting age-appropriate instrumental ADL",
+        "grade3": "Severe or medically significant but not immediately life-threatening; hospitalization or prolongation of existing hospitalization indicated; limiting self care ADL",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10008481",
+      "term": "Chest pain - cardiac",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; pain on exertion; limiting instrumental ADL; hemodynamically stable",
+        "grade3": "Pain at rest; limiting self care ADL; cardiac catheterization; new onset cardiac chest pain; unstable angina",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10010276",
+      "term": "Conduction disorder",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Non-urgent medical intervention indicated",
+        "grade3": "Symptomatic, urgent intervention indicated",
+        "grade4": "Life-threatening consequences",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10011703",
+      "term": "Cyanosis",
+      "grades": {
+        "grade1": "-",
+        "grade2": "Present",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10019279",
+      "term": "Heart failure",
+      "grades": {
+        "grade1": "Asymptomatic with laboratory (e.g., BNP [B-Natriuretic Peptide ]) or cardiac imaging abnormalities",
+        "grade2": "Symptoms with moderate activity or exertion",
+        "grade3": "Symptoms at rest or with minimal activity or exertion; hospitalization; new onset of symptoms",
+        "grade4": "Life-threatening consequences; urgent intervention indicated (e.g., continuous IV therapy or mechanical hemodynamic support)",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10069501",
+      "term": "Left ventricular systolic dysfunction",
+      "grades": {
+        "grade1": "-",
+        "grade2": "-",
+        "grade3": "Symptomatic due to drop in ejection fraction responsive to intervention",
+        "grade4": "Refractory or poorly controlled heart failure due to drop in ejection fraction; intervention such as ventricular assist device, intravenous vasopressor support, or heart transplant indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10061532",
+      "term": "Mitral valve disease",
+      "grades": {
+        "grade1": "Asymptomatic valvular thickening with or without mild valvular regurgitation or stenosis by imaging",
+        "grade2": "Asymptomatic; moderate regurgitation or stenosis by imaging",
+        "grade3": "Symptomatic; severe regurgitation or stenosis by imaging; symptoms controlled with medical intervention",
+        "grade4": "Life-threatening consequences; urgent intervention indicated (e.g., valve replacement, valvuloplasty)",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10027786",
+      "term": "Mobitz (type) II atrioventricular block",
+      "grades": {
+        "grade1": "Asymptomatic, intervention not indicated",
+        "grade2": "Symptomatic; medical intervention indicated",
+        "grade3": "Symptomatic and incompletely controlled medically, or controlled with device (e.g., pacemaker); new onset",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10027787",
+      "term": "Mobitz type I",
+      "grades": {
+        "grade1": "Asymptomatic, intervention not indicated",
+        "grade2": "Symptomatic; medical intervention indicated",
+        "grade3": "Symptomatic and incompletely controlled medically, or controlled with device (e.g., pacemaker)",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10028596",
+      "term": "Myocardial infarction",
+      "grades": {
+        "grade1": "-",
+        "grade2": "Asymptomatic and cardiac enzymes minimally abnormal and no evidence of ischemic ECG changes",
+        "grade3": "Severe symptoms; cardiac enzymes abnormal; hemodynamically stable; ECG changes consistent with infarction",
+        "grade4": "Life-threatening consequences; hemodynamically unstable",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10028606",
+      "term": "Myocarditis",
+      "grades": {
+        "grade1": "-",
+        "grade2": "Symptoms with moderate activity or exertion",
+        "grade3": "Severe with symptoms at rest or with minimal activity or exertion; intervention indicated; new onset of symptoms",
+        "grade4": "Life-threatening consequences; urgent intervention indicated (e.g., continuous IV therapy or mechanical hemodynamic support)",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10033557",
+      "term": "Palpitations",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Intervention indicated",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10034040",
+      "term": "Paroxysmal atrial tachycardia",
+      "grades": {
+        "grade1": "Asymptomatic, intervention not indicated",
+        "grade2": "Non-urgent medical intervention indicated",
+        "grade3": "Symptomatic, urgent intervention indicated; ablation",
+        "grade4": "Life-threatening consequences; incompletely controlled medically; cardioversion indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10034474",
+      "term": "Pericardial effusion",
+      "grades": {
+        "grade1": "-",
+        "grade2": "Asymptomatic effusion size small to moderate",
+        "grade3": "Effusion with physiologic consequences",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10053565",
+      "term": "Pericardial tamponade",
+      "grades": {
+        "grade1": "-",
+        "grade2": "-",
+        "grade3": "-",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10034484",
+      "term": "Pericarditis",
+      "grades": {
+        "grade1": "Asymptomatic, ECG or physical findings (e.g., rub) consistent with pericarditis",
+        "grade2": "Symptomatic pericarditis (e.g., chest pain)",
+        "grade3": "Pericarditis with physiologic consequences (e.g., pericardial constriction)",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10061541",
+      "term": "Pulmonary valve disease",
+      "grades": {
+        "grade1": "Asymptomatic valvular thickening with or without mild valvular regurgitation or stenosis by imaging",
+        "grade2": "Asymptomatic; moderate regurgitation or stenosis by imaging",
+        "grade3": "Symptomatic; severe regurgitation or stenosis by imaging; symptoms controlled with medical intervention",
+        "grade4": "Life-threatening consequences; urgent intervention indicated (e.g., valve replacement, valvuloplasty)",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10038748",
+      "term": "Restrictive cardiomyopathy",
+      "grades": {
+        "grade1": "Imaging findings only",
+        "grade2": "Symptomatic without signs of heart failure",
+        "grade3": "Symptomatic heart failure or other cardiac symptoms, responsive to intervention; new onset of symptoms",
+        "grade4": "Refractory heart failure or other poorly controlled cardiac symptoms",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10058597",
+      "term": "Right ventricular dysfunction",
+      "grades": {
+        "grade1": "Asymptomatic with laboratory (e.g., BNP [B-Natriuretic Peptide ]) or cardiac imaging abnormalities",
+        "grade2": "Symptoms with moderate activity or exertion",
+        "grade3": "Severe symptoms, associated with hypoxia, right heart failure; oxygen indicated",
+        "grade4": "Life-threatening consequences; urgent intervention indicated (e.g., ventricular assist device); heart transplant indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10040639",
+      "term": "Sick sinus syndrome",
+      "grades": {
+        "grade1": "Asymptomatic, intervention not indicated",
+        "grade2": "Symptomatic, intervention not indicated; change in medication initiated",
+        "grade3": "Symptomatic, intervention indicated",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10040741",
+      "term": "Sinus bradycardia",
+      "grades": {
+        "grade1": "Asymptomatic, intervention not indicated",
+        "grade2": "Symptomatic, intervention not indicated; change in medication initiated",
+        "grade3": "Symptomatic, intervention indicated",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10040752",
+      "term": "Sinus tachycardia",
+      "grades": {
+        "grade1": "Asymptomatic, intervention not indicated",
+        "grade2": "Symptomatic; non-urgent medical intervention indicated",
+        "grade3": "Urgent medical intervention indicated",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10042604",
+      "term": "Supraventricular tachycardia",
+      "grades": {
+        "grade1": "Asymptomatic, intervention not indicated",
+        "grade2": "Non-urgent medical intervention indicated",
+        "grade3": "Symptomatic, urgent intervention indicated",
+        "grade4": "Life-threatening consequences",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10061389",
+      "term": "Tricuspid valve disease",
+      "grades": {
+        "grade1": "Asymptomatic valvular thickening with or without mild valvular regurgitation or stenosis",
+        "grade2": "Asymptomatic; moderate regurgitation or stenosis by imaging",
+        "grade3": "Symptomatic; severe regurgitation or stenosis; symptoms controlled with medical intervention",
+        "grade4": "Life-threatening consequences; urgent intervention indicated (e.g., valve replacement, valvuloplasty)",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10047281",
+      "term": "Ventricular arrhythmia",
+      "grades": {
+        "grade1": "Asymptomatic, intervention not indicated",
+        "grade2": "Non-urgent medical intervention indicated",
+        "grade3": "Urgent intervention indicated",
+        "grade4": "Life-threatening consequences; hemodynamic compromise",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10047290",
+      "term": "Ventricular fibrillation",
+      "grades": {
+        "grade1": "-",
+        "grade2": "-",
+        "grade3": "-",
+        "grade4": "Life-threatening consequences; hemodynamic compromise",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10047302",
+      "term": "Ventricular tachycardia",
+      "grades": {
+        "grade1": "-",
+        "grade2": "Non-urgent medical intervention indicated",
+        "grade3": "Symptomatic, urgent intervention indicated",
+        "grade4": "Life-threatening consequences; hemodynamic compromise",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10051592",
+      "term": "Acute coronary syndrome",
+      "grades": {
+        "grade1": "-",
+        "grade2": "[Term deleted. Map to Chest pain-cardiac, Grade 2.] Symptomatic, progressive angina; cardiac enzymes normal; hemodynamically stable",
+        "grade3": "[Term deleted. Map to Chest pain-cardiac, Grade 3.] Symptomatic, unstable angina and/or acute myocardial infarction, cardiac enzymes abnormal, hemodynamically stable",
+        "grade4": "[Term deleted. Map to Myocardial infarction, Grade 4.] Symptomatic, unstable angina and/or acute myocardial infarction, cardiac enzymes abnormal, hemodynamically unstable",
+        "grade5": "[Term deleted. Map to Myocardial infarction, Grade 5.] Death"
+      }
+    },
+    {
+      "code": "10010783",
+      "term": "Constrictive pericarditis",
+      "grades": {
+        "grade1": "-",
+        "grade2": "-",
+        "grade3": "[Term deleted. Map to Pericarditis, Grade 3.] Symptomatic heart failure or other cardiac symptoms, responsive to intervention",
+        "grade4": "[Term deleted. Map to Pericarditis, Grade 4.] Refractory heart failure or other poorly controlled cardiac symptoms",
+        "grade5": "[Term deleted. Map to Pericarditis, Grade 5.] Death"
+      }
+    },
+    {
+      "code": "10048015",
+      "term": "Wolff-Parkinson-White syndrome",
+      "grades": {
+        "grade1": "[Term deleted. Map to Cardiac disorders - Other, specify (Wolff-Parkinson-White syndrome), Grade 1.] Asymptomatic, intervention not indicated",
+        "grade2": "[Term deleted. Map to Cardiac disorders - Other, specify (Wolff-Parkinson-White syndrome), Grade 2.] Non-urgent medical intervention indicated",
+        "grade3": "[Term deleted. Map to Cardiac disorders - Other, specify (Wolff-Parkinson-White syndrome), Grade 3.] Symptomatic and incompletely controlled medically or controlled with procedure",
+        "grade4": "[Term deleted. Map to Cardiac disorders - Other, specify (Wolff-Parkinson-White syndrome), Grade 4.] Life-threatening consequences; urgent intervention indicated",
+        "grade5": "[Term deleted. Map to Cardiac disorders - Other, specify (Wolff-Parkinson-White syndrome), Grade 5.] Death"
+      }
+    },
+    {
+      "code": "10001760",
+      "term": "Alopecia",
+      "grades": {
+        "grade1": "Hair loss of <50% of normal for that individual that is not obvious from a distance but only on close inspection; a different hair style may be required to cover the hair loss but it does not require a wig or hair piece to camouflage",
+        "grade2": "Hair loss of >=50% normal for that individual that is readily apparent to others; a wig or hair piece is necessary if the patient desires to completely camouflage the hair loss; associated with psychosocial impact",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10005901",
+      "term": "Body odor",
+      "grades": {
+        "grade1": "Mild odor; physician intervention not indicated; self care interventions",
+        "grade2": "Pronounced odor; psychosocial impact; patient seeks medical intervention",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10006556",
+      "term": "Bullous dermatitis",
+      "grades": {
+        "grade1": "Asymptomatic; blisters covering <10% BSA",
+        "grade2": "Blisters covering 10 - 30% BSA; painful blisters; limiting instrumental ADL",
+        "grade3": "Blisters covering >30% BSA; limiting self care ADL",
+        "grade4": "Blisters covering >30% BSA; associated with fluid or electrolyte abnormalities; ICU care or burn unit indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10013786",
+      "term": "Dry skin",
+      "grades": {
+        "grade1": "Covering <10% BSA and no associated erythema or pruritus",
+        "grade2": "Covering 10 - 30% BSA and associated with erythema or pruritus; limiting instrumental ADL",
+        "grade3": "Covering >30% BSA and associated with pruritus; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10014184",
+      "term": "Eczema",
+      "grades": {
+        "grade1": "Asymptomatic or mild symptoms; additional medical intervention over baseline not indicated",
+        "grade2": "Moderate; topical or oral intervention indicated; additional medical intervention over baseline indicated",
+        "grade3": "Severe or medically significant but not immediately life-threatening; IV intervention indicated",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10015218",
+      "term": "Erythema multiforme",
+      "grades": {
+        "grade1": "Target lesions covering <10% BSA and not associated with skin tenderness",
+        "grade2": "Target lesions covering 10 - 30% BSA and associated with skin tenderness",
+        "grade3": "Target lesions covering >30% BSA and associated with oral or genital erosions",
+        "grade4": "Target lesions covering >30% BSA; associated with fluid or electrolyte abnormalities; ICU care or burn unit indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10015277",
+      "term": "Erythroderma",
+      "grades": {
+        "grade1": "-",
+        "grade2": "Erythema covering >90% BSA without associated symptoms; limiting instrumental ADL",
+        "grade3": "Erythema covering >90% BSA with associated symptoms (e.g., pruritus or tenderness); limiting self care ADL",
+        "grade4": "Erythema covering >90% BSA with associated fluid or electrolyte abnormalities; ICU care or burn unit indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10016241",
+      "term": "Fat atrophy",
+      "grades": {
+        "grade1": "Covering <10% BSA and asymptomatic",
+        "grade2": "Covering 10 - 30% BSA and associated with erythema or tenderness; limiting instrumental ADL",
+        "grade3": "Covering >30% BSA; associated with erythema or tenderness; limiting self-care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10055525",
+      "term": "Hair color changes",
+      "grades": {
+        "grade1": "Present",
+        "grade2": "-",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10019049",
+      "term": "Hair texture abnormal",
+      "grades": {
+        "grade1": "Present",
+        "grade2": "-",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10020112",
+      "term": "Hirsutism",
+      "grades": {
+        "grade1": "In women, increase in length, thickness or density of hair in a male distribution that the patient is able to camouflage by periodic shaving, bleaching, or removal of hair",
+        "grade2": "In women, increase in length, thickness or density of hair in a male distribution that requires daily shaving or consistent destructive means of hair removal to camouflage; associated with psychosocial impact",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10020642",
+      "term": "Hyperhidrosis",
+      "grades": {
+        "grade1": "Limited to one site (palms, soles, or axillae); self care interventions",
+        "grade2": "Involving >1 site; patient seeks medical intervention; associated with psychosocial impact",
+        "grade3": "Associated with electrolyte/hemodynamic imbalance",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10020649",
+      "term": "Hyperkeratosis",
+      "grades": {
+        "grade1": "Present",
+        "grade2": "-",
+        "grade3": "Limiting self-care ADLs",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10020864",
+      "term": "Hypertrichosis",
+      "grades": {
+        "grade1": "Increase in length, thickness or density of hair that the patient is either able to camouflage by periodic shaving or removal of hairs or is not concerned enough about the overgrowth to use any form of hair removal",
+        "grade2": "Increase in length, thickness or density of hair at least on the usual exposed areas of the body [face (not limited to beard/moustache area) plus/minus arms] that requires frequent shaving or use of destructive means of hair removal to camouflage; associated with psychosocial impact",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10021013",
+      "term": "Hypohidrosis",
+      "grades": {
+        "grade1": "-",
+        "grade2": "Symptomatic; limiting instrumental ADL",
+        "grade3": "Increase in body temperature; limiting self care ADL",
+        "grade4": "Heat stroke",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10062315",
+      "term": "Lipohypertrophy",
+      "grades": {
+        "grade1": "Asymptomatic and covering <10% BSA",
+        "grade2": "Covering 10 - 30% BSA and associated tenderness; limiting instrumental ADL",
+        "grade3": "Covering >30% BSA and associated tenderness and narcotics or NSAIDs indicated; lipohypertrophy; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10028689",
+      "term": "Nail changes",
+      "grades": {
+        "grade1": "Present",
+        "grade2": "-",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10028691",
+      "term": "Nail discoloration",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only",
+        "grade2": "-",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10049281",
+      "term": "Nail loss",
+      "grades": {
+        "grade1": "Asymptomatic separation of the nail bed from the nail plate or nail loss",
+        "grade2": "Symptomatic separation of the nail bed from the nail plate or nail loss; limiting instrumental ADL",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10062283",
+      "term": "Nail ridging",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "-",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10033474",
+      "term": "Pain of skin",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10054524",
+      "term": "Palmar-plantar erythrodysesthesia syndrome",
+      "grades": {
+        "grade1": "Minimal skin changes or dermatitis (e.g., erythema, edema, or hyperkeratosis) without pain",
+        "grade2": "Skin changes (e.g., peeling, blisters, bleeding, fissures, edema, or hyperkeratosis) with pain; limiting instrumental ADL",
+        "grade3": "Severe skin changes (e.g., peeling, blisters, bleeding, fissures, edema, or hyperkeratosis) with pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10034966",
+      "term": "Photosensitivity",
+      "grades": {
+        "grade1": "Painless erythema and erythema covering <10% BSA",
+        "grade2": "Tender erythema covering 10 - 30% BSA",
+        "grade3": "Erythema covering >30% BSA and erythema with blistering; photosensitivity; oral corticosteroid therapy indicated; pain control indicated (e.g., narcotics or NSAIDs)",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10037087",
+      "term": "Pruritus",
+      "grades": {
+        "grade1": "Mild or localized; topical intervention indicated",
+        "grade2": "Widespread and intermittent; skin changes from scratching (e.g., edema, papulation, excoriations, lichenification, oozing/crusts); oral intervention indicated; limiting instrumental ADL",
+        "grade3": "Widespread and constant; limiting self care ADL or sleep; systemic corticosteroid or immunosuppressive therapy indicated",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10037549",
+      "term": "Purpura",
+      "grades": {
+        "grade1": "Combined area of lesions covering <10% BSA",
+        "grade2": "Combined area of lesions covering 10 - 30% BSA; bleeding with trauma",
+        "grade3": "Combined area of lesions covering >30% BSA; spontaneous bleeding",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10037847",
+      "term": "Rash acneiform",
+      "grades": {
+        "grade1": "Papules and/or pustules covering <10% BSA, which may or may not be associated with symptoms of pruritus or tenderness",
+        "grade2": "Papules and/or pustules covering 10 - 30% BSA, which may or may not be associated with symptoms of pruritus or tenderness; associated with psychosocial impact; limiting instrumental ADL; papules and/or pustules covering > 30% BSA with or without mild symptoms",
+        "grade3": "Papules and/or pustules covering >30% BSA with moderate or severe symptoms; limiting self-care ADL; associated with local superinfection with oral antibiotics indicated",
+        "grade4": "Life-threatening consequences; papules and/or pustules covering any % BSA, which may or may not be associated with symptoms of pruritus or tenderness and are associated with extensive superinfection with IV antibiotics indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10037868",
+      "term": "Rash maculo-papular",
+      "grades": {
+        "grade1": "Macules/papules covering <10% BSA with or without symptoms (e.g., pruritus, burning, tightness)",
+        "grade2": "Macules/papules covering 10 - 30% BSA with or without symptoms (e.g., pruritus, burning, tightness); limiting instrumental ADL; rash covering > 30% BSA with or without mild symptoms",
+        "grade3": "Macules/papules covering >30% BSA with moderate or severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10049120",
+      "term": "Scalp pain",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10040785",
+      "term": "Skin and subcutaneous tissue disorders - Other, specify",
+      "grades": {
+        "grade1": "Asymptomatic or mild symptoms; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate; minimal, local or noninvasive intervention indicated; limiting age-appropriate instrumental ADL",
+        "grade3": "Severe or medically significant but not immediately life-threatening; hospitalization or prolongation of existing hospitalization indicated; limiting self care ADL",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10040799",
+      "term": "Skin atrophy",
+      "grades": {
+        "grade1": "Covering <10% BSA; associated with telangiectasias or changes in skin color",
+        "grade2": "Covering 10 - 30% BSA; associated with striae or adnexal structure loss",
+        "grade3": "Covering >30% BSA; associated with ulceration",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10040865",
+      "term": "Skin hyperpigmentation",
+      "grades": {
+        "grade1": "Hyperpigmentation covering <10% BSA; no psychosocial impact",
+        "grade2": "Hyperpigmentation covering >10% BSA; associated psychosocial impact",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10040868",
+      "term": "Skin hypopigmentation",
+      "grades": {
+        "grade1": "Hypopigmentation or depigmentation covering <10% BSA; no psychosocial impact",
+        "grade2": "Hypopigmentation or depigmentation covering >10% BSA; associated psychosocial impact",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10051837",
+      "term": "Skin induration",
+      "grades": {
+        "grade1": "Mild induration, able to move skin parallel to plane (sliding) and perpendicular to skin (pinching up)",
+        "grade2": "Moderate induration, able to slide skin, unable to pinch skin; limiting instrumental ADL",
+        "grade3": "Severe induration; unable to slide or pinch skin; limiting joint or orifice movement (e.g., mouth, anus); limiting self care ADL",
+        "grade4": "Generalized; associated with signs or symptoms of impaired breathing or feeding",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10040947",
+      "term": "Skin ulceration",
+      "grades": {
+        "grade1": "Combined area of ulcers <1 cm; nonblanchable erythema of intact skin with associated warmth or edema",
+        "grade2": "Combined area of ulcers 1 - 2 cm; partial thickness skin loss involving skin or subcutaneous fat",
+        "grade3": "Combined area of ulcers >2 cm; full-thickness skin loss involving damage to or necrosis of subcutaneous tissue that may extend down to fascia",
+        "grade4": "Any size ulcer with extensive destruction, tissue necrosis, or damage to muscle, bone, or supporting structures with or without full thickness skin loss",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10042033",
+      "term": "Stevens-Johnson syndrome",
+      "grades": {
+        "grade1": "-",
+        "grade2": "-",
+        "grade3": "Skin sloughing covering <10% BSA with associated signs (e.g., erythema, purpura, epidermal detachment, and mucous membrane detachment)",
+        "grade4": "Skin sloughing covering 10 - 30% BSA with associated signs (e.g., erythema, purpura, epidermal detachment and mucous membrane detachment)",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10042344",
+      "term": "Subcutaneous emphysema",
+      "grades": {
+        "grade1": "Asymptomatic or mild symptoms; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate; minimal, local or noninvasive intervention indicated",
+        "grade3": "Severe or medically significant but not immediately life-threatening; hospitalization or prolongation of existing hospitalization indicated; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10043189",
+      "term": "Telangiectasia",
+      "grades": {
+        "grade1": "Telangiectasias covering <10% BSA",
+        "grade2": "Telangiectasias covering >=10% BSA; associated with psychosocial impact",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10044223",
+      "term": "Toxic epidermal necrolysis",
+      "grades": {
+        "grade1": "-",
+        "grade2": "-",
+        "grade3": "-",
+        "grade4": "Skin sloughing covering >=30% BSA with associated symptoms (e.g., erythema, purpura, or epidermal detachment)",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10046735",
+      "term": "Urticaria",
+      "grades": {
+        "grade1": "Urticarial lesions covering <10% BSA; topical intervention indicated",
+        "grade2": "Urticarial lesions covering 10 - 30% BSA; oral intervention indicated",
+        "grade3": "Urticarial lesions covering >30% BSA; IV intervention indicated",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10014222",
+      "term": "Edema face",
+      "grades": {
+        "grade1": "Localized facial edema",
+        "grade2": "Moderate localized facial edema; limiting instrumental ADL",
+        "grade3": "Severe swelling; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10050068",
+      "term": "Edema limbs",
+      "grades": {
+        "grade1": "5 - 10% inter-limb discrepancy in volume or circumference at point of greatest visible difference; swelling or obscuration of anatomic architecture on close inspection",
+        "grade2": ">10 - 30% inter-limb discrepancy in volume or circumference at point of greatest visible difference; readily apparent obscuration of anatomic architecture; obliteration of skin folds; readily apparent deviation from normal anatomic contour; limiting instrumental ADL",
+        "grade3": ">30% inter-limb discrepancy in volume; gross deviation from normal anatomic contour; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10058720",
+      "term": "Edema trunk",
+      "grades": {
+        "grade1": "Swelling or obscuration of anatomic architecture on close inspection",
+        "grade2": "Readily apparent obscuration of anatomic architecture; obliteration of skin folds; readily apparent deviation from normal anatomic contour; limiting instrumental ADL",
+        "grade3": "Gross deviation from normal anatomic contour; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10016059",
+      "term": "Facial pain",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10016256",
+      "term": "Fatigue",
+      "grades": {
+        "grade1": "Fatigue relieved by rest",
+        "grade2": "Fatigue not relieved by rest; limiting instrumental ADL",
+        "grade3": "Fatigue not relieved by rest, limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10018112",
+      "term": "Generalized edema",
+      "grades": {
+        "grade1": "Noted on exam; 1+ pitting edema",
+        "grade2": "Interfering with instrumental ADLs; oral therapy initiated",
+        "grade3": "Interferes with self care ADL; intravenous therapy indicated; skin breakdown",
+        "grade4": "Life-threatening consequences",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10062466",
+      "term": "Localized edema",
+      "grades": {
+        "grade1": "Localized to dependent areas, no disability or functional impairment",
+        "grade2": "Moderate localized edema and intervention indicated; limiting instrumental ADL",
+        "grade3": "Severe localized edema and intervention indicated; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10054482",
+      "term": "Neck edema",
+      "grades": {
+        "grade1": "Asymptomatic localized neck edema",
+        "grade2": "Moderate neck edema; slight obliteration of anatomic landmarks; limiting instrumental ADL",
+        "grade3": "Generalized neck edema (e.g., difficulty in turning neck); limiting self care ADL",
+        "grade4": "Vascular or respiratory impairment requiring urgent intervention",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10062501",
+      "term": "Non-cardiac chest pain",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10033371",
+      "term": "Pain",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10003239",
+      "term": "Arthralgia",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10003988",
+      "term": "Back pain",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10006002",
+      "term": "Bone pain",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10048677",
+      "term": "Buttock pain",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10008496",
+      "term": "Chest wall pain",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10016750",
+      "term": "Flank pain",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10062572",
+      "term": "Generalized muscle weakness",
+      "grades": {
+        "grade1": "Symptomatic; perceived by patient but not evident on physical exam",
+        "grade2": "Symptomatic; evident on physical exam; limiting instrumental ADL",
+        "grade3": "Limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10023215",
+      "term": "Joint effusion",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Symptomatic; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL; invasive intervention indicated",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10048706",
+      "term": "Joint range of motion decreased",
+      "grades": {
+        "grade1": "<=25% loss of ROM (range of motion); decreased ROM limiting athletic activity",
+        "grade2": ">25 - 50% decrease in ROM; limiting instrumental ADL",
+        "grade3": ">50% decrease in ROM; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10065796",
+      "term": "Joint range of motion decreased cervical spine",
+      "grades": {
+        "grade1": "Mild restriction of rotation or flexion between 60 - 70 degrees",
+        "grade2": "Rotation <60 degrees to right or left; <60 degrees of flexion",
+        "grade3": "Ankylosed/fused over multiple segments with no C-spine rotation",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10065800",
+      "term": "Joint range of motion decreased lumbar spine",
+      "grades": {
+        "grade1": "Stiffness; difficulty bending to the floor to pick up a very light object but able to do athletic activity",
+        "grade2": "Pain with range of motion (ROM) in lumbar spine; requires a reaching aid to pick up a very light object from the floor",
+        "grade3": "<50% lumbar spine flexion; associated with symptoms of ankylosis or fused over multiple segments with no L-spine flexion (e.g., unable to reach to floor to pick up a very light object)",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10028294",
+      "term": "Muscle cramp",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10065776",
+      "term": "Muscle weakness lower limb",
+      "grades": {
+        "grade1": "Symptomatic; perceived by patient but not evident on physical exam",
+        "grade2": "Symptomatic; evident on physical exam; limiting instrumental ADL",
+        "grade3": "Limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10065795",
+      "term": "Muscle weakness trunk",
+      "grades": {
+        "grade1": "Symptomatic; perceived by patient but not evident on physical exam",
+        "grade2": "Symptomatic; evident on physical exam; limiting instrumental ADL",
+        "grade3": "Limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10065895",
+      "term": "Muscle weakness upper limb",
+      "grades": {
+        "grade1": "Symptomatic; perceived by patient but not evident on physical exam",
+        "grade2": "Symptomatic; evident on physical exam; limiting instrumental ADL",
+        "grade3": "Limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10028411",
+      "term": "Myalgia",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10028836",
+      "term": "Neck pain",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10033425",
+      "term": "Pain in extremity",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10001367",
+      "term": "Adrenal insufficiency",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Moderate symptoms; medical intervention indicated",
+        "grade3": "Severe symptoms; hospitalization indicated",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10065746",
+      "term": "Bronchopulmonary hemorrhage",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; invasive intervention not indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; intubation or urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10011224",
+      "term": "Cough",
+      "grades": {
+        "grade1": "Mild symptoms; nonprescription intervention indicated",
+        "grade2": "Moderate symptoms, medical intervention indicated; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10013963",
+      "term": "Dyspnea",
+      "grades": {
+        "grade1": "Shortness of breath with moderate exertion",
+        "grade2": "Shortness of breath with minimal exertion; limiting instrumental ADL",
+        "grade3": "Shortness of breath at rest; limiting self care ADL",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10023838",
+      "term": "Laryngeal edema",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Symptomatic; medical intervention indicated (e.g., dexamethasone, epinephrine, antihistamines)",
+        "grade3": "Stridor; respiratory distress; hospitalization indicated",
+        "grade4": "Life-threatening airway compromise; urgent intervention indicated (e.g., tracheotomy or intubation)",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10065759",
+      "term": "Laryngeal hemorrhage",
+      "grades": {
+        "grade1": "Mild cough or trace hemoptysis; laryngoscopic findings",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated (e.g., tracheotomy or intubation)",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10062667",
+      "term": "Laryngopharyngeal dysesthesia",
+      "grades": {
+        "grade1": "Mild symptoms; no anxiety; intervention not indicated",
+        "grade2": "Moderate symptoms; mild anxiety, but no dyspnea; short duration of observation and/or anxiolytic indicated; limiting instrumental ADL",
+        "grade3": "Severe symptoms; dyspnea and swallowing difficulty; limiting self care ADL",
+        "grade4": "Life-threatening consequences",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10056356",
+      "term": "Mediastinal hemorrhage",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated; radiologic evidence only",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10068319",
+      "term": "Oropharyngeal pain",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; altered oral intake; non-narcotics initiated; topical analgesics initiated",
+        "grade3": "Severe pain; severely altered eating/swallowing; narcotics initiated; requires parenteral nutrition",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10055315",
+      "term": "Pharyngeal hemorrhage",
+      "grades": {
+        "grade1": "Mild symptoms; intervention not indicated",
+        "grade2": "Moderate symptoms; intervention indicated",
+        "grade3": "Transfusion indicated; invasive intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; intubation or urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10034844",
+      "term": "Pharyngolaryngeal pain",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10055319",
+      "term": "Pleural hemorrhage",
+      "grades": {
+        "grade1": "Asymptomatic; mild hemorrhage confirmed by thoracentesis",
+        "grade2": "Symptomatic or associated with pneumothorax; chest tube drainage indicated",
+        "grade3": ">1000 ml of blood evacuated; persistent bleeding (150-200 ml/hr for 2 - 4 hr); persistent transfusion indicated; elective operative intervention indicated; hospitalization",
+        "grade4": "Life-threatening consequences; intubation or urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10035623",
+      "term": "Pleuritic pain",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10035742",
+      "term": "Pneumonitis",
+      "grades": {
+        "grade1": "Asymptomatic; clinical or diagnostic observations only; intervention not indicated",
+        "grade2": "Symptomatic; medical intervention indicated; limiting instrumental ADL",
+        "grade3": "Severe symptoms; limiting self care ADL; oxygen indicated",
+        "grade4": "Life-threatening respiratory compromise; urgent intervention indicated (e.g., tracheotomy or intubation)",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10036790",
+      "term": "Productive cough",
+      "grades": {
+        "grade1": "Occasional/minimal production of sputum with cough",
+        "grade2": "Moderate sputum production; limiting instrumental ADL",
+        "grade3": "Persistent or copious production of sputum; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10037375",
+      "term": "Pulmonary edema",
+      "grades": {
+        "grade1": "Radiologic findings only; minimal dyspnea on exertion",
+        "grade2": "Moderate dyspnea on exertion; medical intervention indicated; limiting instrumental ADL",
+        "grade3": "Severe dyspnea or dyspnea at rest; oxygen indicated; limiting self care ADL",
+        "grade4": "Life-threatening respiratory compromise; urgent intervention or intubation with ventilatory support indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10037383",
+      "term": "Pulmonary fibrosis",
+      "grades": {
+        "grade1": "Radiologic pulmonary fibrosis <25% of lung volume associated with hypoxia",
+        "grade2": "Evidence of pulmonary hypertension; radiographic pulmonary fibrosis 25 - 50% associated with hypoxia",
+        "grade3": "Severe hypoxia; evidence of right-sided heart failure; radiographic pulmonary fibrosis >50 - 75%",
+        "grade4": "Life-threatening consequences (e.g., hemodynamic/pulmonary complications); intubation with ventilatory support indicated; radiographic pulmonary fibrosis >75% with severe honeycombing",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10065873",
+      "term": "Pulmonary fistula",
+      "grades": {
+        "grade1": "Asymptomatic",
+        "grade2": "Symptomatic, invasive intervention not indicated",
+        "grade3": "Invasive intervention indicated",
+        "grade4": "Life-threatening consequences; urgent intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10037400",
+      "term": "Pulmonary hypertension",
+      "grades": {
+        "grade1": "Minimal dyspnea; findings on physical exam or other evaluation",
+        "grade2": "Moderate dyspnea, cough; requiring evaluation by cardiac catheterization and medical intervention",
+        "grade3": "Severe symptoms, associated with hypoxia, right heart failure; oxygen indicated",
+        "grade4": "Life-threatening airway consequences; urgent intervention indicated (e.g., tracheotomy or intubation)",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10040747",
+      "term": "Sinus pain",
+      "grades": {
+        "grade1": "Mild pain",
+        "grade2": "Moderate pain; limiting instrumental ADL",
+        "grade3": "Severe pain; limiting self care ADL",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10040975",
+      "term": "Sleep apnea",
+      "grades": {
+        "grade1": "Snoring and nocturnal sleep arousal without apneic periods",
+        "grade2": "Moderate apnea and oxygen desaturation; excessive daytime sleepiness; medical evaluation indicated; limiting instrumental ADL",
+        "grade3": "Oxygen desaturation; associated with pulmonary hypertension; medical intervention indicated; limiting self care ADL",
+        "grade4": "Cardiovascular or neuropsychiatric symptoms; urgent operative intervention indicated",
+        "grade5": "Death"
+      }
+    },
+    {
+      "code": "10005364",
+      "term": "Blood bilirubin increased",
+      "grades": {
+        "grade1": ">ULN - 1.5 x ULN if baseline was normal; > 1.0 - 1.5 x baseline if baseline was abnormal",
+        "grade2": ">1.5 - 3.0 x ULN if baseline was normal; >1.5 - 3.0 x baseline if baseline was abnormal",
+        "grade3": ">3.0 - 10.0 x ULN if baseline was normal; >3.0 - 10.0 x baseline if baseline was abnormal",
+        "grade4": ">10.0 x ULN if baseline was normal; >10.0 x baseline if baseline was abnormal",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10007612",
+      "term": "Cardiac troponin I increased",
+      "grades": {
+        "grade1": "Levels above the upper limit of normal and below the level of myocardial infarction as defined by the manufacturer",
+        "grade2": "-",
+        "grade3": "Levels consistent with myocardial infarction as defined by the manufacturer",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10007613",
+      "term": "Cardiac troponin T increased",
+      "grades": {
+        "grade1": "Levels above the upper limit of normal and below the level of myocardial infarction as defined by the manufacturer",
+        "grade2": "-",
+        "grade3": "Levels consistent with myocardial infarction as defined by the manufacturer",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10011368",
+      "term": "Creatinine increased",
+      "grades": {
+        "grade1": ">ULN - 1.5 x ULN",
+        "grade2": ">1.5 - 3.0 x baseline; >1.5 - 3.0 x ULN",
+        "grade3": ">3.0 x baseline; >3.0 - 6.0 x ULN",
+        "grade4": ">6.0 x ULN",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10014383",
+      "term": "Electrocardiogram QT corrected interval prolonged",
+      "grades": {
+        "grade1": "Average QTc 450 - 480 ms",
+        "grade2": "Average QTc 481 - 500 ms",
+        "grade3": "Average QTc >= 501 ms; >60 ms change from baseline",
+        "grade4": "Torsade de pointes; polymorphic ventricular tachycardia; signs/symptoms of serious arrhythmia",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10050380",
+      "term": "Electrocardiogram T wave abnormal",
+      "grades": {
+        "grade1": "T wave flattening",
+        "grade2": "Nonspecific ST segment change",
+        "grade3": "-",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10047896",
+      "term": "Weight gain",
+      "grades": {
+        "grade1": "5 - <10% from baseline",
+        "grade2": "10 - <20% from baseline",
+        "grade3": ">=20% from baseline",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    },
+    {
+      "code": "10047900",
+      "term": "Weight loss",
+      "grades": {
+        "grade1": "5 to <10% from baseline; intervention not indicated",
+        "grade2": "10 - <20% from baseline; nutritional support indicated",
+        "grade3": ">=20% from baseline; tube feeding or TPN indicated",
+        "grade4": "-",
+        "grade5": "-"
+      }
+    }
+  ]
+}

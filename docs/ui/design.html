@@ -1,0 +1,354 @@
+
+<!-- saved from url=(0014)about:internet -->
+<html lang="en" vid="0"><head vid="1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" vid="3">
+    <title vid="4">SGL — ENTERING BIOSYSTEM</title>
+    <style vid="5">
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            --leading-tight: 0.9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        
+        #landing-view {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 3rem;
+            transition: transform 1s cubic-bezier(0.85, 0, 0.15, 1);
+        }
+
+        #lab-view {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 1s ease;
+        }
+
+        .view-active #landing-view {
+            transform: translateY(-100%);
+        }
+
+        .view-active #lab-view {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        
+        #landing-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .nav-minimal {
+            display: flex;
+            justify-content: space-between;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            z-index: 10;
+        }
+
+        .mission-overlay {
+            max-width: 600px;
+            z-index: 10;
+        }
+
+        .mission-overlay h2 {
+            font-size: 4rem;
+            line-height: 0.85;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            letter-spacing: -0.02em;
+        }
+
+        .mission-overlay p {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            max-width: 40ch;
+            line-height: 1.4;
+        }
+
+        .enter-container {
+            display: flex;
+            justify-content: flex-end;
+            z-index: 10;
+        }
+
+        .enter-btn {
+            font-size: 8vw;
+            text-transform: uppercase;
+            font-weight: 500;
+            line-height: 0.8;
+            cursor: pointer;
+            border: none;
+            background: none;
+            text-align: right;
+            transition: opacity 0.3s;
+        }
+
+        .enter-btn:hover {
+            opacity: 0.5;
+        }
+
+        .enter-btn span {
+            display: block;
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+
+        
+        main {
+            padding: 2rem;
+            max-width: 1600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .hero { margin-bottom: 15vh; position: relative; }
+        .hero-title { font-size: 12vw; font-weight: 500; line-height: 0.9; letter-spacing: -0.04em; text-transform: uppercase; }
+        .hero-meta { margin-top: 2rem; font-size: 1.5rem; display: flex; gap: 2rem; text-transform: uppercase; }
+        
+        #dna-canvas-main {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 50vw;
+            height: 100vh;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .services-section { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; margin-bottom: 10vh; }
+        .section-label { font-size: 3rem; line-height: 0.9; text-transform: uppercase; position: sticky; top: 2rem; }
+        .service-list { list-style: none; }
+        .service-item { margin-bottom: 4rem; display: grid; grid-template-columns: 80px 1fr; }
+        .service-content h3 { font-size: 1.1rem; font-weight: 400; text-transform: uppercase; font-style: italic; margin-bottom: 0.5rem; }
+        .service-content p { font-size: 1.1rem; text-transform: uppercase; margin-bottom: 1rem; max-width: 40ch; }
+        .feature-list { list-style: none; margin-top: 1rem; }
+        .feature-list li { position: relative; padding-left: 1.5rem; margin-bottom: 0.25rem; text-transform: uppercase; }
+        .feature-list li::before { content: '+'; position: absolute; left: 0; }
+        
+        .footer { margin-top: 20vh; padding-bottom: 5rem; }
+        .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .legal-block { font-size: 0.85rem; text-transform: uppercase; max-width: 60ch; }
+        .cta-btn { font-size: 3rem; text-transform: uppercase; text-decoration: none; color: #000; border-bottom: 3px solid transparent; }
+
+        @media (max-width: 768px) {
+            .services-section { grid-template-columns: 1fr; }
+            .hero-title { font-size: 18vw; }
+            .mission-overlay h2 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body vid="6">
+
+    <section id="landing-view" vid="7">
+        <canvas id="landing-canvas" vid="8" width="1280" height="960"></canvas>
+        
+        <nav class="nav-minimal" vid="9">
+            <div vid="10">SGL // PROTOCOL 0.1</div>
+            <div vid="11">STATUS: ARCHIVING...</div>
+            <div vid="12">EST. 2024</div>
+        </nav>
+
+        <div class="mission-overlay" vid="13">
+            <h2 vid="14">REWRITING<br vid="15">THE ARCHITECTURE<br vid="16">OF LIFE</h2>
+            <p vid="17">WE OPERATE AT THE INTERSECTION OF COMPUTATIONAL BIOLOGY AND HUMAN DESIGN, ENGINEERING THE FUTURE OF THE SOMATIC FORM.</p>
+        </div>
+
+        <div class="enter-container" vid="18">
+            <button class="enter-btn" onclick="enterLab()" vid="19">
+                <span vid="20">ACCESS TERMINAL</span>
+                ENTER LAB —
+            </button>
+        </div>
+    </section>
+
+    <section id="lab-view" vid="21">
+        <canvas id="dna-canvas-main" vid="22" width="1280" height="960"></canvas>
+
+        <main vid="23">
+            <header class="hero" vid="24">
+                <h1 class="hero-title" vid="25">
+                    SYN<br vid="26">THETIC<br vid="27">GENO<br vid="28">MICS<br vid="29">LAB —
+                </h1>
+                
+                <div class="hero-meta" vid="30">
+                    <div class="block" vid="31">
+                        EST. 2024<br vid="32">
+                        SAN FRANCISCO
+                    </div>
+                    <div class="block" vid="33">
+                        HUMAN ARCHITECTURE<br vid="34">
+                        &amp; DESIGN BUREAU
+                    </div>
+                </div>
+            </header>
+
+            <section class="services-section" vid="35">
+                <div class="section-label" vid="36">OFFERINGS<br vid="37">V. 2.0</div>
+
+                <ul class="service-list" vid="38">
+                    <li class="service-item" vid="39">
+                        <div class="service-id" vid="40">01:00</div>
+                        <div class="service-content" vid="41">
+                            <h3 vid="42">CRISPR SEQUENCING</h3>
+                            <p vid="43">BASE PAIR EDITING FOR AESTHETIC &amp; FUNCTIONAL OPTIMIZATION.</p>
+                            <ul class="feature-list" vid="44">
+                                <li vid="45">OCULAR PIGMENT ADJUSTMENT</li>
+                                <li vid="46">HEIGHT PROJECTION MODELING</li>
+                                <li vid="47">METABOLIC EFFICIENCY TUNING</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="service-item" vid="48">
+                        <div class="service-id" vid="49">02:45</div>
+                        <div class="service-content" vid="50">
+                            <h3 vid="51">CHROMOSOMAL STORAGE</h3>
+                            <p vid="52">LONG-TERM BIO-ARCHIVING IN ZERO-DEGRADATION ENVIRONMENTS.</p>
+                            <ul class="feature-list" vid="53">
+                                <li vid="54">OFF-SITE COLD STORAGE</li>
+                                <li vid="55">SECURE GENETIC ESTATE PLANNING</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <footer class="footer" vid="56">
+                <div class="footer-grid" vid="57">
+                    <div vid="58">
+                        <div style="font-size: 4rem; line-height: 0.8; margin-bottom: 2rem; font-weight: 500;" vid="59">
+                            READY<br vid="60">TO<br vid="61">EVOLVE?
+                        </div>
+                        <a href="https://variant.com/design/b7aef3b0-1fff-403c-ac5f-38b3343e1f17.html#" class="cta-btn" vid="62">INQUIRE NOW</a>
+                    </div>
+                    <div class="legal-block" vid="63">
+                        HELIX ARCHITECTS, SECTOR 7, BIO-DISTRICT. LICENSED BY THE INTERNATIONAL GENOME BOARD. 
+                        ALL MODIFICATIONS SUBJECT TO ETHICS REVIEW.
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </section>
+
+    <script vid="64">
+        function enterLab() {
+            document.body.classList.add('view-active');
+            setTimeout(() => {
+                document.getElementById('landing-view').style.display = 'none';
+            }, 1000);
+        }
+
+        
+        function initDna(canvasId, densityMultiplier = 1, alignment = 0.5) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            let width, height, t = 0;
+            const particles = [];
+            const bases = ['A', 'T', 'C', 'G'];
+
+            function resize() {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+            }
+
+            window.addEventListener('resize', resize);
+            resize();
+
+            class Particle {
+                constructor(y, offset, char) {
+                    this.y = y;
+                    this.offset = offset;
+                    this.char = char;
+                }
+                update(time) {
+                    const angle = this.y * 0.05 + time + this.offset;
+                    const radius = width < 768 ? 80 : 150; 
+                    const x3d = Math.sin(angle) * radius;
+                    const z3d = Math.cos(angle) * radius;
+                    const fov = 1000;
+                    const scale = fov / (fov + z3d);
+                    this.x = (width * alignment) + x3d * scale;
+                    this.screenY = (this.y * 15) * scale + (height * 0.1);
+                    this.size = 12 * scale;
+                    this.alpha = scale > 1 ? 1 : 0.3;
+                }
+                draw() {
+                    ctx.font = `bold ${this.size}px Helvetica, sans-serif`;
+                    ctx.fillStyle = `rgba(0,0,0, ${this.alpha})`;
+                    ctx.textAlign = 'center';
+                    ctx.fillText(this.char, this.x, this.screenY);
+                }
+            }
+
+            for (let i = 0; i < (80 * densityMultiplier); i++) {
+                let char = bases[i % 4];
+                let pairChar = char === 'A' ? 'T' : char === 'T' ? 'A' : char === 'C' ? 'G' : 'C';
+                particles.push(new Particle(i, 0, char));
+                particles.push(new Particle(i, Math.PI, pairChar));
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+                t += 0.008;
+                ctx.strokeStyle = 'rgba(0,0,0,0.15)';
+                for (let i = 0; i < particles.length; i += 2) {
+                    const p1 = particles[i];
+                    const p2 = particles[i+1];
+                    p1.update(t);
+                    p2.update(t);
+                    ctx.beginPath();
+                    ctx.moveTo(p1.x, p1.screenY);
+                    ctx.lineTo(p2.x, p2.screenY);
+                    ctx.stroke();
+                    p1.draw();
+                    p2.draw();
+                }
+                requestAnimationFrame(animate);
+            }
+            animate();
+        }
+
+        
+        initDna('landing-canvas', 1.5, 0.5); 
+        initDna('dna-canvas-main', 1, 0.75); 
+    </script>
+</body></html>

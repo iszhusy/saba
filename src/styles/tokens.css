@@ -1,0 +1,111 @@
+/**
+ * SABA Design System v2.0
+ * Soft Structuralism - 医疗健康风格
+ * 温暖、专业、可信赖
+ */
+
+/* === Premium Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* === Color Palette === */
+  /* Primary - 温暖的蓝绿色，代表健康与平静 */
+  --color-primary: #0D9488;
+  --color-primary-light: #14B8A6;
+  --color-primary-dark: #0F766E;
+  --color-primary-50: #F0FDFA;
+  --color-primary-100: #CCFBF1;
+  --color-primary-200: #99F6E4;
+  
+  /* Risk Colors - 语义化 */
+  --color-risk-high: #DC2626;
+  --color-risk-high-bg: #FEF2F2;
+  --color-risk-high-border: #FEE2E2;
+  
+  --color-risk-medium: #D97706;
+  --color-risk-medium-bg: #FFFBEB;
+  --color-risk-medium-border: #FDE68A;
+  
+  --color-risk-low: #059669;
+  --color-risk-low-bg: #ECFDF5;
+  --color-risk-low-border: #A7F3D0;
+  
+  /* Neutral */
+  --color-stone-50: #FAFAF9;
+  --color-stone-100: #F5F5F4;
+  --color-stone-200: #E7E5E4;
+  --color-stone-300: #D6D3D1;
+  --color-stone-400: #A8A29E;
+  --color-stone-500: #78716C;
+  --color-stone-600: #57534E;
+  --color-stone-700: #44403C;
+  --color-stone-800: #292524;
+  --color-stone-900: #1C1917;
+  
+  /* Accent */
+  --color-violet: #7C3AED;
+  --color-violet-light: #8B5CF6;
+  
+  /* === Typography === */
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  
+  /* === Spacing === */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+  
+  /* === Radii === */
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-3xl: 3rem;
+  --radius-full: 9999px;
+  
+  /* === Shadows === */
+  /* Ultra-soft shadows for floating effect */
+  --shadow-xs: 0 1px 2px rgba(28, 25, 23, 0.04);
+  --shadow-sm: 0 2px 4px rgba(28, 25, 23, 0.04), 0 1px 2px rgba(28, 25, 23, 0.03);
+  --shadow-md: 0 4px 8px rgba(28, 25, 23, 0.05), 0 2px 4px rgba(28, 25, 23, 0.03);
+  --shadow-lg: 0 12px 24px rgba(28, 25, 23, 0.06), 0 4px 8px rgba(28, 25, 23, 0.04);
+  --shadow-xl: 0 24px 48px rgba(28, 25, 23, 0.08), 0 8px 16px rgba(28, 25, 23, 0.04);
+  --shadow-2xl: 0 48px 96px rgba(28, 25, 23, 0.1), 0 16px 32px rgba(28, 25, 23, 0.06);
+  
+  /* === Animation === */
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --duration-slow: 500ms;
+  --duration-slower: 700ms;
+  
+  /* Custom cubic-beziers for spring physics */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.32, 0.72, 0, 1);
+  
+  /* === Layer depths === */
+  --depth-1: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --depth-2: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --depth-3: 0 16px 48px rgba(0, 0, 0, 0.1);
+}

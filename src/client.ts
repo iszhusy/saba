@@ -1,0 +1,158 @@
+/**
+ * SABA API 客户端
+ * 前端调用后端 API 的封装
+ */
+
+import type {
+  AssessRequest,
+  AssessResponse,
+  AssessmentDetail,
+  HistoryQuery,
+  HistoryResponse,
+  FeedbackRequest,
+  TeamNotifyRequest,
+  TeamNotifyResponse,
+  BehaviorEventRequest,
+  BehaviorEventResponse,
+} from './types/index';
+
+const API_BASE = '/api/v1';
+
+class SabaClient {
+  private baseUrl: string;
+
+  constructor(baseUrl: string = API_BASE) {
+    this.baseUrl = baseUrl;
+  }
+
+  /**
+   * 提交评估
+   */
+  async assess(request: AssessRequest): Promise<AssessResponse> {
+    const response = await fetch(`${this.baseUrl}/assess`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(request),
+    });
+
+    if (!response.ok) {
+      const error = await response.json() as {
+        error?: { code?: string; message?: string };
+      };
+      const message = error.error?.message || 'Assessment failed';
+      if (error.error?.code === 'AI_SERVICE_ERROR') {
+        throw new Error(message);
+      }
+      throw new Error(message);
+    }
+
+    return response.json() as Promise<AssessResponse>;
+  }
+
+  /**
+   * 获取评估详情
+   */
+  async getAssessment(id: string): Promise<AssessmentDetail> {
+    const response = await fetch(`${this.baseUrl}/assessments/${id}`);
+
+    if (!response.ok) {
+      const error = await response.json() as { error?: { message?: string } };
+      throw new Error(error.error?.message || 'Failed to get assessment');
+    }
+
+    return response.json() as Promise<AssessmentDetail>;
+  }
+
+  /**
+   * 获取评估历史
+   */
+  async getHistory(query: HistoryQuery): Promise<HistoryResponse> {
+    const params = new URLSearchParams();
+    if (query.user_id) params.append('user_id', query.user_id);
+    if (query.page) params.append('page', query.page.toString());
+    if (query.limit) params.append('limit', query.limit.toString());
+    if (query.risk_level) params.append('risk_level', query.risk_level);
+
+    const response = await fetch(`${this.baseUrl}/assessments?${params.toString()}`);
+
+    if (!response.ok) {
+      const error = await response.json() as { error?: { message?: string } };
+      throw new Error(error.error?.message || 'Failed to get history');
+    }
+
+    return response.json() as Promise<HistoryResponse>;
+  }
+
+  /**
+   * 提交反馈
+   */
+  async submitFeedback(feedback: FeedbackRequest): Promise<{ feedback_id: string; created_at: string }> {
+    const response = await fetch(`${this.baseUrl}/feedback`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(feedback),
+    });
+
+    if (!response.ok) {
+      const error = await response.json() as { error?: { message?: string } };
+      throw new Error(error.error?.message || 'Failed to submit feedback');
+    }
+
+    return response.json() as Promise<{ feedback_id: string; created_at: string }>;
+  }
+
+  /**
+   * 发送团队通知
+   */
+  async notifyTeam(request: TeamNotifyRequest): Promise<TeamNotifyResponse> {
+    const response = await fetch(`${this.baseUrl}/team/notify`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(request),
+    });
+
+    if (!response.ok) {
+      const error = await response.json() as { error?: { message?: string } };
+      throw new Error(error.error?.message || 'Failed to notify team');
+    }
+
+    return response.json() as Promise<TeamNotifyResponse>;
+  }
+
+  /**
+   * 上报行为事件
+   */
+  async trackBehaviorEvent(event: BehaviorEventRequest): Promise<BehaviorEventResponse> {
+    const response = await fetch(`${this.baseUrl}/events`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(event),
+    });
+
+    if (!response.ok) {
+      const error = await response.json() as { error?: { message?: string } };
+      throw new Error(error.error?.message || 'Failed to track behavior event');
+    }
+
+    return response.json() as Promise<BehaviorEventResponse>;
+  }
+
+  /**
+   * 健康检查
+   */
+  async health(): Promise<{ status: string; version: string; timestamp: string }> {
+    const response = await fetch(`${this.baseUrl}/health`);
+
+    if (!response.ok) {
+      throw new Error('Health check failed');
+    }
+
+    return response.json() as Promise<{ status: string; version: string; timestamp: string }>;
+  }
+}
+
+// 导出单例
+export const sabaClient = new SabaClient();
+
+// 导出类
+export { SabaClient };
