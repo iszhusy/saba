@@ -184,7 +184,13 @@ export function App({ onExitHome }: AppProps) {
     <>
       <header className="saba-header">
         <div className="saba-header__bar">
-          <span className="saba-header__brand">SABA // LAB</span>
+          <button type="button" className="saba-header__brand" onClick={requestExit} aria-label="返回首页">
+            <span className="saba-header__brand-mark">S</span>
+            <span>
+              <strong>SABA</strong>
+              <small>Care workspace</small>
+            </span>
+          </button>
 
           <nav className="saba-header__nav" aria-label="主导航">
             <button
@@ -227,13 +233,17 @@ export function App({ onExitHome }: AppProps) {
             >
               {fontScale === 'large' ? 'A−' : 'A+'}
             </button>
+            <span className="saba-header__live">
+              <span aria-hidden />
+              安全约束已启用
+            </span>
             {onExitHome ? (
               <button
                 type="button"
                 className="saba-header__exit"
                 onClick={requestExit}
               >
-                EXIT —
+                返回首页
               </button>
             ) : null}
           </div>
@@ -250,26 +260,66 @@ export function App({ onExitHome }: AppProps) {
           className={`saba-view chat-layout ${view === 'chat' ? 'saba-view--active' : ''}`}
           aria-hidden={view !== 'chat'}
         >
-          <ConversationAssessment
-            hydrateAssessment={hydrateAssessment}
-            onExitHydrate={() => setHydrateAssessment(null)}
-            onDraftChange={setHasDraft}
-            onComplete={(detail) => {
-              setTeamRequestResult(null);
-              setHydrateAssessment(null);
-              if (!isClarificationResult(detail)) {
-                setLastResult(detail);
-              }
-            }}
-            onContactTeam={handleContactTeam}
-          />
-          {lastResult && !isClarificationResult(lastResult) && (
-            <AuditDisclosure
-              result={lastResult}
-              teamRequestResult={teamRequestResult}
-              onContactTeam={handleContactTeam}
-            />
-          )}
+          <div className="care-workspace">
+            <aside className="care-rail" aria-label="评估说明">
+              <div className="care-rail__intro">
+                <span className="care-rail__eyebrow">CURRENT SESSION</span>
+                <h1>症状评估工作区</h1>
+                <p>描述此刻最困扰您的感受。系统会逐步确认风险边界，而不是仓促给出结论。</p>
+              </div>
+
+              <div className="care-rail__status">
+                <div>
+                  <span className="care-rail__status-dot" aria-hidden />
+                  <span>评估引擎</span>
+                </div>
+                <strong>READY</strong>
+              </div>
+
+              <ol className="care-rail__path">
+                <li className="care-rail__path-item care-rail__path-item--active">
+                  <span>01</span>
+                  <div><strong>症状描述</strong><small>发生了什么、何时开始</small></div>
+                </li>
+                <li className="care-rail__path-item">
+                  <span>02</span>
+                  <div><strong>风险判断</strong><small>结合治疗背景与警示信号</small></div>
+                </li>
+                <li className="care-rail__path-item">
+                  <span>03</span>
+                  <div><strong>行动建议</strong><small>观察、咨询或及时升级</small></div>
+                </li>
+              </ol>
+
+              <div className="care-rail__boundary">
+                <span className="care-rail__boundary-mark" aria-hidden>＋</span>
+                <p><strong>安全边界</strong>本工具不作诊断，也不会建议自行停药或调整剂量。</p>
+              </div>
+            </aside>
+
+            <div className="care-workspace__main">
+              <ConversationAssessment
+                hydrateAssessment={hydrateAssessment}
+                onExitHydrate={() => setHydrateAssessment(null)}
+                onDraftChange={setHasDraft}
+                onComplete={(detail) => {
+                  setTeamRequestResult(null);
+                  setHydrateAssessment(null);
+                  if (!isClarificationResult(detail)) {
+                    setLastResult(detail);
+                  }
+                }}
+                onContactTeam={handleContactTeam}
+              />
+              {lastResult && !isClarificationResult(lastResult) && (
+                <AuditDisclosure
+                  result={lastResult}
+                  teamRequestResult={teamRequestResult}
+                  onContactTeam={handleContactTeam}
+                />
+              )}
+            </div>
+          </div>
         </section>
 
         <section

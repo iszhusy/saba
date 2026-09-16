@@ -421,8 +421,11 @@ export function ConversationAssessment({
         <span>
           <strong>症状对话</strong> · SYMPTOM INTAKE
         </span>
-        <span className="chat-shell__clinical-pulse" aria-hidden />
-        <span>循证评估进行中</span>
+        <span
+          className={`chat-shell__clinical-pulse ${isAssessing ? 'chat-shell__clinical-pulse--active' : ''}`}
+          aria-hidden
+        />
+        <span>{isAssessing ? '循证评估进行中' : '等待症状描述'}</span>
       </div>
       <div
         className="chat-thread"

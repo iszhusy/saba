@@ -36,7 +36,7 @@ function ensureArray(value: string[] | undefined, fallback: string[]): string[] 
 
 export function validateSafety(input: SafetyValidationInput): SafetyValidationResult {
   const violations: SafetyViolation[] = [];
-  let immediateAction = input.immediate_action;
+  const immediateAction = input.immediate_action;
   let followUp = input.follow_up ?? '';
   let warningSigns = [...(input.warning_signs ?? [])];
 

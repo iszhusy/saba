@@ -743,6 +743,217 @@
   color: rgba(0, 0, 0, 0.6);
 }
 
+/* —— Conversation surface refinement —— */
+.chat-shell {
+  height: min(735px, calc(100vh - 7.1rem));
+  min-height: 560px;
+  overflow: hidden;
+  border-color: rgba(20, 18, 16, 0.45);
+  background: rgba(255, 252, 247, 0.96);
+  box-shadow: 10px 10px 0 rgba(20, 18, 16, 0.065);
+}
+
+.chat-shell__clinical-bar {
+  min-height: 2.7rem;
+  padding: 0.62rem 0.95rem;
+  border-bottom: 0;
+  background: #203b32;
+  color: rgba(255, 252, 247, 0.64);
+  font-size: 0.56rem;
+}
+
+.chat-shell__clinical-bar strong {
+  color: #f7f2e9;
+}
+
+.chat-shell__clinical-pulse {
+  margin-left: auto;
+  background: #9fd0b8;
+}
+
+.chat-thread {
+  gap: 1.1rem;
+  padding: 1.4rem clamp(1rem, 2.5vw, 1.5rem);
+  background:
+    linear-gradient(rgba(47, 92, 74, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(47, 92, 74, 0.035) 1px, transparent 1px),
+    #faf7f1;
+  background-size: 24px 24px;
+  scrollbar-color: rgba(47, 92, 74, 0.28) transparent;
+}
+
+.chat-bubble {
+  position: relative;
+  max-width: min(88%, 34rem);
+  padding: 1.55rem 1.05rem 0.9rem;
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.chat-bubble::before {
+  position: absolute;
+  top: 0.62rem;
+  left: 1rem;
+  font-family: var(--saba-font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.chat-bubble--assistant {
+  border-color: rgba(47, 92, 74, 0.26);
+  border-left: 3px solid var(--saba-clinical-teal);
+  background: rgba(255, 252, 247, 0.96);
+  box-shadow: 3px 3px 0 rgba(47, 92, 74, 0.06);
+}
+
+.chat-bubble--assistant::before {
+  content: 'SABA CARE';
+  color: var(--saba-clinical-teal);
+}
+
+.chat-bubble--user {
+  border-color: #203b32;
+  background: #203b32;
+  color: #f7f2e9;
+  box-shadow: 3px 3px 0 rgba(20, 18, 16, 0.12);
+}
+
+.chat-bubble--user::before {
+  content: 'YOU';
+  color: rgba(247, 242, 233, 0.55);
+}
+
+.chat-bubble__typing::after {
+  content: '';
+  display: inline-block;
+  width: 1.2rem;
+  height: 1px;
+  margin-left: 0.5rem;
+  background: var(--saba-clinical-teal);
+  vertical-align: middle;
+  animation: typing-scan 1.2s ease-in-out infinite;
+}
+
+.chat-dock {
+  padding: 0.9rem 1rem 0.75rem;
+  border-top-color: rgba(20, 18, 16, 0.12);
+  background: #f7f2e9;
+  box-shadow: 0 -8px 24px rgba(20, 18, 16, 0.035);
+}
+
+.chat-composer {
+  gap: 0.6rem;
+}
+
+.chat-composer__quick {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.chat-composer__quick-label {
+  white-space: nowrap;
+  font-size: 0.54rem;
+}
+
+.chat-composer__tags {
+  flex-wrap: nowrap;
+  gap: 0.32rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.chat-composer__tags::-webkit-scrollbar {
+  display: none;
+}
+
+.chat-composer__tag {
+  min-height: 2rem;
+  flex: 0 0 auto;
+  padding: 0.36rem 0.68rem;
+  border-color: rgba(20, 18, 16, 0.15);
+  border-radius: 999px;
+  background: rgba(255, 252, 247, 0.88);
+  font-size: 0.7rem;
+}
+
+.chat-composer__tag:hover:not(:disabled) {
+  border-color: var(--saba-clinical-teal);
+  color: var(--saba-clinical-teal);
+}
+
+.chat-composer__row {
+  gap: 0.65rem;
+}
+
+.chat-composer__input {
+  min-height: 3.25rem;
+  padding: 0.8rem 0.95rem;
+  border-color: rgba(20, 18, 16, 0.42);
+  background: rgba(255, 252, 247, 0.95);
+  font-size: 0.9rem;
+}
+
+.chat-composer__input:focus {
+  outline: 1px solid var(--saba-clinical-teal);
+  outline-offset: 2px;
+}
+
+.chat-composer__send {
+  width: 3.25rem;
+  height: 3.25rem;
+  min-width: 3.25rem;
+  min-height: 3.25rem;
+  border-color: var(--saba-accent);
+  background: var(--saba-accent);
+  color: #fffaf3;
+}
+
+.chat-composer__send:hover:not(:disabled) {
+  border-color: var(--saba-ink);
+  background: var(--saba-ink);
+  color: var(--saba-paper);
+}
+
+.chat-composer__hint {
+  font-size: 0.54rem;
+  text-align: right;
+}
+
+.saba-audit-disclosure__toggle {
+  border-style: solid;
+  border-color: rgba(20, 18, 16, 0.18);
+  background: rgba(255, 252, 247, 0.62);
+}
+
+@keyframes typing-scan {
+  0%, 100% { transform: scaleX(0.35); transform-origin: left; opacity: 0.4; }
+  50% { transform: scaleX(1); transform-origin: left; opacity: 1; }
+}
+
+@media (max-width: 860px) {
+  .chat-shell {
+    height: min(700px, calc(100vh - 7rem));
+  }
+}
+
+@media (max-width: 620px) {
+  .chat-shell {
+    min-height: 540px;
+  }
+  .chat-shell__clinical-bar span:last-child {
+    display: none;
+  }
+  .chat-bubble {
+    max-width: 94%;
+  }
+  .chat-composer__quick {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (min-width: 900px) {
   .profile-page__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
